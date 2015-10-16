@@ -1,0 +1,103 @@
+﻿author="[RMC] Chief";          
+OnLoadName = "Воркута";
+OnLoadMission = "Сталкерские будни";
+loadScreen = "";
+overviewPicture = "";
+
+class Header {
+	gameType = Team;
+	minPlayers = 1;
+	maxPlayers = 140;
+};
+
+enableDebugConsole=1;
+disableChannels[] = {0,2,4,5,6};
+
+corpseRemovalMinTime= 86400;
+wreckRemovalMinTime = 86400;
+
+
+class CfgFunctions
+{
+  class anomaly
+  {
+  	class main
+		{
+			file = "functions\anomaly";
+			class Aview {};
+			class Ahit {};
+			class AhitElectra {};
+			class Ahide {};
+		};
+	};
+};  
+class CfgSounds
+{
+	sounds[] = {};
+	
+	class gravi_main
+	{
+		name = "gravi_main";
+		sound[] = {"sound\gravi_main.ogg", 1, 1};
+		titles[] = {0,""};
+	};
+	class gravi_hit
+	{
+		name = "gravi_hit";
+		sound[] = {"sound\gravi_hit.ogg", 1, 1};
+		titles[] = {0,""};
+	};
+	class jarka_main
+	{
+		name = "jarka_main";
+		sound[] = {"sound\jarka_main.ogg", 1, 1};
+		titles[] = {0,""};
+	};
+	class jarka_hit
+	{
+		name = "jarka_hit";
+		sound[] = {"sound\jarka_hit.ogg", 1, 1};
+		titles[] = {0,""};
+	};
+	class puh_main
+	{
+		name = "puh_main";
+		sound[] = {"sound\puh_main.ogg", 1, 1};
+		titles[] = {0,""};
+	};
+	class puh_hit
+	{
+		name = "puh_hit";
+		sound[] = {"sound\puh_hit.ogg", 1, 1};
+		titles[] = {0,""};
+	};
+	class myas_main
+	{
+		name = "myas_main";
+		sound[] = {"sound\myas_main.ogg", 1, 1};
+		titles[] = {0,""};
+	};
+	class myas_hit
+	{
+		name = "myas_hit";
+		sound[] = {"sound\myas_hit.ogg", 1, 1};
+		titles[] = {0,""};
+	};
+	class electra_main
+	{
+		name = "electra_main";
+		sound[] = {"sound\electra_main.ogg", 1, 1};
+		titles[] = {0,""};
+	};
+
+	#include "blowout\sounds.hpp"
+	#include "rad\sounds.hpp"
+
+};
+
+
+class RscTitles
+{	
+	
+	#include "rad\titles.hpp"
+};
