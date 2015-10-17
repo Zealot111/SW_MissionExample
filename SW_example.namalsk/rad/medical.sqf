@@ -9,7 +9,7 @@ PP_alcohol ppEffectCommit 0;
 zltMedAlco = {
 	_alc = player getVariable ["ZAlcohol",0];
 	if (_alc > 0 && floor time % 30 == 0) then {
-		player setVariable ["ZAlcohol", 0 max (_alc - 0.1), true];
+		player setVariable ["ZAlcohol", 0 max (_alc - 0.05), true];
 	};
 	if (_alc >= 0.05) then {
 		PP_alcohol ppEffectAdjust [_alc /2.,_alc /2.,_alc /2.,2,1,-2,-1,0.1,0.01,0.1,0.01,0.02,0.05,1,1];
@@ -64,7 +64,7 @@ zltMedDblCLickHandler = {
 			player setVariable ["ZAlcohol",_alc, true];
 	
 			_old = player getVariable ["ZRadDoze",0.1];
-			player setVariable ["ZRadDoze", (_old - (10 + random 10)) max 0, true];
+			player setVariable ["ZRadDoze", (_old - (15 + random 10)) max 0, true];
 		
 		};
 		
@@ -77,7 +77,7 @@ zltMedDblCLickHandler = {
 			player setVariable ["ZAlcohol",_alc, true];
 		
 			_old = player getVariable ["ZRadDoze",0.1];
-			player setVariable ["ZRadDoze", (_old - (0 + random 10)) max 0, true];
+			player setVariable ["ZRadDoze", (_old - (10 + random 10)) max 0, true];
 		
 		
 		};
