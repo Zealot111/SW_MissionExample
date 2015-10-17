@@ -11,6 +11,7 @@ _bs = [] execVM "t.sqf";
 [] execVM "briefing.sqf";
 waituntil {scriptDone _bs};
 0 execVM "loot2.sqf";
+0 execVM "loot3.sqf";
 
 0 spawn {sleep 1;  10 setFog [0.1, 0.02, 50]; };
 

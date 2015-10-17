@@ -121,6 +121,12 @@ zlt_fnc_fillbox = {
 };
 
 
+zlt_fnc_fillholder = {
+
+
+};
+
+
 {
     if (_x isKindof "rhs_mags_crate") then {
         _script = _x spawn {_this call zlt_fnc_fillbox;};
