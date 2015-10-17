@@ -1,0 +1,6 @@
+///////<HEADER>///////
+prefix=zlt_items
+Mikero=DePbo.dll
+Pbo Type is: Arma Addon
+Sha: '1CD0626D6983E0B60018B5F5B4F9F238DD09033C'
+//////</HEADER>//////
