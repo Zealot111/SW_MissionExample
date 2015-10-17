@@ -56,7 +56,7 @@ zradmedkashel = {
 	} foreach (((getpos player) nearEntities ["Man",15]) - [player]);
 	
 	playSound "kashel";
-	player setFatigue 0;
+	player setFatigue 1;
 	hint parsetext "<t color='#ff0000' size='1.2' shadow='1' shadowColor='#000000' align='center'>У вас симптомы лучевой болезни!</t>";
 	sleep 10.;
 	if (_rad > 300) then {
