@@ -22,11 +22,6 @@ PP_radmed ppEffectEnable false;
 PP_radmed ppEffectAdjust [0]; // 0-20
 PP_radmed ppEffectCommit 0;
 
-
-
-
-
-
 ZRadexRenew = {
 	disableserialization;
 	_display = uiNamespace getVariable ["Zlt_radex_display",displayNull];

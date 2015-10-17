@@ -9,7 +9,7 @@ PP_alcohol ppEffectCommit 0;
 zltMedAlco = {
 	_alc = player getVariable ["ZAlcohol",0];
 	if (_alc > 0 && floor time % 30 == 0) then {
-		if (getVariable ["AGM_isUnconscious", False]) then {
+		if (player getVariable ["AGM_isUnconscious", False]) then {
 			player setVariable ["ZAlcohol", 0 max (_alc - 0.1), true];
 		} else {
 			player setVariable ["ZAlcohol", 0 max (_alc - 0.05), true];
