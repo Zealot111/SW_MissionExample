@@ -1,26 +1,33 @@
 ﻿
-zlt_radzones = _this select 0;
+zlt_radzones = param [0,[],[[]]];
+
 zlt_maskOn = false;
 
 
 if (!hasInterface) exitWith {};
 
-sleep 1;
+
 
 [] execvm "rad\goggles.sqf";
 
 0 execvm "rad\medical.sqf";
 
-pp_radiation = ppEffectCreate ["ColorCorrections",1505];
-pp_radiation ppEffectEnable false;
-pp_radiation ppEffectAdjust [1,1,0.35,[0,0,0,0],[1,1,1,1],[0,0,0,0],[0,0,0,0,0,0,4]];
-pp_radiation ppEffectCommit 0;
-
-
-PP_radmed = ppEffectCreate ["DynamicBlur",105];
-PP_radmed ppEffectEnable false;
-PP_radmed ppEffectAdjust [0]; // 0-20
-PP_radmed ppEffectCommit 0;
+zradscanmarkers = {
+	private ["_mrkdel","_trigger"];
+	_mrkdel = [];
+	{
+		if (_x select [0,4] == "rad_") then {
+			_trigger = createTrigger ["EmptyDetector", markerPos _x, false];
+			_trigger setPosATL markerPos _x;
+			_trigger setTriggerArea [markerSize _x select 0, markerSize _x select 1, markerDir _x, markerShape _x == "RECTANGLE"];
+			_trigger setTriggerActivation ["ANY", "PRESENT", true];
+			_trigger setTriggerStatements ["this","",""]; 
+			_mrkdel pushback _x;
+			zlt_radzones pushback _trigger;
+		};
+	} foreach allmapmarkers;
+	{ deletemarkerlocal _x } foreach _mrkdel;
+};
 
 ZRadexRenew = {
 	disableserialization;
@@ -134,6 +141,20 @@ ZRadMainCycle = {
 	};
 };
 
+0 call zradscanmarkers;
+
+sleep 1;
+
+pp_radiation = ppEffectCreate ["ColorCorrections",1505];
+pp_radiation ppEffectEnable false;
+pp_radiation ppEffectAdjust [1,1,0.35,[0,0,0,0],[1,1,1,1],[0,0,0,0],[0,0,0,0,0,0,4]];
+pp_radiation ppEffectCommit 0;
+
+
+PP_radmed = ppEffectCreate ["DynamicBlur",105];
+PP_radmed ppEffectEnable false;
+PP_radmed ppEffectAdjust [0]; // 0-20
+PP_radmed ppEffectCommit 0;
 
 ZRadScrMainCycle = 0 spawn ZRadMainCycle;
 
