@@ -80,7 +80,7 @@ zrad_coeff = 1;
 ZRadMedEffects = {
 	private ["_orig"];
 	_orig = player getVariable ["ZRadDoze",0.1];
-	zrad_coeff = 4 ^ ( player getVariable ["radx",0]) * (if (!zlt_maskOn) then {1} else {10}) *  16^(player getVariable ["ZAlcohol",0]);	
+	zrad_coeff = 4 ^ ( player getVariable ["radx",0]) * (if (!zlt_maskOn) then {1} else {10}) *  10^(player getVariable ["ZAlcohol",0]);	
 	if (  daytime - (player getvariable ["radx_time", daytime]) > 0.25 ) then { player setvariable ["radx", 0,true]; player setvariable ["radx_time", nil, true]; };
 	if (zradSecond > 0.1) then {
 		_orig = _orig + (random (zradSecond / zrad_coeff + 0.01));

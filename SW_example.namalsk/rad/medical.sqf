@@ -64,7 +64,7 @@ zltMedDblCLickHandler = {
 			player setVariable ["ZAlcohol",_alc, true];
 	
 			_old = player getVariable ["ZRadDoze",0.1];
-			player setVariable ["ZRadDoze", (_old - (0 + random 15)) max 0, true];
+			player setVariable ["ZRadDoze", (_old - (10 + random 10)) max 0, true];
 		
 		};
 		
@@ -77,7 +77,7 @@ zltMedDblCLickHandler = {
 			player setVariable ["ZAlcohol",_alc, true];
 		
 			_old = player getVariable ["ZRadDoze",0.1];
-			player setVariable ["ZRadDoze", (_old - (0 + random 5)) max 0, true];
+			player setVariable ["ZRadDoze", (_old - (0 + random 10)) max 0, true];
 		
 		
 		};
