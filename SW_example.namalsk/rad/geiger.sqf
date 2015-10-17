@@ -9,6 +9,8 @@ sleep 1;
 
 [] execvm "rad\goggles.sqf";
 
+0 execvm "rad\medical.sqf";
+
 pp_radiation = ppEffectCreate ["ColorCorrections",1505];
 pp_radiation ppEffectEnable false;
 pp_radiation ppEffectAdjust [1,1,0.35,[0,0,0,0],[1,1,1,1],[0,0,0,0],[0,0,0,0,0,0,4]];
@@ -19,6 +21,9 @@ PP_radmed = ppEffectCreate ["DynamicBlur",105];
 PP_radmed ppEffectEnable false;
 PP_radmed ppEffectAdjust [0]; // 0-20
 PP_radmed ppEffectCommit 0;
+
+
+
 
 
 
@@ -53,9 +58,9 @@ zradmedkashel = {
 		if (isPlayer _x) then {
 			[ [player], { (_this select 0) say "kashel"; } ] remoteExec ["bis_fnc_spawn",_x];
 		};
-	} foreach ((getpos player) nearEntities ["Man",15]);
+	} foreach (((getpos player) nearEntities ["Man",15]) - [player]);
 	
-//	playSound "kashel";
+	playSound "kashel";
 	hint parsetext "<t color='#ff0000' size='1.2' shadow='1' shadowColor='#000000' align='center'>У вас симптомы лучевой болезни!</t>";
 	sleep 10.;
 	if (_rad > 300) then {
@@ -71,13 +76,14 @@ zradmedkashel = {
 };
 
 
+zrad_coeff = 1;
 ZRadMedEffects = {
-	private "_orig";
+	private ["_orig"];
 	_orig = player getVariable ["ZRadDoze",0.1];
+	zrad_coeff = 4 ^ ( player getVariable ["radx",0]) * (if (!zlt_maskOn) then {1} else {10}) *  16^(player getVariable ["ZAlcohol",0]);	
+	if (  daytime - (player getvariable ["radx_time", daytime]) > 0.25 ) then { player setvariable ["radx", 0,true]; player setvariable ["radx_time", nil, true]; };
 	if (zradSecond > 0.1) then {
-		if (!zlt_maskOn) then {
-			_orig = _orig + (random (zradSecond + 0.1));
-		};
+		_orig = _orig + (random (zradSecond / zrad_coeff + 0.01));
 	} else {
 		if (_orig < 203.2 && _orig > 48.7) then { _orig = _orig - (random 0.1)};
 		if (_orig > 306.7) then { _orig = _orig + (random 0.1)};
@@ -86,31 +92,28 @@ ZRadMedEffects = {
 		_kasheltime = 180 max (300 - (_orig - 200));
 		if (zradmedkashellast + _kasheltime < time ) then { 0 spawn zradmedkashel;}
 	};
-
-	if ( floor time % 12 == 0) then {
-		player setVariable ["ZRadDoze",_orig, true];
-
-	} else {
-		player setVariable ["ZRadDoze",_orig];
-	};
+	if ( floor time % 12 == 0) then { player setVariable ["ZRadDoze",_orig, true];} else {player setVariable ["ZRadDoze",_orig];};
 	if (_orig > 400) then { player setdammage 1; };	
 	
+	0 call zltMedAlco;
 };
 
 ZRadGetCurrent = {
 	_inzone = false;
-	{if (player in list _x) exitWith {_inzone = true;};} foreach zlt_radzones;
+	{if (player in list _x || ( missionnamespace getvariable ["zradon",false])) exitWith {_inzone = true;};} foreach zlt_radzones;
 	if (_inzone) then {z_asec=20; zradSecond = 3;} else {z_asec = 0; zradSecond = 0;};
 	_inzone
 };
 
+
+//&& !isnull (uiNamespace getVariable ["Zlt_radex_display",displayNull])
 zradeffect_hevradt = 0;
 ZRadEffect = {
-	if (zradeffect_hevradt + 100 < time && !isnull (uiNamespace getVariable ["Zlt_radex_display",displayNull])) then {
+	if (zradeffect_hevradt + 100 < time ) then {
 		playsound "hevrad"; zradeffect_hevradt = time;
 	};
 	while {z_asec > 0.3 && alive player} do {
-		if (zlt_maskOn) then {
+		if (zlt_maskOn || zrad_coeff > 1.05) then {
 			pp_radiation ppEffectEnable false;
 		} else {
 			pp_radiation ppEffectEnable true;

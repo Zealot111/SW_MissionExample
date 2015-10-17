@@ -25,3 +25,31 @@
 		sound[] = {"rad\kashel.ogg", 1.0, 1};
 		titles[]={};
 	};
+
+	class zrad_radx
+	{
+		name = "zrad_radx";
+		sound[] = {"rad\radx.ogg", 1.0, 1};
+		titles[]={};
+	};
+
+	class zrad_radaway
+	{
+		name = "zrad_radaway";
+		sound[] = {"rad\radaway.ogg", 1.0, 1};
+		titles[]={};
+	};
+
+	class zrad_bottleup
+	{
+		name = "zrad_bottleup";
+		sound[] = {"rad\drink_3.ogg", 1.0, 1};
+		titles[]={};
+	};
+
+	class zrad_soda
+	{
+		name = "zrad_soda";
+		sound[] = {"rad\soda.ogg", 1.0, 1};
+		titles[]={};
+	};

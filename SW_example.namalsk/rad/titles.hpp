@@ -17,7 +17,7 @@
 		 style=48;
 		 colorBackground[]={0,0,0,0};
 		 colorText[]={1,1,1,1};
-		 font="Bitstream";
+		 font="EtelkaMonospacePro";
 		};
 	};
 	
@@ -64,7 +64,7 @@
 				colorActive[] = {0,1,0,1};
 				shadow = 0.5;
 				colorShadow[] = {0,0,0,0.5};				
-				font = "tf_font_segments";
+				font = "EtelkaMonospacePro";
 				SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";				
 		};
 	};

@@ -34,3 +34,5 @@ zlt_gasmaskScript = 0 spawn {
 };
 
 
+["ZltRad","PutOnGasMask",["Одеть противогаз","Одеть противогаз"],{ if (goggles player in zlt_gasmaskClasses) exitwith { player unassignitem (goggles player);};_gm = "";{if (_x in items player) exitwith {_gm = _x;}} foreach zlt_gasmaskClasses;if (_gm != "") then {player assignitem _gm;};},{true},[0x3F,[false,false,false]],false] call cba_fnc_addKeybind;
+
