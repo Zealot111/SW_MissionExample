@@ -13,7 +13,7 @@ waituntil {scriptDone _bs};
 0 execVM "loot2.sqf";
 0 execVM "loot3.sqf";
 0 spawn {sleep 1;  10 setFog [0.1, 0.02, 50]; };
-0 execVM "anomalies\anomaly.sqf"
+0 execVM "anomalies\anomaly.sqf";
 //с качестве параметра - список триггеров
 [[trad1,trad2,trad3,trad4,trad5,trad6,trad7,trad8,trad9,trad10,trad11,trad12,trad13,trad14,trad16]] execvm "rad\geiger.sqf";
 
