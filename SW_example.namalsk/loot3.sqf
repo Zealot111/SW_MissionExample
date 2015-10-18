@@ -54,7 +54,7 @@ waituntil {sleep 1.2;!isnil "zlt_lootlogic"};
 
 player addeventhandler ["InventoryOpened",{
 	zlt_myContainers = zlt_myContainers - [_this select 1];
-	if (typeof (_this select 1) == "GroundWeaponHolder") then {
+	if (typeof (_this select 1) in ["GroundWeaponHolder","WeaponHolderSimulated"]) then {
 		(_this select 1) setVariable ["ztouched", 1, true];
 	};
 	

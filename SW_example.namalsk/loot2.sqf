@@ -62,15 +62,17 @@ zloottableCat1 =
 zloottableCat2 = {
 	private "_res";_res = [];
 	private "_tbl";_tbl=	[
-		0.3 ,	{ _res pushback "AGM_Morphine";},
-		0.1 ,	{ _res pushback "AGM_Epipen";},
-		0.05 ,	{ _res pushback "AGM_Bloodbag";},
-		0.3 ,	{ _res pushback "zlt_rotgut";},
-		0.2 ,	{ _res pushback "zlt_radx";},
-		0.025 ,	{ _res pushback "zlt_radaway";},
-		0.5 ,	{ _res pushback "zlt_beer";}
+		0.3 ,	{ _res pushback "ItemRadio";},
+		0.1 ,	{ _res pushback "ItemGPS";},
+		0.05 ,	{ _res pushback "NVGoggles";},
+		0.3 ,	{ _res pushback "Binocular";},
+		0.2 ,	{ _res pushback "Mask_M40";},
+		0.025 ,	{ _res pushback "Mask_M40_OD";},
+		0.5 ,	{ _res pushback "Mask_M50";}
 	];
-	
+	for "_i" from 0 to (count _tbl )-1 step 2 do {
+		if ((1 call zlt_fnc_random) < (_tbl select _i)) then {0 call (_tbl select (_i+1));};
+	};	
 	
 	
 	_res pushback (["ItemMap","ItemRadio","ItemGPS","NVGoggles","Binocular",["Mask_M40","Mask_M40_OD","Mask_M50"] call bis_fnc_selectRandom] call bis_fnc_selectRandom);
@@ -121,7 +123,8 @@ zlt_fnc_fillbox = {
 	clearItemCargoGlobal _box;
 	clearBackpackCargoGlobal _box;
 	
-	{_box addItemCargoGlobal [_x,1];} foreach _items;
+	
+	{_box addItemCargoGlobal _x;} foreach (_items call BIS_fnc_consolidateArray);
 	
 };
 

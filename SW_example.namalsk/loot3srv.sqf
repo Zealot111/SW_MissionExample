@@ -1,4 +1,8 @@
 
+if (hasinterface) then {
+	sleep 1.;
+	player addeventhandler ["InventoryOpened",{	if (typeof (_this select 1) in ["WeaponHolderSimulated"]) then {	(_this select 1) setVariable ["ztouched", true, true];};false}];
+};
 
 
 if (!isserver) exitwith {};
@@ -19,20 +23,18 @@ zlt_fnc_selectRandomWeighted = {
 	_array select _index
 };
 
-zldespawntime = 5;
 zldebug = true;
-
 zlhouses = [];
-zlhousesempty = [];
-
-
 
 zlfillhld = {
-	_this addweaponcargoglobal ["Binocular",2];
+	params ["_hld","_h","_ind"];
+	_cargo = _h getvariable ("zlcargo"+str(_ind));
+	if (!isnil "_cargo") then {
+		{_hld addItemCargoGlobal _x;} foreach _cargo;
+	} else {
+		_hld addweaponcargoglobal ["Binocular",2];
+	};
 };
-
-
-
 
 zlcheckunit = {
 	private ["_hs","_h","_hpos","_empty","_hld"];
@@ -40,7 +42,7 @@ zlcheckunit = {
 	if (zldebug) then { diag_log ["zlcheckunit1", count _hs];};
 	{
 		_h = _x;
-		if (!(_h in zlhouses) && !(_h in zlhousesempty)) then {
+		if (!(_h in zlhouses) && !(_h getvariable ["zlempty",false])) then {
 			(getposasl _x) params ["_x1","_y1","_z1"]; zlt_rnd_seed = (floor _x1 * floor _y1 * floor _z1)/100;
 			_hpos = ([_h] call BIS_fnc_buildingPositions);
 			//if (zldebug) then { diag_log ["zlcheckunit", typeof _h, getpos _h, zlt_rnd_seed];};
@@ -50,15 +52,16 @@ zlcheckunit = {
 				if ((1 call zlt_fnc_random) < 0.2) then {
 					_empty = false;
 					_hld = createVehicle ["WeaponHolderSimulated", _x, [], 0, "CAN_COLLIDE"];
-					_hld setposatl _x;
-					if (zldebug) then {_markerstr = createMarker ["xxzloot"+str(zlt_rnd_seed),getpos _hld];_markerstr setMarkerShape "ICON";_markerstr setMarkerType "mil_dot";};
-					_hld call zlfillhld;
+					_hld setposatl [_x select 0,_x select 1, (_x select 2) + 0.5];
+					if (zldebug) then {_markerstr = createMarker ["xxzloot"+str(getpos _h),getpos _h];_markerstr setMarkerShape "ICON";_markerstr setMarkerType "mil_dot";};
+					[_hld, _h, _foreachindex] call zlfillhld;
+					_hld setvariable ["zlposnum",_foreachindex];
 					_hlds pushback _hld;
 				};
 				
 			} foreach _hpos;
 			_h setvariable ["zlhlds", _hlds];
-			if (_empty) then [{zlhousesempty pushback _h},{zlhouses pushback _h}];
+			if (_empty) then [{_h setvariable ["zlempty",true];},{zlhouses pushback _h}];
 		};
 	} foreach _hs;
 };
@@ -66,9 +69,18 @@ zlcheckunit = {
 
 zltsuspend = {
 	zlhouses = zlhouses - [_this];
-	if (zldebug) then {};
+	private "_save";_save = [];
+	if (zldebug) then { deletemarker ("xxzloot"+str(getpos _this)); };
 	{
-		if !(isnull _x) then {deletevehicle _x;};
+		
+		if !(isnull _x) then {
+			if ( _x getvariable ["ztouched",false]) then {
+				_posn = _x getvariable "zlposnum";
+				_this setvariable ["zlcargo"+str(_posn), (magazinecargo _x +   weaponCargo _x +  itemCargo _x +  backpackCargo _x) call BIS_fnc_consolidateArray];
+			};
+	
+			deletevehicle _x;
+		};
 	} foreach (_this getvariable ["zlhlds",[]]);
 };
 
