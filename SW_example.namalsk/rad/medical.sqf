@@ -1,7 +1,10 @@
 
 if (!hasInterface)  exitwith {};
 
-
+PP_alcohol = ppEffectCreate ["WetDistortion",345];
+PP_alcohol ppEffectEnable false;
+PP_alcohol ppEffectAdjust [0,0,0,2,1,-2,-1,0.1,0.01,0.1,0.01,0.02,0.05,1,1];
+PP_alcohol ppEffectCommit 0;
 
 zltMedAlco = {
 	_alc = player getVariable ["ZAlcohol",0];
@@ -89,10 +92,7 @@ zltMedDblCLickHandler = {
 
 sleep 1.;
 
-PP_alcohol = ppEffectCreate ["WetDistortion",345];
-PP_alcohol ppEffectEnable false;
-PP_alcohol ppEffectAdjust [0,0,0,2,1,-2,-1,0.1,0.01,0.1,0.01,0.02,0.05,1,1];
-PP_alcohol ppEffectCommit 0;
+
 
 player addeventhandler ["InventoryOpened",{
 	0 spawn {

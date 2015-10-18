@@ -1,5 +1,7 @@
 ﻿
-zlt_radzones = param [0,[],[[]]];
+if (isnil "zlt_radzones") then {zlt_radzones = [];};
+
+zlt_radzones append ( param [0,[],[[]]] );
 
 zlt_maskOn = false;
 
@@ -83,7 +85,7 @@ zrad_coeff = 1;
 ZRadMedEffects = {
 	private ["_orig"];
 	_orig = player getVariable ["ZRadDoze",0.1];
-	zrad_coeff = 4 ^ ( player getVariable ["radx",0]) * (if (!zlt_maskOn) then {1} else {10}) *  10^(player getVariable ["ZAlcohol",0]);	
+	zrad_coeff = 4 ^ ( player getVariable ["radx",0]) * ( [1,20] select zlt_maskOn) *  10^(player getVariable ["ZAlcohol",0]);	
 	if (  daytime - (player getvariable ["radx_time", daytime]) > 0.25 ) then { player setvariable ["radx", 0,true]; player setvariable ["radx_time", nil, true]; };
 	if (zradSecond > 0.1) then {
 		_orig = _orig + (random (zradSecond / zrad_coeff + 0.01));
@@ -159,3 +161,6 @@ PP_radmed ppEffectCommit 0;
 ZRadScrMainCycle = 0 spawn ZRadMainCycle;
 
 ["Дозиметр (показать/убрать)", {true}, {if (isnull (uiNamespace getVariable ["Zlt_radex_display",displaynull])) then {("zltradradex" call BIS_fnc_rscLayer) cutrsc ["RscZltRadex", "PLAIN"];} else {("zltradradex" call BIS_fnc_rscLayer) cuttext ["", "PLAIN"];}}, true] call AGM_Interaction_fnc_addInteractionSelf;
+
+
+

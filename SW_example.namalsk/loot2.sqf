@@ -61,6 +61,18 @@ zloottableCat1 =
 
 zloottableCat2 = {
 	private "_res";_res = [];
+	private "_tbl";_tbl=	[
+		0.3 ,	{ _res pushback "AGM_Morphine";},
+		0.1 ,	{ _res pushback "AGM_Epipen";},
+		0.05 ,	{ _res pushback "AGM_Bloodbag";},
+		0.3 ,	{ _res pushback "zlt_rotgut";},
+		0.2 ,	{ _res pushback "zlt_radx";},
+		0.025 ,	{ _res pushback "zlt_radaway";},
+		0.5 ,	{ _res pushback "zlt_beer";}
+	];
+	
+	
+	
 	_res pushback (["ItemMap","ItemRadio","ItemGPS","NVGoggles","Binocular",["Mask_M40","Mask_M40_OD","Mask_M50"] call bis_fnc_selectRandom] call bis_fnc_selectRandom);
 	_res;
 };
@@ -68,26 +80,19 @@ zloottableCat2 = {
 
 zloottableCat3 = {
 	private "_res";_res = [];
-	// гарантировано от 2 до 6 бинтов
-	
-	_maxnum = [2,6] call BIS_fnc_randomInt;
-	for "_i" from 1 to _maxnum do {
-		_res pushback "AGM_Bandage";
-	};
-
-	// 0.5 шанс что будет 1 AGM_Morphine
-	if (([1,2] call BIS_fnc_randomInt) == 1) then {
-		_res pushback "AGM_Morphine";
-	};
-
-	// 0.3 шанс что будет 1 AGM_Epipen
-	if (([1,2,3] call BIS_fnc_randomInt) == 1) then {
-		_res pushback "AGM_Epipen";
-	};
-	
-	// 0.25 шанс что будет 1 AGM_Bloodbag
-	if (([1,2,3,4] call BIS_fnc_randomInt) == 1) then {
-		_res pushback "AGM_Bloodbag";
+	_maxnum = [1,2] call zlt_fnc_randomInt;
+	for "_i" from 1 to _maxnum do {	_res pushback "AGM_Bandage"; };
+	private "_tbl";_tbl=	[
+		0.3 ,	{ _res pushback "AGM_Morphine";},
+		0.1 ,	{ _res pushback "AGM_Epipen";},
+		0.05 ,	{ _res pushback "AGM_Bloodbag";},
+		0.3 ,	{ _res pushback "zlt_rotgut";},
+		0.2 ,	{ _res pushback "zlt_radx";},
+		0.025 ,	{ _res pushback "zlt_radaway";},
+		0.5 ,	{ _res pushback "zlt_beer";}
+	];
+	for "_i" from 0 to (count _tbl )-1 step 2 do {
+		if ((1 call zlt_fnc_random) < (_tbl select _i)) then {0 call (_tbl select (_i+1));};
 	};
 	_res;
 };
@@ -110,7 +115,7 @@ zlt_fnc_fillbox = {
 	if (([0,1] call bis_fnc_randomNum) < 0.5) then {_items append (0 call zloottableCat2);};
 	if (([0,1] call bis_fnc_randomNum) < 1) then {_items append (0 call zloottableCat3);};
 	if (([0,1] call bis_fnc_randomNum) < 0) then {_items append (0 call zloottableCat4);};
-	diag_log ["zlt_fnc_fillbox", _items];
+	//diag_log ["zlt_fnc_fillbox", _items];
 	clearWeaponCargoGlobal _box;
 	clearMagazineCargoGlobal _box;
 	clearItemCargoGlobal _box;
