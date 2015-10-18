@@ -23,8 +23,5 @@ waituntil {scriptDone _bs};
 0 execVM "loot2.sqf";
 
 0 execVM "anomalies\anomaly.sqf";
-if (isServer) then {
-	0 execVM "anomalies\anomalyServer.sqf";
-};
 
 //################ MISSION SPECIFIC ##################################################

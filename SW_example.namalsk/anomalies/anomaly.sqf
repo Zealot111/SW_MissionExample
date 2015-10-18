@@ -1,6 +1,10 @@
 /*
 // while {!AnomaliesInitialized} do { sleep 1;};
   */
+if (isServer) then {
+	0 execVM "anomalies\anomalyServer.sqf";
+};
+  
 if (isDedicated) exitWith {};
 sleep 3;
 //diag_log "User side initializing...";
@@ -36,6 +40,7 @@ _null = [] spawn {
                };
             };
           } forEach tf_Anomalies;
+diag_log "User side Acycle finished.";        
         };
     };
 //diag_log "User side stoped.";
