@@ -29,14 +29,14 @@ if !(hasInterface) exitwith {};
 //lineIntersectsObjs [getposasl player, [[(getposasl player) select 0, (getposasl player) select 1, ((getposasl player) select 2) + 100], 100, random 360] call bis_fnc_relPos,objnull, objnull, false, 4]
 mrk_fnc_checkIn = {
 	private ["_res","_objs","_uniUnit"];
-	_res = true;
+	_res = 0;
 	if ( "45KO_u3_grey_camo_uniform" == uniform player ) exitwith { true };
 	for "_i" from 0 to 35 do { 
 		_rpos = [[(getposasl player) select 0, (getposasl player) select 1, ((getposasl player) select 2) + 100], 100, 10*_i] call bis_fnc_relPos;
 		_objs = lineIntersectsObjs [getposasl player, _rpos,objnull, objnull, false, 4];
-		if (count _objs == 0) exitwith {_res = false;}
+		if (count _objs == 0) then {_res = _res + 1;}
 	};
-	_res;
+	_res / 36.;
 };
 
 
@@ -133,7 +133,9 @@ mrk_fnc_blowout = {
 	sleep 2.8;
 	[player, 30] call AGM_Medical_fnc_knockOut;
 	_Out = [] call Mrk_fnc_CheckIn;
-	if ( !_Out ) then { player setDamage (damage player + 0.3); } else { hint "Вы пережили выброс!" };
+
+	player setDamage (damage player + _Out);
+	
 	titleText ["", "BLACK IN",0.5];
 	terminate _soundEj;
 	terminate _psiSound;
