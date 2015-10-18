@@ -1,1 +1,0 @@
-0 execVM "anomalies\anomalyServer.sqf"
