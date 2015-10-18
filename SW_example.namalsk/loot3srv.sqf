@@ -1,7 +1,9 @@
 
 if (hasinterface) then {
-	sleep 1.;
-	player addeventhandler ["InventoryOpened",{	if (typeof (_this select 1) in ["WeaponHolderSimulated"]) then {	(_this select 1) setVariable ["ztouched", true, true];};false}];
+	0 spawn {
+		sleep 1.;
+		player addeventhandler ["InventoryOpened",{	if (typeof (_this select 1) in ["WeaponHolderSimulated"]) then {	(_this select 1) setVariable ["ztouched", true, true];};false}];
+	};
 };
 
 
@@ -32,14 +34,17 @@ zlfillhld = {
 	if (!isnil "_cargo") then {
 		{_hld addItemCargoGlobal _x;} foreach _cargo;
 	} else {
-		_hld addweaponcargoglobal ["Binocular",2];
+		private "_items"; _items = [];
+		[1,0.75, {_items append (0 call zloottableCat1);}] call zlcheckcat;
+		[1,0.75, {_items append (0 call zloottableCat2);}] call zlcheckcat;
+		[1,0.75, {_items append (0 call zloottableCat3);}] call zlcheckcat;
+		{_hld addItemCargoGlobal _x;} foreach (_items call BIS_fnc_consolidateArray);
 	};
 };
 
 zlcheckunit = {
 	private ["_hs","_h","_hpos","_empty","_hld"];
 	_hs = (getpos _this) nearObjects ["House", 100];
-	if (zldebug) then { diag_log ["zlcheckunit1", count _hs];};
 	{
 		_h = _x;
 		if (!(_h in zlhouses) && !(_h getvariable ["zlempty",false])) then {

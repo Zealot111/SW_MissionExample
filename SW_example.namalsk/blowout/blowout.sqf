@@ -81,14 +81,14 @@ mrk_fnc_LightningsAll = {
 };
 
 
-mrk_blw_blowout_inprogress = 0;
+mrk_blw_blowout_inprogress = false;
 mrk_fnc_blowout = {
 
 
 	if !(hasInterface) exitwith {  };
 		
-	if (mrk_blw_blowout_inprogress != 0) exitwith {};
-	mrk_blw_blowout_inprogress = 1;
+	if (mrk_blw_blowout_inprogress) exitwith {};
+	mrk_blw_blowout_inprogress = true;
 
 	params ["_time"];
 	// зеленый оверлэй
@@ -99,7 +99,7 @@ mrk_fnc_blowout = {
 	_delay = _time / 10;
 
 
-	_soundEj = [] spawn { playsound "Blowoutbegin"; sleep 7; 	while { mrk_blw_blowout_inprogress!=0 } do { playsound "Blowoutrumble"; sleep 8; }; };
+	_soundEj = [] spawn { playsound "Blowoutbegin"; sleep 7; 	while { mrk_blw_blowout_inprogress } do { playsound "Blowoutrumble"; sleep 8; }; };
 
 	
 	sleep 8;
@@ -108,7 +108,6 @@ mrk_fnc_blowout = {
 	playsound "Blowouttext1";
 	for "_i" from 1 to 6 do { sleep _delay; [5,0.2] call mrk_fnc_Lightning; };
 	playsound "Blowouttext2";
-	mrk_blw_blowout_inprogress = 2;
 
 	mrk_blw_EndColorEj_1 = ppEffectCreate ["ColorCorrections", 1502];
 	mrk_blw_EndColorEj_1 ppEffectEnable true;
@@ -124,9 +123,9 @@ mrk_fnc_blowout = {
 	mrk_blw_psiColor ppEffectEnable true;   
 	mrk_blw_psiColor ppEffectAdjust [1,	1,		0,0,1,0,0,		0.9,0.8,0.7,0,		0.3,0.5,0.7,0];   
 	mrk_blw_psiColor ppEffectCommit 10;
-	mrk_blw_blowout_inprogress = 3;
+	zradon = true;
 
-	_psiSound = [] spawn { while { mrk_blw_blowout_inprogress!=0 } do { playSound "PsyVoice"; playSound "PsyBlackout"; sleep 7;	}; };
+	_psiSound = [] spawn { while {mrk_blw_blowout_inprogress } do { playSound "PsyVoice"; playSound "PsyBlackout"; sleep 7;	}; };
 
 	[10,1] call mrk_fnc_Lightning;
 	titleText ["", "BLACK OUT",2.8];
@@ -135,11 +134,11 @@ mrk_fnc_blowout = {
 	_Out = [] call Mrk_fnc_CheckIn;
 
 	player setDamage (damage player + _Out);
+	zradon = false;
 	
 	titleText ["", "BLACK IN",0.5];
 	terminate _soundEj;
 	terminate _psiSound;
-	mrk_blw_blowout_inprogress = 2;
 	mrk_blw_psiColor ppEffectEnable false;   
 	ppEffectDestroy mrk_blw_psiColor;
 	mrk_blw_EndColorEj_1 ppEffectEnable false;
@@ -151,7 +150,7 @@ mrk_fnc_blowout = {
 	sleep _delay;
 	mrk_blw_StartColorEj ppEffectEnable false;
 	ppEffectDestroy mrk_blw_StartColorEj;
-	mrk_blw_blowout_inprogress = 0;
+	mrk_blw_blowout_inprogress = false;
 
 
 };

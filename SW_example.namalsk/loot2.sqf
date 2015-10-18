@@ -62,20 +62,17 @@ zloottableCat1 =
 zloottableCat2 = {
 	private "_res";_res = [];
 	private "_tbl";_tbl=	[
-		0.3 ,	{ _res pushback "ItemRadio";},
-		0.1 ,	{ _res pushback "ItemGPS";},
+		0.2 ,	{ _res pushback "ItemRadio";},
+		0.05 ,	{ _res pushback "ItemGPS";},
 		0.05 ,	{ _res pushback "NVGoggles";},
-		0.3 ,	{ _res pushback "Binocular";},
-		0.2 ,	{ _res pushback "Mask_M40";},
-		0.025 ,	{ _res pushback "Mask_M40_OD";},
-		0.5 ,	{ _res pushback "Mask_M50";}
+		0.2 ,	{ _res pushback "Binocular";},
+		0.1 ,	{ _res pushback (["Mask_M40","Mask_M40_OD","Mask_M50"] call zlt_fnc_selectrandom);},
+		0.2 ,	{ _res pushback (["B_TacticalPack_rgr","B_TacticalPack_blk","B_TacticalPack_oli","B_Kitbag_rgr","B_Carryall_oli","B_Carryall_khk","rhs_sidor"] call zlt_fnc_selectrandom);}
 	];
 	for "_i" from 0 to (count _tbl )-1 step 2 do {
 		if ((1 call zlt_fnc_random) < (_tbl select _i)) then {0 call (_tbl select (_i+1));};
 	};	
 	
-	
-	_res pushback (["ItemMap","ItemRadio","ItemGPS","NVGoggles","Binocular",["Mask_M40","Mask_M40_OD","Mask_M50"] call bis_fnc_selectRandom] call bis_fnc_selectRandom);
 	_res;
 };
 
@@ -105,34 +102,36 @@ zloottableCat4 = {
 	[];
 };
 
+
+zlcheckcat = {
+	params ["_cnt","_pr","_code"];
+	private ["_res"]; _res = [];
+	while {_cnt > 0} do { if ((1 call zlt_fnc_random) < _pr ) then { _res append (0 call _code); _cnt=_cnt-1;};};
+};
+
+
 zlt_fnc_fillbox = {
-	// вероятности по категориям
-	// [1, 0.5, 1, 0]
 	
     private ["_box","_index"];
     _box = _this;
 	_items = [];
+	zlt_rnd_seed = diag_ticktime;
 	
-	if (([0,1] call bis_fnc_randomNum) < 1) then {_items append (0 call zloottableCat1);};
-	if (([0,1] call bis_fnc_randomNum) < 0.5) then {_items append (0 call zloottableCat2);};
-	if (([0,1] call bis_fnc_randomNum) < 1) then {_items append (0 call zloottableCat3);};
-	if (([0,1] call bis_fnc_randomNum) < 0) then {_items append (0 call zloottableCat4);};
-	//diag_log ["zlt_fnc_fillbox", _items];
+	[2,1, {_items append (0 call zloottableCat1);}] call zlcheckcat;
+	[2,1 , {_items append (0 call zloottableCat2);}] call zlcheckcat;
+	[2,1, {_items append (0 call zloottableCat3);}] call zlcheckcat;
+	[2,1, {_items append (0 call zloottableCat4);}] call zlcheckcat;
+
+	diag_log ["zlt_fnc_fillbox", _items];
 	clearWeaponCargoGlobal _box;
 	clearMagazineCargoGlobal _box;
 	clearItemCargoGlobal _box;
 	clearBackpackCargoGlobal _box;
 	
-	
 	{_box addItemCargoGlobal _x;} foreach (_items call BIS_fnc_consolidateArray);
 	
 };
 
-
-zlt_fnc_fillholder = {
-
-
-};
 
 
 {
