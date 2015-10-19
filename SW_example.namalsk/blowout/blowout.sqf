@@ -54,7 +54,7 @@ mrk_fnc_Lightning = {
 		_lighting setpos _relativePosition;
 		_light = "#lightpoint" createvehiclelocal _relativePosition;
 		_light setpos _relativePosition;
-		_light setLightBrightness 300;
+		_light setLightBrightness 50;
 		_light setLightDayLight true;
 		_light setLightAmbient [0.5, 0.5, 1];
 		_light setlightcolor [1, 1, 2];
