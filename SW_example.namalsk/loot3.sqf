@@ -26,23 +26,19 @@ if (hasinterface) then {
 if (!isServer) exitwith {"Loot2.sqf не на сервере!"};
 zldebug = true;
 zlhouses = [];
+zlseedcorrection = 7;
 
-zlt_fnc_random = {[16807.,0,2147483647.] params ["_a","_c","_m"];zlt_rnd_seed=( zlt_rnd_seed*_a+_c )%_m; _this*(zlt_rnd_seed/_m)};
+zlt_fnc_random = {[75,0,65537] params ["_a","_c","_m"];zlt_rnd_seed=( zlt_rnd_seed*_a+_c )%_m; _this*(zlt_rnd_seed/_m)};
 zlt_fnc_selectrandom = {_this select floor ( (1 call zlt_fnc_random) * count (_this))};
 zlt_fnc_randomint = { params ["_l","_u"]; [round _l,round _u] params ["_l","_u"];floor (((1 call zlt_fnc_random) * (1 + _u-_l)) + _l) };
 zlt_fnc_randomnum = {params ["_l","_u"];[round _l,round _u] params ["_l","_u"]; ((_u - _l) call zlt_fnc_random) + _l};
 zlt_fnc_selectRandomWeighted = {
-	private ["_array", "_weights","_weightsTotal","_weighted","_weight","_index"];
-	_array =  param [0,[],[[]]];
-	_weights = +(  param [1,[],[[]]]);
-	_weightsTotal = 0;
-	{ _x = _x param [0,0,[0]]; _weightsTotal = _weightsTotal + _x; } foreach _weights;
-	_weighted = [];
-	{ _weight = _x / _weightsTotal;	_weight = round(_weight * 100);	for "_k" from 0 to (_weight - 1) do {_weighted pushback _foreachindex; }; } foreach _weights;
-	_index = _weighted call zlt_fnc_selectRandom;
-	_array select _index
+	params [["_a",[],[[]]],["_w",[],[[]]]]; 
+	private ["_t","_r","_s","_i","_ret"];
+	_t=0; {_t =_t+_x;} foreach _w;	_r= (_t call zlt_fnc_random); _s=0; _i=0; 
+	while {_i < count _a} do { _s = _s + (_w select _i); if (_r < _s) exitwith {_ret = _a select _i}; _i=_i+1; };
+	_ret
 };
-
 
 
 zlfillhld = {
@@ -52,7 +48,6 @@ zlfillhld = {
 		{_hld addItemCargoGlobal _x;} foreach _cargo;
 	} else {
 		private "_items"; _items = [];
-		zlt_rnd_seed = zlt_rnd_seed * 65537 / 75;
 		[1,0.75, {_items append (0 call zloottableCat1);}] call zlcheckcat;
 		[1,0.75, {_items append (0 call zloottableCat2);}] call zlcheckcat;
 		[1,0.75, {_items append (0 call zloottableCat3);}] call zlcheckcat;
@@ -69,7 +64,7 @@ zlcheckunit = {
 	{
 		_h = _x;
 		if (!(_h in zlhouses) && !(_h getvariable ["zlempty",false])) then {
-			(getposasl _x) params ["_x1","_y1","_z1"]; zlt_rnd_seed = (floor _x1 * floor _y1 + floor _z1);
+			(getposasl _x) params ["_x1","_y1","_z1"]; zlt_rnd_seed = (floor _x1 + floor _y1 + floor _z1) + zlseedcorrection;
 			_hpos = ([_h] call BIS_fnc_buildingPositions);
 			_hlds = [];
 			_empty = true;
