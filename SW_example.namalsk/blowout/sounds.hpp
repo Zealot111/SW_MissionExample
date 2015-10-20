@@ -7,7 +7,7 @@
 	class Blowoutrumble
     {
         name = "blowoutrumble";
-        sound[] = {"blowout\blowout_rumble2.ogg", 4, 1};
+        sound[] = {"blowout\blowout_rumble3.ogg", 4, 1};
         titles[] = {"Продолжение выброса"};
 	};
 	class PsyVoice
