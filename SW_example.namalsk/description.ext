@@ -11,7 +11,7 @@ class Header {
 };
 
 enableDebugConsole=1;
-disableChannels[] = {0,2,4,5,6};
+disableChannels[] = {2,4,5,6};
 
 corpseRemovalMinTime= 86400;
 wreckRemovalMinTime = 86400;
