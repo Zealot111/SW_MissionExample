@@ -27,6 +27,7 @@ if (!isServer) exitwith {"Loot2.sqf не на сервере!"};
 zldebug = true;
 zlhouses = [];
 zlseedcorrection = 7;
+zlblacklisthc = ["land_terain_base_a","land_terain_velke_panely"];
 
 zlt_fnc_random = {[75,0,65537] params ["_a","_c","_m"];zlt_rnd_seed=( zlt_rnd_seed*_a+_c )%_m; _this*(zlt_rnd_seed/_m)};
 zlt_fnc_selectrandom = {_this select floor ( (1 call zlt_fnc_random) * count (_this))};
@@ -55,38 +56,62 @@ zlfillhld = {
 			diag_log ["zlfillhld", typeof _h, _ind , getpos _h, zlt_rnd_seed, (_items call BIS_fnc_consolidateArray)];
 		};
 		{_hld addItemCargoGlobal _x;} foreach (_items call BIS_fnc_consolidateArray);
+		//TODO: убрать когда все зафиксится
+		if ((1 call zlt_fnc_random) < 0.2) then 	
+			{ _hld addBackpackcargoGlobal [(["B_TacticalPack_rgr","B_TacticalPack_blk","B_TacticalPack_oli","B_Kitbag_rgr","B_Carryall_oli","B_Carryall_khk","rhs_sidor"] call zlt_fnc_selectrandom),1];};
 	};
 };
 
+
+zlfindpos = {
+	params ["_pos","_maxval"];
+	_delta = 0.05;
+	_maxval = 45; 
+	if ((_pos select 2) < 0) then {
+		_pos = [_pos select 0, _pos select 1, 1];
+	} else {
+		_pos = [_pos select 0, _pos select 1, (_pos select 2) + 1];
+	};
+	_test = true; _val = 1;
+	while {_test} do {
+		_int = lineintersects [atltoasl(_pos), atltoasl([_pos select 0, _pos select 1, (_pos select 2) - (_val * _delta)])] || terrainintersect [_pos, [_pos select 0, _pos select 1, (_pos select 2) - (_val * _delta)]];
+		if (_int ) then {_pos = [_pos select 0, _pos select 1, ((_pos select 2) - ((_val -1 ) * _delta)) max 0]; _test = false;	};
+		_val = _val + 1;
+		if (_val > _maxval) then {_test=false; _pos = [_pos select 0, _pos select 1, (_pos select 2) - 1]; _test = false;};
+	};
+	_pos
+};
+
 zlcheckunit = {
-	private ["_hs","_h","_hpos","_empty","_hld","_coord","_batt"];
+	private ["_hs","_h","_hpos","_empty","_hld","_coord","_batt","_good","_cpos"];
 	_hs = (getpos _this) nearObjects ["House", 100];
 	{
 		_h = _x;
 		if (!(_h in zlhouses) && !(_h getvariable ["zlempty",false])) then {
-			(getposasl _x) params ["_x1","_y1","_z1"]; zlt_rnd_seed = (floor _x1 + floor _y1 + floor _z1) + zlseedcorrection;
-			_hpos = ([_h] call BIS_fnc_buildingPositions);
-			_hlds = [];
-			_empty = true;
-			{
-				if ((1 call zlt_fnc_random) < 0.2) then {
-					_empty = false;
-					_coord = [_x select 0,_x select 1, (_x select 2)+0.1];
-					/*_batt = createVehicle ["Land_Battery_F", _coord, [], 0, "CAN_COLLIDE"];
-					_batt setposatl _coord;
-					sleep 0.5;
-					_coord = getposatl _batt;*/
-					_hld = createVehicle ["GroundWeaponHolder",_coord , [], 0, "CAN_COLLIDE"]; _hld setposatl _coord;
-					//deletevehicle _batt;
-					if (zldebug) then {_markerstr = createMarker ["xxzloot"+str(getpos _h),getpos _h];_markerstr setMarkerShape "ICON";_markerstr setMarkerType "mil_dot";};
-					[_hld, _h, _foreachindex] call zlfillhld;
-					_hld setvariable ["zlposnum",_foreachindex];
-					_hlds pushback _hld;
-				};
-				
-			} foreach _hpos;
-			_h setvariable ["zlhlds", _hlds];
-			if (_empty) then [{_h setvariable ["zlempty",true];},{zlhouses pushback _h}];
+			if (typeof _h in zlblacklisthc) then {_h setvariable ["zlempty",true];} else {
+				(getposasl _x) params ["_x1","_y1","_z1"]; zlt_rnd_seed = (floor _x1 + floor _y1 + floor _z1) + zlseedcorrection;
+				_hpos = ([_h] call BIS_fnc_buildingPositions);
+				_hlds = [];
+				_empty = true;
+				{
+					if ((1 call zlt_fnc_random) < 0.2) then {
+						_good = true; _cpos = _x;
+						{if (_x distance _cpos < 5) then {_good= false;};} foreach _hlds;
+						if (_good) then {
+							_empty = false;
+							_coord = [_x] call zlfindpos;
+							_hld = createVehicle ["GroundWeaponHolder",_coord , [], 0, "CAN_COLLIDE"]; _hld setposatl _coord;
+							if (zldebug) then {_markerstr = createMarker ["xxzloot"+str(getpos _h),getpos _h];_markerstr setMarkerShape "ICON";_markerstr setMarkerType "mil_dot";};
+							[_hld, _h, _foreachindex] call zlfillhld;
+							_hld setvariable ["zlposnum",_foreachindex];
+							_hlds pushback _hld;
+						};
+					};
+				} foreach _hpos;
+				_h setvariable ["zlhlds", _hlds];
+				if (_empty) then [{_h setvariable ["zlempty",true];},{zlhouses pushback _h}];
+
+			};
 		};
 	} foreach _hs;
 };
@@ -133,15 +158,15 @@ zloottableCat1 =
 	// common uncommon rare veryrare legendary
 	private ["_weapons","_weights","_class"];
 	_weapons = ["C","U","R","V","L"];
-	_weights = [100,25,10,5,1];
+	_weights = [100,30,10,3,1];
 	_class = [_weapons,_weights] call zlt_fnc_selectRandomWeighted;
 	switch (_class) do { 	
 		case "C": {
 				private "_tbl";_tbl=	[
-					{ if ((1 call zlt_fnc_random) < 0.33) then  {_res pushback "str_ij_obr";}; for "_i" from 1 to ([1,2] call zlt_fnc_randomInt ) do {_res pushback "2pul_pula"}; },
-					{ if ((1 call zlt_fnc_random) < 0.33) then  {_res pushback "str_mp133";}; for "_i" from 1 to ([1,2] call zlt_fnc_randomInt ) do {_res pushback "7pul_pula"}; },
-					{ if ((1 call zlt_fnc_random) < 0.33) then  {_res pushback "str_ij_long";}; for "_i" from 1 to ([1,2] call zlt_fnc_randomInt ) do {_res pushback "2pul_pula"}; },
-					{ if ((1 call zlt_fnc_random) < 0.33) then  {_res pushback "str_to34_long";}; for "_i" from 1 to ([1,2] call zlt_fnc_randomInt ) do {_res pushback "2pul_pula"}; }
+					{ if ((1 call zlt_fnc_random) < 0.5) then  {_res pushback "str_ij_obr";}; for "_i" from 1 to ([3,7] call zlt_fnc_randomInt ) do {_res pushback "2pul_pula"}; },
+					{ if ((1 call zlt_fnc_random) < 0.5) then  {_res pushback "str_mp133";}; for "_i" from 1 to ([1,3] call zlt_fnc_randomInt ) do {_res pushback "7pul_pula"}; },
+					{ if ((1 call zlt_fnc_random) < 0.5) then  {_res pushback "str_ij_long";}; for "_i" from 1 to ([3,7] call zlt_fnc_randomInt ) do {_res pushback "2pul_pula"}; },
+					{ if ((1 call zlt_fnc_random) < 0.5) then  {_res pushback "str_to34_long";}; for "_i" from 1 to ([3,7] call zlt_fnc_randomInt ) do {_res pushback "2pul_pula"}; }
 				]; 0 call (_tbl call zlt_fnc_selectrandom);
 		};
 		case "U":{
@@ -149,9 +174,9 @@ zloottableCat1 =
 					{ if ((1 call zlt_fnc_random) < 0.75) then  {_res pushback "str_saiga20k";}; for "_i" from 1 to ([1,3] call zlt_fnc_randomInt ) do {_res pushback "8pul_s2_pula"}; },
 					{ 	if ((1 call zlt_fnc_random) < 0.75) then  {_res pushback "str_3xlin_sn";};
 						if ((1 call zlt_fnc_random) < 0.25) then  {_res pushback "optic_str_puold";}; for "_i" from 1 to ([1,3] call zlt_fnc_randomInt ) do {_res pushback "5rnd_762_mos"}; },
-					{ if ((1 call zlt_fnc_random) < 0.75) then  {_res pushback "str_sks_old";}; for "_i" from 1 to ([1,2] call zlt_fnc_randomInt ) do {_res pushback "10rnd_sks_mag"}; },
-					{ if ((1 call zlt_fnc_random) < 0.75) then  {_res pushback "str_tt";}; for "_i" from 1 to ([1,2] call zlt_fnc_randomInt ) do {_res pushback "8rnd_tt_mag"}; },
-					{ if ((1 call zlt_fnc_random) < 0.75) then  {_res pushback "str_pmm";}; for "_i" from 1 to ([1,2] call zlt_fnc_randomInt ) do {_res pushback "8Rnd_Mag_pm"}; }
+					{ if ((1 call zlt_fnc_random) < 0.75) then  {_res pushback "str_sks_old";}; for "_i" from 1 to ([1,3] call zlt_fnc_randomInt ) do {_res pushback "10rnd_sks_mag"}; },
+					{ if ((1 call zlt_fnc_random) < 0.75) then  {_res pushback "str_tt";}; for "_i" from 1 to ([1,3] call zlt_fnc_randomInt ) do {_res pushback "8rnd_tt_mag"}; },
+					{ if ((1 call zlt_fnc_random) < 0.75) then  {_res pushback "str_pmm";}; for "_i" from 1 to ([1,3] call zlt_fnc_randomInt ) do {_res pushback "8Rnd_Mag_pm"}; }
 				]; 0 call (_tbl call zlt_fnc_selectrandom);
 
 		};
@@ -179,15 +204,15 @@ zloottableCat1 =
 			
 	};
 	
-	private "_tbl";_tbl=	[
-		0.2 ,	{ _res pushback (["rhs_weap_rsp30_green","rhs_weap_rsp30_red","rhs_weap_rsp30_white"] call zlt_fnc_selectrandom);},
-		0.2 ,	{ _res pushback (["rhs_mag_rdg2_white","rhs_mag_nspn_green","rhs_mag_zarya2"] call zlt_fnc_selectrandom);},
-		0.2 ,	{ _res pushback (["rhs_mag_rgd5","rhs_mag_rdg2_white","rhs_mag_zarya2"] call zlt_fnc_selectrandom);}
-	];
-	
-	for "_i" from 0 to (count _tbl )-1 step 2 do {
-		if ((1 call zlt_fnc_random) < (_tbl select _i)) then {0 call (_tbl select (_i+1));};
-	};		
+	if ((1 call zlt_fnc_random) < 0.2) then {
+		private "_tbl";_tbl=	[
+				{ _res pushback (["rhs_weap_rsp30_green","rhs_weap_rsp30_red","rhs_weap_rsp30_white"] call zlt_fnc_selectrandom);},
+				{ _res pushback (["rhs_mag_rdg2_white","rhs_mag_nspn_green","rhs_mag_zarya2"] call zlt_fnc_selectrandom);},
+				{ _res pushback (["rhs_mag_rgd5","rhs_mag_rdg2_white","rhs_mag_zarya2"] call zlt_fnc_selectrandom);}
+		];
+		
+		0 call (_tbl call zlt_fnc_selectrandom);	
+	};
 	
 	_res;
 };
@@ -195,13 +220,15 @@ zloottableCat1 =
 zloottableCat2 = {
 	private "_res";_res = [];
 	private "_tbl";_tbl=	[
-		0.2 ,	{ _res pushback "ItemRadio";},
-		0.05 ,	{ _res pushback "ItemGPS";},
+		0.5 ,	{ _res pushback "ItemRadio";},
+		0.01 ,	{ _res pushback "ItemGPS";},
 		0.01 ,	{ _res pushback "NVGoggles";},
 		0.01 ,	{ _res pushback "rhs_pdu4";},
-		0.2 ,	{ _res pushback "Binocular";},
-		0.1 ,	{ _res pushback (["Mask_M40","Mask_M40_OD","Mask_M50"] call zlt_fnc_selectrandom);},
-		0.2 ,	{ _res pushback (["B_TacticalPack_rgr","B_TacticalPack_blk","B_TacticalPack_oli","B_Kitbag_rgr","B_Carryall_oli","B_Carryall_khk","rhs_sidor"] call zlt_fnc_selectrandom);}
+		0.1 ,	{ _res pushback "Binocular";},
+		0.2 ,	{ _res pushback (["Mask_M40","Mask_M40_OD","Mask_M50"] call zlt_fnc_selectrandom);}
+		
+		// TODO: не работает, нужно addBackpackcargoGlobal
+		/*0.2 ,	{ _res pushback (["B_TacticalPack_rgr","B_TacticalPack_blk","B_TacticalPack_oli","B_Kitbag_rgr","B_Carryall_oli","B_Carryall_khk","rhs_sidor"] call zlt_fnc_selectrandom);}*/
 	];
 	for "_i" from 0 to (count _tbl )-1 step 2 do {
 		if ((1 call zlt_fnc_random) < (_tbl select _i)) then {0 call (_tbl select (_i+1));};
@@ -213,9 +240,10 @@ zloottableCat2 = {
 
 zloottableCat3 = {
 	private "_res";_res = [];
-	_maxnum = [1,2] call zlt_fnc_randomInt;
-	for "_i" from 1 to _maxnum do {	_res pushback "AGM_Bandage"; };
+/*	_maxnum = [1,2] call zlt_fnc_randomInt;
+	for "_i" from 1 to _maxnum do {	_res pushback "AGM_Bandage"; };*/
 	private "_tbl";_tbl=	[
+		0.9, 	{ _res pushback "AGM_Bandage";},
 		0.3 ,	{ _res pushback "AGM_Morphine";},
 		0.1 ,	{ _res pushback "AGM_Epipen";},
 		0.05 ,	{ _res pushback "AGM_Bloodbag";},
@@ -265,6 +293,10 @@ zlt_fnc_fillbox = {
 		diag_log ["zlt_fnc_fillbox", (_items call BIS_fnc_consolidateArray)];
 	};
 	{_box addItemCargoGlobal _x;} foreach (_items call BIS_fnc_consolidateArray);
+	
+	//TODO: убрать когда все зафиксится
+	if ((1 call zlt_fnc_random) < 0.2) then 	
+	{ _box addBackpackcargoGlobal [(["B_TacticalPack_rgr","B_TacticalPack_blk","B_TacticalPack_oli","B_Kitbag_rgr","B_Carryall_oli","B_Carryall_khk","rhs_sidor"] call zlt_fnc_selectrandom),1];};
 	
 };
 
