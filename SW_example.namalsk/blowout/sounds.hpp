@@ -1,26 +1,26 @@
 	class Blowoutbegin
     {
         name = "blowoutbegin";
-        sound[] = {"blowout\blowout_begin.ogg", 1, 1};
-        titles[] = {"Начало выброса"};
+        sound[] = {"blowout\blowout_begin.ogg", 2, 1};
+        titles[] = {};
     };
 	class Blowoutrumble
     {
         name = "blowoutrumble";
         sound[] = {"blowout\blowout_rumble3.ogg", 4, 1};
-        titles[] = {"Продолжение выброса"};
+        titles[] = {};
 	};
 	class PsyVoice
     {
         name = "PsyVoice";
         sound[] = {"blowout\psy_voices.ogg", 1, 1};
-        titles[] = {"Пси-Голоса"};
+        titles[] = {};
     };
 	class PsyBlackout
     {
         name = "PsyBlackout";
         sound[] = {"blowout\psy_blackout.ogg", 0.5, 0.5};
-        titles[] = {"Пси"};
+        titles[] = {};
     };
 
 	class Blowouttext1

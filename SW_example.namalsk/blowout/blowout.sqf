@@ -26,14 +26,19 @@ if (isServer) then {
 if !(hasInterface) exitwith {};
 
 
-//lineIntersectsObjs [getposasl player, [[(getposasl player) select 0, (getposasl player) select 1, ((getposasl player) select 2) + 100], 100, random 360] call bis_fnc_relPos,objnull, objnull, false, 4]
+
+/*
+if (count (lineIntersectsSurfaces [getposasl player, _rpos, objnull,objnull,true,1,"FIRE","FIRE"]) == 0) then {_res = _res + 1;};
+		diag_log [lineIntersectsSurfaces [getposasl player, _rpos, objnull,objnull,true,1,"FIRE","FIRE"]];
+*/
+
 mrk_fnc_checkIn = {
 	private ["_res","_objs","_uniUnit"];
 	_res = 0;
 	if ( "45KO_u3_grey_camo_uniform" == uniform player ) exitwith { true };
 	for "_i" from 0 to 35 do { 
 		_rpos = [[(getposasl player) select 0, (getposasl player) select 1, ((getposasl player) select 2) + 100], 100, 10*_i] call bis_fnc_relPos;
-		if (!lineintersects [getposasl player, _rpos]) then {_res = _res + 1;};
+		if (!lineintersects [getposasl player, _rpos,player]) then {_res = _res + 1;};
 	};
 	_res / 36.;
 };
@@ -87,7 +92,7 @@ mrk_fnc_LightningsAll = {
 			_coeff = (0.1 max _coeff) min 1.5; 
 		} else {
 			if (_peaktime == 0) then {_peaktime = time;};
-			_coeff = 0.02 * _time / (time - _peaktime);
+			_coeff = 0.02 * _time / ((time - _peaktime) max 0.01);
 			_coeff = (0.1 max _coeff) min 1.5;
 		};
 		sleep (1/_coeff)*(0.5 + random 0.75);
@@ -112,7 +117,7 @@ mrk_fnc_blowout = {
 	[_time] spawn mrk_fnc_LightningsAll;
 	_soundEj = [] spawn { playsound "Blowoutbegin"; sleep 7; 	while { mrk_blw_blowout_inprogress } do { playsound "Blowoutrumble"; sleep 30; }; };
 	sleep 3;
-	[_delay] spawn { params ["_delay"]; playsound "Blowouttext1";  sleep (_delay*2); playsound "Blowouttext2";  sleep (_delay*2); playsound "Blowouttext3";  };
+	[_delay] spawn { params ["_delay"]; playsound "Blowouttext1";  sleep (_delay*2); playsound "Blowouttext2";  sleep (_delay*2)+3; playsound "Blowouttext3";  };
 	sleep (_delay *2);
 	mrk_blw_EndColorEj_1 = ppEffectCreate ["ColorCorrections", 1502];
 	mrk_blw_EndColorEj_1 ppEffectEnable true;
@@ -129,7 +134,9 @@ mrk_fnc_blowout = {
 	player setfatigue 1;
 	titleText ["", "BLACK OUT",2.8];
 	sleep 2.8;
-	[player, 30] call AGM_Medical_fnc_knockOut;
+	if ( (player getVariable ["ZAlcohol",0]) < 0.5 ) then {
+		[player, 30] call AGM_Medical_fnc_knockOut;
+	};
 	_Out = [] call Mrk_fnc_CheckIn;
 	player setDamage (damage player + _Out);
 	zradon = false;
