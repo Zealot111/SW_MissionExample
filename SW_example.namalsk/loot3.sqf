@@ -24,7 +24,7 @@ if (hasinterface) then {
 
 
 if (!isServer) exitwith {"Loot2.sqf не на сервере!"};
-zldebug = true;
+zldebug = false;
 zlhouses = [];
 zlseedcorrection = 7;
 zlblacklisthc = ["land_terain_base_a","land_terain_velke_panely"];

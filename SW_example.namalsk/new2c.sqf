@@ -1,4 +1,4 @@
-hint "Загрузка началась...";
+hint "Р—Р°РіСЂСѓР·РєР° РЅР°С‡Р°Р»Р°СЃСЊ...";
 
 
 // A3_Bush A3_Plants A3_Stones A3_Trees RSPN_Assets
@@ -1020,8 +1020,8 @@ zlt_new_10cmfix = ["Land_BagBunker_Large_F", "Land_BagBunker_Small_F", "Land_Bag
 zlt_new_5cmfix = ["Land_CncShelter_F"];
 zlt_new_15cmfix = ["Land_CncBarrierMedium4_F"];
 
-// -------------------------------------------------- НОВОЕ -----------------------------------------------------------------------------------
-// лок объекты + отключены повреждения
+// -------------------------------------------------- РќРћР’РћР• -----------------------------------------------------------------------------------
+// Р»РѕРє РѕР±СЉРµРєС‚С‹ + РѕС‚РєР»СЋС‡РµРЅС‹ РїРѕРІСЂРµР¶РґРµРЅРёСЏ
 zlt_localObjectsClasses = 
 	([['A3_Structures_F_Mil_Fortification','A3_Structures_F_Mil_BagBunker','A3_Structures_F_Mil_BagFence'] call zlt_units, { not (["razor", _x] call bis_fnc_instring) }] call zlt_filter)
 	+(["A3_Structures_F_Civ_Garbage","A3_Structures_F_EPA_Mil_Scrapyard","A3_Structures_F_Wrecks"] call zlt_units)
@@ -1039,7 +1039,7 @@ zlt_localObjectsClasses =
 	,(["Rbc_praa_objects" call zlt_units, {!(["qalat", _x] call bis_fnc_instring) && !(["qfort", _x] call bis_fnc_instring) && !(["cone", _x] call bis_fnc_instring)}] call zlt_filter)
 ;
 
-// лок. объекты + отключены повр., выключена симуляция
+// Р»РѕРє. РѕР±СЉРµРєС‚С‹ + РѕС‚РєР»СЋС‡РµРЅС‹ РїРѕРІСЂ., РІС‹РєР»СЋС‡РµРЅР° СЃРёРјСѓР»СЏС†РёСЏ
 zlt_disableSimClasses = 
 	(["A3_Structures_F_Civ_Camping" call zlt_units, { not (["toilet", _x] call bis_fnc_instring) }] call zlt_filter)
 	+(["A3_Structures_F_Items_Documents","A3_Structures_F_Items_Electronics","A3_Structures_F_Items_Cans","A3_Structures_F_Items_Gadgets","A3_Structures_F_Items_Luggage","A3_Structures_F_Items_Stationery","A3_Structures_F_Items_Tools","A3_Structures_F_Items_Valuables","A3_Structures_F_EPA_Items_Electronics","A3_Structures_F_EPA_Items_Food","A3_Structures_F_EPA_Items_Medical","A3_Structures_F_EPA_Items_Tools","A3_Structures_F_EPA_Items_Vessels","A3_Structures_F_EPC_Items_Documents","A3_Structures_F_EPC_Items_Electronics"] call zlt_units)
@@ -1050,13 +1050,13 @@ zlt_disableSimClasses =
 
 ;
 
-// нужны маркера для объекта
+// РЅСѓР¶РЅС‹ РјР°СЂРєРµСЂР° РґР»СЏ РѕР±СЉРµРєС‚Р°
 zlt_objectsWithMarkers = 
 	("A3_Structures_F_Mil_BagBunker" call zlt_units) + ["Land_CncWall4_F","Land_CncWall4_F","Land_HBarrierBig_F", "Land_HBarrier_Big_F", "Land_HBarrierTower_F",
 "Land_HBarrierWall_corner_F", "Land_HBarrierWall_corridor_F", "Land_HBarrierWall4_F", "Land_HBarrierWall6_F", "House_F", "House"]
 ;
 
-// игнорировать этот тип объекта
+// РёРіРЅРѕСЂРёСЂРѕРІР°С‚СЊ СЌС‚РѕС‚ С‚РёРї РѕР±СЉРµРєС‚Р°
 zlt_objectsIgnorePlacement = [
 "Helper_Base_F"
 ];
@@ -1251,7 +1251,7 @@ zlt_rotatecam = {
 /*
  *
  *
- *  РИСОВАНИЕ РАМОК
+ *  Р РРЎРћР’РђРќРР• Р РђРњРћРљ
  *
  */
 zlt_drawBox = {
@@ -1288,20 +1288,20 @@ zlt_drawBox = {
 	_bl pushback _obj;
 };
 
-// выделять - красный - текущий блок
-// синий - центр текущей композиции, зеленый - доп. эл-ты текущей композиции
+// РІС‹РґРµР»СЏС‚СЊ - РєСЂР°СЃРЅС‹Р№ - С‚РµРєСѓС‰РёР№ Р±Р»РѕРє
+// СЃРёРЅРёР№ - С†РµРЅС‚СЂ С‚РµРєСѓС‰РµР№ РєРѕРјРїРѕР·РёС†РёРё, Р·РµР»РµРЅС‹Р№ - РґРѕРї. СЌР»-С‚С‹ С‚РµРєСѓС‰РµР№ РєРѕРјРїРѕР·РёС†РёРё
 
 
 zlt_fnc_help = {
 
 
-	_help_data = [["F1","Справка"],["F3","Режим камеры"],["F4","Режим нормали к земле"],["F5","ATL/ASL режим"],["F6","Микро-режим"],["F7","Режим автоселекции новых блоков"],["Ctrl+Ins","Установить новый объект здесь и сделать его текущим"],
-	["Ctrl+PgUp,PgDn","Переключение страниц библиотеки объектов"],["Ctrl+Home","Выравнивание текущего объекта по вертикали и ландшафту"],["Home","Выравнивание текущего объекта по вертикали"],
-	["End","Сохрание позиций построенных объектов в буфер обмена"],["Delete","Удаление текущего объекта"],["/(цифр.)","Делает объект текущим"],["Ctrl+/(цифр.)","Выбрать объект и сделать текущим"],
-	["*(цифр.)","Выбрать ближайший объект"],["-(цифр.)","Выбрать класс выбранного объекта"],["+(цифр.)","Переместить камеру на выбранный объект"],["Up Down Left Right","Пермещение текущего объекта"],
-	["Ctrl+Up,Down,Left,Right","Вращение текущего объекта и пермещение его по вертикали"],["PgUp,PgDn","Выбор объекта на текущей странице библиотеки объектов"],
-	["Alt+Up,Down,Left,Right","Наклон текущего объекта(может вызвать баги)"],["Shift+клавиши перемещения объекта","Выполнение действия с меньшим шагом"],["Ins","Установить объект рядом с текущим(ждет нажатия клавиши Up,Dn,Left, Right)"],
-	["Space","Выделить объект под курсором"],["Ctrl+Space","Снять выделение с группы"],["Alt+Space","Добавить в выделение текущий объект"]
+	_help_data = [["F1","РЎРїСЂР°РІРєР°"],["F3","Р РµР¶РёРј РєР°РјРµСЂС‹"],["F4","Р РµР¶РёРј РЅРѕСЂРјР°Р»Рё Рє Р·РµРјР»Рµ"],["F5","ATL/ASL СЂРµР¶РёРј"],["F6","РњРёРєСЂРѕ-СЂРµР¶РёРј"],["F7","Р РµР¶РёРј Р°РІС‚РѕСЃРµР»РµРєС†РёРё РЅРѕРІС‹С… Р±Р»РѕРєРѕРІ"],["Ctrl+Ins","РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РЅРѕРІС‹Р№ РѕР±СЉРµРєС‚ Р·РґРµСЃСЊ Рё СЃРґРµР»Р°С‚СЊ РµРіРѕ С‚РµРєСѓС‰РёРј"],
+	["Ctrl+PgUp,PgDn","РџРµСЂРµРєР»СЋС‡РµРЅРёРµ СЃС‚СЂР°РЅРёС† Р±РёР±Р»РёРѕС‚РµРєРё РѕР±СЉРµРєС‚РѕРІ"],["Ctrl+Home","Р’С‹СЂР°РІРЅРёРІР°РЅРёРµ С‚РµРєСѓС‰РµРіРѕ РѕР±СЉРµРєС‚Р° РїРѕ РІРµСЂС‚РёРєР°Р»Рё Рё Р»Р°РЅРґС€Р°С„С‚Сѓ"],["Home","Р’С‹СЂР°РІРЅРёРІР°РЅРёРµ С‚РµРєСѓС‰РµРіРѕ РѕР±СЉРµРєС‚Р° РїРѕ РІРµСЂС‚РёРєР°Р»Рё"],
+	["End","РЎРѕС…СЂР°РЅРёРµ РїРѕР·РёС†РёР№ РїРѕСЃС‚СЂРѕРµРЅРЅС‹С… РѕР±СЉРµРєС‚РѕРІ РІ Р±СѓС„РµСЂ РѕР±РјРµРЅР°"],["Delete","РЈРґР°Р»РµРЅРёРµ С‚РµРєСѓС‰РµРіРѕ РѕР±СЉРµРєС‚Р°"],["/(С†РёС„СЂ.)","Р”РµР»Р°РµС‚ РѕР±СЉРµРєС‚ С‚РµРєСѓС‰РёРј"],["Ctrl+/(С†РёС„СЂ.)","Р’С‹Р±СЂР°С‚СЊ РѕР±СЉРµРєС‚ Рё СЃРґРµР»Р°С‚СЊ С‚РµРєСѓС‰РёРј"],
+	["*(С†РёС„СЂ.)","Р’С‹Р±СЂР°С‚СЊ Р±Р»РёР¶Р°Р№С€РёР№ РѕР±СЉРµРєС‚"],["-(С†РёС„СЂ.)","Р’С‹Р±СЂР°С‚СЊ РєР»Р°СЃСЃ РІС‹Р±СЂР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°"],["+(С†РёС„СЂ.)","РџРµСЂРµРјРµСЃС‚РёС‚СЊ РєР°РјРµСЂСѓ РЅР° РІС‹Р±СЂР°РЅРЅС‹Р№ РѕР±СЉРµРєС‚"],["Up Down Left Right","РџРµСЂРјРµС‰РµРЅРёРµ С‚РµРєСѓС‰РµРіРѕ РѕР±СЉРµРєС‚Р°"],
+	["Ctrl+Up,Down,Left,Right","Р’СЂР°С‰РµРЅРёРµ С‚РµРєСѓС‰РµРіРѕ РѕР±СЉРµРєС‚Р° Рё РїРµСЂРјРµС‰РµРЅРёРµ РµРіРѕ РїРѕ РІРµСЂС‚РёРєР°Р»Рё"],["PgUp,PgDn","Р’С‹Р±РѕСЂ РѕР±СЉРµРєС‚Р° РЅР° С‚РµРєСѓС‰РµР№ СЃС‚СЂР°РЅРёС†Рµ Р±РёР±Р»РёРѕС‚РµРєРё РѕР±СЉРµРєС‚РѕРІ"],
+	["Alt+Up,Down,Left,Right","РќР°РєР»РѕРЅ С‚РµРєСѓС‰РµРіРѕ РѕР±СЉРµРєС‚Р°(РјРѕР¶РµС‚ РІС‹Р·РІР°С‚СЊ Р±Р°РіРё)"],["Shift+РєР»Р°РІРёС€Рё РїРµСЂРµРјРµС‰РµРЅРёСЏ РѕР±СЉРµРєС‚Р°","Р’С‹РїРѕР»РЅРµРЅРёРµ РґРµР№СЃС‚РІРёСЏ СЃ РјРµРЅСЊС€РёРј С€Р°РіРѕРј"],["Ins","РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РѕР±СЉРµРєС‚ СЂСЏРґРѕРј СЃ С‚РµРєСѓС‰РёРј(Р¶РґРµС‚ РЅР°Р¶Р°С‚РёСЏ РєР»Р°РІРёС€Рё Up,Dn,Left, Right)"],
+	["Space","Р’С‹РґРµР»РёС‚СЊ РѕР±СЉРµРєС‚ РїРѕРґ РєСѓСЂСЃРѕСЂРѕРј"],["Ctrl+Space","РЎРЅСЏС‚СЊ РІС‹РґРµР»РµРЅРёРµ СЃ РіСЂСѓРїРїС‹"],["Alt+Space","Р”РѕР±Р°РІРёС‚СЊ РІ РІС‹РґРµР»РµРЅРёРµ С‚РµРєСѓС‰РёР№ РѕР±СЉРµРєС‚"]
 	];
 	_help_txt2="<t size='0.5' color='#ffff00' align='left'>";
 	{_help_txt2 =_help_txt2 + format["<t color='#ff0000'>%1</t> - %2<br/>", (_help_data select _foreachindex)select 0,(_help_data select _foreachindex)select 1];} foreach _help_data;
@@ -1312,7 +1312,7 @@ zlt_fnc_help = {
 
 zlt_onEachFrame = {
 	_bl = [];
-	// подсветка текущей
+	// РїРѕРґСЃРІРµС‚РєР° С‚РµРєСѓС‰РµР№
 	[zlt_newlb, [1,0,0,1],_bl] call zlt_drawBox;
 
 	if (!zlt_cameraMode && !isNull cursorTarget) then {
@@ -1457,14 +1457,14 @@ zlt_fnc_modeindication = {
 	_txt = "";
 	
 	if (!isNil "zltNewAutoSelect" && {zltNewAutoSelect}) then {
-		_txt = _txt + "<t color='#ff0000'> АВТО </t>";
+		_txt = _txt + "<t color='#ff0000'> РђР’РўРћ </t>";
 	} else {
 		_txt = _txt + "<t color='#ffaa00'> --------</t>";
 	};
 	if (!zlt_new_vectorup) then {
-		_txt = _txt + "<t color='#ff0000'> НОРМ</t>";
+		_txt = _txt + "<t color='#ff0000'> РќРћР Рњ</t>";
 	} else {
-		_txt = _txt + "<t color='#ffaa00'> ВЕРТ</t>";
+		_txt = _txt + "<t color='#ffaa00'> Р’Р•Р Рў</t>";
 	};
 	
 	if (zlt_new_asl) then {
@@ -1482,10 +1482,10 @@ zlt_fnc_modeindication = {
 
 	_txt = _txt + "<br/>";
 	if (count zltNewCurSel !=0 ) then {
-		_txt = _txt + format["Выбрано %1 блоков",count zltNewCurSel]  + "<br/>";
+		_txt = _txt + format["Р’С‹Р±СЂР°РЅРѕ %1 Р±Р»РѕРєРѕРІ",count zltNewCurSel]  + "<br/>";
 	};
 	
-	// покажем текущий блок
+	// РїРѕРєР°Р¶РµРј С‚РµРєСѓС‰РёР№ Р±Р»РѕРє
 	if (!isNil "zlt_newlb" && {!isnull zlt_newlb}) then {
 		// previous
 		_ci = zlt_new_blocks find zlt_newlb;
@@ -1533,12 +1533,12 @@ zlt_fnc_modeindication = {
 	};
 
 	if (not isNil "zlt_cur_class") then {
-		_txt=_txt+"<br/>КЛАСС: "+zlt_cur_class +"<br/>"+"НАЗВАНИЕ: "+ _classTxt + "<br/>";
+		_txt=_txt+"<br/>РљР›РђРЎРЎ: "+zlt_cur_class +"<br/>"+"РќРђР—Р’РђРќРР•: "+ _classTxt + "<br/>";
 
 	};
 
 	//diag_log [_txt];
-	// конец показа текущего блока
+	// РєРѕРЅРµС† РїРѕРєР°Р·Р° С‚РµРєСѓС‰РµРіРѕ Р±Р»РѕРєР°
 	[ format["<t size='0.4' align='left' color='#ffff00'>%1</t>",_txt], safezonex,safezoney+0.1,1,0,0,335] spawn bis_fnc_dynamicText;
 };
 
@@ -1653,21 +1653,21 @@ ZltNewUseGroupParam = {
 
 zlt_new_moveblock = {
 	// "UP", "RIGHT", "ROLLZ", "FARER", "PITCH", "BANK"
-	// VALUE - Значение на сколько
+	// VALUE - Р—РЅР°С‡РµРЅРёРµ РЅР° СЃРєРѕР»СЊРєРѕ
 	private ["_class", "_pos", "_dir", "_pitch", "_bank","_obj"];
 	_mode = _this select 0;
 	_val = _this select 1;
 	PARAM(_fASL, 2, zlt_new_asl)
 	
 	if ( isnil "zlt_newlb" or {isNull zlt_newlb} ) exitwith {};
-	//для текущего выделения
+	//РґР»СЏ С‚РµРєСѓС‰РµРіРѕ РІС‹РґРµР»РµРЅРёСЏ
 	[zlt_newlb, zltNewCurSel] call ZltNewSaveGroupParam;
 
-	//конец обработки текущего выделения
+	//РєРѕРЅРµС† РѕР±СЂР°Р±РѕС‚РєРё С‚РµРєСѓС‰РµРіРѕ РІС‹РґРµР»РµРЅРёСЏ
 
 
 	_obj = zlt_newlb;
-	//получить координаты
+	//РїРѕР»СѓС‡РёС‚СЊ РєРѕРѕСЂРґРёРЅР°С‚С‹
 	_dir = getdir _obj;
 	_pitchBank = _obj call BIS_fnc_getPitchBank; _pitch = _pitchBank select 0; 	_bank = _pitchBank select 1;
 	if (_pitch !=0 or _bank != 0) then {
@@ -1718,7 +1718,7 @@ zlt_new_moveblock = {
 	};
 
 	[zlt_newlb, zltNewCurSel] call ZltNewUseGroupParam;
-	//конец обработки текущего выделения
+	//РєРѕРЅРµС† РѕР±СЂР°Р±РѕС‚РєРё С‚РµРєСѓС‰РµРіРѕ РІС‹РґРµР»РµРЅРёСЏ
 };
 
 
@@ -1782,7 +1782,7 @@ zlt_new_keydown =
 		
 		switch (true) do
 		{
-			// КАМЕРА
+			// РљРђРњР•Р Рђ
 			
 			case (!zlt_cameraMode && _key == DIK_F3) : { [] spawn zlt_createcam; };
 			case (zlt_cameraMode && _key == DIK_F3) : { [] spawn zlt_removecam; };
@@ -1800,39 +1800,39 @@ zlt_new_keydown =
 			case (_key == DIK_RIGHT && _alt && !_ctrl) : {   ["BANKUP", -_angle] call zlt_new_moveblock;  };
 
 
-			//вверх
+			//РІРІРµСЂС…
 			case (_key == DIK_UP && !zlt_new_is_plc_mode ) : {["FARER", _coeff] call zlt_new_moveblock;};
-			//вниз
+			//РІРЅРёР·
 			case (_key == DIK_DOWN && !zlt_new_is_plc_mode ) : {["FARER", -_coeff] call zlt_new_moveblock;};
-			//влево
+			//РІР»РµРІРѕ
 			case (_key == DIK_LEFT && !zlt_new_is_plc_mode ) : {["LEFT", _coeff] call zlt_new_moveblock;};
-			//вправо
+			//РІРїСЂР°РІРѕ
 			case (_key == DIK_RIGHT && !zlt_new_is_plc_mode ) : {["RIGHT", _coeff] call zlt_new_moveblock;};
 			
-			// вставить
+			// РІСЃС‚Р°РІРёС‚СЊ
 			case (_key == DIK_INSERT && _ctrl) : {[_ctrl] call zlt_new_block};
 
 			case (_key == DIK_INSERT) : {
-				// режим установки 
+				// СЂРµР¶РёРј СѓСЃС‚Р°РЅРѕРІРєРё 
 				zlt_new_is_plc_mode = true;
-				// handle колбека выключения режима установки 
+				// handle РєРѕР»Р±РµРєР° РІС‹РєР»СЋС‡РµРЅРёСЏ СЂРµР¶РёРјР° СѓСЃС‚Р°РЅРѕРІРєРё 
 				zlt_new_plc_mode_cb = [] spawn {
 					sleep 5;
 					zlt_new_is_plc_mode = false;
-					hint "Установка отменена!";
+					hint "РЈСЃС‚Р°РЅРѕРІРєР° РѕС‚РјРµРЅРµРЅР°!";
 				};
 
-				hint "Режим установки";
+				hint "Р РµР¶РёРј СѓСЃС‚Р°РЅРѕРІРєРё";
 			};
 			//ctrl up down
-			case (zlt_new_is_plc_mode && _key == DIK_UP && _ctrl && !_alt) :  { terminate zlt_new_plc_mode_cb;zlt_new_is_plc_mode=false; [false,"UP"] call zlt_new_block; hint "Установка";};
-			case (zlt_new_is_plc_mode && _key == DIK_DOWN && _ctrl && !_alt) :  { terminate zlt_new_plc_mode_cb;zlt_new_is_plc_mode=false; [false,"DOWN"] call zlt_new_block; hint "Установка";};
+			case (zlt_new_is_plc_mode && _key == DIK_UP && _ctrl && !_alt) :  { terminate zlt_new_plc_mode_cb;zlt_new_is_plc_mode=false; [false,"UP"] call zlt_new_block; hint "РЈСЃС‚Р°РЅРѕРІРєР°";};
+			case (zlt_new_is_plc_mode && _key == DIK_DOWN && _ctrl && !_alt) :  { terminate zlt_new_plc_mode_cb;zlt_new_is_plc_mode=false; [false,"DOWN"] call zlt_new_block; hint "РЈСЃС‚Р°РЅРѕРІРєР°";};
 			//up down
-			case (zlt_new_is_plc_mode && _key == DIK_DOWN && !_ctrl && !_alt) :  { terminate zlt_new_plc_mode_cb;zlt_new_is_plc_mode=false; [_ctrl,"BACK"] call zlt_new_block; hint "Установка";};
-			case (zlt_new_is_plc_mode && _key == DIK_UP && !_ctrl && !_alt) :  { terminate zlt_new_plc_mode_cb;zlt_new_is_plc_mode=false; [_ctrl,"FRONT"] call zlt_new_block; hint "Установка";};
+			case (zlt_new_is_plc_mode && _key == DIK_DOWN && !_ctrl && !_alt) :  { terminate zlt_new_plc_mode_cb;zlt_new_is_plc_mode=false; [_ctrl,"BACK"] call zlt_new_block; hint "РЈСЃС‚Р°РЅРѕРІРєР°";};
+			case (zlt_new_is_plc_mode && _key == DIK_UP && !_ctrl && !_alt) :  { terminate zlt_new_plc_mode_cb;zlt_new_is_plc_mode=false; [_ctrl,"FRONT"] call zlt_new_block; hint "РЈСЃС‚Р°РЅРѕРІРєР°";};
 			//left right
-			case (zlt_new_is_plc_mode && _key == DIK_LEFT && !_ctrl && !_alt) :  { terminate zlt_new_plc_mode_cb;zlt_new_is_plc_mode=false; [_ctrl,"LEFT"] call zlt_new_block; hint "Установка";};
-			case (zlt_new_is_plc_mode && _key == DIK_RIGHT && !_ctrl && !_alt) :  { terminate zlt_new_plc_mode_cb;zlt_new_is_plc_mode=false; [_ctrl,"RIGHT"] call zlt_new_block; hint "Установка";};
+			case (zlt_new_is_plc_mode && _key == DIK_LEFT && !_ctrl && !_alt) :  { terminate zlt_new_plc_mode_cb;zlt_new_is_plc_mode=false; [_ctrl,"LEFT"] call zlt_new_block; hint "РЈСЃС‚Р°РЅРѕРІРєР°";};
+			case (zlt_new_is_plc_mode && _key == DIK_RIGHT && !_ctrl && !_alt) :  { terminate zlt_new_plc_mode_cb;zlt_new_is_plc_mode=false; [_ctrl,"RIGHT"] call zlt_new_block; hint "РЈСЃС‚Р°РЅРѕРІРєР°";};
 
 
 			//
@@ -1866,14 +1866,14 @@ zlt_new_keydown =
 			case (_key == DIK_PGUP ) : {_ind =  (zlt_obj_list find zlt_cur_class ) max 0; _ind = _ind - (if (_shift) then {10} else {1} ); if (_ind < 0) then {_ind = 0 ;}; zlt_cur_class = zlt_obj_list select _ind; [zlt_cur_class, zlt_obj_list] call zlt_fnc_notifyhint; };
 			
 			//end
-			case (_key == DIK_END && !_ctrl) : { zlt_new_blocks call zlt_save_comp ; "Сохронил!" call zlt_fnc_notify; };
+			case (_key == DIK_END && !_ctrl) : { zlt_new_blocks call zlt_save_comp ; "РЎРѕС…СЂРѕРЅРёР»!" call zlt_fnc_notify; };
             
             case (_key == DIK_END && _ctrl) : { 
                 zlt_disableSimClasses2 = zlt_disableSimClasses;
                 zlt_disableSimClasses = [];
                 zlt_localObjectsClasses2= zlt_localObjectsClasses;
                 zlt_localObjectsClasses = [];
-                zlt_new_blocks call zlt_save_comp ; "Сохронил глобально!" call zlt_fnc_notify; 
+                zlt_new_blocks call zlt_save_comp ; "РЎРѕС…СЂРѕРЅРёР» РіР»РѕР±Р°Р»СЊРЅРѕ!" call zlt_fnc_notify; 
                 zlt_disableSimClasses = zlt_disableSimClasses2;
                 zlt_disableSimClasses2 = nil;
                 zlt_localObjectsClasses= zlt_localObjectsClasses2;
@@ -1891,7 +1891,7 @@ zlt_new_keydown =
 				deletevehicle zlt_newlb;
 				zlt_newlb = if (count zlt_new_blocks == 0 )then {objNull} else {if(_oldid > 0) then{ zlt_new_blocks select (_oldid - 1)} else {zlt_new_blocks select 0}};
 
-				"Удалено!" call zlt_fnc_notify;
+				"РЈРґР°Р»РµРЅРѕ!" call zlt_fnc_notify;
 			};
 			
 			// home 
@@ -1905,14 +1905,14 @@ zlt_new_keydown =
 						[zlt_newlb, zltNewCurSel] call ZltNewSaveGroupParam;
 						zlt_newlb setvectorup ( surfaceNormal (getpos zlt_newlb) );
 						[zlt_newlb, zltNewCurSel] call ZltNewUseGroupParam;
-						"Нормаль" call zlt_fnc_notify;
+						"РќРѕСЂРјР°Р»СЊ" call zlt_fnc_notify;
 						//zlt_new_vectorup = false;
 					} else {
 						[zlt_newlb, zltNewCurSel] call ZltNewSaveGroupParam;
 						[zlt_newlb, 0,0] call bis_fnc_setpitchbank;
 						[zlt_newlb, zltNewCurSel] call ZltNewUseGroupParam;
 						//zlt_new_vectorup = true;
-						"Вертикаль" call zlt_fnc_notify;
+						"Р’РµСЂС‚РёРєР°Р»СЊ" call zlt_fnc_notify;
 					};
 				};
 			};
@@ -1922,54 +1922,54 @@ zlt_new_keydown =
 			};
 			
 			case (_key == DIK_F4) : {
-				if (zlt_new_vectorup) then {zlt_new_vectorup = false; "Режим нормали" call zlt_fnc_notify;} 
-				else { zlt_new_vectorup = true; "Режим вертикали" call zlt_fnc_notify;};
+				if (zlt_new_vectorup) then {zlt_new_vectorup = false; "Р РµР¶РёРј РЅРѕСЂРјР°Р»Рё" call zlt_fnc_notify;} 
+				else { zlt_new_vectorup = true; "Р РµР¶РёРј РІРµСЂС‚РёРєР°Р»Рё" call zlt_fnc_notify;};
 			};
 			case (_key == DIK_F5) : {
-				if (zlt_new_asl) then {zlt_new_asl = false; "Режим ATL" call zlt_fnc_notify;} 
-				else { zlt_new_asl = true; "Режим ASL" call zlt_fnc_notify;};
+				if (zlt_new_asl) then {zlt_new_asl = false; "Р РµР¶РёРј ATL" call zlt_fnc_notify;} 
+				else { zlt_new_asl = true; "Р РµР¶РёРј ASL" call zlt_fnc_notify;};
 			};
 			case (_key == DIK_F6) : {
-				if (zlt_new_micro) then {zlt_new_micro = false; "Микрорежим выключен" call zlt_fnc_notify;} 
-				else { zlt_new_micro = true; "Микрорежим" call zlt_fnc_notify;};
+				if (zlt_new_micro) then {zlt_new_micro = false; "РњРёРєСЂРѕСЂРµР¶РёРј РІС‹РєР»СЋС‡РµРЅ" call zlt_fnc_notify;} 
+				else { zlt_new_micro = true; "РњРёРєСЂРѕСЂРµР¶РёРј" call zlt_fnc_notify;};
 			};			
 
 /*			case (_key == DIK_F7) : {
 				if (isNil "zltNewAutoSelect") then {zltNewAutoSelect=false;};
-				if (zltNewAutoSelect) then {zltNewAutoSelect = false; "Режим автовыбора выключен" call zlt_fnc_notify;} 
-				else { zltNewAutoSelect = true; "Режим автовыбора" call zlt_fnc_notify;};
+				if (zltNewAutoSelect) then {zltNewAutoSelect = false; "Р РµР¶РёРј Р°РІС‚РѕРІС‹Р±РѕСЂР° РІС‹РєР»СЋС‡РµРЅ" call zlt_fnc_notify;} 
+				else { zltNewAutoSelect = true; "Р РµР¶РёРј Р°РІС‚РѕРІС‹Р±РѕСЂР°" call zlt_fnc_notify;};
 			};			*/
 
 
 
 
 			case (_ctrl && _key >= 0x02 && _key <= 0x0B ) : { zltNewCurrentFastObjects set [_key-0x02,zlt_cur_class]; profilenamespace setvariable ["zltNewCurrentFastObjects",zltNewCurrentFastObjects];        };
-			case (!_ctrl && _key >= 0x02 && _key <= 0x0B ) : {private "_co"; _co = zltNewCurrentFastObjects select (_key-0x02); if !(isNil "_co") then {zlt_cur_class=_co;}else{"Быстрая клавиша не назначена" call zlt_fnc_notify};};
+			case (!_ctrl && _key >= 0x02 && _key <= 0x0B ) : {private "_co"; _co = zltNewCurrentFastObjects select (_key-0x02); if !(isNil "_co") then {zlt_cur_class=_co;}else{"Р‘С‹СЃС‚СЂР°СЏ РєР»Р°РІРёС€Р° РЅРµ РЅР°Р·РЅР°С‡РµРЅР°" call zlt_fnc_notify};};
 			case (_ctrl && _key==DIK_C) : {
 				[zltNewCurSel, false] call ZltNewSaveGroupToClipboard;
-				"Скопировано в буфер" call zlt_fnc_notify;
+				"РЎРєРѕРїРёСЂРѕРІР°РЅРѕ РІ Р±СѓС„РµСЂ" call zlt_fnc_notify;
 			};
 			case (_ctrl && _key==DIK_V) : {
 				zltNewCurSel=0 call ZltNewLoadGroupFromClipboard;
-				"Вставлено из буфера" call zlt_fnc_notify;
+				"Р’СЃС‚Р°РІР»РµРЅРѕ РёР· Р±СѓС„РµСЂР°" call zlt_fnc_notify;
 			};
 			case (_ctrl && _key==DIK_X) : {
 				[zltNewCurSel, true] call ZltNewSaveGroupToClipboard;
 				zltNewCurSel=[];
-				"Вырезано из буфера" call zlt_fnc_notify;
+				"Р’С‹СЂРµР·Р°РЅРѕ РёР· Р±СѓС„РµСЂР°" call zlt_fnc_notify;
 			};
 
-			case (_alt && !_ctrl && _key == DIK_SPACE) : {if (zlt_newlb in zltNewCurSel) then {zltNewCurSel = zltNewCurSel-[zlt_newlb]; "Удалено" call zlt_fnc_notify} else {zltNewCurSel pushBack zlt_newlb; "Добавлено" call zlt_fnc_notify;};};
-			case (!_alt && _ctrl && _key == DIK_SPACE) : {zltNewCurSel=[]; "Выделение снято" call zlt_fnc_notify};
+			case (_alt && !_ctrl && _key == DIK_SPACE) : {if (zlt_newlb in zltNewCurSel) then {zltNewCurSel = zltNewCurSel-[zlt_newlb]; "РЈРґР°Р»РµРЅРѕ" call zlt_fnc_notify} else {zltNewCurSel pushBack zlt_newlb; "Р”РѕР±Р°РІР»РµРЅРѕ" call zlt_fnc_notify;};};
+			case (!_alt && _ctrl && _key == DIK_SPACE) : {zltNewCurSel=[]; "Р’С‹РґРµР»РµРЅРёРµ СЃРЅСЏС‚Рѕ" call zlt_fnc_notify};
     		case (!_alt && !_ctrl && _key == DIK_SPACE) : {
 				private "_target";
 				_target = 0 call ZltNewGetCameraTarget;
 				if !(isnull _target) then {
 					if (_target in zlt_new_blocks) then {
 						if !(_target in zltNewCurSel) then {
-							zltNewCurSel pushBack _target; "Добавлено в выделение" call zlt_fnc_notify; } else {zltNewCurSel = zltNewCurSel - [_target]; "Убрано из выделения" call zlt_fnc_notify;};
-					} else {"Блок нельзя выделить - он поставлен не нами" call zlt_fnc_notify;};
-				} else {"Блок не выбран" call zlt_fnc_notify;};
+							zltNewCurSel pushBack _target; "Р”РѕР±Р°РІР»РµРЅРѕ РІ РІС‹РґРµР»РµРЅРёРµ" call zlt_fnc_notify; } else {zltNewCurSel = zltNewCurSel - [_target]; "РЈР±СЂР°РЅРѕ РёР· РІС‹РґРµР»РµРЅРёСЏ" call zlt_fnc_notify;};
+					} else {"Р‘Р»РѕРє РЅРµР»СЊР·СЏ РІС‹РґРµР»РёС‚СЊ - РѕРЅ РїРѕСЃС‚Р°РІР»РµРЅ РЅРµ РЅР°РјРё" call zlt_fnc_notify;};
+				} else {"Р‘Р»РѕРє РЅРµ РІС‹Р±СЂР°РЅ" call zlt_fnc_notify;};
 			};
 
 			// "/"
@@ -2023,7 +2023,7 @@ zlt_new_block = {
 	comment "v.1";
 	_class = zlt_cur_class;
 
-	if (!isClass (configFile >> "CfgVehicles" >> zlt_cur_class)) exitWith { "Такого класса нет в данной сборке!" call zlt_fnc_notify};
+	if (!isClass (configFile >> "CfgVehicles" >> zlt_cur_class)) exitWith { "РўР°РєРѕРіРѕ РєР»Р°СЃСЃР° РЅРµС‚ РІ РґР°РЅРЅРѕР№ СЃР±РѕСЂРєРµ!" call zlt_fnc_notify};
 
 	_ctrl = [_this,0,false ] call bis_fnc_param;
 	_placemode = [_this, 1, "UP"] call bis_fnc_param;
@@ -2106,7 +2106,7 @@ zlt_new_block = {
 		
 		};
 		diag_log format ["NEW BLOCK %1 %2 _olddir=%3 _bboxold=%4 _bboxnew=%5 _lng=%6 _oldpos=%7 _pos1=%8", zlt_newlb, _new, _olddir, _bboxold, _bboxnew, _lng, _oldpos,_pos1  ];
-		((typeof _new) + " блок установлен!") call zlt_fnc_notify;
+		((typeof _new) + " Р±Р»РѕРє СѓСЃС‚Р°РЅРѕРІР»РµРЅ!") call zlt_fnc_notify;
 	};
 	//diag_log ["C",_pos1];
 	
@@ -2123,7 +2123,7 @@ zlt_new_block = {
 	
 	PR(_closestBlocks) = [zlt_new_blocks,[_new],{_input0 distanceSqr _x},"ASCEND"] call BIS_fnc_sortBy;	
 	if ((count zlt_new_blocks > 0) and {(_closestBlocks select 0) distance _new < 0.05} ) then {
-		"Ошибка, слишком близко к другому блоку!" call zlt_fnc_notify;
+		"РћС€РёР±РєР°, СЃР»РёС€РєРѕРј Р±Р»РёР·РєРѕ Рє РґСЂСѓРіРѕРјСѓ Р±Р»РѕРєСѓ!" call zlt_fnc_notify;
 		deleteVehicle _new;
 	} else {
 		zlt_newlb = _new;
@@ -2281,7 +2281,7 @@ if (isNil "zlt_eh_keydown") then {
 			zlt_eh_keydown = (findDisplay 46) displayAddEventHandler ["KeyDown", "_aaa=(_this call zlt_new_keydown)"];	
 			zlt_eh_keyup = (findDisplay 46) displayAddEventHandler ["KeyUp", "_ccc=(_this call zlt_new_keyup)"];	
 			zlt_eh_mouse = (findDisplay 46) displayAddEventHandler ["MouseMoving", "_bbb=(_this call zlt_new_mouseMoving)"];	
-			waitUntil { !isNull(findDisplay 312) }; // сработает после запуска Zeus
+			waitUntil { !isNull(findDisplay 312) }; // СЃСЂР°Р±РѕС‚Р°РµС‚ РїРѕСЃР»Рµ Р·Р°РїСѓСЃРєР° Zeus
 			[] spawn zlt_fnc_ZeusSync;
 			waitUntil { isNull(findDisplay 312) };
 			[] spawn zlt_fnc_ZeusSync;
@@ -2296,7 +2296,7 @@ if (isNil "zlt_eh_keydown") then {
 	(findDisplay 46) displayRemoveAllEventHandlers "KeyUp"; */
 	
 
-	// ВИДЖЕТ СПИСКА
+	// Р’РР”Р–Р•Рў РЎРџРРЎРљРђ
 	call zlt_fnc_initUI;
 
 	zlt_cur_class = zlt_obj_list select 0;	
@@ -2306,13 +2306,13 @@ if (isNil "zlt_eh_keydown") then {
 	zlt_new_asl = true;
 	zlt_new_micro = false;
 
-	zltNewCurSel=[]; //текущее выделение через пробел
+	zltNewCurSel=[]; //С‚РµРєСѓС‰РµРµ РІС‹РґРµР»РµРЅРёРµ С‡РµСЂРµР· РїСЂРѕР±РµР»
 
 
 	zltNewCurrentFastObjects=[]; zltNewCurrentFastObjects resize 10;
 	zltNewCurrentFastObjects=profilenamespace getvariable ["zltNewCurrentFastObjects",zltNewCurrentFastObjects];
 	
-	// камера
+	// РєР°РјРµСЂР°
 	zlt_cameraMode = false;
 	zlt_camerakeys = [];
 	_DIKcodes = true call bis_fnc_keyCode;
@@ -2323,9 +2323,9 @@ if (isNil "zlt_eh_keydown") then {
 
 	zlt_cameraTarget = objNull;
 
-	// режим установки 
+	// СЂРµР¶РёРј СѓСЃС‚Р°РЅРѕРІРєРё 
 	zlt_new_is_plc_mode = false;
-	// handle колбека выключения режима установки 
+	// handle РєРѕР»Р±РµРєР° РІС‹РєР»СЋС‡РµРЅРёСЏ СЂРµР¶РёРјР° СѓСЃС‚Р°РЅРѕРІРєРё 
 	zlt_new_plc_mode_cb = nil;
 
 	addMissionEventHandler ["Draw3D", "call zlt_onEachFrame"];
@@ -2339,4 +2339,4 @@ if (isNil "zlt_eh_keydown") then {
 
 };
 
-hint "Загрузка завершена";
+hint "Р—Р°РіСЂСѓР·РєР° Р·Р°РІРµСЂС€РµРЅР°";
