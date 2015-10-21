@@ -1,6 +1,7 @@
 /*
 // while {!AnomaliesInitialized} do { sleep 1;};
   */
+detectAdistconst = 20;
 if (isServer) then {
 	//diag_log "Server side initializing...";
 	tf_Anomalies = [];
@@ -32,7 +33,7 @@ if (isServer) then {
 		    _Aactive = VAR getVariable [_Aname,false];
 				if (_Aactive) then
 	      {
-	   	    diag_log format["Checking anomaly %1",_Aname];
+//	   	    diag_log format["Checking anomaly %1",_Aname];
 	      
 					_Aplayers = false;
 					scopeName "ifAnomalyisactive";
@@ -66,16 +67,30 @@ sleep 3;
 //diag_log "tf_Anomalies";
 while {isNil "tf_Anomalies"} do {diag_log "sleep";sleep 1;};
 //diag_log tf_Anomalies;
+detectedAname = "";
+detectedAtext = nil;
+detectedAdist = detectAdistconst+1;
 
 _null = [] spawn {
+    
     private ["_Aname, _Aactive, _Adist"];
     while {true} do
     {
-      sleep 0.3;
+      _detectedAchanged = false;
+      sleep 0.2;
       if (alive Player) then
       {
          {  
             _Adist = markerPos _x distance (Player);
+            if (_Adist <= detectAdistconst) then
+            {
+	            if (_Adist < detectedAdist) then
+	            {
+	            	detectedAname = _x;
+	            	detectedAdist = _Adist;
+	      	      _detectedAchanged = true;
+	            };	
+	          };
             _Aactive = VAR getVariable [_x,false];
             if (!_Aactive) then
             {
@@ -94,9 +109,23 @@ _null = [] spawn {
                };
             };
           } forEach tf_Anomalies;
-diag_log "User side Acycle finished.";        
+          if (not _detectedAchanged) then
+          {
+            if (detectedAname!="") then
+            {
+	            detectedAdist = markerPos detectedAname distance (Player);
+	            if (detectedAdist > detectAdistconst) then
+	            {
+						    detectedAname = "";
+						   	detectedAtext = nil;
+						    detectedAdist = detectAdistconst+1;
+	            };            
+	          };
+          };
+// diag_log "User side Acycle finished.";        
         };
     };
 //diag_log "User side stoped.";
 };
 //diag_log "User side fully initialized.";
+0 execVM "anomalies\detector.sqf";

@@ -52,3 +52,21 @@
 		sound[] = {"anomalies\sound\electra_main.ogg", 1, 1};
 		titles[] = {0,""};
 	};
+	class AdetectorBeep
+	{
+		name = "electra_main";
+		sound[] = {"anomalies\sound\detector.ogg", 1, 1};
+		titles[] = {0,""};
+	};
+	class AdetectorBeep2
+	{
+		name = "electra_main";
+		sound[] = {"anomalies\sound\detector2.ogg", 1, 1};
+		titles[] = {0,""};
+	};
+	class AdetectorBeep3
+	{
+		name = "electra_main";
+		sound[] = {"anomalies\sound\detector3.ogg", 1, 1};
+		titles[] = {0,""};
+	};

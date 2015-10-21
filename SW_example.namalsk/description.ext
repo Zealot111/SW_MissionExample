@@ -23,13 +23,12 @@ class CfgFunctions
 class CfgSounds
 {
 	sounds[] = {};
-	#include "anomalies\sounds.hpp"
 	#include "blowout\sounds.hpp"
 	#include "rad\sounds.hpp"
-
+	#include "anomalies\sounds.hpp"
 };
 class RscTitles
 {	
-	
 	#include "rad\titles.hpp"
+	#include "anomalies\titles.hpp"
 };

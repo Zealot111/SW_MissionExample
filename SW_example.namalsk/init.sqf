@@ -21,10 +21,11 @@ waituntil {!isnil "bis_fnc_init"};
 
 [30,240] execVM "blowout\blowout.sqf";
 
+0 execVM "anomalies\anomaly.sqf";
+
 _bs = [] execVM "t.sqf";
 waituntil {scriptDone _bs};
 0 execVM "loot3.sqf";
 
-0 execVM "anomalies\anomaly.sqf";
 
 //################ MISSION SPECIFIC ##################################################
