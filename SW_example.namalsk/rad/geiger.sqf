@@ -43,6 +43,7 @@ ZRadexRenew = {
 		_ctrl ctrlCommit 0;
 		uisleep 0.35;
 	};
+	("zltradradex" call BIS_fnc_rscLayer) cuttext ["", "PLAIN"];
 };
 
 zradmedkashelmutex = false;
