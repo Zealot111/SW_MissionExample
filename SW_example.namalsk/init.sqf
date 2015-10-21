@@ -44,3 +44,19 @@ if (hasinterface) then {
 	};
 };
 
+if (isServer) then {
+        _pos = [8070.807129,11224.441406,86.745728];
+        box1 = createVehicle ["plp_ct_FootlockerYellow", _pos, [], 0, "CAN_COLLIDE"];
+        box1 setDir 19.6426; box1 setPosWorld _pos;[box1,  1.49765e-005, -0.000255543] call BIS_fnc_setPitchBank;
+        box1 call compile preprocessFileLineNumbers "box1.sqf";
+ 
+        _pos = [6286.719727,11760.203125,18.9911];
+        box2 = createVehicle ["plp_ct_WeathCrateBigWorn", _pos, [], 0, "CAN_COLLIDE"];
+        box2 setDir 359.87; box2 setPosWorld _pos;[box2, -8.83048, -0.480143] call BIS_fnc_setPitchBank;
+        box2 call compile preprocessFileLineNumbers "box2.sqf";
+ 
+        _pos = [3979.119873,9289.958008,35.465378];
+        box3 = createVehicle ["plp_ct_WeathCrateBigWorn", _pos, [], 0, "CAN_COLLIDE"];
+        box3 setDir 326.03; box3 setPosWorld _pos;[box3, -29.414, -7.3344] call BIS_fnc_setPitchBank;
+        box3 call compile preprocessFileLineNumbers "box3.sqf";
+};
