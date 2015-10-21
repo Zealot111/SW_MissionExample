@@ -2,7 +2,7 @@
   {
   	class main
 		{
-			file = "anomalies\functions\anomaly";
+			file = "anomalies\functions";
 			class Aview {};
 			class Ahit {};
 			class AhitElectra {};
