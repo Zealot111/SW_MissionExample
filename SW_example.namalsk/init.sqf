@@ -8,6 +8,8 @@ tf_east_radio_code = tf_west_radio_code;
 tf_guer_radio_code = tf_west_radio_code;
 tf_civ_radio_code = tf_west_radio_code;
 //tf_radio_channel_name 
+wmt_hl_ratio = [-1,-1,-1];
+wmt_hl_sidelimits = [-1,-1,-1];
 
 waituntil {!isnil "bis_fnc_init"};
 
