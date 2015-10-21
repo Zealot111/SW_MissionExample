@@ -91,7 +91,7 @@ DetectorRenew = {
 			case 2: {Player say3d "AdetectorBeep2";};
 			case 3: {Player say3d "AdetectorBeep3";};
 		};
-		uisleep 1;
+		uisleep 0.8;
 	};
 };
 /*
