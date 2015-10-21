@@ -31,3 +31,16 @@ waituntil {scriptDone _bs};
 
 
 //################ MISSION SPECIFIC ##################################################
+
+if (hasinterface) then {
+	sleep 1;
+	0 spawn {
+		while {alive player} do {
+			if ("rb_suitcase" in magazines player) then {
+				"marker_doc" setmarkerpos (getpos player);
+			};
+			sleep 0.6;
+		};
+	};
+};
+
