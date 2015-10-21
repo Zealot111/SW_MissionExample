@@ -107,4 +107,4 @@ ADetectorMainCycle = {
 
 ADetectorMainCycleP = 0 spawn ADetectorMainCycle;
 */
-["Детектер аномалий (on/off)", {true}, {if (isnull (uiNamespace getVariable ["Adetector_display",displaynull])) then {("ADetector" call BIS_fnc_rscLayer) cutrsc ["RscADetector", "PLAIN"];} else {("ADetector" call BIS_fnc_rscLayer) cuttext ["", "PLAIN"];}}, true] call AGM_Interaction_fnc_addInteractionSelf;                                       
+["Детектор аномалий", {true}, {if (isnull (uiNamespace getVariable ["Adetector_display",displaynull])) then {("ADetector" call BIS_fnc_rscLayer) cutrsc ["RscADetector", "PLAIN"];} else {("ADetector" call BIS_fnc_rscLayer) cuttext ["", "PLAIN"];}}, true] call AGM_Interaction_fnc_addInteractionSelf;
