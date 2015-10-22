@@ -4,33 +4,28 @@
 	Ejection for stalker 
 
 	Call from init.sqf:
-	[30,240] execvm "blowout.sqf";
-	30 - number of minutes between each ejection
- 	240 - length in seconds of each ejection
+	[40,120,120] execvm "blowout.sqf";
+	40 - number of minutes between each ejection (approx.)
+ 	120 - length in seconds of each ejection (approx.)
+	120 - time in seconds (approx.) between first warning and blowout
 
 */
 
-params [["_timeout",40,[0]],["_blowtime",120,[0]]];
+params [["_timeout",40,[0]],["_blowtime",120,[0]],["_timea",120,[0]]];
 
 if (isServer) then {
 	[_timeout,_blowtime] spawn {
-		params [["_timeout",40,[0]],["_blowtime",120,[0]]];
+		params [["_timeout",40,[0]],["_blowtime",120,[0]],["_timea",120,[0]]];
 		while {true} do {
 			sleep ( _timeout * (45 + random 30));
 			diag_log ["Starting blowout on clients"];
-			[[_blowtime],{((_this select 0)*(0.75 + random 0.5)) spawn mrk_fnc_blowout}] remoteexec ["bis_fnc_spawn"];			
+			[[_blowtime,_timea],{[((_this select 0)*(0.75 + random 0.5)),((_this select 1)*(0.5 + random 1)) ] spawn mrk_fnc_blowout}] remoteexec ["bis_fnc_spawn"];			
 		};
 	};
 };
 
 if !(hasInterface) exitwith {};
 
-
-
-/*
-if (count (lineIntersectsSurfaces [getposasl player, _rpos, objnull,objnull,true,1,"FIRE","FIRE"]) == 0) then {_res = _res + 1;};
-		diag_log [lineIntersectsSurfaces [getposasl player, _rpos, objnull,objnull,true,1,"FIRE","FIRE"]];
-*/
 
 mrk_fnc_checkIn = {
 	private ["_res","_objs","_uniUnit"];
@@ -110,7 +105,7 @@ mrk_fnc_blowout = {
 	mrk_blw_blowout_peakended = false;
 	
 	playsound "Blowouttext1"; 
-	sleep (_timeA)*(0.5 + random 1);
+	sleep _timeA;
 	
 	mrk_blw_StartColorEj = ppEffectCreate ["ColorCorrections", 1501];
 	mrk_blw_StartColorEj ppEffectEnable true;
