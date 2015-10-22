@@ -10,15 +10,15 @@
 
 */
 
-params [["_timeout",30,[0]],["_blowtime",240,[0]]];
+params [["_timeout",40,[0]],["_blowtime",120,[0]]];
 
 if (isServer) then {
 	[_timeout,_blowtime] spawn {
-		params [["_timeout",30,[0]],["_blowtime",240,[0]]];
+		params [["_timeout",40,[0]],["_blowtime",120,[0]]];
 		while {true} do {
-			sleep ( _timeout * (30 + random 30));
+			sleep ( _timeout * (45 + random 30));
 			diag_log ["Starting blowout on clients"];
-			[[_blowtime],{(_this select 0) spawn mrk_fnc_blowout}] remoteexec ["bis_fnc_spawn"];			
+			[[_blowtime],{((_this select 0)*(0.75 + random 0.5)) spawn mrk_fnc_blowout}] remoteexec ["bis_fnc_spawn"];			
 		};
 	};
 };
@@ -40,7 +40,7 @@ mrk_fnc_checkIn = {
 		_rpos = [[(getposasl player) select 0, (getposasl player) select 1, ((getposasl player) select 2) + 100], 100, 10*_i] call bis_fnc_relPos;
 		if (!lineintersects [getposasl player, _rpos,player]) then {_res = _res + 1;};
 	};
-	_res / 36.;
+	_res ;
 };
 
 
@@ -95,7 +95,7 @@ mrk_fnc_LightningsAll = {
 			_coeff = 0.02 * _time / ((time - _peaktime) max 0.01);
 			_coeff = (0.1 max _coeff) min 1.5;
 		};
-		sleep (1/_coeff)*(0.5 + random 0.75);
+		sleep (1/_coeff)*(0.25 + random 1.5);
 
 	};
 }; //mrk_blw_blowout_inprogress = true;240 spawn mrk_fnc_LightningsAll
@@ -104,32 +104,35 @@ mrk_fnc_LightningsAll = {
 mrk_blw_blowout_inprogress = false;
 mrk_blw_blowout_peakended = false;
 mrk_fnc_blowout = {
-	params ["_time"];
-	if !(hasInterface) exitwith {  };
-	if (mrk_blw_blowout_inprogress) exitwith {};
+	params [["_time",120,[1]],["_timeA",120,[1]]];
+	if (!hasInterface || !alive player || mrk_blw_blowout_inprogress) exitwith {};
 	mrk_blw_blowout_inprogress = true;
 	mrk_blw_blowout_peakended = false;
+	
+	playsound "Blowouttext1"; 
+	sleep (_timeA)*(0.5 + random 1);
+	
 	mrk_blw_StartColorEj = ppEffectCreate ["ColorCorrections", 1501];
 	mrk_blw_StartColorEj ppEffectEnable true;
 	mrk_blw_StartColorEj ppEffectAdjust [1,    1.5,   0,   0, 0, 0, 0,    0.2, 0.8, 0.5, 0.7,   0.1, 1, 0.7, 0];
 	mrk_blw_StartColorEj ppEffectCommit 20;
 	_delay = _time / 5;
 	[_time] spawn mrk_fnc_LightningsAll;
-	_soundEj = [] spawn { playsound "Blowoutbegin"; sleep 7; 	while { mrk_blw_blowout_inprogress } do { playsound "Blowoutrumble"; sleep 30; }; };
+	_soundEj = [] spawn { while { mrk_blw_blowout_inprogress } do { playsound "Blowoutrumble"; sleep 30; }; };
 	sleep 3;
-	[_delay] spawn { params ["_delay"]; playsound "Blowouttext1";  sleep (_delay*2); playsound "Blowouttext2";  sleep (_delay*2)+3; playsound "Blowouttext3";  };
+	[_delay] spawn { params ["_delay"]; sleep (5 + random 5); playsound "Blowouttext3";  sleep (2*_delay + random 5); playsound "Blowouttext2";  };
 	sleep (_delay *2);
 	mrk_blw_EndColorEj_1 = ppEffectCreate ["ColorCorrections", 1502];
 	mrk_blw_EndColorEj_1 ppEffectEnable true;
 	mrk_blw_EndColorEj_1 ppEffectAdjust [1,1,0,0, 0, 0, 0, 1.5, 0.5, 0.5, -0.5, 0.3, 0.5, 0.5, 0];
-	mrk_blw_EndColorEj_1 ppEffectCommit 40;
+	mrk_blw_EndColorEj_1 ppEffectCommit 20;
 	sleep (_delay*2);
 	mrk_blw_psiColor = ppEffectCreate ["ColorCorrections", 1503];   
 	mrk_blw_psiColor ppEffectEnable true;   
 	mrk_blw_psiColor ppEffectAdjust [1,	1,		0,0,1,0,0,		0.9,0.8,0.7,0,		0.3,0.5,0.7,0];   
 	mrk_blw_psiColor ppEffectCommit 10;
-	zradon = true;
-	_psiSound = [] spawn { while {mrk_blw_blowout_inprogress } do { playSound "PsyVoice"; playSound "PsyBlackout"; sleep 7;	}; };
+	_psiSound = [] spawn { while {mrk_blw_blowout_inprogress } do { playSound "PsyVoice"; playSound "PsyBlackout"; sleep 7;}; };
+	[] spawn {zradon= true; while {mrk_blw_blowout_inprogress} do { zradon = ([false,true] select (([] call mrk_fnc_checkIn) > 2)) ; sleep 1.5; } ;zradon= false;};
 	sleep _delay;
 	player setfatigue 1;
 	titleText ["", "BLACK OUT",2.8];
@@ -137,9 +140,8 @@ mrk_fnc_blowout = {
 	if ( (player getVariable ["ZAlcohol",0]) < 0.5 ) then {
 		[player, 30] call AGM_Medical_fnc_knockOut;
 	};
-	_Out = [] call Mrk_fnc_CheckIn;
+	_Out = ([] call Mrk_fnc_CheckIn) / 36. * 2;
 	player setDamage (damage player + _Out);
-	zradon = false;
 	mrk_blw_blowout_peakended = true;
 	titleText ["", "BLACK IN",0.5];
 	terminate _soundEj;
