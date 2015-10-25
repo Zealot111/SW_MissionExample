@@ -93,6 +93,7 @@ DetectorRenew = {
 		};
 		uisleep 0.8;
 	};
+("ADetector" call BIS_fnc_rscLayer) cuttext ["", "PLAIN"];
 };
 /*
 ADetectorMainCycle = {
