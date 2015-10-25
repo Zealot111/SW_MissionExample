@@ -1,12 +1,47 @@
 class CfgPatches
 {
-	class zlt_items
+	class rbc_stalker
 	{
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 1.0;
 	};
 };
+
+
+
+
+class CfgWeapons {
+	class ItemCore;
+	class InventoryItem_Base_F;
+	
+	class rbc_itemcore : ItemCore {
+        type = 4096;//4;
+        detectRange = -1;
+        simulation = "ItemMineDetector";
+	};
+	
+	
+	class rbc_adetector : rbc_itemcore {
+		displayname = "Детектор аномалий";
+		descriptionshort = "Собран кустарным способом";
+		model = "\A3\weapons_f\items\gps.p3d";
+		picture = "\rbc_stalker\pics\rbc_adetector.paa";
+		scope = 2;
+		type = 0;
+		class ItemInfo: InventoryItem_Base_F {
+			mass = 2;
+		};		
+	};
+	
+		
+		
+	
+	
+};
+
+
+
 class CfgMagazines 
 {
 	class CA_Magazine;
@@ -17,7 +52,7 @@ class CfgMagazines
 		author = "Zealot";
 		displayName = "Пиво Красный Медведь темное";
 		descriptionShort = "Не содержит радионуклеотидов!";
-		picture = "\zlt_items\pics\Chem_beer.paa";
+		picture = "\rbc_stalker\pics\Chem_beer.paa";
 	};
 	class zlt_radx: CA_Magazine
 	{
@@ -26,7 +61,7 @@ class CfgMagazines
 		author = "Zealot";
 		displayName = "Rad-X";
 		descriptionShort = "Патентованный препарат-радиопротектор. <br/> Противопоказан при беременности!";
-		picture = "\zlt_items\pics\Chem_Rad-X.paa";
+		picture = "\rbc_stalker\pics\Chem_Rad-X.paa";
 	};
 	class zlt_radaway: CA_Magazine
 	{
@@ -35,7 +70,7 @@ class CfgMagazines
 		author = "Zealot";
 		displayName = "Rad Away";
 		descriptionShort = "Очень дефицитное импортное средство от радиации";
-		picture = "\zlt_items\pics\Chem_RadAway.paa";
+		picture = "\rbc_stalker\pics\Chem_RadAway.paa";
 	};
 	class zlt_rotgut: CA_Magazine
 	{
@@ -44,6 +79,6 @@ class CfgMagazines
 		author = "Zealot";
 		displayName = "Самогон";
 		descriptionShort = "5 лет выдержки в бочке из под мазута";
-		picture = "\zlt_items\pics\Chem_RotGut.paa";
+		picture = "\rbc_stalker\pics\Chem_RotGut.paa";
 	};
 };
