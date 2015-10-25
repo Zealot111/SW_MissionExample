@@ -8,6 +8,12 @@ class CfgPatches
 	};
 };
 
+class CfgSounds
+{
+	sounds[] = {};
+	#include "sounds.hpp"
+};
+
 
 
 
@@ -82,3 +88,4 @@ class CfgMagazines
 		picture = "\rbc_stalker\pics\Chem_RotGut.paa";
 	};
 };
+
