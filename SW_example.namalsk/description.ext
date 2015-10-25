@@ -12,6 +12,7 @@ class Header {
 
 enableDebugConsole=1;
 disableChannels[] = {2,4,5,6};
+//DisabledAI = 1;
 
 corpseRemovalMinTime= 86400;
 wreckRemovalMinTime = 86400;
@@ -20,13 +21,6 @@ class CfgFunctions
 {
  	#include "anomalies\functions.hpp"
 };  
-class CfgSounds
-{
-	sounds[] = {};
-	#include "blowout\sounds.hpp"
-	#include "rad\sounds.hpp"
-	#include "anomalies\sounds.hpp"
-};
 class RscTitles
 {	
 	#include "rad\titles.hpp"
