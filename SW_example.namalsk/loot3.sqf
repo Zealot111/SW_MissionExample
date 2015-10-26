@@ -186,13 +186,13 @@ zloottableCat1 =
 				{ if ((1 call zlt_fnc_random) < 0.95) then  {_res pushback "str_kedr";}; for "_i" from 1 to ([1,2] call zlt_fnc_randomInt ) do {_res pushback "20Rnd_Mag_kedr"}; },
 				{ if ((1 call zlt_fnc_random) < 0.95) then  {_res pushback "str_pp_vit";}; for "_i" from 1 to ([1,1] call zlt_fnc_randomInt ) do {_res pushback "30rnd_9mm_vit"}; },
 				{ if ((1 call zlt_fnc_random) < 0.95) then  {_res pushback "str_aks74u";}; for "_i" from 1 to ([1,1] call zlt_fnc_randomInt ) do {_res pushback "30rnd_545_mag"}; },
-				{ if ((1 call zlt_fnc_random) < 0.95) then  {_res pushback "str_as_val";_res pushback "str_2dps";}; for "_i" from 1 to ([1,3] call zlt_fnc_randomInt ) do {_res pushback "10rnd_mag_vss_sz"}; },
 				{ if ((1 call zlt_fnc_random) < 0.95) then  {_res pushback "str_pb"; _res pushback "muzzle_snds_str_pb1";}; for "_i" from 1 to ([1,2] call zlt_fnc_randomInt ) do {_res pushback "8Rnd_Mag_pm"}; }
 			]; 0 call (_tbl call zlt_fnc_selectrandom);
 		};
 		case "V":{	
 			private "_tbl";_tbl=	[
 				{ if ((1 call zlt_fnc_random) < 1.00) then  {_res pushback "str_ak74m";}; for "_i" from 1 to ([1,1] call zlt_fnc_randomInt ) do {_res pushback "30rnd_545_mag"}; },
+				{ if ((1 call zlt_fnc_random) < 0.95) then  {_res pushback "str_as_val";_res pushback "str_2dps";}; for "_i" from 1 to ([1,4] call zlt_fnc_randomInt ) do {_res pushback "10rnd_mag_vss_sz"}; },
 				{ if ((1 call zlt_fnc_random) < 1.00) then  {_res pushback "rhs_weap_rpg26";}; }
 			]; 0 call (_tbl call zlt_fnc_selectrandom);
 		};
@@ -244,13 +244,14 @@ zloottableCat3 = {
 	for "_i" from 1 to _maxnum do {	_res pushback "AGM_Bandage"; };*/
 	private "_tbl";_tbl=	[
 		0.9, 	{ _res pushback "AGM_Bandage";},
+		0.6, 	{ _res pushback "AGM_Bandage";},
 		0.3 ,	{ _res pushback "AGM_Morphine";},
-		0.1 ,	{ _res pushback "AGM_Epipen";},
-		0.05 ,	{ _res pushback "AGM_Bloodbag";},
-		0.3 ,	{ _res pushback "zlt_rotgut";},
+		0.2 ,	{ _res pushback "AGM_Epipen";},
+		0.1 ,	{ _res pushback "AGM_Bloodbag";},
+		0.4 ,	{ _res pushback "zlt_rotgut";},
 		0.2 ,	{ _res pushback "zlt_radx";},
-		0.025 ,	{ _res pushback "zlt_radaway";},
-		0.5 ,	{ _res pushback "zlt_beer";}
+		0.05 ,	{ _res pushback "zlt_radaway";},
+		0.6 ,	{ _res pushback "zlt_beer";}
 	];
 	for "_i" from 0 to (count _tbl )-1 step 2 do {
 		if ((1 call zlt_fnc_random) < (_tbl select _i)) then {0 call (_tbl select (_i+1));};

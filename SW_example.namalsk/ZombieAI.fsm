@@ -1,9 +1,9 @@
 /*%FSM<COMPILE "D:\SteamLibrary\SteamApps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, ZombieAI">*/
 /*%FSM<HEAD>*/
 /*
-item0[] = {"Init_",0,250,-69.283112,-349.787109,20.716888,-299.787109,0.000000,"Init" \n ""};
+item0[] = {"Init_",0,4346,-69.283112,-349.787109,20.716888,-299.787109,0.000000,"Init" \n ""};
 item1[] = {"Delay_",4,218,-68.452911,-256.571350,21.547089,-206.571411,0.000000,"Delay" \n ""};
-item2[] = {"Make_Decision_",2,4346,-31.122253,-161.043533,86.693558,-80.578674,0.000000,"Make Decision" \n ""};
+item2[] = {"Make_Decision_",2,250,-31.122253,-161.043533,86.693558,-80.578674,0.000000,"Make Decision" \n ""};
 item3[] = {"AnimState",4,218,201.420776,-180.458221,291.420776,-130.458221,50.000000,"AnimState"};
 item4[] = {"Pursue__",4,218,-211.967789,-31.813690,-121.967789,18.186310,20.000000,"Pursue?" \n ""};
 item5[] = {"Stalk__",4,218,-423.288605,-118.539169,-333.288666,-68.539169,0.000000,"Stalk?" \n ""};
@@ -97,6 +97,7 @@ class FSM
                          "_zombie setskill (random 1);" \n
                          "_zombie setdir random 360;" \n
                          "removeAllWeapons _zombie ;" \n
+                         "dostop _zombie;" \n
                          "" \n
                          "_zombieGrp = group _zombie;" \n
                          "_zombieGrp setCombatMode ""BLUE"";" \n
@@ -141,7 +142,7 @@ class FSM
                         itemno = 2;
                         init = /*%FSM<STATEINIT""">*/"_target = objnull;" \n
                          "_players = [];" \n
-                         "{if (isplayer _x && alive _x && _x distance _zombie < _checkenemyradius && {(_zombie knowsAbout _x) > 0.5} && (_x distance _logic > _huntradius)) then {_players pushback _x;}; } foreach ([playableunits,allunits] select (count playableunits == 0));" \n
+                         "{if (isplayer _x && {alive _x} && {_x distance _zombie < _checkenemyradius} && {(_zombie knowsAbout _x) > 0.5} && {(_x distance _logic < _huntradius)} && {_x getvariable [""ZAlcohol"",0] < 0.5}) then {_players pushback _x;}; } foreach ([playableunits,allunits] select (count playableunits == 0));" \n
                          "" \n
                          "if ((count _players) > 0) then {" \n
                          "//	_target = _players call bis_fnc_selectrandom;" \n
@@ -233,7 +234,7 @@ class FSM
                                         to="Stalk";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"_time = diag_ticktime + 3+ (random 10);"/*%FSM</ACTION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                         };
@@ -542,7 +543,7 @@ class FSM
                          "_zombie domove _stalkpos;" \n
                          "" \n
                          "if (_zombie distance _stalkpos < 10) then {_stalkpos = [];};" \n
-                         "" \n
+                         "_time = diag_ticktime + 3+ (random 10);" \n
                          "" \n
                          "if (_debug) then {" \n
                          "	diag_log [""Zombie.fsm:Stalk:"",_stalkpos];" \n
