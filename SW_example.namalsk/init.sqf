@@ -29,5 +29,8 @@ _bs = [] execVM "t.sqf";
 waituntil {scriptDone _bs};
 0 execVM "loot3.sqf";
 
+[logic1] execVM "zombie.sqf";
+
 
 //################ MISSION SPECIFIC ##################################################
+
