@@ -5,6 +5,7 @@ class CfgPatches
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 1.0;
+		requiredAddons[] = {"Weapons_F"};
 	};
 };
 
@@ -13,8 +14,6 @@ class CfgSounds
 	sounds[] = {};
 	#include "sounds.hpp"
 };
-
-
 
 
 class CfgWeapons {
@@ -29,7 +28,8 @@ class CfgWeapons {
 	
 	
 	class rbc_adetector : rbc_itemcore {
-		displayname = "Детектор аномалий";
+		author = "def";
+		displayname = "Детектор аномалий С-А1";
 		descriptionshort = "Собран кустарным способом";
 		model = "\A3\weapons_f\items\gps.p3d";
 		picture = "\rbc_stalker\pics\rbc_adetector.paa";
@@ -39,13 +39,19 @@ class CfgWeapons {
 			mass = 2;
 		};		
 	};
-	
-		
-		
-	
-	
+	class rbc_adetector_small : rbc_itemcore {
+		author = "def";
+		displayname = "Детектор аномалий С-А2";
+		descriptionshort = "Простейшая версия детектора аномалий";
+		model = "\A3\weapons_f\items\gps.p3d";
+		picture = "\rbc_stalker\pics\rbc_adetector_small.paa";
+		scope = 2;
+		type = 0;
+		class ItemInfo: InventoryItem_Base_F {
+			mass = 1;
+		};		
+	};
 };
-
 
 
 class CfgMagazines 
