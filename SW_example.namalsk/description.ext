@@ -24,5 +24,4 @@ class CfgFunctions
 class RscTitles
 {	
 	#include "rad\titles.hpp"
-	#include "anomalies\titles.hpp"
 };
