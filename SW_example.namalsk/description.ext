@@ -25,10 +25,8 @@ class CfgSounds
 	sounds[] = {};
 	#include "blowout\sounds.hpp"
 	#include "rad\sounds.hpp"
-	#include "anomalies\sounds.hpp"
 };
 class RscTitles
 {	
 	#include "rad\titles.hpp"
-	#include "anomalies\titles.hpp"
 };
