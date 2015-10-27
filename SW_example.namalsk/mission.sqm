@@ -3,25 +3,19 @@ class Mission
 {
 	addOns[]=
 	{
-		"MNP_INDE_Config",
 		"WMT_Main",
 		"wmt_vehicle",
 		"AGM_Medical",
 		"A3_Modules_F",
-		"MNP_OPFOR_CONFIG",
-		"STOP_BLUFOR_Config",
 		"rhs_c_weapons",
 		"rhsusf_c_troops"
 	};
 	addOnsAuto[]=
 	{
-		"MNP_INDE_Config",
-		"WMT_Main",
+		"wmt_main",
 		"wmt_vehicle",
 		"AGM_Medical",
 		"A3_Modules_F",
-		"MNP_OPFOR_CONFIG",
-		"STOP_BLUFOR_Config",
 		"rhsusf_c_troops",
 		"rhs_c_weapons"
 	};
@@ -2292,7 +2286,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=794;
+		items=882;
 		class Item0
 		{
 			position[]={6976.6255,17.355341,11175.923};
@@ -3202,7 +3196,7 @@ class Mission
 		};
 		class Item101
 		{
-			position[]={7383.9063,16.150326,11473.432};
+			position[]={7510.3989,32.844547,11379.925};
 			name="E_1_31_7_1_3_14";
 			text="Electra";
 			type="Empty";
@@ -3211,7 +3205,7 @@ class Mission
 		};
 		class Item102
 		{
-			position[]={7193.1992,15,11586.563};
+			position[]={7223.8623,15,11472.68};
 			name="E_1_31_7_1_3_15";
 			text="Electra";
 			type="Empty";
@@ -3454,7 +3448,7 @@ class Mission
 		};
 		class Item129
 		{
-			position[]={6073.9961,47.815151,8956.752};
+			position[]={6087.167,47.587883,8910.6592};
 			name="E_1_31_7_1_3_46";
 			text="Electra";
 			type="Empty";
@@ -4777,32 +4771,14 @@ class Mission
 		};
 		class Item276
 		{
-			position[]={6706.4375,15,11219.006};
-			name="E_1_31_7_1_3_53";
-			text="Electra";
-			type="Empty";
-			colorName="ColorBlue";
-			angle=-51.491299;
-		};
-		class Item277
-		{
-			position[]={6588.1504,15,11192.72};
-			name="E_1_31_7_1_3_54";
-			text="Electra";
-			type="Empty";
-			colorName="ColorBlue";
-			angle=-51.491299;
-		};
-		class Item278
-		{
-			position[]={6563.3247,15.256561,11336.807};
+			position[]={6601.3896,15,11196.181};
 			name="E_1_31_7_1_3_55";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item279
+		class Item277
 		{
 			position[]={6847.7993,15.160669,11039.711};
 			name="E_1_31_7_1_3_56";
@@ -4811,16 +4787,16 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item280
+		class Item278
 		{
-			position[]={6932.7603,15.560455,11253.686};
+			position[]={7030.4849,15,11272.164};
 			name="E_1_31_7_1_3_57";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item281
+		class Item279
 		{
 			position[]={4452.1323,15.151916,10985.024};
 			name="J_1_22_3_1";
@@ -4829,7 +4805,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item282
+		class Item280
 		{
 			position[]={4300.0957,9.1424236,10643.97};
 			name="J_1_22_29_1";
@@ -4838,7 +4814,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item283
+		class Item281
 		{
 			position[]={4461.1357,15.228748,10763.278};
 			name="J_1_22_46_1";
@@ -4847,7 +4823,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item284
+		class Item282
 		{
 			position[]={4284.0957,12.918569,10711.955};
 			name="J_1_22_19_16_1";
@@ -4856,7 +4832,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item285
+		class Item283
 		{
 			position[]={4305.417,13.207851,10991.593};
 			name="J_32_2_2_1";
@@ -4865,7 +4841,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item286
+		class Item284
 		{
 			position[]={4362.3115,15.991037,10797.504};
 			name="E_24_40_1";
@@ -4874,7 +4850,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item287
+		class Item285
 		{
 			position[]={4196.3022,6.9439497,10851.507};
 			name="E_24_41_1";
@@ -4883,7 +4859,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item288
+		class Item286
 		{
 			position[]={11684.848,-0.39262101,-7776.6465};
 			name="marker_doc";
@@ -4891,7 +4867,7 @@ class Mission
 			type="mil_triangle";
 			colorName="ColorRed";
 		};
-		class Item289
+		class Item287
 		{
 			position[]={6875.8281,14.573397,11138.354};
 			name="E_2_18_2_59_1";
@@ -4900,7 +4876,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item290
+		class Item288
 		{
 			position[]={6855.3857,14.55488,11159.896};
 			name="E_2_18_2_59_2";
@@ -4909,7 +4885,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item291
+		class Item289
 		{
 			position[]={6779.1436,14.173853,11185.03};
 			name="E_2_18_2_59_3";
@@ -4918,7 +4894,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item292
+		class Item290
 		{
 			position[]={6660.9126,15,11161.554};
 			name="E_2_18_2_59_4";
@@ -4927,7 +4903,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item293
+		class Item291
 		{
 			position[]={6596.5479,15,11125.924};
 			name="E_2_18_2_59_5";
@@ -4936,7 +4912,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item294
+		class Item292
 		{
 			position[]={6622.7905,15,11066.541};
 			name="E_2_18_2_59_6";
@@ -4945,7 +4921,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item295
+		class Item293
 		{
 			position[]={6662.0171,15,11085.323};
 			name="E_2_18_2_59_7";
@@ -4954,7 +4930,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item296
+		class Item294
 		{
 			position[]={6714.5029,15,11334.729};
 			name="E_2_18_2_59_8";
@@ -4963,7 +4939,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item297
+		class Item295
 		{
 			position[]={6819.1987,15,11368.702};
 			name="E_2_18_2_59_9";
@@ -4972,7 +4948,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item298
+		class Item296
 		{
 			position[]={6698.2715,15,11371.97};
 			name="E_2_18_2_59_10";
@@ -4981,7 +4957,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item299
+		class Item297
 		{
 			position[]={6798.4204,15,11670.23};
 			name="E_24_1_1";
@@ -4990,7 +4966,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item300
+		class Item298
 		{
 			position[]={6771.4961,15,11687.207};
 			name="E_24_1_2";
@@ -4999,7 +4975,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item301
+		class Item299
 		{
 			position[]={6807.0542,15,11691.269};
 			name="E_24_1_3";
@@ -5008,7 +4984,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item302
+		class Item300
 		{
 			position[]={8056.5225,70.59549,11213.291};
 			name="J_32_8_1";
@@ -5017,7 +4993,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item303
+		class Item301
 		{
 			position[]={8269.6885,15,10782.338};
 			name="J_32_8_2";
@@ -5026,34 +5002,34 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item304
+		class Item302
 		{
-			position[]={8208.5801,15,10774.377};
+			position[]={8189.7383,15,10749.09};
 			name="E_1_31_7_1_3_13_1";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item305
+		class Item303
 		{
-			position[]={8161.7036,15,10823.03};
+			position[]={8129.9692,15.138629,10785.844};
 			name="E_1_31_7_1_3_13_2";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item306
+		class Item304
 		{
-			position[]={8236.7061,15,10696.711};
+			position[]={8130.0952,15,10601.761};
 			name="E_1_31_7_1_3_13_3";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item307
+		class Item305
 		{
 			position[]={8225.5732,15,10661.624};
 			name="E_2_18_2_9_1";
@@ -5062,7 +5038,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item308
+		class Item306
 		{
 			position[]={8175.1279,15.003433,10635.289};
 			name="E_2_18_2_9_2";
@@ -5071,7 +5047,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item309
+		class Item307
 		{
 			position[]={8247.0029,15,10741.521};
 			name="E_2_18_2_9_3";
@@ -5080,7 +5056,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item310
+		class Item308
 		{
 			position[]={8383.6855,15,10626.303};
 			name="E_24_31_1";
@@ -5089,7 +5065,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item311
+		class Item309
 		{
 			position[]={8358.0156,15,10761.179};
 			name="E_24_31_1_1";
@@ -5098,7 +5074,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item312
+		class Item310
 		{
 			position[]={7669.9409,15,10617.749};
 			name="E_24_31_1_1_1";
@@ -5107,7 +5083,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item313
+		class Item311
 		{
 			position[]={6827.9023,23.328371,9944.3818};
 			name="E_1_31_7_1_3_21_1";
@@ -5116,16 +5092,16 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item314
+		class Item312
 		{
-			position[]={6286.3022,4.9041748,9912.1709};
+			position[]={6288.5503,5.0005803,9900.2363};
 			name="E_1_31_7_1_3_21_2";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item315
+		class Item313
 		{
 			position[]={5705.5615,4.5202951,9933.7168};
 			name="E_1_31_7_1_3_21_3";
@@ -5134,25 +5110,25 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item316
+		class Item314
 		{
-			position[]={5762.6528,21.929262,9875.4912};
+			position[]={5744.1885,23.193157,9790.0557};
 			name="E_1_31_7_1_3_21_3_1";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item317
+		class Item315
 		{
-			position[]={5754.9673,22.200624,9853.2158};
+			position[]={5745.1504,22.206778,9835.0605};
 			name="E_1_31_7_1_3_21_3_2";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item318
+		class Item316
 		{
 			position[]={6421.8594,36,9326.168};
 			name="J_1_22_17_1";
@@ -5161,7 +5137,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item319
+		class Item317
 		{
 			position[]={6522.4297,36,9314.6875};
 			name="J_1_22_17_2";
@@ -5170,7 +5146,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item320
+		class Item318
 		{
 			position[]={6201.0571,43.319759,9210.1025};
 			name="E_1_31_7_1_3_45_1";
@@ -5179,16 +5155,16 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item321
+		class Item319
 		{
-			position[]={6457.6304,36,9290.4668};
+			position[]={6517.3091,35.104679,9341.0889};
 			name="E_1_31_7_1_3_45_2";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item322
+		class Item320
 		{
 			position[]={6511.1138,36,9269.6309};
 			name="J_32_23_1";
@@ -5197,7 +5173,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item323
+		class Item321
 		{
 			position[]={6505.6006,36,9312.9209};
 			name="J_32_23_1_1";
@@ -5206,7 +5182,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item324
+		class Item322
 		{
 			position[]={6291.5015,42.117931,9351.4033};
 			name="J_32_23_1_2";
@@ -5215,7 +5191,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item325
+		class Item323
 		{
 			position[]={6211.062,41.214954,9649.9189};
 			name="J_32_23_1_3";
@@ -5224,7 +5200,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item326
+		class Item324
 		{
 			position[]={6316.4189,45.577923,9624.0313};
 			name="J_32_23_1_4";
@@ -5233,7 +5209,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item327
+		class Item325
 		{
 			position[]={6232.4902,41.633724,9534.7598};
 			name="J_32_23_1_5";
@@ -5242,7 +5218,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item328
+		class Item326
 		{
 			position[]={6235.1685,41.471249,9573.5918};
 			name="J_32_23_1_6";
@@ -5251,7 +5227,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item329
+		class Item327
 		{
 			position[]={5601.7368,18.686338,10111.703};
 			name="J_32_23_1_7";
@@ -5260,7 +5236,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item330
+		class Item328
 		{
 			position[]={5599.2441,32.355579,10214.469};
 			name="J_32_23_1_8";
@@ -5269,7 +5245,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item331
+		class Item329
 		{
 			position[]={5697.3555,28.914673,10135.37};
 			name="J_32_23_1_9";
@@ -5278,7 +5254,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item332
+		class Item330
 		{
 			position[]={5707.3218,28.945662,10135.993};
 			name="J_32_23_1_10";
@@ -5287,7 +5263,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item333
+		class Item331
 		{
 			position[]={5710.1245,28.45554,10126.962};
 			name="J_32_23_1_11";
@@ -5296,7 +5272,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item334
+		class Item332
 		{
 			position[]={5722.2759,34.652515,10242.921};
 			name="E_1_31_7_1_3_29_1";
@@ -5305,34 +5281,34 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item335
+		class Item333
 		{
-			position[]={5697.1626,21.116304,9893.8779};
+			position[]={5745.0723,22.060953,9884.1035};
 			name="E_1_31_7_1_3_29_2";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item336
+		class Item334
 		{
-			position[]={5641.9692,18.323505,10035.318};
+			position[]={5645.4404,18.520544,10021.685};
 			name="E_1_31_7_1_3_29_3";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item337
+		class Item335
 		{
-			position[]={5659.7871,19.128386,10039.444};
+			position[]={5692.7622,21.981558,10058.286};
 			name="E_1_31_7_1_3_29_4";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item338
+		class Item336
 		{
 			position[]={5578.0825,2.5699487,10036.839};
 			name="E_1_31_7_1_3_29_5";
@@ -5341,10 +5317,28 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
+		class Item337
+		{
+			position[]={4795.4282,14.893708,10778.533};
+			name="E_1_31_7_1_3_29_6";
+			text="Electra";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=-51.491299;
+		};
+		class Item338
+		{
+			position[]={4868.6631,12.375447,10800.549};
+			name="E_1_31_7_1_3_29_7";
+			text="Electra";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=-51.491299;
+		};
 		class Item339
 		{
-			position[]={4810.5317,14.105762,10810.098};
-			name="E_1_31_7_1_3_29_6";
+			position[]={4865.4478,12.793537,10901.31};
+			name="E_1_31_7_1_3_29_8";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
@@ -5352,8 +5346,8 @@ class Mission
 		};
 		class Item340
 		{
-			position[]={4818.3184,13.566954,10834.699};
-			name="E_1_31_7_1_3_29_7";
+			position[]={5739.4312,17.873526,10769.375};
+			name="E_1_31_7_1_3_29_9";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
@@ -5361,32 +5355,14 @@ class Mission
 		};
 		class Item341
 		{
-			position[]={4839.1865,12.994167,10863.35};
-			name="E_1_31_7_1_3_29_8";
-			text="Electra";
-			type="Empty";
-			colorName="ColorBlue";
-			angle=-51.491299;
-		};
-		class Item342
-		{
-			position[]={5781.4673,16.854937,10772.75};
-			name="E_1_31_7_1_3_29_9";
-			text="Electra";
-			type="Empty";
-			colorName="ColorBlue";
-			angle=-51.491299;
-		};
-		class Item343
-		{
-			position[]={5788.6816,16.854244,10794.391};
+			position[]={5829.6431,16.372341,10755.272};
 			name="E_1_31_7_1_3_29_10";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item344
+		class Item342
 		{
 			position[]={7088.9922,14.482108,10912.544};
 			name="E_1_31_7_1_3_29_11";
@@ -5395,7 +5371,7 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item345
+		class Item343
 		{
 			position[]={7155.6934,13.225314,10936.944};
 			name="E_1_31_7_1_3_29_12";
@@ -5404,16 +5380,16 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item346
+		class Item344
 		{
-			position[]={8454.7646,15,10287.918};
+			position[]={8392.3096,15,10295.129};
 			name="E_1_31_7_1_3_29_13";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item347
+		class Item345
 		{
 			position[]={7606.3398,73.368256,8731.2354};
 			name="E_1_31_7_1_3_29_14";
@@ -5422,10 +5398,28 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
+		class Item346
+		{
+			position[]={7689.6177,72.372032,8798.5693};
+			name="E_1_31_7_1_3_29_15";
+			text="Electra";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=-51.491299;
+		};
+		class Item347
+		{
+			position[]={7604.1123,71.360367,8774.2656};
+			name="E_1_31_7_1_3_29_16";
+			text="Electra";
+			type="Empty";
+			colorName="ColorBlue";
+			angle=-51.491299;
+		};
 		class Item348
 		{
-			position[]={7639.6909,71.72348,8789.7939};
-			name="E_1_31_7_1_3_29_15";
+			position[]={7196.5454,86.079826,7950.1836};
+			name="E_1_31_7_1_3_29_17";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
@@ -5433,8 +5427,8 @@ class Mission
 		};
 		class Item349
 		{
-			position[]={7718.5947,71.867363,8762.9551};
-			name="E_1_31_7_1_3_29_16";
+			position[]={7334.3398,84.285957,8028.9116};
+			name="E_1_31_7_1_3_29_18";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
@@ -5442,8 +5436,8 @@ class Mission
 		};
 		class Item350
 		{
-			position[]={7215.0737,85.739235,7939.0674};
-			name="E_1_31_7_1_3_29_17";
+			position[]={7376.3027,84.037369,7997.8594};
+			name="E_1_31_7_1_3_29_19";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
@@ -5451,8 +5445,8 @@ class Mission
 		};
 		class Item351
 		{
-			position[]={7310.7412,84.343292,8019.5503};
-			name="E_1_31_7_1_3_29_18";
+			position[]={7234.2598,87.274765,7914.8242};
+			name="E_1_31_7_1_3_29_20";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
@@ -5460,8 +5454,8 @@ class Mission
 		};
 		class Item352
 		{
-			position[]={7380.2031,84.026459,8003.3188};
-			name="E_1_31_7_1_3_29_19";
+			position[]={7814.0991,11.98665,7574.2026};
+			name="E_1_31_7_1_3_29_22";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
@@ -5469,8 +5463,8 @@ class Mission
 		};
 		class Item353
 		{
-			position[]={7254.9321,85.700188,7908.9736};
-			name="E_1_31_7_1_3_29_20";
+			position[]={7852.4517,9.8220177,7796.7808};
+			name="E_1_31_7_1_3_29_23";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
@@ -5478,8 +5472,8 @@ class Mission
 		};
 		class Item354
 		{
-			position[]={7254.9321,84.639999,7969.9727};
-			name="E_1_31_7_1_3_29_21";
+			position[]={7800.2466,12.450008,7786.5259};
+			name="E_1_31_7_1_3_29_24";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
@@ -5487,8 +5481,8 @@ class Mission
 		};
 		class Item355
 		{
-			position[]={7870.7095,9.6184692,7641.394};
-			name="E_1_31_7_1_3_29_22";
+			position[]={7768.2676,11.435706,7656.48};
+			name="E_1_31_7_1_3_29_25";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
@@ -5496,41 +5490,14 @@ class Mission
 		};
 		class Item356
 		{
-			position[]={7918.7031,0,7759.3247};
-			name="E_1_31_7_1_3_29_23";
-			text="Electra";
-			type="Empty";
-			colorName="ColorBlue";
-			angle=-51.491299;
-		};
-		class Item357
-		{
-			position[]={7834.9185,9.8374329,7725.165};
-			name="E_1_31_7_1_3_29_24";
-			text="Electra";
-			type="Empty";
-			colorName="ColorBlue";
-			angle=-51.491299;
-		};
-		class Item358
-		{
-			position[]={7855.2539,9.615941,7658.4736};
-			name="E_1_31_7_1_3_29_25";
-			text="Electra";
-			type="Empty";
-			colorName="ColorBlue";
-			angle=-51.491299;
-		};
-		class Item359
-		{
-			position[]={7944.7329,0.28599581,7618.6206};
+			position[]={7869.5361,12.934605,7552.0942};
 			name="E_1_31_7_1_3_29_26";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item360
+		class Item357
 		{
 			position[]={7653.5205,42.013294,7402.2798};
 			name="E_1_31_7_1_3_29_27";
@@ -5539,7 +5506,7 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item361
+		class Item358
 		{
 			position[]={7640.8105,39.999313,7480.4751};
 			name="E_1_31_7_1_3_29_28";
@@ -5548,34 +5515,25 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item362
+		class Item359
 		{
-			position[]={7264.3442,238.1409,7035.1372};
+			position[]={7285.209,237.89105,7011.8203};
 			name="E_1_31_7_1_3_29_29";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item363
+		class Item360
 		{
-			position[]={7281.2788,238.72711,7055.396};
+			position[]={7245.6777,238.88754,7095.3384};
 			name="E_1_31_7_1_3_29_30";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item364
-		{
-			position[]={7247.0996,238.89218,7064.7847};
-			name="E_1_31_7_1_3_29_31";
-			text="Electra";
-			type="Empty";
-			colorName="ColorBlue";
-			angle=-51.491299;
-		};
-		class Item365
+		class Item361
 		{
 			position[]={7250.4126,147.16333,6649.332};
 			name="E_1_31_7_1_3_29_32";
@@ -5584,7 +5542,7 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item366
+		class Item362
 		{
 			position[]={7067.4419,87.90239,6324.0972};
 			name="E_1_31_7_1_3_29_33";
@@ -5593,34 +5551,34 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item367
+		class Item363
 		{
-			position[]={7077.8774,88.103615,6257.4395};
+			position[]={7125.0591,89.091751,6260.5723};
 			name="E_1_31_7_1_3_29_34";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item368
+		class Item364
 		{
-			position[]={7542.1826,39.369694,6029.9512};
+			position[]={7534.7056,39.451542,6020.7158};
 			name="E_1_31_7_1_3_29_35";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item369
+		class Item365
 		{
-			position[]={7420.481,40.220741,5914.8594};
+			position[]={7429.1523,40.136986,5916.627};
 			name="E_1_31_7_1_3_29_36";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item370
+		class Item366
 		{
 			position[]={7256.5601,40.296261,5823.6377};
 			name="E_1_31_7_1_3_29_37";
@@ -5629,88 +5587,7 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item371
-		{
-			position[]={5933.9526,39.621162,5876.52};
-			name="E_1_31_7_1_3_29_38";
-			text="Electra";
-			type="Empty";
-			colorName="ColorBlue";
-			angle=-51.491299;
-		};
-		class Item372
-		{
-			position[]={5945.4385,39.26358,5867.0122};
-			name="E_1_31_7_1_3_29_39";
-			text="Electra";
-			type="Empty";
-			colorName="ColorBlue";
-			angle=-51.491299;
-		};
-		class Item373
-		{
-			position[]={6886.606,38.605171,5837.3237};
-			name="E_1_31_7_1_3_29_40";
-			text="Electra";
-			type="Empty";
-			colorName="ColorBlue";
-			angle=-51.491299;
-		};
-		class Item374
-		{
-			position[]={6156.6377,8.8721037,5867.1494};
-			name="E_1_31_7_1_3_29_41";
-			text="Electra";
-			type="Empty";
-			colorName="ColorBlue";
-			angle=-51.491299;
-		};
-		class Item375
-		{
-			position[]={6143.7236,9.5782003,5737.3657};
-			name="E_1_31_7_1_3_29_42";
-			text="Electra";
-			type="Empty";
-			colorName="ColorBlue";
-			angle=-51.491299;
-		};
-		class Item376
-		{
-			position[]={6173.8589,7.4280434,5720.4629};
-			name="E_1_31_7_1_3_29_43";
-			text="Electra";
-			type="Empty";
-			colorName="ColorBlue";
-			angle=-51.491299;
-		};
-		class Item377
-		{
-			position[]={7045.7388,40.021206,5812.9287};
-			name="E_1_31_7_1_3_29_44";
-			text="Electra";
-			type="Empty";
-			colorName="ColorBlue";
-			angle=-51.491299;
-		};
-		class Item378
-		{
-			position[]={7010.1943,40.202755,5783.7739};
-			name="E_1_31_7_1_3_29_45";
-			text="Electra";
-			type="Empty";
-			colorName="ColorBlue";
-			angle=-51.491299;
-		};
-		class Item379
-		{
-			position[]={4888.7197,41,6074.3247};
-			name="E_1_31_7_1_3_29_46";
-			text="Electra";
-			type="Empty";
-			colorName="ColorBlue";
-			angle=-51.491299;
-		};
-		class Item380
+		class Item367
 		{
 			position[]={5156.1299,40.427433,6110.0347};
 			name="E_1_31_7_1_3_29_47";
@@ -5719,106 +5596,97 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item381
+		class Item368
 		{
-			position[]={4827.5586,41,6207.7861};
-			name="E_1_31_7_1_3_29_48";
-			text="Electra";
-			type="Empty";
-			colorName="ColorBlue";
-			angle=-51.491299;
-		};
-		class Item382
-		{
-			position[]={4844.0767,41,6225.1938};
+			position[]={4851.6245,41,6285.2905};
 			name="E_1_31_7_1_3_29_49";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item383
+		class Item369
 		{
-			position[]={4848.541,41,6161.3647};
+			position[]={4851.2827,41,6076.8706};
 			name="E_1_31_7_1_3_29_50";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item384
+		class Item370
 		{
-			position[]={5009.6436,14.737634,6604.6558};
+			position[]={5010.1875,21.822989,6636.4932};
 			name="E_1_31_7_1_3_29_51";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item385
+		class Item371
 		{
-			position[]={5059.7788,54.636806,6675.7661};
+			position[]={5055.833,52.795071,6653.0449};
 			name="E_1_31_7_1_3_29_52";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item386
+		class Item372
 		{
-			position[]={4942.0195,19.892071,6661.7769};
+			position[]={4921.2231,47.496964,6670.3638};
 			name="E_1_31_7_1_3_29_53";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item387
+		class Item373
 		{
-			position[]={4950.1807,5.9146028,6594.1636};
+			position[]={4951.2695,14.217205,6588.041};
 			name="E_1_31_7_1_3_29_54";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item388
+		class Item374
 		{
-			position[]={4971.1675,13.965042,6582.5068};
+			position[]={5013.4839,46.099941,6517.3369};
 			name="E_1_31_7_1_3_29_55";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item389
+		class Item375
 		{
-			position[]={4781.1206,60.033585,6918.2407};
+			position[]={4791.8213,57.616627,6913.3032};
 			name="E_1_31_7_1_3_29_56";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item390
+		class Item376
 		{
-			position[]={4659.8633,82.007561,7055.7993};
+			position[]={4683.7354,77.178497,7049.2144};
 			name="E_1_31_7_1_3_29_57";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item391
+		class Item377
 		{
-			position[]={4529.2788,122.51568,7255.1416};
+			position[]={4516.1377,120.17001,7239.0801};
 			name="E_1_31_7_1_3_29_58";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item392
+		class Item378
 		{
 			position[]={4406.856,240.81898,6868.1138};
 			name="E_1_31_7_1_3_29_59";
@@ -5827,16 +5695,16 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item393
+		class Item379
 		{
-			position[]={4229.6343,317.55441,6840.1353};
+			position[]={4299.6567,300.0845,6832.9077};
 			name="E_1_31_7_1_3_29_60";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item394
+		class Item380
 		{
 			position[]={4198.1538,333.88351,6810.9927};
 			name="E_1_31_7_1_3_29_61";
@@ -5845,34 +5713,34 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item395
+		class Item381
 		{
-			position[]={4117.7046,354.11478,6753.8706};
+			position[]={4107.7656,351.0498,6765.1636};
 			name="E_1_31_7_1_3_29_62";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item396
+		class Item382
 		{
-			position[]={4193.4897,399.36899,6605.8198};
+			position[]={4182.5923,398.75436,6595.2695};
 			name="E_1_31_7_1_3_29_63";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item397
+		class Item383
 		{
-			position[]={4115.3726,376.87048,6688.5879};
+			position[]={4088.9067,373.10214,6682.707};
 			name="E_1_31_7_1_3_29_64";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item398
+		class Item384
 		{
 			position[]={4089.7222,377.53333,6643.1245};
 			name="E_1_31_7_1_3_29_65";
@@ -5881,16 +5749,16 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item399
+		class Item385
 		{
-			position[]={3516.0828,205.38771,6650.1191};
+			position[]={3552.9429,205.38771,6631.2026};
 			name="E_1_31_7_1_3_29_66";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item400
+		class Item386
 		{
 			position[]={3644.3352,211.46661,6722.3955};
 			name="E_1_31_7_1_3_29_67";
@@ -5899,7 +5767,7 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item401
+		class Item387
 		{
 			position[]={3724.7854,52.988663,7336.7451};
 			name="E_1_31_7_1_3_29_68";
@@ -5908,25 +5776,25 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item402
+		class Item388
 		{
-			position[]={3914.8323,52.999908,7494.1211};
+			position[]={3990.0364,52.510132,7506.2153};
 			name="E_1_31_7_1_3_29_69";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item403
+		class Item389
 		{
-			position[]={3844.8762,52.999317,7501.1143};
+			position[]={3788.8027,53.046368,7443.7261};
 			name="E_1_31_7_1_3_29_70";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item404
+		class Item390
 		{
 			position[]={3990.6182,52.998791,7661.9873};
 			name="E_1_31_7_1_3_29_71";
@@ -5935,7 +5803,7 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item405
+		class Item391
 		{
 			position[]={3981.2905,52.99902,7646.834};
 			name="E_1_31_7_1_3_29_72";
@@ -5944,7 +5812,7 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item406
+		class Item392
 		{
 			position[]={3924.1597,53.011784,7604.8662};
 			name="E_1_31_7_1_3_29_73";
@@ -5953,52 +5821,43 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item407
+		class Item393
 		{
-			position[]={5001.4819,40.054417,8165.5908};
+			position[]={4981.252,45.618088,8093.0313};
 			name="E_1_31_7_1_3_29_74";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item408
+		class Item394
 		{
-			position[]={5025.9663,40,8205.2266};
+			position[]={4960.6577,40.609554,8210.2842};
 			name="E_1_31_7_1_3_29_75";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item409
+		class Item395
 		{
-			position[]={5037.626,41.889503,8275.1709};
+			position[]={5074.5684,39.76543,8281.3271};
 			name="E_1_31_7_1_3_29_76";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item410
+		class Item396
 		{
-			position[]={4989.8223,50,8005.8838};
+			position[]={4990.9399,53.666313,7958.9248};
 			name="E_1_31_7_1_3_29_77";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item411
-		{
-			position[]={7150.8564,40.24601,5804.8877};
-			name="E_1_31_7_1_3_29_78";
-			text="Electra";
-			type="Empty";
-			colorName="ColorBlue";
-			angle=-51.491299;
-		};
-		class Item412
+		class Item397
 		{
 			position[]={7018.7139,40,5846.3989};
 			name="E_1_31_7_1_3_29_79";
@@ -6007,16 +5866,16 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item413
+		class Item398
 		{
-			position[]={7847.8589,9.8602734,7755.4458};
+			position[]={7844.1763,9.9113798,7766.4907};
 			name="E_1_31_7_1_3_29_80";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item414
+		class Item399
 		{
 			position[]={4018.2427,39.934467,5626.7959};
 			name="E_1_31_7_1_3_29_81";
@@ -6025,16 +5884,16 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item415
+		class Item400
 		{
-			position[]={4319.0205,3.379544,4781.0386};
+			position[]={4402.9385,4.715137,4803.1289};
 			name="E_1_31_7_1_3_29_82";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item416
+		class Item401
 		{
 			position[]={4491.5664,40,5073.7202};
 			name="E_1_31_7_1_3_29_83";
@@ -6043,25 +5902,25 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item417
+		class Item402
 		{
-			position[]={4075.2598,317.5412,6456.9668};
+			position[]={4093.063,338.10043,6486.2534};
 			name="E_1_31_7_1_3_29_84";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item418
+		class Item403
 		{
-			position[]={4330.9819,342.05939,6412.6572};
+			position[]={4309.749,350.43979,6448.3936};
 			name="E_1_31_7_1_3_29_85";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item419
+		class Item404
 		{
 			position[]={2944.6367,312.17386,6404.6235};
 			name="E_1_31_7_1_3_29_86";
@@ -6070,7 +5929,7 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item420
+		class Item405
 		{
 			position[]={3006.4221,319.27103,6505.8306};
 			name="E_1_31_7_1_3_29_87";
@@ -6079,7 +5938,7 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item421
+		class Item406
 		{
 			position[]={2909.1431,311.0267,6492.6865};
 			name="E_1_31_7_1_3_29_88";
@@ -6088,34 +5947,34 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item422
+		class Item407
 		{
-			position[]={5356.9028,378.84363,7155.1318};
+			position[]={5350.4595,379.20575,7158.813};
 			name="E_1_31_7_1_3_29_90";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item423
+		class Item408
 		{
-			position[]={5785.4575,51.122379,8649.5791};
+			position[]={5740.4839,51.738407,8655.2881};
 			name="E_1_31_7_1_3_29_91";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item424
+		class Item409
 		{
-			position[]={4598.1294,78.491562,9230.417};
+			position[]={4598.3281,78.595963,9232.0068};
 			name="E_1_31_7_1_3_29_91_1";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item425
+		class Item410
 		{
 			position[]={4574.499,80.609253,9210.1738};
 			name="E_1_31_7_1_3_29_91_2";
@@ -6124,7 +5983,7 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item426
+		class Item411
 		{
 			position[]={4411.7085,14.989105,10736.177};
 			name="J_32_23_1_8_3";
@@ -6133,7 +5992,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item427
+		class Item412
 		{
 			position[]={4619.6514,77.89859,9204.5283};
 			name="E_1_31_7_1_3_29_91_3";
@@ -6142,7 +6001,7 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item428
+		class Item413
 		{
 			position[]={4395.9067,14.989105,10751.626};
 			name="J_32_23_1_8_3_1";
@@ -6151,7 +6010,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item429
+		class Item414
 		{
 			position[]={4597.9839,77.580742,9188.9092};
 			name="E_1_31_7_1_3_29_91_3_1";
@@ -6160,7 +6019,7 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item430
+		class Item415
 		{
 			position[]={4841.4907,13.563664,10828.118};
 			name="J_32_23_1_8_3_2";
@@ -6169,7 +6028,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item431
+		class Item416
 		{
 			position[]={4816.2397,13.361257,10857.692};
 			name="J_32_23_1_8_3_3";
@@ -6178,7 +6037,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item432
+		class Item417
 		{
 			position[]={4428.0942,2.8,11240.727};
 			name="J_32_23_1_8_3_4";
@@ -6187,7 +6046,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item433
+		class Item418
 		{
 			position[]={4614.3076,9.4023695,9675.8369};
 			name="E_1_31_7_1_3_29_91_3_4";
@@ -6196,7 +6055,7 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item434
+		class Item419
 		{
 			position[]={4438.1943,2.8,11212.595};
 			name="J_32_23_1_8_3_5";
@@ -6205,7 +6064,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item435
+		class Item420
 		{
 			position[]={4456.9526,2.8,11245.055};
 			name="J_32_23_1_8_3_6";
@@ -6214,7 +6073,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item436
+		class Item421
 		{
 			position[]={4643.166,11.313702,9680.165};
 			name="E_1_31_7_1_3_29_91_3_6";
@@ -6223,7 +6082,7 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item437
+		class Item422
 		{
 			position[]={4498.7974,2.8,11241.448};
 			name="J_32_23_1_8_3_7";
@@ -6232,7 +6091,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item438
+		class Item423
 		{
 			position[]={4685.0107,12.022059,9676.5586};
 			name="E_1_31_7_1_3_29_91_3_7";
@@ -6241,7 +6100,7 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item439
+		class Item424
 		{
 			position[]={4484.3677,2.6229787,11214.759};
 			name="J_32_23_1_8_3_8";
@@ -6250,7 +6109,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item440
+		class Item425
 		{
 			position[]={4670.5811,12.927631,9649.8691};
 			name="E_1_31_7_1_3_29_91_3_8";
@@ -6259,7 +6118,7 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item441
+		class Item426
 		{
 			position[]={4390.5776,0.011110526,11250.104};
 			name="J_32_23_1_8_3_9";
@@ -6268,7 +6127,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item442
+		class Item427
 		{
 			position[]={4576.791,10.801311,9685.2148};
 			name="E_1_31_7_1_3_29_91_3_9";
@@ -6277,7 +6136,7 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item443
+		class Item428
 		{
 			position[]={4949.71,14.725631,11273.909};
 			name="J_32_23_1_8_3_10";
@@ -6286,7 +6145,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item444
+		class Item429
 		{
 			position[]={5135.9233,22.413227,9709.0195};
 			name="E_1_31_7_1_3_29_91_3_10";
@@ -6295,7 +6154,7 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item445
+		class Item430
 		{
 			position[]={6233.3169,17.276081,11783.262};
 			name="J_32_23_1_8_3_11";
@@ -6304,7 +6163,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item446
+		class Item431
 		{
 			position[]={6419.5303,18.055223,10218.372};
 			name="E_1_31_7_1_3_29_91_3_11";
@@ -6313,7 +6172,7 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item447
+		class Item432
 		{
 			position[]={6666.0698,15,11527.881};
 			name="J_32_23_1_8_3_12";
@@ -6322,7 +6181,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item448
+		class Item433
 		{
 			position[]={8956.5586,4.2338247,10620.401};
 			name="J_32_23_1_8_3_13";
@@ -6331,7 +6190,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item449
+		class Item434
 		{
 			position[]={8891.8262,13.943402,10753.862};
 			name="J_32_23_1_8_3_14";
@@ -6340,7 +6199,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item450
+		class Item435
 		{
 			position[]={9024.417,8.8439798,10107.537};
 			name="J_32_23_1_8_3_15";
@@ -6349,7 +6208,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item451
+		class Item436
 		{
 			position[]={9031.1133,9.1194496,10130.301};
 			name="J_32_23_1_8_3_16";
@@ -6358,7 +6217,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item452
+		class Item437
 		{
 			position[]={9041.8281,9.0568085,10149.94};
 			name="J_32_23_1_8_3_17";
@@ -6367,7 +6226,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item453
+		class Item438
 		{
 			position[]={9002.0947,9.768445,9947.2939};
 			name="J_32_23_1_8_3_18";
@@ -6376,7 +6235,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item454
+		class Item439
 		{
 			position[]={8687.3623,15,10092.358};
 			name="J_32_23_1_8_3_19";
@@ -6385,7 +6244,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item455
+		class Item440
 		{
 			position[]={8486.0234,15,10308.396};
 			name="J_32_23_1_8_3_20";
@@ -6394,7 +6253,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item456
+		class Item441
 		{
 			position[]={7777.541,14.734879,10414.628};
 			name="J_32_23_1_8_3_21";
@@ -6403,16 +6262,16 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item457
+		class Item442
 		{
-			position[]={7963.7539,30.114191,8849.7383};
+			position[]={7789.1353,3.6827679,9473.834};
 			name="E_1_31_7_1_3_29_91_3_21";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item458
+		class Item443
 		{
 			position[]={8166.8247,15.580612,10669.051};
 			name="J_32_23_1_8_3_22";
@@ -6421,7 +6280,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item459
+		class Item444
 		{
 			position[]={8238.7002,15,10647.625};
 			name="J_32_23_1_8_3_23";
@@ -6430,7 +6289,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item460
+		class Item445
 		{
 			position[]={8216.8252,15,10641.822};
 			name="J_32_23_1_8_3_24";
@@ -6439,7 +6298,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item461
+		class Item446
 		{
 			position[]={8319.9502,15,10709.223};
 			name="J_32_23_1_8_3_25";
@@ -6448,7 +6307,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item462
+		class Item447
 		{
 			position[]={8360.5752,15,10777.068};
 			name="J_32_23_1_8_3_26";
@@ -6457,7 +6316,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item463
+		class Item448
 		{
 			position[]={8198.5215,15,10705.205};
 			name="J_32_23_1_8_3_27";
@@ -6466,7 +6325,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item464
+		class Item449
 		{
 			position[]={8222.1816,15,10739.129};
 			name="J_32_23_1_8_3_28";
@@ -6475,7 +6334,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item465
+		class Item450
 		{
 			position[]={8128.8784,15,10844.469};
 			name="J_32_23_1_8_3_29";
@@ -6484,7 +6343,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item466
+		class Item451
 		{
 			position[]={8107.0034,15,10844.469};
 			name="J_32_23_1_8_3_30";
@@ -6493,7 +6352,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item467
+		class Item452
 		{
 			position[]={7576.3267,35.299568,11326.209};
 			name="J_32_23_1_8_3_31";
@@ -6502,7 +6361,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item468
+		class Item453
 		{
 			position[]={7053.0117,15,11532.281};
 			name="J_32_23_1_8_3_32";
@@ -6511,7 +6370,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item469
+		class Item454
 		{
 			position[]={7027.8735,15,11543.053};
 			name="J_32_23_1_8_3_33";
@@ -6520,7 +6379,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item470
+		class Item455
 		{
 			position[]={6655.9956,15,11517.203};
 			name="J_32_23_1_8_3_34";
@@ -6529,7 +6388,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item471
+		class Item456
 		{
 			position[]={6833.3896,15,11294.054};
 			name="J_32_23_1_8_3_35";
@@ -6538,7 +6397,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item472
+		class Item457
 		{
 			position[]={6715.6514,15,11267.184};
 			name="J_32_23_1_8_3_36";
@@ -6547,7 +6406,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item473
+		class Item458
 		{
 			position[]={6718.8511,15,11093.805};
 			name="J_32_23_1_8_3_37";
@@ -6556,7 +6415,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item474
+		class Item459
 		{
 			position[]={6860.2642,16.389219,11107.24};
 			name="J_32_23_1_8_3_38";
@@ -6565,7 +6424,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item475
+		class Item460
 		{
 			position[]={6732.2891,15,11310.688};
 			name="J_32_23_1_8_3_39";
@@ -6574,7 +6433,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item476
+		class Item461
 		{
 			position[]={6670.998,15,11461.188};
 			name="J_32_23_1_8_3_40";
@@ -6583,7 +6442,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item477
+		class Item462
 		{
 			position[]={6909.5317,15,11426.64};
 			name="J_32_23_1_8_3_41";
@@ -6592,7 +6451,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item478
+		class Item463
 		{
 			position[]={6929.4219,15,11406.201};
 			name="J_32_23_1_8_3_42";
@@ -6601,7 +6460,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item479
+		class Item464
 		{
 			position[]={6962.5708,15,11413.106};
 			name="J_32_23_1_8_3_43";
@@ -6610,7 +6469,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item480
+		class Item465
 		{
 			position[]={7028.0415,15.4893,11054.049};
 			name="J_32_23_1_8_3_44";
@@ -6619,7 +6478,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item481
+		class Item466
 		{
 			position[]={6860.915,15.113922,10931.693};
 			name="J_32_23_1_8_3_45";
@@ -6628,7 +6487,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item482
+		class Item467
 		{
 			position[]={7101.7979,14.45734,10902.969};
 			name="J_32_23_1_8_3_46";
@@ -6637,7 +6496,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item483
+		class Item468
 		{
 			position[]={6420.3101,23.20289,11000.742};
 			name="J_32_23_1_8_3_47";
@@ -6646,7 +6505,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item484
+		class Item469
 		{
 			position[]={6631.6353,15.000282,11025.324};
 			name="J_32_23_1_8_3_48";
@@ -6655,7 +6514,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item485
+		class Item470
 		{
 			position[]={7151.5234,16.168034,10765.145};
 			name="J_32_23_1_8_3_49";
@@ -6664,7 +6523,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item486
+		class Item471
 		{
 			position[]={7208.4297,15.399333,10838.337};
 			name="J_32_23_1_8_3_50";
@@ -6673,7 +6532,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item487
+		class Item472
 		{
 			position[]={7403.4565,14.999998,10795.525};
 			name="J_32_23_1_8_3_51";
@@ -6682,7 +6541,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item488
+		class Item473
 		{
 			position[]={5565.2715,34.584045,10343.936};
 			name="J_32_23_1_8_3_52";
@@ -6691,7 +6550,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item489
+		class Item474
 		{
 			position[]={5751.4829,51.674244,8779.0459};
 			name="E_1_31_7_1_3_29_91_3_52";
@@ -6700,7 +6559,7 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item490
+		class Item475
 		{
 			position[]={4072.4775,70.297539,9247.1162};
 			name="J_32_23_1_8_3_53";
@@ -6709,7 +6568,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item491
+		class Item476
 		{
 			position[]={4258.689,72.539017,7682.2266};
 			name="E_1_31_7_1_3_29_91_3_53";
@@ -6718,7 +6577,7 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item492
+		class Item477
 		{
 			position[]={4076.0847,70.337982,9212.4912};
 			name="J_32_23_1_8_3_54";
@@ -6727,7 +6586,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item493
+		class Item478
 		{
 			position[]={4262.2959,76.74221,7647.6016};
 			name="E_1_31_7_1_3_29_91_3_54";
@@ -6736,7 +6595,7 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item494
+		class Item479
 		{
 			position[]={4690.0474,23.543583,8912.4111};
 			name="J_32_23_1_8_3_55";
@@ -6745,7 +6604,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item495
+		class Item480
 		{
 			position[]={4712.4126,23.543577,8927.5596};
 			name="J_32_23_1_8_3_56";
@@ -6754,7 +6613,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item496
+		class Item481
 		{
 			position[]={4572.4492,25.252937,8827.292};
 			name="J_32_23_1_8_3_57";
@@ -6763,7 +6622,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item497
+		class Item482
 		{
 			position[]={5856.6484,50.611649,8684.4658};
 			name="J_32_23_1_8_3_58";
@@ -6772,7 +6631,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item498
+		class Item483
 		{
 			position[]={5841.4976,50.595234,8703.9414};
 			name="J_32_23_1_8_3_59";
@@ -6781,7 +6640,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item499
+		class Item484
 		{
 			position[]={5851.2964,50.703587,8644.7256};
 			name="J_32_23_1_8_3_60";
@@ -6790,7 +6649,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item500
+		class Item485
 		{
 			position[]={6460.8271,36,9314.6523};
 			name="J_32_23_1_8_3_61";
@@ -6799,7 +6658,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item501
+		class Item486
 		{
 			position[]={6671.5386,25.53838,7707.8735};
 			name="E_1_31_7_1_3_29_91_3_61";
@@ -6808,7 +6667,7 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item502
+		class Item487
 		{
 			position[]={6468.9214,36,9323.3223};
 			name="J_32_23_1_8_3_62";
@@ -6817,7 +6676,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item503
+		class Item488
 		{
 			position[]={6721.2837,15.783117,7799.832};
 			name="E_1_31_7_1_3_29_91_3_62";
@@ -6826,7 +6685,7 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item504
+		class Item489
 		{
 			position[]={7665.6089,71.867363,8750.501};
 			name="J_32_23_1_8_3_63";
@@ -6835,7 +6694,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item505
+		class Item490
 		{
 			position[]={7851.8203,40,7185.6113};
 			name="E_1_31_7_1_3_29_91_3_63";
@@ -6844,7 +6703,7 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item506
+		class Item491
 		{
 			position[]={7340.834,84.476555,7959.1543};
 			name="J_32_23_1_8_3_64";
@@ -6853,7 +6712,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item507
+		class Item492
 		{
 			position[]={7328.5596,84.365677,7986.0747};
 			name="J_32_23_1_8_3_65";
@@ -6862,7 +6721,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item508
+		class Item493
 		{
 			position[]={7248.5786,84.225891,7955.5913};
 			name="J_32_23_1_8_3_66";
@@ -6871,7 +6730,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item509
+		class Item494
 		{
 			position[]={7831.8066,9.9714203,7642.0522};
 			name="J_32_23_1_8_3_67";
@@ -6880,7 +6739,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item510
+		class Item495
 		{
 			position[]={7803.2988,10.164507,7720.0415};
 			name="J_32_23_1_8_3_68";
@@ -6889,7 +6748,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item511
+		class Item496
 		{
 			position[]={7920.104,0,7690.7461};
 			name="J_32_23_1_8_3_69";
@@ -6898,7 +6757,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item512
+		class Item497
 		{
 			position[]={7667.3696,41.947636,7376.6807};
 			name="J_32_23_1_8_3_70";
@@ -6907,7 +6766,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item513
+		class Item498
 		{
 			position[]={7256.3535,238.12199,7054.1758};
 			name="J_32_23_1_8_3_71";
@@ -6916,7 +6775,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item514
+		class Item499
 		{
 			position[]={7257.5786,238.13782,7025.0249};
 			name="J_32_23_1_8_3_72";
@@ -6925,7 +6784,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item515
+		class Item500
 		{
 			position[]={7021.6338,40.143085,5802.918};
 			name="J_32_23_1_8_3_73";
@@ -6934,7 +6793,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item516
+		class Item501
 		{
 			position[]={7058.3843,39.920311,5793.6094};
 			name="J_32_23_1_8_3_74";
@@ -6943,7 +6802,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item517
+		class Item502
 		{
 			position[]={7072.8389,40,5835.0088};
 			name="J_32_23_1_8_3_75";
@@ -6952,7 +6811,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item518
+		class Item503
 		{
 			position[]={5630.0864,107.69884,5984.624};
 			name="J_32_23_1_8_3_76";
@@ -6961,7 +6820,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item519
+		class Item504
 		{
 			position[]={6005.2031,48.667625,6622.8633};
 			name="J_32_23_1_8_3_77";
@@ -6970,7 +6829,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item520
+		class Item505
 		{
 			position[]={5995.1138,33.758438,6678.8013};
 			name="J_32_23_1_8_3_78";
@@ -6979,7 +6838,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item521
+		class Item506
 		{
 			position[]={5953.8418,48.442917,6644.8721};
 			name="J_32_23_1_8_3_79";
@@ -6988,7 +6847,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item522
+		class Item507
 		{
 			position[]={5684.543,99.63176,7264.3145};
 			name="J_32_23_1_8_3_80";
@@ -6997,7 +6856,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item523
+		class Item508
 		{
 			position[]={5870.7544,43.772015,5699.4248};
 			name="E_1_31_7_1_3_29_91_3_80";
@@ -7006,7 +6865,7 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item524
+		class Item509
 		{
 			position[]={5829.3452,47.492714,7629.916};
 			name="J_32_23_1_8_3_81";
@@ -7015,7 +6874,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item525
+		class Item510
 		{
 			position[]={6003.5518,22.369265,7825.3359};
 			name="J_32_23_1_8_3_82";
@@ -7024,7 +6883,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item526
+		class Item511
 		{
 			position[]={6189.7632,18.782539,6260.4463};
 			name="E_1_31_7_1_3_29_91_3_82";
@@ -7033,7 +6892,7 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item527
+		class Item512
 		{
 			position[]={5978.0581,27.40941,8209.8027};
 			name="J_32_23_1_8_3_83";
@@ -7042,7 +6901,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item528
+		class Item513
 		{
 			position[]={4658.3755,74.571709,8218.543};
 			name="E_24_22_1";
@@ -7051,7 +6910,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item529
+		class Item514
 		{
 			position[]={5802.2632,73.612869,8007.1519};
 			name="J_32_23_1_8_3_83_1";
@@ -7060,7 +6919,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item530
+		class Item515
 		{
 			position[]={5027.5464,40,8189.5928};
 			name="E_24_22_1_1";
@@ -7069,7 +6928,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item531
+		class Item516
 		{
 			position[]={6171.4341,0.25292799,7978.2017};
 			name="J_32_23_1_8_3_83_1_1";
@@ -7078,7 +6937,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item532
+		class Item517
 		{
 			position[]={5056.5005,40,8231.9844};
 			name="E_24_22_1_2";
@@ -7087,7 +6946,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item533
+		class Item518
 		{
 			position[]={6200.3882,-0.37275621,8020.5933};
 			name="J_32_23_1_8_3_83_1_2";
@@ -7096,7 +6955,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item534
+		class Item519
 		{
 			position[]={5822.7603,50.595631,8681.7412};
 			name="E_24_22_1_3";
@@ -7105,7 +6964,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item535
+		class Item520
 		{
 			position[]={6607.0371,2.2537789,8445.3984};
 			name="J_32_23_1_8_3_83_1_3";
@@ -7114,7 +6973,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item536
+		class Item521
 		{
 			position[]={7196.7847,209.16351,6952.6333};
 			name="E_1_31_7_1_3_29_91_3_83_1_3";
@@ -7123,7 +6982,7 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item537
+		class Item522
 		{
 			position[]={5819.6582,50.759624,8651.7568};
 			name="E_24_22_1_4";
@@ -7132,7 +6991,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item538
+		class Item523
 		{
 			position[]={6621.2119,5.9476171,8461.4775};
 			name="J_32_23_1_8_3_83_1_4";
@@ -7141,7 +7000,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item539
+		class Item524
 		{
 			position[]={7181.4814,185.87483,6867.3423};
 			name="E_1_31_7_1_3_29_91_3_83_1_4";
@@ -7150,7 +7009,7 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item540
+		class Item525
 		{
 			position[]={4611.6797,78.297195,9218.4629};
 			name="E_24_22_1_5";
@@ -7159,7 +7018,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item541
+		class Item526
 		{
 			position[]={5755.5674,29.158804,9007.0713};
 			name="J_32_23_1_8_3_83_1_5";
@@ -7168,7 +7027,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item542
+		class Item527
 		{
 			position[]={4086.5759,70.31086,9238.5576};
 			name="E_24_22_1_6";
@@ -7177,7 +7036,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item543
+		class Item528
 		{
 			position[]={5230.4639,74.230057,9027.166};
 			name="J_32_23_1_8_3_83_1_6";
@@ -7186,7 +7045,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item544
+		class Item529
 		{
 			position[]={4062.0222,70.321968,9221.5967};
 			name="E_24_22_1_7";
@@ -7195,7 +7054,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item545
+		class Item530
 		{
 			position[]={5205.9102,74.262535,9010.2051};
 			name="J_32_23_1_8_3_83_1_7";
@@ -7204,7 +7063,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item546
+		class Item531
 		{
 			position[]={4631.1084,6.5633268,9909.1895};
 			name="E_24_22_1_8";
@@ -7213,7 +7072,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item547
+		class Item532
 		{
 			position[]={5774.9961,24.783674,9697.7979};
 			name="J_32_23_1_8_3_83_1_8";
@@ -7222,7 +7081,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item548
+		class Item533
 		{
 			position[]={5961.207,27.78232,8132.9087};
 			name="E_1_31_7_1_3_29_91_3_83_1_8";
@@ -7231,7 +7090,7 @@ class Mission
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item549
+		class Item534
 		{
 			position[]={6270.1675,4.4357543,9920.6162};
 			name="E_24_22_1_8_1";
@@ -7240,7 +7099,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item550
+		class Item535
 		{
 			position[]={5719.3232,22.136604,9829.8008};
 			name="E_24_22_1_8_2";
@@ -7249,7 +7108,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item551
+		class Item536
 		{
 			position[]={5711.8481,21.332355,9865.3018};
 			name="E_24_22_1_8_3";
@@ -7258,7 +7117,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item552
+		class Item537
 		{
 			position[]={6211.0923,5,9877.9453};
 			name="E_24_22_1_8_4";
@@ -7267,7 +7126,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item553
+		class Item538
 		{
 			position[]={6110.1997,8.0109797,9961.8594};
 			name="E_24_22_1_8_5";
@@ -7276,7 +7135,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item554
+		class Item539
 		{
 			position[]={6299.6025,4.2476439,9951.458};
 			name="E_24_22_1_8_6";
@@ -7285,7 +7144,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item555
+		class Item540
 		{
 			position[]={6484.4741,36,9277.7275};
 			name="E_24_22_1_8_7";
@@ -7294,7 +7153,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item556
+		class Item541
 		{
 			position[]={6517.0708,36,9286.0127};
 			name="E_24_22_1_8_8";
@@ -7303,7 +7162,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item557
+		class Item542
 		{
 			position[]={6441.4277,36,9302.9229};
 			name="E_24_22_1_8_9";
@@ -7312,7 +7171,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item558
+		class Item543
 		{
 			position[]={6429.9302,36,9305.3438};
 			name="E_24_22_1_8_10";
@@ -7321,7 +7180,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item559
+		class Item544
 		{
 			position[]={7832.6128,9.9312983,7661.5361};
 			name="E_24_22_1_8_11";
@@ -7330,7 +7189,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item560
+		class Item545
 		{
 			position[]={7894.3535,9.6826754,7706.8545};
 			name="E_24_22_1_8_12";
@@ -7339,7 +7198,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item561
+		class Item546
 		{
 			position[]={7876.2236,9.6677561,7593.9258};
 			name="E_24_22_1_8_13";
@@ -7348,7 +7207,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item562
+		class Item547
 		{
 			position[]={7886.2681,9.8379612,7802.3921};
 			name="E_24_22_1_8_14";
@@ -7357,7 +7216,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item563
+		class Item548
 		{
 			position[]={7272.5649,85.04792,7923.5508};
 			name="E_24_22_1_8_15";
@@ -7366,7 +7225,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item564
+		class Item549
 		{
 			position[]={7313.8511,84.498482,7952.23};
 			name="E_24_22_1_8_16";
@@ -7375,7 +7234,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item565
+		class Item550
 		{
 			position[]={7307.1152,84.490356,7979.8223};
 			name="E_24_22_1_8_17";
@@ -7384,7 +7243,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item566
+		class Item551
 		{
 			position[]={7298.2065,84.350082,8019.1475};
 			name="E_24_22_1_8_18";
@@ -7393,7 +7252,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item567
+		class Item552
 		{
 			position[]={7718.2788,40.541626,7368.1089};
 			name="E_24_22_1_8_19";
@@ -7402,7 +7261,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item568
+		class Item553
 		{
 			position[]={7699.5835,40.132217,7411.8511};
 			name="E_24_22_1_8_20";
@@ -7411,7 +7270,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item569
+		class Item554
 		{
 			position[]={7685.5151,42.25536,7386.4155};
 			name="E_24_22_1_8_21";
@@ -7420,7 +7279,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item570
+		class Item555
 		{
 			position[]={7649.8599,39.897644,7462.7231};
 			name="E_24_22_1_8_22";
@@ -7429,7 +7288,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item571
+		class Item556
 		{
 			position[]={7750.9668,40,7383.6646};
 			name="E_24_22_1_8_23";
@@ -7438,7 +7297,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item572
+		class Item557
 		{
 			position[]={7082.5386,40,5826.2012};
 			name="E_24_22_1_8_24";
@@ -7447,7 +7306,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item573
+		class Item558
 		{
 			position[]={7165.9814,40.01178,5820.1177};
 			name="E_24_22_1_8_25";
@@ -7456,7 +7315,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item574
+		class Item559
 		{
 			position[]={7010.1777,40.135792,5810.124};
 			name="E_24_22_1_8_26";
@@ -7465,7 +7324,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item575
+		class Item560
 		{
 			position[]={6995.1846,40.14822,5807.2988};
 			name="E_24_22_1_8_27";
@@ -7474,7 +7333,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item576
+		class Item561
 		{
 			position[]={7018.4351,40.245129,5753.6343};
 			name="E_24_22_1_8_28";
@@ -7483,7 +7342,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item577
+		class Item562
 		{
 			position[]={7102.7383,88.673462,6253.168};
 			name="E_24_22_1_8_29";
@@ -7492,7 +7351,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item578
+		class Item563
 		{
 			position[]={7267.8696,238.68965,7052.2285};
 			name="E_24_22_1_8_30";
@@ -7501,7 +7360,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item579
+		class Item564
 		{
 			position[]={7270.8613,238.77847,7070.4272};
 			name="E_24_22_1_8_31";
@@ -7510,7 +7369,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item580
+		class Item565
 		{
 			position[]={6908.2358,4.6850986,8352.3291};
 			name="E_24_22_1_8_32";
@@ -7519,7 +7378,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item581
+		class Item566
 		{
 			position[]={6906.3174,3.2395692,8312.6641};
 			name="E_24_22_1_8_33";
@@ -7528,7 +7387,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item582
+		class Item567
 		{
 			position[]={6844.249,5.3777618,8360.6465};
 			name="E_24_22_1_8_34";
@@ -7537,7 +7396,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item583
+		class Item568
 		{
 			position[]={6594.7017,5.5282817,8481.0303};
 			name="J_32_23_1_8_3_83_1_4_1";
@@ -7546,7 +7405,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item584
+		class Item569
 		{
 			position[]={6575.1445,2.3596559,8465.1699};
 			name="J_32_23_1_8_3_83_1_4_2";
@@ -7555,7 +7414,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-51.491325;
 		};
-		class Item585
+		class Item570
 		{
 			position[]={6839.0347,5.5390348,8372.5957};
 			name="E_24_22_1_8_34_1";
@@ -7564,7 +7423,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item586
+		class Item571
 		{
 			position[]={6606.3057,2.2123921,8451.6797};
 			name="E_24_22_1_8_34_2";
@@ -7573,7 +7432,7 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item587
+		class Item572
 		{
 			position[]={5207.8623,34.618057,10924.671};
 			name="J_1_22_29_2";
@@ -7582,7 +7441,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item588
+		class Item573
 		{
 			position[]={5403.3057,51.870831,11020.826};
 			name="J_1_22_29_3";
@@ -7591,7 +7450,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item589
+		class Item574
 		{
 			position[]={5493.2715,50.831417,11051.844};
 			name="J_1_22_29_4";
@@ -7600,7 +7459,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item590
+		class Item575
 		{
 			position[]={5236.8164,43.193314,10853.33};
 			name="J_1_22_29_5";
@@ -7609,7 +7468,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item591
+		class Item576
 		{
 			position[]={5302.9985,51.271542,10826.448};
 			name="J_1_22_29_6";
@@ -7618,7 +7477,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item592
+		class Item577
 		{
 			position[]={5483.9648,60.339931,10945.35};
 			name="J_1_22_29_7";
@@ -7627,7 +7486,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item593
+		class Item578
 		{
 			position[]={5425.021,54.787552,11011.521};
 			name="J_1_22_29_8";
@@ -7636,7 +7495,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item594
+		class Item579
 		{
 			position[]={6119.9502,7.82798,11599.74};
 			name="J_1_22_29_7_1";
@@ -7645,7 +7504,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item595
+		class Item580
 		{
 			position[]={6145.0181,14.202364,11686.627};
 			name="J_1_22_29_7_2";
@@ -7654,7 +7513,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item596
+		class Item581
 		{
 			position[]={6153.373,16.980928,11733.412};
 			name="J_1_22_29_7_3";
@@ -7663,7 +7522,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item597
+		class Item582
 		{
 			position[]={5276.9585,53.257603,8827.415};
 			name="J_1_22_29_7_4";
@@ -7672,7 +7531,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item598
+		class Item583
 		{
 			position[]={5322.4297,38.644474,8763.2988};
 			name="J_1_22_29_7_5";
@@ -7681,7 +7540,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item599
+		class Item584
 		{
 			position[]={5243.147,50.364582,8770.2939};
 			name="J_1_22_29_7_6";
@@ -7690,7 +7549,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item600
+		class Item585
 		{
 			position[]={5252.4741,41.770813,8699.1826};
 			name="J_1_22_29_7_7";
@@ -7699,7 +7558,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item601
+		class Item586
 		{
 			position[]={5215.1641,34.046894,8597.7627};
 			name="J_1_22_29_7_8";
@@ -7708,7 +7567,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item602
+		class Item587
 		{
 			position[]={5140.5444,38.351978,8574.4473};
 			name="J_1_22_29_7_9";
@@ -7717,7 +7576,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item603
+		class Item588
 		{
 			position[]={5210.5,30.952351,8540.6406};
 			name="J_1_22_29_7_10";
@@ -7726,7 +7585,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item604
+		class Item589
 		{
 			position[]={4366.3643,95.2015,8369.2754};
 			name="J_1_22_29_7_11";
@@ -7735,7 +7594,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item605
+		class Item590
 		{
 			position[]={4558.7437,86.635757,8419.4033};
 			name="J_1_22_29_7_12";
@@ -7744,7 +7603,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item606
+		class Item591
 		{
 			position[]={4442.1499,76.982246,8489.3477};
 			name="J_1_22_29_7_13";
@@ -7753,7 +7612,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item607
+		class Item592
 		{
 			position[]={4579.7295,73.904472,8514.9951};
 			name="J_1_22_29_7_14";
@@ -7762,7 +7621,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item608
+		class Item593
 		{
 			position[]={4489.9531,62.7561,8558.127};
 			name="J_1_22_29_7_15";
@@ -7771,7 +7630,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item609
+		class Item594
 		{
 			position[]={4512.106,51.936649,8626.9063};
 			name="J_1_22_29_7_16";
@@ -7780,7 +7639,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item610
+		class Item595
 		{
 			position[]={4575.0664,48.447819,8668.874};
 			name="J_1_22_29_7_17";
@@ -7789,7 +7648,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item611
+		class Item596
 		{
 			position[]={4928.3442,71.375259,8547.6348};
 			name="J_1_22_29_7_18";
@@ -7798,7 +7657,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item612
+		class Item597
 		{
 			position[]={4891.0347,65.860397,8398.4189};
 			name="J_1_22_29_7_19";
@@ -7807,7 +7666,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item613
+		class Item598
 		{
 			position[]={4696.3232,80.78894,8341.2979};
 			name="J_1_22_29_7_20";
@@ -7816,7 +7675,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item614
+		class Item599
 		{
 			position[]={4600.7168,86.050835,8379.7676};
 			name="J_1_22_29_7_21";
@@ -7825,7 +7684,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item615
+		class Item600
 		{
 			position[]={4415.3335,91.438553,8280.6797};
 			name="J_1_22_29_7_22";
@@ -7834,7 +7693,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item616
+		class Item601
 		{
 			position[]={4263.7617,101.95184,8222.3916};
 			name="J_1_22_29_7_23";
@@ -7843,7 +7702,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item617
+		class Item602
 		{
 			position[]={4116.8545,120.97552,8291.1709};
 			name="J_1_22_29_7_24";
@@ -7852,7 +7711,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item618
+		class Item603
 		{
 			position[]={3395.1411,88.021851,8204.9053};
 			name="J_1_22_29_7_25";
@@ -7861,7 +7720,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item619
+		class Item604
 		{
 			position[]={3601.5112,100.4948,8403.082};
 			name="J_1_22_29_7_26";
@@ -7870,7 +7729,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item620
+		class Item605
 		{
 			position[]={3691.2883,79.835457,8576.7793};
 			name="J_1_22_29_7_27";
@@ -7879,7 +7738,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item621
+		class Item606
 		{
 			position[]={4461.9707,112.03051,7660.501};
 			name="J_1_22_29_7_28";
@@ -7888,7 +7747,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item622
+		class Item607
 		{
 			position[]={4645.0225,98.553001,7793.396};
 			name="J_1_22_29_7_29";
@@ -7897,7 +7756,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item623
+		class Item608
 		{
 			position[]={4700.9873,142.3476,7615.0366};
 			name="J_1_22_29_7_30";
@@ -7906,7 +7765,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item624
+		class Item609
 		{
 			position[]={4854.8901,95.409477,7812.0483};
 			name="J_1_22_29_7_31";
@@ -7915,7 +7774,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item625
+		class Item610
 		{
 			position[]={5103.2344,128.98203,7753.7612};
 			name="J_1_22_29_7_32";
@@ -7924,7 +7783,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item626
+		class Item611
 		{
 			position[]={5209.334,63.042316,7928.623};
 			name="J_1_22_29_7_33";
@@ -7933,7 +7792,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item627
+		class Item612
 		{
 			position[]={5271.1289,143.73384,7740.938};
 			name="J_1_22_29_7_34";
@@ -7942,7 +7801,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item628
+		class Item613
 		{
 			position[]={5440.1895,114.42487,7941.4458};
 			name="J_1_22_29_7_35";
@@ -7951,7 +7810,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item629
+		class Item614
 		{
 			position[]={5499.6519,128.39734,7729.2803};
 			name="J_1_22_29_7_36";
@@ -7960,7 +7819,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item630
+		class Item615
 		{
 			position[]={3418.8152,152.56801,6904.7393};
 			name="J_1_22_29_7_37";
@@ -7969,7 +7828,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item631
+		class Item616
 		{
 			position[]={3726.863,133.20714,7021.5659};
 			name="J_1_22_29_7_38";
@@ -7978,7 +7837,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item632
+		class Item617
 		{
 			position[]={4037.0356,94.357437,7244.6001};
 			name="J_1_22_29_7_39";
@@ -7987,7 +7846,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item633
+		class Item618
 		{
 			position[]={4245.2344,127.91608,7246.7241};
 			name="J_1_22_29_7_40";
@@ -7996,7 +7855,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item634
+		class Item619
 		{
 			position[]={4432.1875,39.619473,5024.8809};
 			name="J_1_22_29_7_41";
@@ -8005,7 +7864,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item635
+		class Item620
 		{
 			position[]={4536.791,40.022816,5131.7217};
 			name="J_1_22_29_7_42";
@@ -8014,7 +7873,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item636
+		class Item621
 		{
 			position[]={4612.7681,15.988737,5003.6392};
 			name="J_1_22_29_7_43";
@@ -8023,7 +7882,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item637
+		class Item622
 		{
 			position[]={4362.0806,38.585926,5001.5151};
 			name="J_1_22_29_7_44";
@@ -8032,7 +7891,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item638
+		class Item623
 		{
 			position[]={4416.1665,35.797817,4977.9858};
 			name="J_1_22_29_7_45";
@@ -8041,7 +7900,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item639
+		class Item624
 		{
 			position[]={4710.54,35.356899,5211.5938};
 			name="J_1_22_29_7_46";
@@ -8050,7 +7909,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item640
+		class Item625
 		{
 			position[]={5364.8301,39.249847,5753.459};
 			name="J_1_22_29_7_47";
@@ -8059,7 +7918,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item641
+		class Item626
 		{
 			position[]={5759.9819,61.312984,5772.5752};
 			name="J_1_22_29_7_48";
@@ -8068,7 +7927,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item642
+		class Item627
 		{
 			position[]={5772.729,14.149327,5581.4033};
 			name="J_1_22_29_7_49";
@@ -8077,7 +7936,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item643
+		class Item628
 		{
 			position[]={5766.3555,58.884335,5789.5693};
 			name="J_1_22_29_7_50";
@@ -8086,7 +7945,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item644
+		class Item629
 		{
 			position[]={5953.3086,100.85094,6290.8638};
 			name="J_1_22_29_7_51";
@@ -8095,7 +7954,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item645
+		class Item630
 		{
 			position[]={5708.9951,210.95094,6494.7803};
 			name="J_1_22_29_7_52";
@@ -8104,7 +7963,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item646
+		class Item631
 		{
 			position[]={7115.394,174.05801,7395.4131};
 			name="J_1_22_29_7_53";
@@ -8113,7 +7972,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item647
+		class Item632
 		{
 			position[]={7193.9995,165.08043,7484.627};
 			name="J_1_22_29_7_54";
@@ -8122,7 +7981,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item648
+		class Item633
 		{
 			position[]={7268.356,207.85126,7306.1997};
 			name="J_1_22_29_7_55";
@@ -8131,7 +7990,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item649
+		class Item634
 		{
 			position[]={7083.5269,179.76422,7265.8418};
 			name="J_1_22_29_7_56";
@@ -8140,7 +7999,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item650
+		class Item635
 		{
 			position[]={7174.8789,110.44573,7807.4946};
 			name="J_1_22_29_7_57";
@@ -8149,7 +8008,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item651
+		class Item636
 		{
 			position[]={7179.1279,104.58653,7847.853};
 			name="J_1_22_29_7_58";
@@ -8158,7 +8017,7 @@ class Mission
 			colorName="ColorGreen";
 			angle=-51.491299;
 		};
-		class Item652
+		class Item637
 		{
 			position[]={4976.1758,4.7414918,6635.7471};
 			name="E_2_18_2_29_1_1";
@@ -8167,7 +8026,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item653
+		class Item638
 		{
 			position[]={4956.5278,4.7406487,6631.6104};
 			name="E_2_18_2_29_1_2";
@@ -8176,7 +8035,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item654
+		class Item639
 		{
 			position[]={4942.0508,8.272089,6613};
 			name="E_2_18_2_29_1_3";
@@ -8185,7 +8044,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item655
+		class Item640
 		{
 			position[]={4861.4072,41,6217.5273};
 			name="E_2_18_2_29_1";
@@ -8194,7 +8053,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item656
+		class Item641
 		{
 			position[]={4806.7666,41.067112,6224.6533};
 			name="E_2_18_2_29_1_4";
@@ -8203,7 +8062,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item657
+		class Item642
 		{
 			position[]={4836.4629,41,6166.0615};
 			name="E_2_18_2_29_1_5";
@@ -8212,7 +8071,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item658
+		class Item643
 		{
 			position[]={4865.7627,41,6169.2295};
 			name="E_2_18_2_29_1_6";
@@ -8221,7 +8080,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item659
+		class Item644
 		{
 			position[]={4503.1426,40,5083.6279};
 			name="E_2_18_2_29_1_7";
@@ -8230,7 +8089,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item660
+		class Item645
 		{
 			position[]={4340.1191,3.2226467,4787.5103};
 			name="E_2_18_2_29_1_8";
@@ -8239,7 +8098,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item661
+		class Item646
 		{
 			position[]={4274.6025,3.24156,4793.3726};
 			name="E_2_18_2_29_1_9";
@@ -8248,7 +8107,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item662
+		class Item647
 		{
 			position[]={6170.0894,7.3925295,5697.0234};
 			name="E_2_18_2_29_1_10";
@@ -8257,7 +8116,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item663
+		class Item648
 		{
 			position[]={6169.0557,7.4444256,5727.0078};
 			name="E_2_18_2_29_1_11";
@@ -8266,7 +8125,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item664
+		class Item649
 		{
 			position[]={5999.4644,49.105652,6615.1509};
 			name="E_2_18_2_29_1_12";
@@ -8275,7 +8134,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item665
+		class Item650
 		{
 			position[]={5961.2026,31.16444,6698.8984};
 			name="E_2_18_2_29_1_13";
@@ -8284,7 +8143,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item666
+		class Item651
 		{
 			position[]={5975.6802,26.218365,6720.6118};
 			name="E_2_18_2_29_1_14";
@@ -8293,7 +8152,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item667
+		class Item652
 		{
 			position[]={4196.7212,398.70895,6635.7334};
 			name="E_2_18_2_29_1_15";
@@ -8302,7 +8161,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item668
+		class Item653
 		{
 			position[]={4182.644,398.85754,6615.9009};
 			name="E_2_18_2_29_1_16";
@@ -8311,7 +8170,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item669
+		class Item654
 		{
 			position[]={4154.4893,397.31317,6592.8682};
 			name="E_2_18_2_29_1_17";
@@ -8320,7 +8179,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item670
+		class Item655
 		{
 			position[]={4153.8491,376.84122,6711.2275};
 			name="E_2_18_2_29_1_18";
@@ -8329,16 +8188,16 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item671
+		class Item656
 		{
-			position[]={4134.6528,375.49469,6715.0659};
+			position[]={4128.4258,376.20758,6713.1636};
 			name="E_2_18_2_29_1_19";
 			text="Myas";
 			type="Empty";
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item672
+		class Item657
 		{
 			position[]={3569.0012,205.38771,6682.4385};
 			name="E_2_18_2_29_1_20";
@@ -8347,7 +8206,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item673
+		class Item658
 		{
 			position[]={3579.2393,205.38771,6697.1533};
 			name="E_2_18_2_29_1_21";
@@ -8356,7 +8215,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item674
+		class Item659
 		{
 			position[]={3863.4761,53,7474.8325};
 			name="E_2_18_2_29_1_22";
@@ -8365,7 +8224,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item675
+		class Item660
 		{
 			position[]={3979.0869,53.002296,7571.1597};
 			name="E_2_18_2_29_1_23";
@@ -8374,7 +8233,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item676
+		class Item661
 		{
 			position[]={4014.6597,52.999958,7660.0767};
 			name="E_2_18_2_29_1_24";
@@ -8383,7 +8242,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item677
+		class Item662
 		{
 			position[]={3934.6213,52.999374,7590.4248};
 			name="E_2_18_2_29_1_25";
@@ -8392,7 +8251,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item678
+		class Item663
 		{
 			position[]={3859.0293,53.000164,7430.373};
 			name="E_2_18_2_29_1_26";
@@ -8401,7 +8260,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item679
+		class Item664
 		{
 			position[]={5034.0762,40.492619,8159.0801};
 			name="E_2_18_2_29_1_27";
@@ -8410,7 +8269,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item680
+		class Item665
 		{
 			position[]={5060.6738,40,8217.7695};
 			name="E_2_18_2_29_1_28";
@@ -8419,7 +8278,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item681
+		class Item666
 		{
 			position[]={5026.7388,40.636005,8158.1631};
 			name="E_2_18_2_29_1_29";
@@ -8428,7 +8287,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item682
+		class Item667
 		{
 			position[]={4992.8042,40.000023,8199.4287};
 			name="E_2_18_2_29_1_30";
@@ -8437,7 +8296,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item683
+		class Item668
 		{
 			position[]={5765.9668,51.484821,8646.0137};
 			name="E_2_18_2_29_1_31";
@@ -8446,7 +8305,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item684
+		class Item669
 		{
 			position[]={5858.5991,50.600315,8692.7803};
 			name="E_2_18_2_29_1_32";
@@ -8455,7 +8314,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item685
+		class Item670
 		{
 			position[]={5818.2446,50.777126,8635.9258};
 			name="E_2_18_2_29_1_33";
@@ -8464,7 +8323,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item686
+		class Item671
 		{
 			position[]={4614.0186,78.297195,9221.8955};
 			name="E_2_18_2_29_1_34";
@@ -8473,7 +8332,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item687
+		class Item672
 		{
 			position[]={4627.7764,76.683464,9203.5537};
 			name="E_2_18_2_29_1_35";
@@ -8482,7 +8341,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item688
+		class Item673
 		{
 			position[]={5718.8218,21.391918,9901.4063};
 			name="E_2_18_2_29_1_36";
@@ -8491,7 +8350,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item689
+		class Item674
 		{
 			position[]={5720.4912,21.547941,9889.4824};
 			name="E_2_18_2_29_1_37";
@@ -8500,7 +8359,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item690
+		class Item675
 		{
 			position[]={5701.0518,8.8486109,9983.084};
 			name="E_2_18_2_29_1_38";
@@ -8509,7 +8368,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item691
+		class Item676
 		{
 			position[]={5694.2544,21.658962,10002.759};
 			name="E_2_18_2_29_1_39";
@@ -8518,7 +8377,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item692
+		class Item677
 		{
 			position[]={5735.397,8.7487707,9945.4053};
 			name="E_2_18_2_29_1_40";
@@ -8527,7 +8386,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item693
+		class Item678
 		{
 			position[]={5715.3618,8.1115341,9986.0654};
 			name="E_2_18_2_29_1_41";
@@ -8536,7 +8395,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item694
+		class Item679
 		{
 			position[]={5673.98,1.9682643,9950.1748};
 			name="E_2_18_2_29_1_42";
@@ -8545,7 +8404,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item695
+		class Item680
 		{
 			position[]={5987.7949,0.49969769,9858.2783};
 			name="E_2_18_2_29_1_43";
@@ -8554,7 +8413,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item696
+		class Item681
 		{
 			position[]={5995.9043,0.48659363,9839.5576};
 			name="E_2_18_2_29_1_44";
@@ -8563,7 +8422,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item697
+		class Item682
 		{
 			position[]={6016.417,0.38115579,9830.1377};
 			name="E_2_18_2_29_1_45";
@@ -8572,7 +8431,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item698
+		class Item683
 		{
 			position[]={5992.5654,0.49034819,9848.9785};
 			name="E_2_18_2_29_1_46";
@@ -8581,7 +8440,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item699
+		class Item684
 		{
 			position[]={5976.2275,0.46025562,9839.6768};
 			name="E_2_18_2_29_1_47";
@@ -8590,7 +8449,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item700
+		class Item685
 		{
 			position[]={6282.9541,4.9727354,9940.1084};
 			name="E_2_18_2_29_1_48";
@@ -8599,7 +8458,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item701
+		class Item686
 		{
 			position[]={8153.9014,15.905565,10659.789};
 			name="E_2_18_2_29_1_49";
@@ -8608,16 +8467,16 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item702
+		class Item687
 		{
-			position[]={2197.3245,4.4121718,5767.6748};
+			position[]={2212.3767,4.9720259,5774.7827};
 			name="E_1_31_7_1_3_29_91_3_83_1";
 			text="Electra";
 			type="Empty";
 			colorName="ColorBlue";
 			angle=-51.491299;
 		};
-		class Item703
+		class Item688
 		{
 			position[]={3536.4153,205.38771,6680.2344};
 			name="E_2_18_2_29_1_20_1";
@@ -8626,7 +8485,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item704
+		class Item689
 		{
 			position[]={3534.2104,205.38771,6671.1709};
 			name="E_2_18_2_29_1_20_2";
@@ -8635,7 +8494,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item705
+		class Item690
 		{
 			position[]={3937.8198,153.75151,8447.5088};
 			name="E_2_18_2_29_1_20_3";
@@ -8644,7 +8503,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item706
+		class Item691
 		{
 			position[]={3942.4749,152.94235,8478.374};
 			name="E_2_18_2_29_1_20_4";
@@ -8653,7 +8512,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item707
+		class Item692
 		{
 			position[]={4064.5337,70.322853,9221.4258};
 			name="E_2_18_2_29_1_20_5";
@@ -8662,7 +8521,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item708
+		class Item693
 		{
 			position[]={4067.5723,70.311066,9239.1025};
 			name="E_2_18_2_29_1_20_6";
@@ -8671,7 +8530,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item709
+		class Item694
 		{
 			position[]={4835.3599,13.872915,10792.818};
 			name="E_2_18_2_29_1_20_7";
@@ -8680,7 +8539,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item710
+		class Item695
 		{
 			position[]={4839.8999,13.512454,10834.241};
 			name="E_2_18_2_29_1_20_8";
@@ -8689,7 +8548,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item711
+		class Item696
 		{
 			position[]={4437.5278,14.989105,10743.452};
 			name="E_2_18_2_29_1_20_9";
@@ -8698,7 +8557,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item712
+		class Item697
 		{
 			position[]={4402.3413,14.989105,10740.615};
 			name="E_2_18_2_29_1_20_10";
@@ -8707,7 +8566,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item713
+		class Item698
 		{
 			position[]={4385.8833,14.989105,10736.644};
 			name="E_2_18_2_29_1_20_11";
@@ -8716,7 +8575,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item714
+		class Item699
 		{
 			position[]={4516.4131,15.041248,10956.806};
 			name="E_2_18_2_29_1_20_12";
@@ -8725,7 +8584,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item715
+		class Item700
 		{
 			position[]={4413.124,14.913249,11042.488};
 			name="E_2_18_2_29_1_20_13";
@@ -8734,7 +8593,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item716
+		class Item701
 		{
 			position[]={4442.0679,14.606822,11045.325};
 			name="E_2_18_2_29_1_20_14";
@@ -8743,7 +8602,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item717
+		class Item702
 		{
 			position[]={4462.4985,14.800159,11040.786};
 			name="E_2_18_2_29_1_20_15";
@@ -8752,7 +8611,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item718
+		class Item703
 		{
 			position[]={4987.4551,12.953818,11261.516};
 			name="E_2_18_2_29_1_20_16";
@@ -8761,7 +8620,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item719
+		class Item704
 		{
 			position[]={4952.269,14.725631,11272.864};
 			name="E_2_18_2_29_1_20_17";
@@ -8770,7 +8629,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item720
+		class Item705
 		{
 			position[]={5024.9116,9.5397911,10974.963};
 			name="E_2_18_2_29_1_20_18";
@@ -8779,7 +8638,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item721
+		class Item706
 		{
 			position[]={4997.103,7.6513405,10953.4};
 			name="E_2_18_2_29_1_20_19";
@@ -8788,7 +8647,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item722
+		class Item707
 		{
 			position[]={5074.8535,14.304315,10950.563};
 			name="E_2_18_2_29_1_20_20";
@@ -8797,7 +8656,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item723
+		class Item708
 		{
 			position[]={5238.8672,35.79512,10953.968};
 			name="E_2_18_2_29_1_20_21";
@@ -8806,7 +8665,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item724
+		class Item709
 		{
 			position[]={4451.1479,11.051392,11145.192};
 			name="E_2_18_2_29_1_20_22";
@@ -8815,7 +8674,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item725
+		class Item710
 		{
 			position[]={4419.3667,2.8,11225.768};
 			name="E_2_18_2_29_1_20_23";
@@ -8824,7 +8683,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item726
+		class Item711
 		{
 			position[]={4406.8813,2.8,11264.92};
 			name="E_2_18_2_29_1_20_24";
@@ -8833,7 +8692,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item727
+		class Item712
 		{
 			position[]={5788.478,16.854517,10772.105};
 			name="E_2_18_2_29_1_20_25";
@@ -8842,7 +8701,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item728
+		class Item713
 		{
 			position[]={5777.104,16.855017,10781.411};
 			name="E_2_18_2_29_1_20_26";
@@ -8851,7 +8710,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item729
+		class Item714
 		{
 			position[]={6036.6934,30.351204,10803.542};
 			name="E_2_18_2_29_1_20_27";
@@ -8860,7 +8719,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item730
+		class Item715
 		{
 			position[]={6038.2769,30.350763,10819.378};
 			name="E_2_18_2_29_1_20_28";
@@ -8869,7 +8728,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item731
+		class Item716
 		{
 			position[]={6158.6445,36.195427,10885.49};
 			name="E_2_18_2_29_1_20_29";
@@ -8878,7 +8737,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item732
+		class Item717
 		{
 			position[]={6151.1216,34.647305,10798};
 			name="E_2_18_2_29_1_20_30";
@@ -8887,7 +8746,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item733
+		class Item718
 		{
 			position[]={6135.6797,34.89542,10778.998};
 			name="E_2_18_2_29_1_20_31";
@@ -8896,7 +8755,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item734
+		class Item719
 		{
 			position[]={4147.7661,396.1076,6586.231};
 			name="E_2_18_2_29_1_20_32";
@@ -8905,7 +8764,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item735
+		class Item720
 		{
 			position[]={4169.2485,398.84848,6627.6113};
 			name="E_2_18_2_29_1_20_33";
@@ -8914,7 +8773,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item736
+		class Item721
 		{
 			position[]={4146.0127,376.93231,6698.3496};
 			name="E_2_18_2_29_1_20_34";
@@ -8923,7 +8782,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item737
+		class Item722
 		{
 			position[]={7671.5928,41.85223,7398.0474};
 			name="E_2_18_2_29_1_20_35";
@@ -8932,7 +8791,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item738
+		class Item723
 		{
 			position[]={7149.2046,83.907906,7962.6699};
 			name="E_2_18_2_29_1_20_36";
@@ -8941,7 +8800,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item739
+		class Item724
 		{
 			position[]={7284.6694,85.853195,7883.0571};
 			name="E_2_18_2_29_1_20_37";
@@ -8950,7 +8809,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item740
+		class Item725
 		{
 			position[]={7438.749,75.270844,8375.207};
 			name="E_2_18_2_29_1_20_38";
@@ -8959,7 +8818,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item741
+		class Item726
 		{
 			position[]={6648.7031,5.9236245,8412.4277};
 			name="E_2_18_2_29_1_20_39";
@@ -8968,7 +8827,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item742
+		class Item727
 		{
 			position[]={6400.168,6.5388951,8626.0352};
 			name="E_2_18_2_29_1_20_40";
@@ -8977,7 +8836,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item743
+		class Item728
 		{
 			position[]={6390.7954,6.6933527,8616.8672};
 			name="E_2_18_2_29_1_20_41";
@@ -8986,7 +8845,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item744
+		class Item729
 		{
 			position[]={6382.8721,7.7505803,8603.0654};
 			name="E_2_18_2_29_1_20_42";
@@ -8995,7 +8854,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item745
+		class Item730
 		{
 			position[]={5839.2529,50.61203,8669.6553};
 			name="E_2_18_2_29_1_20_43";
@@ -9004,7 +8863,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item746
+		class Item731
 		{
 			position[]={5781.4448,50.626213,8668.0713};
 			name="E_2_18_2_29_1_20_44";
@@ -9013,7 +8872,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item747
+		class Item732
 		{
 			position[]={6512.2769,41.930546,9557.9961};
 			name="E_2_18_2_29_1_20_45";
@@ -9022,7 +8881,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item748
+		class Item733
 		{
 			position[]={6551.0796,40.290356,9525.5352};
 			name="E_2_18_2_29_1_20_46";
@@ -9031,7 +8890,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item749
+		class Item734
 		{
 			position[]={6564.542,40.220257,9516.8252};
 			name="E_2_18_2_29_1_20_47";
@@ -9040,7 +8899,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item750
+		class Item735
 		{
 			position[]={6710.0381,34.123962,9747.7744};
 			name="E_2_18_2_29_1_20_48";
@@ -9049,7 +8908,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item751
+		class Item736
 		{
 			position[]={6343.9883,37.006882,9749.4014};
 			name="E_2_18_2_29_1_20_49";
@@ -9058,7 +8917,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item752
+		class Item737
 		{
 			position[]={6899.9565,24.280176,10246.238};
 			name="E_2_18_2_29_1_20_50";
@@ -9067,7 +8926,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item753
+		class Item738
 		{
 			position[]={6613.0996,5.7819357,10230.668};
 			name="E_2_18_2_29_1_20_51";
@@ -9076,7 +8935,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item754
+		class Item739
 		{
 			position[]={6322.1943,12.598007,10212.605};
 			name="E_2_18_2_29_1_20_52";
@@ -9085,7 +8944,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item755
+		class Item740
 		{
 			position[]={6138.2388,19.985617,10473.709};
 			name="E_2_18_2_29_1_20_53";
@@ -9094,7 +8953,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item756
+		class Item741
 		{
 			position[]={6608.4619,15.282462,10412.128};
 			name="E_2_18_2_29_1_20_54";
@@ -9103,7 +8962,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item757
+		class Item742
 		{
 			position[]={6648.1426,19.166971,10673.255};
 			name="E_2_18_2_29_1_20_55";
@@ -9112,7 +8971,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item758
+		class Item743
 		{
 			position[]={6521.1655,13.953494,10565.774};
 			name="E_2_18_2_29_1_20_56";
@@ -9121,7 +8980,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item759
+		class Item744
 		{
 			position[]={6769.3477,16,10710.765};
 			name="E_2_18_2_29_1_20_57";
@@ -9130,7 +8989,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item760
+		class Item745
 		{
 			position[]={6829.229,15.997732,10883.888};
 			name="E_2_18_2_29_1_20_58";
@@ -9139,7 +8998,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item761
+		class Item746
 		{
 			position[]={6993.8286,15.067167,10953.097};
 			name="E_2_18_2_29_1_20_59";
@@ -9148,7 +9007,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item762
+		class Item747
 		{
 			position[]={7009.603,14.999997,11033.274};
 			name="E_2_18_2_29_1_20_60";
@@ -9157,7 +9016,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item763
+		class Item748
 		{
 			position[]={7304.0713,18.721581,10929.438};
 			name="E_2_18_2_29_1_20_61";
@@ -9166,7 +9025,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item764
+		class Item749
 		{
 			position[]={7168.668,14.880028,11198.885};
 			name="E_2_18_2_29_1_20_62";
@@ -9175,7 +9034,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item765
+		class Item750
 		{
 			position[]={7192.3311,14.54519,11222.545};
 			name="E_2_18_2_29_1_20_63";
@@ -9184,7 +9043,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item766
+		class Item751
 		{
 			position[]={7176.5557,15,11268.548};
 			name="E_2_18_2_29_1_20_64";
@@ -9193,7 +9052,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item767
+		class Item752
 		{
 			position[]={6859.23,15,11196.751};
 			name="E_2_18_2_29_1_20_65";
@@ -9202,7 +9061,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item768
+		class Item753
 		{
 			position[]={6906.9985,15.228099,11255.67};
 			name="E_2_18_2_29_1_20_66";
@@ -9211,7 +9070,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item769
+		class Item754
 		{
 			position[]={6904.7661,15.572745,11284.684};
 			name="E_2_18_2_29_1_20_67";
@@ -9220,7 +9079,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item770
+		class Item755
 		{
 			position[]={6898.9624,15,11362.795};
 			name="E_2_18_2_29_1_20_68";
@@ -9229,7 +9088,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item771
+		class Item756
 		{
 			position[]={6941.8198,15,11362.349};
 			name="E_2_18_2_29_1_20_69";
@@ -9238,7 +9097,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item772
+		class Item757
 		{
 			position[]={6804.3198,15,11285.576};
 			name="E_2_18_2_29_1_20_70";
@@ -9247,7 +9106,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item773
+		class Item758
 		{
 			position[]={6642.2671,15,11229.781};
 			name="E_2_18_2_29_1_20_71";
@@ -9256,7 +9115,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item774
+		class Item759
 		{
 			position[]={6620.3921,15,11231.12};
 			name="E_2_18_2_29_1_20_72";
@@ -9265,7 +9124,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item775
+		class Item760
 		{
 			position[]={8481.1953,15,10289.476};
 			name="E_2_18_2_29_1_20_73";
@@ -9274,7 +9133,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item776
+		class Item761
 		{
 			position[]={8674.0107,15,10093.375};
 			name="E_2_18_2_29_1_20_74";
@@ -9283,7 +9142,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item777
+		class Item762
 		{
 			position[]={7908.1831,50.389835,10695.892};
 			name="E_2_18_2_29_1_20_75";
@@ -9292,7 +9151,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item778
+		class Item763
 		{
 			position[]={6226.6436,17.923452,11766.621};
 			name="E_2_18_2_29_1_20_76";
@@ -9301,7 +9160,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item779
+		class Item764
 		{
 			position[]={5536.062,31.716295,10345.18};
 			name="E_2_18_2_29_1_20_77";
@@ -9310,7 +9169,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item780
+		class Item765
 		{
 			position[]={5554.1787,34.166138,10357.513};
 			name="E_2_18_2_29_1_20_78";
@@ -9319,7 +9178,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item781
+		class Item766
 		{
 			position[]={5583.1421,36.965515,10302.084};
 			name="E_2_18_2_29_1_20_79";
@@ -9328,7 +9187,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item782
+		class Item767
 		{
 			position[]={5693.8555,50.848198,10383.32};
 			name="E_2_18_2_29_1_20_80";
@@ -9337,7 +9196,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item783
+		class Item768
 		{
 			position[]={4519.0264,14.300958,11046.888};
 			name="E_2_18_2_29_1_20_81";
@@ -9346,7 +9205,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item784
+		class Item769
 		{
 			position[]={4467.7808,2.8623848,11204.03};
 			name="E_2_18_2_29_1_20_82";
@@ -9355,7 +9214,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item785
+		class Item770
 		{
 			position[]={4485.0449,2.8,11267.437};
 			name="E_2_18_2_29_1_20_83";
@@ -9364,7 +9223,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item786
+		class Item771
 		{
 			position[]={4423.3384,2.8,11276.495};
 			name="E_2_18_2_29_1_20_84";
@@ -9373,7 +9232,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item787
+		class Item772
 		{
 			position[]={4209.2852,184.71533,8895.1641};
 			name="E_2_18_2_29_1_20_85";
@@ -9382,7 +9241,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item788
+		class Item773
 		{
 			position[]={7279.4395,238.68486,7042.2813};
 			name="E_2_18_2_29_1_20_86";
@@ -9391,7 +9250,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item789
+		class Item774
 		{
 			position[]={7651.1094,71.867363,8764.6963};
 			name="E_2_18_2_29_1_20_87";
@@ -9400,7 +9259,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item790
+		class Item775
 		{
 			position[]={7657.9458,71.867363,8735.3008};
 			name="E_2_18_2_29_1_20_88";
@@ -9409,7 +9268,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item791
+		class Item776
 		{
 			position[]={6721.939,6.7429318,8379.3086};
 			name="E_2_18_2_29_1_20_89";
@@ -9418,7 +9277,7 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item792
+		class Item777
 		{
 			position[]={6031.3164,50.07452,8772.8359};
 			name="E_2_18_2_29_1_20_90";
@@ -9427,10 +9286,937 @@ class Mission
 			colorName="ColorBrown";
 			angle=-51.491299;
 		};
-		class Item793
+		class Item778
 		{
 			position[]={5904.4629,39.721638,7670.6885};
 			name="J_32_23_1_8_3_81_1";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item779
+		{
+			position[]={4321.207,27.674566,4935.9189};
+			name="J_1_22_29_7_45_1";
+			text="Puh";
+			type="Empty";
+			colorName="ColorGreen";
+			angle=-51.491299;
+		};
+		class Item780
+		{
+			position[]={4365.2813,20.210169,4905.0684};
+			name="J_1_22_29_7_45_2";
+			text="Puh";
+			type="Empty";
+			colorName="ColorGreen";
+			angle=-51.491299;
+		};
+		class Item781
+		{
+			position[]={4338.8364,13.587122,4866.6064};
+			name="J_1_22_29_7_45_3";
+			text="Puh";
+			type="Empty";
+			colorName="ColorGreen";
+			angle=-51.491299;
+		};
+		class Item782
+		{
+			position[]={4279.1357,12.031482,4860.5977};
+			name="J_1_22_29_7_45_4";
+			text="Puh";
+			type="Empty";
+			colorName="ColorGreen";
+			angle=-51.491299;
+		};
+		class Item783
+		{
+			position[]={4376.4995,5.7010775,4827.3433};
+			name="J_1_22_29_7_45_5";
+			text="Puh";
+			type="Empty";
+			colorName="ColorGreen";
+			angle=-51.491299;
+		};
+		class Item784
+		{
+			position[]={4409.8569,63.569542,5156.1626};
+			name="J_1_22_29_7_45_6";
+			text="Puh";
+			type="Empty";
+			colorName="ColorGreen";
+			angle=-51.491299;
+		};
+		class Item785
+		{
+			position[]={4533.3374,98.009384,5316.2554};
+			name="J_1_22_29_7_45_7";
+			text="Puh";
+			type="Empty";
+			colorName="ColorGreen";
+			angle=-51.491299;
+		};
+		class Item786
+		{
+			position[]={4314.6309,60.858349,5138.374};
+			name="J_1_22_29_7_45_8";
+			text="Puh";
+			type="Empty";
+			colorName="ColorGreen";
+			angle=-51.491299;
+		};
+		class Item787
+		{
+			position[]={4220.4512,77.054787,5288.0039};
+			name="J_1_22_29_7_45_9";
+			text="Puh";
+			type="Empty";
+			colorName="ColorGreen";
+			angle=-51.491299;
+		};
+		class Item788
+		{
+			position[]={4307.3062,112.50333,5322.5332};
+			name="J_1_22_29_7_45_10";
+			text="Puh";
+			type="Empty";
+			colorName="ColorGreen";
+			angle=-51.491299;
+		};
+		class Item789
+		{
+			position[]={4161.8506,84.20369,5454.375};
+			name="J_1_22_29_7_45_11";
+			text="Puh";
+			type="Empty";
+			colorName="ColorGreen";
+			angle=-51.491299;
+		};
+		class Item790
+		{
+			position[]={2350.4619,20.052063,6001.6211};
+			name="J_1_22_29_7_45_12";
+			text="Puh";
+			type="Empty";
+			colorName="ColorGreen";
+			angle=-51.491299;
+		};
+		class Item791
+		{
+			position[]={2515.7996,42.58543,5815.3691};
+			name="J_1_22_29_7_45_13";
+			text="Puh";
+			type="Empty";
+			colorName="ColorGreen";
+			angle=-51.491299;
+		};
+		class Item792
+		{
+			position[]={2597.4219,29.855467,5768.2837};
+			name="J_1_22_29_7_45_14";
+			text="Puh";
+			type="Empty";
+			colorName="ColorGreen";
+			angle=-51.491299;
+		};
+		class Item793
+		{
+			position[]={2363.0193,23.683744,5944.0718};
+			name="J_1_22_29_7_45_15";
+			text="Puh";
+			type="Empty";
+			colorName="ColorGreen";
+			angle=-51.491299;
+		};
+		class Item794
+		{
+			position[]={2445.688,30.286947,5842.5747};
+			name="J_1_22_29_7_45_16";
+			text="Puh";
+			type="Empty";
+			colorName="ColorGreen";
+			angle=-51.491299;
+		};
+		class Item795
+		{
+			position[]={2414.2947,30.578552,5893.8467};
+			name="J_1_22_29_7_45_17";
+			text="Puh";
+			type="Empty";
+			colorName="ColorGreen";
+			angle=-51.491299;
+		};
+		class Item796
+		{
+			position[]={5935.9766,39.653961,5868.8066};
+			name="E_24_22_1_8_29_1";
+			text="Gravy";
+			type="Empty";
+			colorName="ColorCIV";
+			angle=-51.491325;
+		};
+		class Item797
+		{
+			position[]={6885.5698,38.617516,5837.7046};
+			name="E_24_22_1_8_29_2";
+			text="Gravy";
+			type="Empty";
+			colorName="ColorCIV";
+			angle=-51.491325;
+		};
+		class Item798
+		{
+			position[]={7283.2627,40.535599,5826.9414};
+			name="E_24_22_1_8_29_3";
+			text="Gravy";
+			type="Empty";
+			colorName="ColorCIV";
+			angle=-51.491325;
+		};
+		class Item799
+		{
+			position[]={7589.166,39.314571,6073.4419};
+			name="E_24_22_1_8_29_4";
+			text="Gravy";
+			type="Empty";
+			colorName="ColorCIV";
+			angle=-51.491325;
+		};
+		class Item800
+		{
+			position[]={7583.2104,39.456322,6073.7349};
+			name="E_24_22_1_8_29_5";
+			text="Gravy";
+			type="Empty";
+			colorName="ColorCIV";
+			angle=-51.491325;
+		};
+		class Item801
+		{
+			position[]={4970.6421,4.7103138,6587.5723};
+			name="J_32_23_1_8_3_72_1";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item802
+		{
+			position[]={4159.1636,398.7713,6615.312};
+			name="J_32_23_1_8_3_72_2";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item803
+		{
+			position[]={3570.0178,205.38771,6664.4902};
+			name="J_32_23_1_8_3_72_3";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item804
+		{
+			position[]={4309.8496,3.3331506,4774.7661};
+			name="J_32_23_1_8_3_72_4";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item805
+		{
+			position[]={6165.186,8.5194349,5754.1563};
+			name="J_32_23_1_8_3_72_5";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item806
+		{
+			position[]={7128.957,40.061413,5816.937};
+			name="J_32_23_1_8_3_72_6";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item807
+		{
+			position[]={7013.8477,40.202755,5775.0825};
+			name="J_32_23_1_8_3_72_7";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item808
+		{
+			position[]={7080.8193,88.317406,6257.4536};
+			name="J_32_23_1_8_3_72_8";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item809
+		{
+			position[]={7737.0313,17.56588,7759.0322};
+			name="J_32_23_1_8_3_72_9";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item810
+		{
+			position[]={7690.9346,19.260561,7666.0229};
+			name="J_32_23_1_8_3_72_10";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item811
+		{
+			position[]={7820.1704,17.501444,7534.3281};
+			name="J_32_23_1_8_3_72_11";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item812
+		{
+			position[]={7852.5977,9.7114,7581.0078};
+			name="J_32_23_1_8_3_72_11_1";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item813
+		{
+			position[]={7915.2153,0,7623.4951};
+			name="J_32_23_1_8_3_72_11_1_1";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item814
+		{
+			position[]={7988.4551,-0.3806816,7619.3027};
+			name="J_32_23_1_8_3_72_11_1_2";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item815
+		{
+			position[]={7884.1855,9.61691,7663.187};
+			name="J_32_23_1_8_3_72_11_1_3";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item816
+		{
+			position[]={7904.0337,9.4494314,7683.8711};
+			name="J_32_23_1_8_3_72_11_1_4";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item817
+		{
+			position[]={7901.2383,8.3439045,7742.8486};
+			name="J_32_23_1_8_3_72_11_1_5";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item818
+		{
+			position[]={7877.7563,9.8040743,7735.8604};
+			name="J_32_23_1_8_3_72_11_1_6";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item819
+		{
+			position[]={7850.6406,9.7726917,7725.7988};
+			name="J_32_23_1_8_3_72_11_1_7";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item820
+		{
+			position[]={7823.2461,10.126778,7685.2681};
+			name="J_32_23_1_8_3_72_11_1_8";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item821
+		{
+			position[]={7296.6123,84.509277,7954.8818};
+			name="J_32_23_1_8_3_72_11_1_9";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item822
+		{
+			position[]={7257.6069,84.522087,7981.5986};
+			name="J_32_23_1_8_3_72_11_1_10";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item823
+		{
+			position[]={7279.2554,84.352493,8007.5352};
+			name="J_32_23_1_8_3_72_11_1_11";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item824
+		{
+			position[]={7287.8364,84.50354,7976.7231};
+			name="J_32_23_1_8_3_72_11_1_12";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item825
+		{
+			position[]={7299.9282,84.944962,7923.29};
+			name="J_32_23_1_8_3_72_11_1_13";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item826
+		{
+			position[]={7372.8682,137.50066,7445.063};
+			name="J_32_23_1_8_3_72_11_1_14";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item827
+		{
+			position[]={7622.9102,72.271751,8747.9736};
+			name="J_32_23_1_8_3_72_11_1_15";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item828
+		{
+			position[]={7496.4478,2.5587153,9332.7539};
+			name="J_32_23_1_8_3_72_11_1_16";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item829
+		{
+			position[]={5799.5225,50.620548,8709.707};
+			name="J_32_23_1_8_3_72_11_1_17";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item830
+		{
+			position[]={5855.748,50.594437,8724.3584};
+			name="J_32_23_1_8_3_72_11_1_18";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item831
+		{
+			position[]={6461.0229,36,9293.2227};
+			name="J_32_23_1_8_3_72_11_1_19";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item832
+		{
+			position[]={6500.2974,36,9299.666};
+			name="J_32_23_1_8_3_72_11_1_20";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item833
+		{
+			position[]={6288.355,41.376896,9650.7236};
+			name="J_32_23_1_8_3_72_11_1_21";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item834
+		{
+			position[]={6209.1084,41.609383,9548.7412};
+			name="J_32_23_1_8_3_72_11_1_22";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item835
+		{
+			position[]={6004.938,0.45063332,9850.0391};
+			name="J_32_23_1_8_3_72_11_1_23";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item836
+		{
+			position[]={6303.2075,2.6872182,9995.3887};
+			name="J_32_23_1_8_3_72_11_1_24";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item837
+		{
+			position[]={6309.6372,0,10012.719};
+			name="J_32_23_1_8_3_72_11_1_25";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item838
+		{
+			position[]={6326.6895,0.98614919,10047.379};
+			name="J_32_23_1_8_3_72_11_1_26";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item839
+		{
+			position[]={6774.9336,16.235666,9957.2842};
+			name="J_32_23_1_8_3_72_11_1_27";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item840
+		{
+			position[]={6796.6177,22.335884,9932.8906};
+			name="J_32_23_1_8_3_72_11_1_28";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item841
+		{
+			position[]={6894.1978,19.540289,9965.415};
+			name="J_32_23_1_8_3_72_11_1_29";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item842
+		{
+			position[]={6875.2241,20.628263,9974.4492};
+			name="J_32_23_1_8_3_72_11_1_30";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item843
+		{
+			position[]={8218.3535,15,10807.496};
+			name="J_32_23_1_8_3_72_11_1_31";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item844
+		{
+			position[]={8220.833,15,10815.181};
+			name="J_32_23_1_8_3_72_11_1_32";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item845
+		{
+			position[]={8246.1211,15,10835.757};
+			name="J_32_23_1_8_3_72_11_1_33";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item846
+		{
+			position[]={8220.0889,15,10775.019};
+			name="J_32_23_1_8_3_72_11_1_34";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item847
+		{
+			position[]={8210.4199,15,10777.994};
+			name="J_32_23_1_8_3_72_11_1_35";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item848
+		{
+			position[]={8226.5352,15,10793.116};
+			name="J_32_23_1_8_3_72_11_1_36";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item849
+		{
+			position[]={8199.0146,15,10819.147};
+			name="J_32_23_1_8_3_72_11_1_37";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item850
+		{
+			position[]={8107.7764,15,10847.657};
+			name="J_32_23_1_8_3_72_11_1_38";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item851
+		{
+			position[]={8948.8018,5.4788895,10610.523};
+			name="J_32_23_1_8_3_72_11_1_39";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item852
+		{
+			position[]={9125.999,-0.0076388614,10081.136};
+			name="J_32_23_1_8_3_72_11_1_40";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item853
+		{
+			position[]={6789.6118,14.786537,11222.276};
+			name="J_32_23_1_8_3_72_11_1_41";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item854
+		{
+			position[]={6791.3877,15,11277.354};
+			name="J_32_23_1_8_3_72_11_1_42";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item855
+		{
+			position[]={6628.6309,15,11224.764};
+			name="J_32_23_1_8_3_72_11_1_43";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item856
+		{
+			position[]={6668.7871,15,11248.572};
+			name="J_32_23_1_8_3_72_11_1_44";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item857
+		{
+			position[]={6592.7383,15,11136.64};
+			name="J_32_23_1_8_3_72_11_1_45";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item858
+		{
+			position[]={6619.7471,14.999068,11065.928};
+			name="J_32_23_1_8_3_72_11_1_46";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item859
+		{
+			position[]={6664.5225,15,11058.821};
+			name="J_32_23_1_8_3_72_11_1_47";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item860
+		{
+			position[]={5774.6943,16.855362,10792.171};
+			name="J_32_23_1_8_3_72_11_1_48";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item861
+		{
+			position[]={5762.2676,16.86322,10771.308};
+			name="J_32_23_1_8_3_72_11_1_49";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item862
+		{
+			position[]={4424.8726,14.484612,10713.495};
+			name="J_32_23_1_8_3_72_11_1_50";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item863
+		{
+			position[]={5747.3184,22.15481,9856.1143};
+			name="J_32_23_1_8_3_72_11_1_51";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item864
+		{
+			position[]={5741.2876,19.217842,9748.9248};
+			name="J_32_23_1_8_3_72_11_1_52";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item865
+		{
+			position[]={5754.4355,24.074648,9753.1895};
+			name="J_32_23_1_8_3_72_11_1_53";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item866
+		{
+			position[]={5767.2285,24.148365,9748.5693};
+			name="J_32_23_1_8_3_72_11_1_54";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item867
+		{
+			position[]={5547.6118,43.237389,9543.1826};
+			name="J_32_23_1_8_3_72_11_1_55";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item868
+		{
+			position[]={4675.4019,2.2191834,10166.254};
+			name="J_32_23_1_8_3_72_11_1_56";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item869
+		{
+			position[]={4738.7856,2.8718746,10168.724};
+			name="J_32_23_1_8_3_72_11_1_57";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item870
+		{
+			position[]={4705.0361,-0.0087247537,10191.77};
+			name="J_32_23_1_8_3_72_11_1_58";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item871
+		{
+			position[]={4632.5981,5.7889609,10380.259};
+			name="J_32_23_1_8_3_72_11_1_59";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item872
+		{
+			position[]={4691.042,7.0055671,10391.782};
+			name="J_32_23_1_8_3_72_11_1_60";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item873
+		{
+			position[]={6528.9131,-0.00039100953,10001.04};
+			name="J_32_23_1_8_3_72_11_1_61";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item874
+		{
+			position[]={6530.8555,4.3992767,10028.882};
+			name="J_32_23_1_8_3_72_11_1_62";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item875
+		{
+			position[]={7823.6045,1.2194693,9488.2256};
+			name="J_32_23_1_8_3_72_11_1_63";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item876
+		{
+			position[]={7430.7114,-0.070677429,9349.0137};
+			name="J_32_23_1_8_3_72_11_1_64";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item877
+		{
+			position[]={3825.3181,53,7468.1602};
+			name="J_32_23_1_8_3_72_11_1_65";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item878
+		{
+			position[]={3836.3345,52.999397,7490.9019};
+			name="J_32_23_1_8_3_72_11_1_66";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item879
+		{
+			position[]={4011.5303,53,7623.4443};
+			name="J_32_23_1_8_3_72_11_1_67";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item880
+		{
+			position[]={4004.4231,52.999928,7631.2612};
+			name="J_32_23_1_8_3_72_11_1_68";
+			text="Jarka";
+			type="Empty";
+			colorName="ColorRed";
+			angle=-51.491325;
+		};
+		class Item881
+		{
+			position[]={3968.8865,53.005974,7536.0298};
+			name="J_32_23_1_8_3_72_11_1_69";
 			text="Jarka";
 			type="Empty";
 			colorName="ColorRed";
