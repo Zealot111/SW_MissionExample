@@ -5,7 +5,7 @@ class CfgPatches
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 1.0;
-		requiredAddons[] = {"Weapons_F"};
+		requiredAddons[] = {"A3_Weapons_F"};
 	};
 };
 
@@ -26,10 +26,10 @@ class CfgWeapons {
         simulation = "ItemMineDetector";
 	};
 	
-	
+/*	
 	class rbc_adetector : rbc_itemcore {
 		author = "def";
-		displayname = "Детектор аномалий С-А1";
+		displayname = "Детектор аномалий";
 		descriptionshort = "Собран кустарным способом";
 		model = "\A3\weapons_f\items\gps.p3d";
 		picture = "\rbc_stalker\pics\rbc_adetector.paa";
@@ -51,6 +51,7 @@ class CfgWeapons {
 			mass = 1;
 		};		
 	};
+*/
 };
 
 

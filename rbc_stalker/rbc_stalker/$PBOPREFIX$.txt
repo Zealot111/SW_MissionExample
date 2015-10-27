@@ -1,0 +1,5 @@
+///////<HEADER>///////
+prefix=rbc_stalker
+Pbo Type is: Arma Addon
+Sha: 'C1E86E36DDEA8C2EB666D5C4D81A11581AC9F5B0'
+//////</HEADER>//////
