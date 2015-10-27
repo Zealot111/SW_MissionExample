@@ -7,13 +7,43 @@
 		fadeout = 0; //?
 		onLoad = "uiNamespace setVariable ['Adetector_display', _this select 0]; 0 spawn DetectorRenew;";
 		onUnload="uiNamespace setVariable ['Adetector_display', nil];";
-		controls[]={"back", "light1","light2","light3","light4","light6","light7","light8","light9","lvl1","lvl2","lvl3"};
+		controls[]={"back_ca2","light1_ca2","back", "light1","light2","light3","light4","light6","light7","light8","light9","lvl1","lvl2","lvl3"};
 
+		class back_ca2
+		{
+				style = 48;
+ 			  type = 0;
+				idc = 574115;
+				x = "0.015 * safezoneW + safezoneX";
+				y = "0.478 * safezoneH + safezoneY";
+				w = "0.20 * safezoneW";
+				h = "0.28 * safezoneH";
+				text = "anomalies\titles\back2.paa";
+				colorBackground[] = {0,0,0,0};
+				colorText[] = {1,1,1,1};
+				font = "TahomaB";
+				sizeEx = 0;
+		};
+		class light1_ca2
+		{
+				style = 48;
+ 			  type = 0;
+				idc = 574114;
+				x = "0.015 * safezoneW + safezoneX";
+				y = "0.478 * safezoneH + safezoneY";
+				w = "0.20 * safezoneW";
+				h = "0.28 * safezoneH";
+				text = "anomalies\titles\light1.paa";
+				colorBackground[] = {0,0,0,0};
+				colorText[] = {1,1,1,1};
+				font = "TahomaB";
+				sizeEx = 0;
+		};
 		class back
 		{
 				style = 48;
  			  type = 0;
-				idc = -1;
+				idc = 574100;
 				x = "0.015 * safezoneW + safezoneX";
 				y = "0.478 * safezoneH + safezoneY";
 				w = "0.20 * safezoneW";
