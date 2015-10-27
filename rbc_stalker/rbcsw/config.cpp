@@ -70,7 +70,6 @@ class cfgWeapons
 	{
 		author = "def";
 		scope = 2;
-		type = 0;
 		displayName = "Детектор аномалий С-А1";
 		picture = "\rbcsw\adetector\UI\rbc_adetector_ca1.paa";
 		model = "\rbcsw\ADetector\ca1.p3d";
@@ -84,7 +83,6 @@ class cfgWeapons
 		author = "def";
 //		_generalMacro = "ItemGPS";
 		scope = 2;
-		type = 0;
 		displayName = "Детектор аномалий С-А2";
 //		descriptionUse = "use desc";
 //		simulation = "ItemGPS";
