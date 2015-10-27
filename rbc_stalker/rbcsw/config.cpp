@@ -12,6 +12,11 @@ class CfgPatches
 		requiredAddons[] = {"A3_Weapons_F","rbc_stalker"};
 	};
 };
+class RscTitles
+{	
+	#include "adetector\titles.hpp"
+};
+
 class CfgGlasses
 {
 	class None;
