@@ -12,7 +12,7 @@ zlt_fnc_gasmaskeffects={
 
 
 
-if (isnil "zlt_gasmaskClasses") then {zlt_gasmaskClasses =["RBCSW_Mask_M50_DolgExtrared","RBCSW_Mask_M50_Dolg","RBCSW_Mask_M50_Main","RBCSW_Mask_M50_Monolyth"];};if (!isnil "zlt_gasmaskScript") exitwith {};
+if (isnil "zlt_gasmaskClasses") then {zlt_gasmaskClasses =["RBCSW_Mask_M50_DolgExtrared","RBCSW_Mask_M50_Dolg","RBCSW_Mask_M50_Main","RBCSW_Mask_M50_Monolyth","RBCSW_Mask_M40_OD","RBCSW_Mask_M40_ODCrack","RBCSW_Mask_M40_BL"];};if (!isnil "zlt_gasmaskScript") exitwith {};
 
 zlt_gmEffectsScript = scriptnull;
 zlt_maskOn = false;
