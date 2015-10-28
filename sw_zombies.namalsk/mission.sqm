@@ -1,0 +1,403 @@
+version=12;
+class Mission
+{
+	addOns[]=
+	{
+		"A3_Modules_F",
+		"rhsusf_c_troops"
+	};
+	addOnsAuto[]=
+	{
+		"rhsusf_c_troops",
+		"A3_Modules_F"
+	};
+	randomSeed=14825244;
+	class Intel
+	{
+		startWeather=0.88;
+		startFog=0.23999999;
+		startWind=0.099999994;
+		startWaves=0.099999994;
+		forecastWeather=0.88;
+		forecastFog=0.22;
+		forecastWind=0.099999994;
+		forecastWaves=0.099999994;
+		forecastLightnings=0.099999994;
+		year=2011;
+		month=7;
+		hour=8;
+		minute=25;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+	class Groups
+	{
+		items=16;
+		class Item0
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6764.6807,15.705625,10993.991};
+					id=0;
+					side="WEST";
+					vehicle="rhsusf_usmc_marpat_d_rifleman";
+					player="PLAYER COMMANDER";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item1
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6781.2437,15,11367.721};
+					id=1;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					text="zmb";
+					init="this setvariable [""rbc_zmb_maxzombies"",5];  this setvariable [""rbc_zmb_totalzombies"",10];";
+				};
+			};
+		};
+		class Item2
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6144.1133,35.215096,10857.157};
+					id=2;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					text="zmb_1";
+					init="this setvariable [""rbc_zmb_maxzombies"",5];  this setvariable [""rbc_zmb_totalzombies"",10];";
+				};
+			};
+		};
+		class Item3
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8200.2861,15,10727.213};
+					id=3;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					text="zmb_2";
+					init="this setvariable [""rbc_zmb_maxzombies"",5];  this setvariable [""rbc_zmb_totalzombies"",10];";
+				};
+			};
+		};
+		class Item4
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6613.1558,15,11173.584};
+					id=4;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					text="zmb_8";
+					init="this setvariable [""rbc_zmb_maxzombies"",5];  this setvariable [""rbc_zmb_totalzombies"",10];";
+				};
+			};
+		};
+		class Item5
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={7853.1162,9.7600451,7719.7988};
+					id=5;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					text="zmb_9";
+					init="this setvariable [""rbc_zmb_maxzombies"",5];  this setvariable [""rbc_zmb_totalzombies"",10];";
+				};
+			};
+		};
+		class Item6
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={7280.4438,84.640106,7940.0044};
+					id=6;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					text="zmb_6";
+					init="this setvariable [""rbc_zmb_maxzombies"",5];  this setvariable [""rbc_zmb_totalzombies"",10];";
+				};
+			};
+		};
+		class Item7
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4976.0557,4.7407231,6639.6108};
+					id=7;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					text="zmb_5";
+					init="this setvariable [""rbc_zmb_maxzombies"",5];  this setvariable [""rbc_zmb_totalzombies"",10];";
+				};
+			};
+		};
+		class Item8
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3560.9497,205.38771,6672.7031};
+					id=8;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					text="zmb_7";
+					init="this setvariable [""rbc_zmb_maxzombies"",5];  this setvariable [""rbc_zmb_totalzombies"",10];";
+				};
+			};
+		};
+		class Item9
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3879.105,53,7491.5107};
+					id=9;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					text="zmb_4";
+					init="this setvariable [""rbc_zmb_maxzombies"",5];  this setvariable [""rbc_zmb_totalzombies"",10];";
+				};
+			};
+		};
+		class Item10
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4010.1155,52.999847,7654.1323};
+					id=10;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					text="zmb_10";
+					init="this setvariable [""rbc_zmb_maxzombies"",5];  this setvariable [""rbc_zmb_totalzombies"",10];";
+				};
+			};
+		};
+		class Item11
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6929.2905,16.534552,11201.953};
+					id=11;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					text="zmb_11";
+					init="this setvariable [""rbc_zmb_maxzombies"",5];  this setvariable [""rbc_zmb_totalzombies"",10];";
+				};
+			};
+		};
+		class Item12
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5971.2637,30.823095,6697.9829};
+					id=12;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					text="zmb_12";
+					init="this setvariable [""rbc_zmb_maxzombies"",5];  this setvariable [""rbc_zmb_totalzombies"",10];";
+				};
+			};
+		};
+		class Item13
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4159.144,390.18481,6665.415};
+					id=13;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					text="zmb_13";
+					init="this setvariable [""rbc_zmb_maxzombies"",5];  this setvariable [""rbc_zmb_totalzombies"",10];";
+				};
+			};
+		};
+		class Item14
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5758.5161,23.003538,9806.7246};
+					id=14;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					text="zmb_14";
+					init="this setvariable [""rbc_zmb_maxzombies"",5];  this setvariable [""rbc_zmb_totalzombies"",10];";
+				};
+			};
+		};
+		class Item15
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={5807.8745,50.594482,8677.3369};
+					id=15;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					text="zmb_3";
+					init="this setvariable [""rbc_zmb_maxzombies"",5];  this setvariable [""rbc_zmb_totalzombies"",10];";
+				};
+			};
+		};
+	};
+};
+class Intro
+{
+	randomSeed=2758599;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2011;
+		month=7;
+		hour=15;
+		minute=25;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
+class OutroWin
+{
+	randomSeed=16642897;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2011;
+		month=7;
+		hour=15;
+		minute=25;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
+class OutroLoose
+{
+	randomSeed=14070659;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2011;
+		month=7;
+		hour=15;
+		minute=25;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
