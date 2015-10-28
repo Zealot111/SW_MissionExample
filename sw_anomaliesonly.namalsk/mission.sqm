@@ -3,12 +3,12 @@ class Mission
 {
 	addOns[]=
 	{
-		"WMT_Main",
-		"wmt_vehicle",
 		"AGM_Medical",
-		"A3_Modules_F",
-		"rhs_c_weapons",
-		"rhsusf_c_troops"
+		"A3_Modules_F"
+	};
+	addOnsAuto[]=
+	{
+		"A3_Modules_F"
 	};
 	randomSeed=14825244;
 	class Intel
@@ -29,9 +29,31 @@ class Mission
 		startFogDecay=0.013;
 		forecastFogDecay=0.013;
 	};
+	class Groups
+	{
+		items=1;
+		class Item0
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={11158.322,-50.00206,10601.891};
+					id=0;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					text="VAR";
+				};
+			};
+		};
+	};
 	class Markers
 	{
-		items=957;
+		items=938;
 		class Item0
 		{
 			position[]={6976.6255,17.355341,11175.923};
@@ -733,7 +755,7 @@ class Mission
 		};
 		class Item78
 		{
-			position[]={8275.7705,15.040054,10332.204};
+			position[]={7149.2183,15,11517.368};
 			name="J_1_22_36";
 			text="Puh";
 			type="Empty";
@@ -2594,14 +2616,13 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item286
+		class Item285
 		{
-			position[]={6845.8281,16.573397,11738.354};
-			name="E_2_18_2_59_123";
-			text="Myas";
-			type="Empty";
-			colorName="ColorBrown";
-			angle=-51.491299;
+			position[]={11684.848,-0.39262101,-7776.6465};
+			name="marker_doc";
+			text="Документы";
+			type="mil_triangle";
+			colorName="ColorRed";
 		};
 		class Item286
 		{
@@ -3685,7 +3706,7 @@ class Mission
 		};
 		class Item406
 		{
-			position[]={7733.4365,40,7389.1177};
+			position[]={-82.134567,-0.0039036009,12096.228};
 			name="E_1_31_7_1_3_29_90";
 			text="Electra";
 			type="Empty";
@@ -4468,7 +4489,7 @@ class Mission
 		};
 		class Item493
 		{
-			position[]={3254.7373,26.014711,8229.0234};
+			position[]={7831.8066,9.9714203,7642.0522};
 			name="J_32_23_1_8_3_67";
 			text="Jarka";
 			type="Empty";
@@ -8470,158 +8491,6 @@ class Mission
 			type="Empty";
 			colorName="ColorBrown";
 			angle=-51.491299;
-		};
-		class Item938
-		{
-			position[]={8159.7793,16.624456,10710.384};
-			name="respawn_west";
-			text="RESPAWN WEST";
-			type="Empty";
-			colorName="ColorBlue";
-		};
-		class Item939
-		{
-			position[]={5049.6265,15.937504,10728.968};
-			name="respawn_east";
-			text="RESPAWN EAST";
-			type="Empty";
-			colorName="ColorRed";
-		};
-		class Item940
-		{
-			position[]={4980.3115,4.0857296,10887.558};
-			name="respawn_east_1";
-			text="RESPAWN EAST";
-			type="Empty";
-			colorName="ColorRed";
-		};
-		class Item941
-		{
-			position[]={4882.2129,11.224961,10660.832};
-			name="respawn_east_2";
-			text="RESPAWN EAST";
-			type="Empty";
-			colorName="ColorRed";
-		};
-		class Item942
-		{
-			position[]={4760.6172,14.989105,10861.126};
-			name="respawn_east_3";
-			text="RESPAWN EAST";
-			type="Empty";
-			colorName="ColorRed";
-		};
-		class Item943
-		{
-			position[]={4724.3462,19.021219,10644.671};
-			name="respawn_east_4";
-			text="RESPAWN EAST";
-			type="Empty";
-			colorName="ColorRed";
-		};
-		class Item944
-		{
-			position[]={5133.6987,7.4143481,10530.275};
-			name="respawn_east_5";
-			text="RESPAWN EAST";
-			type="Empty";
-			colorName="ColorRed";
-		};
-		class Item945
-		{
-			position[]={5463.1104,7.477612,10619.504};
-			name="respawn_east_6";
-			text="RESPAWN EAST";
-			type="Empty";
-			colorName="ColorRed";
-		};
-		class Item946
-		{
-			position[]={8371.0762,15,10671.985};
-			name="respawn_west_1";
-			text="RESPAWN WEST";
-			type="Empty";
-			colorName="ColorBlue";
-		};
-		class Item947
-		{
-			position[]={8527.4033,16.317177,10244.416};
-			name="respawn_west_2";
-			text="RESPAWN WEST";
-			type="Empty";
-			colorName="ColorBlue";
-		};
-		class Item948
-		{
-			position[]={7302.3022,7.1809068,10040.571};
-			name="respawn_west_3";
-			text="RESPAWN WEST";
-			type="Empty";
-			colorName="ColorBlue";
-		};
-		class Item949
-		{
-			position[]={7887.6069,25.113005,10240.888};
-			name="respawn_west_4";
-			text="RESPAWN WEST";
-			type="Empty";
-			colorName="ColorBlue";
-		};
-		class Item950
-		{
-			position[]={7470.0503,15.712141,10844.246};
-			name="respawn_west_5";
-			text="RESPAWN WEST";
-			type="Empty";
-			colorName="ColorBlue";
-		};
-		class Item951
-		{
-			position[]={6522.7251,15.057475,10717.32};
-			name="respawn_guerrila";
-			text="RESPAWN GUERILLA";
-			type="Empty";
-			colorName="ColorGreen";
-		};
-		class Item952
-		{
-			position[]={6719.7275,19.669781,10726.077};
-			name="respawn_guerrila_1";
-			text="RESPAWN GUERILLA";
-			type="Empty";
-			colorName="ColorGreen";
-		};
-		class Item953
-		{
-			position[]={6924.3579,17.354521,10815.104};
-			name="respawn_guerrila_2";
-			text="RESPAWN GUERILLA";
-			type="Empty";
-			colorName="ColorGreen";
-		};
-		class Item954
-		{
-			position[]={6723.9116,15.371177,10965.399};
-			name="respawn_guerrila_3";
-			text="RESPAWN GUERILLA";
-			type="Empty";
-			colorName="ColorGreen";
-		};
-		class Item955
-		{
-			position[]={7059.041,17.109694,11085.268};
-			name="respawn_guerrila_4";
-			text="RESPAWN GUERILLA";
-			type="Empty";
-			colorName="ColorGreen";
-		};
-		class Item956
-		{
-			position[]={6803.9399,14.796623,11121.703};
-			name="respawn_guerrila_5";
-			text="RESPAWN GUERILLA";
-			type="Empty";
-			colorName="ColorGreen";
 		};
 	};
 };
