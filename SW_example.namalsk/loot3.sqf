@@ -225,7 +225,8 @@ zloottableCat2 = {
 		0.01 ,	{ _res pushback "NVGoggles";},
 		0.01 ,	{ _res pushback "rhs_pdu4";},
 		0.1 ,	{ _res pushback "Binocular";},
-		0.2 ,	{ _res pushback (["Mask_M40","Mask_M40_OD","Mask_M50"] call zlt_fnc_selectrandom);}
+		0.2 ,	{ _res pushback ([["RBCSW_AdetectorCA1","RBCSW_AdetectorCA2"],[0.1,0.9]] call zlt_fnc_selectRandomWeighted);},
+		0.2 ,	{ _res pushback (["RBCSW_Mask_M40_OD","RBCSW_Mask_M40_OD","RBCSW_Mask_M40_OD"] call zlt_fnc_selectrandom);}
 		
 		// TODO: не работает, нужно addBackpackcargoGlobal
 		/*0.2 ,	{ _res pushback (["B_TacticalPack_rgr","B_TacticalPack_blk","B_TacticalPack_oli","B_Kitbag_rgr","B_Carryall_oli","B_Carryall_khk","rhs_sidor"] call zlt_fnc_selectrandom);}*/
