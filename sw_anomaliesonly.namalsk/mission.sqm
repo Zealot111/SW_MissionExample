@@ -3,12 +3,13 @@ class Mission
 {
 	addOns[]=
 	{
-		"WMT_Main",
-		"wmt_vehicle",
-		"AGM_Medical",
 		"A3_Modules_F",
 		"rhs_c_weapons",
 		"rhsusf_c_troops"
+	};
+	addOnsAuto[]=
+	{
+		"A3_Modules_F"
 	};
 	randomSeed=14825244;
 	class Intel
@@ -8494,7 +8495,7 @@ class Mission
 		};
 		class Item938
 		{
-			position[]={8159.7793,16.624456,10710.384};
+			position[]={8048.7397,15,10546.383};
 			name="respawn_west";
 			text="RESPAWN WEST";
 			type="Empty";
@@ -8558,7 +8559,7 @@ class Mission
 		};
 		class Item946
 		{
-			position[]={8371.0762,15,10671.985};
+			position[]={8276.3359,16.251646,10507.476};
 			name="respawn_west_1";
 			text="RESPAWN WEST";
 			type="Empty";
