@@ -2594,13 +2594,14 @@ class Mission
 			colorName="ColorCIV";
 			angle=-51.491325;
 		};
-		class Item285
+		class Item286
 		{
-			position[]={11684.848,-0.39262101,-7776.6465};
-			name="marker_doc";
-			text="Документы";
-			type="mil_triangle";
-			colorName="ColorRed";
+			position[]={6845.8281,16.573397,11738.354};
+			name="E_2_18_2_59_123";
+			text="Myas";
+			type="Empty";
+			colorName="ColorBrown";
+			angle=-51.491299;
 		};
 		class Item286
 		{
