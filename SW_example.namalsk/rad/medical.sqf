@@ -33,9 +33,18 @@ zltMedAlco = {
 };
 
 zltMedDblCLickHandler = {
-		_idc = ctrlIDC (_this select 0);          
+	_ctrl = (_this select 0);
 	_index = _this select 1;         
-	_item = lbData [_idc, _index];
+
+	_text = _ctrl lbText _index;
+	_item = _ctrl lbData _index;
+	
+	if (_item == "") then {
+		_data = "getText (_x >> 'displayName') == _text" configClasses(configFile >> "CfgWeapons");
+		if (count _data > 0) then {
+			_item = configName (_data select 0);
+		};
+	};
 	
 	closeDialog 2;
 	sleep 0.001;
