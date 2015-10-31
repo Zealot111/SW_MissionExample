@@ -17,52 +17,53 @@ if (isnil "rbc_zmb_scriptHandle") then {rbc_zmb_scriptHandle = scriptNull;};
 rbc_zmb_defaultMaxZombies = 10;
 rbc_zmb_defaultTotalZombies = 20;
 
-private ["_fnc_CreateZombie","_fnc_despawnzombies","_fnc_spawnzombies","_fnc_spawner"];
+private ["_fnc_spawner"];
 
-_fnc_CreateZombie = {
-	_logic = _this select 0;
-	[_logic] execfsm "zombieAI3.fsm";
-};
-
-
-_fnc_despawnzombies = {
-	params ["_logic"];
-	private ["_zombieGrp","_civgrp"];
-	_zombieGrp =  (_logic getvariable ["rbc_zmb_zombies",[]]);
-	{deletevehicle _x;} foreach _zombieGrp;
-	_logic setvariable ["rbc_zmb_zombies",[]];
-};
-
-_fnc_spawnzombies = {
-	params ["_logic"]; private ["_maxzombies","_totalzombies","_grp","_zmb"];
-	_maxzombies = _logic getvariable ["maxzombies",rbc_zmb_defaultMaxZombies];
-	if (isnil {_logic getVariable "totalzombiesNow"}) then {
-		_logic setvariable ["totalzombiesNow", (_logic getvariable ["totalzombies",rbc_zmb_defaultTotalZombies ]) ]; 
-	 };
-	_continue = true;
-	while {_continue} do {
-		_ent = _logic nearEntities ["Man", 400];
-		_continue = false; 
-		{
-			if (isplayer _x && alive _x) exitwith {_continue = true};
-		} foreach _ent;
-		sleep 3;
-		while  {(count (_logic getvariable ["rbc_zmb_zombies",[]])) < _maxzombies && (_logic getvariable ["totalzombiesNow",0 ]) > 0 && rbc_zmb_aliveZombies < rbc_zmb_maxzombies} do {
-			[_logic,_ent] call _fnc_CreateZombie;
-			(_logic setvariable ["totalzombiesNow",(_logic getvariable ["totalzombiesNow",0 ]) - 1 ]);
-			(_logic setvariable ["lastzombietime", time]);
-			sleep 0.1;
-		};
-		if ((_logic getvariable ["totalzombiesNow",0 ]) < 1 && (time - 600) > (_logic getvariable ["lastzombietime", time]) && {(count (_logic getvariable ["rbc_zmb_zombies",[]])) == 0}) then {
-			_logic setvariable ["totalzombiesNow", _maxzombies ]; 
-		};
-		sleep 27;
-	};
-	_logic call _fnc_despawnzombies;
-	_logic setvariable ["rbc_zmb_spawnscript",scriptnull];
-};
 
 _fnc_spawner = {
+	private "_fnc_spawnzombies";
+	_fnc_spawnzombies = {
+		private ["_fnc_CreateZombie","_fnc_despawnzombies"];
+		_fnc_CreateZombie = {
+			_logic = _this select 0;
+			[_logic] execfsm "zombieAI3.fsm";
+		};
+
+		_fnc_despawnzombies = {
+			params ["_logic"];
+			private ["_zombieGrp","_civgrp"];
+			_zombieGrp =  (_logic getvariable ["rbc_zmb_zombies",[]]);
+			{deletevehicle _x;} foreach _zombieGrp;
+			_logic setvariable ["rbc_zmb_zombies",[]];
+		};
+		params ["_logic"]; private ["_maxzombies","_totalzombies","_grp","_zmb"];
+		_maxzombies = _logic getvariable ["maxzombies",rbc_zmb_defaultMaxZombies];
+		if (isnil {_logic getVariable "totalzombiesNow"}) then {
+			_logic setvariable ["totalzombiesNow", (_logic getvariable ["totalzombies",rbc_zmb_defaultTotalZombies ]) ]; 
+		 };
+		_continue = true;
+		while {_continue} do {
+			_ent = _logic nearEntities ["Man", 400];
+			_continue = false; 
+			{
+				if (isplayer _x && alive _x) exitwith {_continue = true};
+			} foreach _ent;
+			sleep 3;
+			while  {(count (_logic getvariable ["rbc_zmb_zombies",[]])) < _maxzombies && (_logic getvariable ["totalzombiesNow",0 ]) > 0 && rbc_zmb_aliveZombies < rbc_zmb_maxzombies} do {
+				[_logic,_ent] call _fnc_CreateZombie;
+				(_logic setvariable ["totalzombiesNow",(_logic getvariable ["totalzombiesNow",0 ]) - 1 ]);
+				(_logic setvariable ["lastzombietime", time]);
+				sleep 0.1;
+			};
+			if ((_logic getvariable ["totalzombiesNow",0 ]) < 1 && (time - 600) > (_logic getvariable ["lastzombietime", time])) then {
+				_logic setvariable ["totalzombiesNow", _maxzombies ]; 
+			};
+			sleep 27;
+		};
+		_logic call _fnc_despawnzombies;
+		_logic setvariable ["rbc_zmb_spawnscript",scriptnull];
+	};
+	
 	private ["_logics","_player","_lgs","_script","_i"];
 	_logics = _this;
 	diag_log ["zlt_fnc_spawner",_logics];
