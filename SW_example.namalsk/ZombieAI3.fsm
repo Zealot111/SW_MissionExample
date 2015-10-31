@@ -1,7 +1,7 @@
 /*%FSM<COMPILE "D:\SteamLibrary\SteamApps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, ZombieAI3">*/
 /*%FSM<HEAD>*/
 /*
-item0[] = {"Init_",0,4346,-67.944733,-492.992157,22.055267,-442.992157,0.000000,"Init" \n ""};
+item0[] = {"Init_",0,250,-67.944733,-492.992157,22.055267,-442.992157,0.000000,"Init" \n ""};
 item1[] = {"Delay_",4,218,-72.467987,-402.453156,17.532013,-352.453217,0.000000,"Delay" \n ""};
 item2[] = {"Make_Decision_",2,250,-95.363770,-201.194473,22.452042,-120.729607,0.000000,"Make Decision" \n ""};
 item3[] = {"AnimState",4,218,65.852417,-185.242981,155.852417,-135.242981,50.000000,"AnimState"};
@@ -21,7 +21,7 @@ item16[] = {"Wait_1",2,250,-636.227783,-156.908478,-546.227783,-106.908478,0.000
 item17[] = {"Damage",2,250,209.326965,155.968140,299.326965,205.968140,0.000000,"Damage"};
 item18[] = {"Dead",2,250,-331.385590,451.306122,-241.385651,501.306091,0.000000,"Dead"};
 item19[] = {"Delay_",4,218,-187.210114,448.378479,-97.210022,498.378479,0.000000,"Delay" \n ""};
-item20[] = {"Finally_Dead",1,250,-43.290405,445.357239,46.709595,495.357208,0.000000,"Finally Dead"};
+item20[] = {"Finally_Dead",1,4346,-43.290405,445.357239,46.709595,495.357208,0.000000,"Finally Dead"};
 item21[] = {"",7,210,237.630859,-379.779510,245.630859,-371.779541,0.000000,""};
 item22[] = {"",7,210,237.442078,18.378357,245.442078,26.378357,0.000000,""};
 item23[] = {"",7,210,-700.740356,-241.895508,-692.740356,-233.895508,0.000000,""};
@@ -562,7 +562,7 @@ class FSM
                          "" \n
                          "_zombies = 	_logic getvariable [""rbc_zmb_zombies"",[]];" \n
                          "_zombies = _zombies - [_zombie];" \n
-                         "_logic getvariable [""rbc_zmb_zombies"",_zombies];" \n
+                         "_logic setvariable [""rbc_zmb_zombies"",_zombies];" \n
                          "(missionnamespace setvariable [""rbc_zmb_aliveZombies"", (missionnamespace getvariable [""rbc_zmb_aliveZombies"",0]) - 1 ]);" \n
                          "" \n
                          "deletevehicle _zombie;" \n
