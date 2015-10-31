@@ -9,19 +9,23 @@ if !(isServer)  exitwith {};
 
 
 rbc_zmb_maxzombies = 100;
-rbc_zmb_aliveZombies = 0;
+if (isnil "rbc_zmb_aliveZombies") then {rbc_zmb_aliveZombies = 0;};
+
+if (isnil "rbc_zmb_scriptHandle") then {rbc_zmb_scriptHandle = scriptNull;};
+
 
 rbc_zmb_defaultMaxZombies = 10;
 rbc_zmb_defaultTotalZombies = 20;
 
+private ["_fnc_CreateZombie","_fnc_despawnzombies","_fnc_spawnzombies","_fnc_spawner"];
 
-rbc_zmb_fnc_CreateZombie = {
+_fnc_CreateZombie = {
 	_logic = _this select 0;
 	[_logic] execfsm "zombieAI3.fsm";
 };
 
 
-rbc_zmb_fnc_despawnzombies = {
+_fnc_despawnzombies = {
 	params ["_logic"];
 	private ["_zombieGrp","_civgrp"];
 	_zombieGrp =  (_logic getvariable ["rbc_zmb_zombies",[]]);
@@ -29,7 +33,7 @@ rbc_zmb_fnc_despawnzombies = {
 	_logic setvariable ["rbc_zmb_zombies",[]];
 };
 
-rbc_zmb_fnc_spawnzombies = {
+_fnc_spawnzombies = {
 	params ["_logic"]; private ["_maxzombies","_totalzombies","_grp","_zmb"];
 	_maxzombies = _logic getvariable ["maxzombies",rbc_zmb_defaultMaxZombies];
 	if (isnil {_logic getVariable "totalzombiesNow"}) then {
@@ -44,21 +48,21 @@ rbc_zmb_fnc_spawnzombies = {
 		} foreach _ent;
 		sleep 3;
 		while  {(count (_logic getvariable ["rbc_zmb_zombies",[]])) < _maxzombies && (_logic getvariable ["totalzombiesNow",0 ]) > 0 && rbc_zmb_aliveZombies < rbc_zmb_maxzombies} do {
-			[_logic,_ent] call rbc_zmb_fnc_CreateZombie;
+			[_logic,_ent] call _fnc_CreateZombie;
 			(_logic setvariable ["totalzombiesNow",(_logic getvariable ["totalzombiesNow",0 ]) - 1 ]);
 			(_logic setvariable ["lastzombietime", time]);
 			sleep 0.1;
 		};
-		if ((_logic getvariable ["totalzombiesNow",0 ]) < 1 && (time - 600) > (_logic getvariable ["lastzombietime", time]) ) then {
-			_logic setvariable ["totalzombiesNow", (_logic getvariable ["totalzombies",rbc_zmb_defaultTotalZombies ]) ]; 
+		if ((_logic getvariable ["totalzombiesNow",0 ]) < 1 && (time - 600) > (_logic getvariable ["lastzombietime", time]) && {(count (_logic getvariable ["rbc_zmb_zombies",[]])) == 0}) then {
+			_logic setvariable ["totalzombiesNow", _maxzombies ]; 
 		};
 		sleep 27;
 	};
-	_logic call rbc_zmb_fnc_despawnzombies;
+	_logic call _fnc_despawnzombies;
 	_logic setvariable ["rbc_zmb_spawnscript",scriptnull];
 };
 
-rbc_zmb_fnc_spawner = {
+_fnc_spawner = {
 	private ["_logics","_player","_lgs","_script","_i"];
 	_logics = _this;
 	diag_log ["zlt_fnc_spawner",_logics];
@@ -70,7 +74,7 @@ rbc_zmb_fnc_spawner = {
 				{
 					if (_x distance _player < 300) then {
 						if (isnull(_x getvariable ["rbc_zmb_spawnscript",scriptnull])) then {
-							_script = _x spawn rbc_zmb_fnc_spawnzombies;
+							_script = _x spawn _fnc_spawnzombies;
 							_x setvariable ["rbc_zmb_spawnscript", _script];
 						};
 					};
@@ -78,12 +82,15 @@ rbc_zmb_fnc_spawner = {
 			};
 		} foreach allunits;
 		sleep 9.; _i=_i+1;
+		diag_log ["Zombies",rbc_zmb_aliveZombies,rbc_zmb_maxzombies];
 	};
 };
 
-if (isServer) then {
-	_this spawn rbc_zmb_fnc_spawner;
+
+if (isNull rbc_zmb_scriptHandle) then {
+	rbc_zmb_scriptHandle = _this spawn _fnc_spawner;
 };
+
 
 
 
