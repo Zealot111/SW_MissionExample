@@ -33,6 +33,7 @@ zltMedAlco = {
 };
 
 zltMedDblCLickHandler = {
+	disableserialization;
 	_ctrl = (_this select 0);
 	_index = _this select 1;         
 
