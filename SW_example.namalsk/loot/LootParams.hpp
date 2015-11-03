@@ -55,6 +55,12 @@
 			makeElevationCheck = 0;
 			
 		};
+
+		class land_terain_base_a : Default {
+		   eachBPosLootProb = 0;
+		};
+		class land_terain_velke_panely : land_terain_base_a {};
+
 		class Box_Ind_Ammoord_F : DefaultBox {}; 
 	};	
 		
