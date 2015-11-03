@@ -8,11 +8,11 @@
 		enabled=1; 
 		playerCheckDistance = 100; // 100m radius
 		pauseBetweenChecks = 7.2;
-		lootRenewTime = 300 ; // 900;  количество секунд до регенерации лута
-		lootSuspendTime = 10 ;  //180;  количество секунд до сохранения лута
+		lootRenewTime = 900 ; // 900;  количество секунд до регенерации лута
+		lootSuspendTime = 180 ;  //180;  количество секунд до сохранения лута
 		
 		lootHouseClasses[] = {"House","House_F"};
-		lootBoxesClasses[] = {"Box_Ind_Ammoord_F"};
+		lootBoxesClasses[] = {"rhs_mags_crate"};
 		
 	};
 
@@ -62,6 +62,7 @@
 		class land_terain_velke_panely : land_terain_base_a {};
 
 		class Box_Ind_Ammoord_F : DefaultBox {}; 
+		class rhs_mags_crate : DefaultBox { lootpoint = "StalkerWeaponBoxLootPoint"; };
 	};	
 		
 		
@@ -77,7 +78,7 @@
 	
 	class StalkerCategory : BaseCategory {
 		// медицина, еда
-		class AGM_Bandage : LootItem {classNames[] = {"AGM_Bandage"};numbers[] = {1,1,1,1,2,2};};
+		class AGM_Bandage : LootItem {classNames[] = {"AGM_Bandage"};numbers[] = {1,1,2,2,3,4};};
 		class AGM_Morphine: LootItem {classNames[] = {"AGM_Morphine"};};
 		class AGM_Epipen: LootItem {classNames[] = {"AGM_Epipen"};};
 		class AGM_Bloodbag: LootItem {classNames[] = {"AGM_Bloodbag"};};
@@ -164,36 +165,36 @@
 		itemsProbability = 1.0;
 		itemsCheckProbNum = 1; 
 		items[] = {			"RBCSW_Mask_M40_OD","RBCSW_Adetector","NightVision","ItemMap","ItemRadio","Binocular","Backpack"};
-		itemsWeights[] = {			5			,		5			,	1		,	10		,	5		,	2		,	3};
+		itemsWeights[] = {			5			,		5			,	1		,	15		,	5		,	2		,	3};
 	};
 	class StalkerCivilianWeapons : StalkerCategory {
 		itemsProbability = 0.25;
 		itemsCheckProbNum = 5; 
 		items[] = {			"Flares", "CivGrenade", "cal12_2rounds", "cal12_w", "av_tt", "8Rnd_TT", "Mosin", "MosinAmmo", "SKS", "SKSAmmo"};
-		itemsWeights[] = {		1,			1,				10,			5,			1,		1,			1,			1,		2,		2										};
+		itemsWeights[] = {		1,			1,				5,			5,			1,		1,			1,			1,		2,		2										};
 	};
 	class StalkerPoliceWeapons : StalkerCategory {
 		itemsProbability =0.67;
 		itemsCheckProbNum = 2; 
 		items[] = {			"Flares", "PolGrenade", "AKSU", "AK74", "RHSMagAK74_1", "APS_MAKAR", "8Rnd_Mag_pm", "av_pp2000",  "av_kedr", "30_9mm"};
-		itemsWeights[] = {		5,			10,			4,		1,			5,			100,			100,			2,		8,			10	};
+		itemsWeights[] = {		5,			10,			4,		1,			5,			20,			20,			2,		8,			10	};
 	};
 	
 	class StalkerMilitaryWeapons : StalkerCategory {
 		itemsProbability = 1;
 		itemsCheckProbNum = 1; 
 		items[] = {			"Flares", "Grenade", "AKSU", "AK74", "RHSMagAK74_1", "APS_MAKAR", "8Rnd_Mag_pm", "av_pp2000", "30_9mm", "MG_PKM","cal762x54R_MG","SVD","cal762x54R_SVD"};
-		itemsWeights[] = {		4,			100,	60,		40,			100,		20,				20,				5,		5,			5,			5,			2,		2			};
+		itemsWeights[] = {		4,			50,		60,		40,			100,		20,				20,				5,		5,			5,			5,			2,		2			};
 
 	};
 	
 		
 	
 	class StalkerStdLootPoint {
-		categoriesCheckProbNum = 5; // количество категорий, которое будет выбираться из досутпных с вероятностью (количество попыток выбрать категорию)
-		categoriesProbability = 0.25; //вероятность что выберется категория 
+		categoriesCheckProbNum = 10; // количество категорий, которое будет выбираться из досутпных с вероятностью (количество попыток выбрать категорию)
+		categoriesProbability = 0.4; //вероятность что выберется категория 
 		LootCategories[] = {	"StalkerMedicals1","StalkerFoodDrink1","StalkerAntiRad1","StalkerItemsAndElectronics1","StalkerCivilianWeapons1","StalkerPoliceWeapons1","StalkerMilitaryWeapons1"			};
-		LootCategoriesWeights[] = {		5,					5,				1,					5,							10,							5,					2				};
+		LootCategoriesWeights[] = {		5,					15,				1,					15,							10,							5,					2				};
 		
 		class StalkerMedicals1 : StalkerMedicals {};
 		class StalkerFoodDrink1 : StalkerFoodDrink {};
@@ -202,7 +203,13 @@
 		class StalkerCivilianWeapons1 : StalkerCivilianWeapons {};
 		class StalkerPoliceWeapons1 : StalkerPoliceWeapons {};
 		class StalkerMilitaryWeapons1 : StalkerMilitaryWeapons {};
-		
+			
+	};
+	
+	class StalkerWeaponBoxLootPoint : StalkerStdLootPoint {
+		categoriesCheckProbNum = 5; // количество категорий, которое будет выбираться из досутпных с вероятностью (количество попыток выбрать категорию)
+		categoriesProbability = 0.75; //вероятность что выберется категория 
+		LootCategoriesWeights[] = {		1,					1,				10,					1,							1,							10,					15				};
 		
 	};
 
