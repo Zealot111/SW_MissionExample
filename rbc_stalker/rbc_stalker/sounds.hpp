@@ -52,6 +52,18 @@
 		sound[] = {"\rbc_stalker\sounds\anomalies\electra_main.ogg", 1, 1};
 		titles[] = {0,""};
 	};
+	class electra_hit
+	{
+		name = "electra_hit";
+		sound[] = {"\rbc_stalker\sounds\anomalies\electra_hit.ogg", 1, 1};
+		titles[] = {0,""};
+	};
+	class electra_hit1
+	{
+		name = "electra_hit1";
+		sound[] = {"\rbc_stalker\sounds\anomalies\electra_hit1.ogg", 1, 1};
+		titles[] = {0,""};
+	};
 	class AdetectorBeep
 	{
 		name = "electra_main";

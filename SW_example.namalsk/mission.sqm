@@ -3,24 +3,18 @@ class Mission
 {
 	addOns[]=
 	{
-		"MNP_INDE_Config",
 		"WMT_Main",
 		"wmt_vehicle",
 		"AGM_Medical",
 		"A3_Modules_F",
-		"MNP_OPFOR_CONFIG",
-		"STOP_BLUFOR_Config",
 		"rhs_c_weapons"
 	};
 	addOnsAuto[]=
 	{
-		"MNP_INDE_Config",
 		"WMT_Main",
 		"wmt_vehicle",
 		"AGM_Medical",
 		"A3_Modules_F",
-		"MNP_OPFOR_CONFIG",
-		"STOP_BLUFOR_Config",
 		"rhs_c_weapons"
 	};
 	randomSeed=14825244;
