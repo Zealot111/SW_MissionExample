@@ -20,6 +20,7 @@ _fn_checkLos = {
 	true
 
 };
+if (isNull _a || !alive _a) exitWith {objNull};
 _units = _a nearEntities["Man", _BaseDistance];
 _units = [_units,[_a,_fn_checkLos,_BaseDistance], {_x distanceSqr _input0},"ASCEND",{isPlayer _x && alive _x && {[_input0,_input2,_x] call _input1}}] call bis_fnc_SortBy;
 if (count _units ==0) exitWith {objNull};

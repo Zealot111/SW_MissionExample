@@ -78,7 +78,7 @@
 	
 	class StalkerCategory : BaseCategory {
 		// медицина, еда
-		class AGM_Bandage : LootItem {classNames[] = {"AGM_Bandage"};numbers[] = {1,1,2,2,3,4};};
+		class AGM_Bandage : LootItem {classNames[] = {"AGM_Bandage"};numbers[] = {1,1,2,2,3,3};};
 		class AGM_Morphine: LootItem {classNames[] = {"AGM_Morphine"};};
 		class AGM_Epipen: LootItem {classNames[] = {"AGM_Epipen"};};
 		class AGM_Bloodbag: LootItem {classNames[] = {"AGM_Bloodbag"};};
@@ -191,8 +191,8 @@
 		
 	
 	class StalkerStdLootPoint {
-		categoriesCheckProbNum = 10; // количество категорий, которое будет выбираться из досутпных с вероятностью (количество попыток выбрать категорию)
-		categoriesProbability = 0.4; //вероятность что выберется категория 
+		categoriesCheckProbNum = 8; // количество категорий, которое будет выбираться из досутпных с вероятностью (количество попыток выбрать категорию)
+		categoriesProbability = 0.5; //вероятность что выберется категория 
 		LootCategories[] = {	"StalkerMedicals1","StalkerFoodDrink1","StalkerAntiRad1","StalkerItemsAndElectronics1","StalkerCivilianWeapons1","StalkerPoliceWeapons1","StalkerMilitaryWeapons1"			};
 		LootCategoriesWeights[] = {		5,					15,				1,					15,							10,							5,					2				};
 		
