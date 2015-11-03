@@ -20,8 +20,11 @@ wreckRemovalMinTime = 86400;
 class CfgFunctions
 {
  	#include "anomalies\functions.hpp"
+ 	#include "loot\LootFnc.hpp"
 };  
 class RscTitles
 {	
 	#include "rad\titles.hpp"
 };
+
+#include "loot\LootParams.hpp"

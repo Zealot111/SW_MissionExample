@@ -37,9 +37,9 @@ _fnc_spawner = {
 			_logic setvariable ["rbc_zmb_zombies",[]];
 		};
 		params ["_logic"]; private ["_maxzombies","_totalzombies","_grp","_zmb"];
-		_maxzombies = _logic getvariable ["maxzombies",rbc_zmb_defaultMaxZombies];
+		_maxzombies = _logic getvariable ["rbc_zmb_maxzombies",rbc_zmb_defaultMaxZombies];
 		if (isnil {_logic getVariable "totalzombiesNow"}) then {
-			_logic setvariable ["totalzombiesNow", (_logic getvariable ["totalzombies",rbc_zmb_defaultTotalZombies ]) ]; 
+			_logic setvariable ["totalzombiesNow", (_logic getvariable ["rbc_zmb_totalzombies",rbc_zmb_defaultTotalZombies ]) ]; 
 		 };
 		_continue = true;
 		while {_continue} do {
