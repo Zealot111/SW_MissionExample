@@ -15,7 +15,7 @@ if (isnil "rbc_zmb_scriptHandle") then {rbc_zmb_scriptHandle = scriptNull;};
 
 
 rbc_zmb_defaultMaxZombies = 10;
-rbc_zmb_defaultTotalZombies = 20;
+rbc_zmb_defaultTotalZombies = 10;
 
 private ["_fnc_spawner"];
 
@@ -30,11 +30,13 @@ _fnc_spawner = {
 		};
 
 		_fnc_despawnzombies = {
-			params ["_logic"];
-			private ["_zombieGrp","_civgrp"];
+			params ["_logic","_maxzombies"];
+			private ["_zombieGrp","_civgrp","_dead"];
 			_zombieGrp =  (_logic getvariable ["rbc_zmb_zombies",[]]);
+			_dead = {!alive _x} count _zombieGrp;
 			{deletevehicle _x;} foreach _zombieGrp;
 			_logic setvariable ["rbc_zmb_zombies",[]];
+			_logic setvariable ["totalzombiesNow", _maxzombies - _dead ]; 
 		};
 		params ["_logic"]; private ["_maxzombies","_totalzombies","_grp","_zmb"];
 		_maxzombies = _logic getvariable ["rbc_zmb_maxzombies",rbc_zmb_defaultMaxZombies];
@@ -60,7 +62,7 @@ _fnc_spawner = {
 			};
 			sleep 27;
 		};
-		_logic call _fnc_despawnzombies;
+		[_logic,_maxzombies] call _fnc_despawnzombies;
 		_logic setvariable ["rbc_zmb_spawnscript",scriptnull];
 	};
 	
