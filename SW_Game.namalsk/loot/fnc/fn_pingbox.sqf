@@ -24,16 +24,16 @@ switch (_state) do {
 	
 	case ("SU") : {
 		if ( time - _time > _maxtime) then {
-			//создавать заново
+			//СЃРѕР·РґР°РІР°С‚СЊ Р·Р°РЅРѕРІРѕ
 			_box setVariable ["rbc_lootstate", "CR"];
 			_box setVariable ["rbc_LootTime", time];
 			_data = [_box,_cfg] call rbc_fnc_createBoxContent;
 			[_box,_data] call rbc_fnc_setcontainerContent;
 			_boxes pushback _box;
 			TEST_MARKER(_box,"ColorRed", str (floor(time)) );
-			//создавать заново
+			//СЃРѕР·РґР°РІР°С‚СЊ Р·Р°РЅРѕРІРѕ
 		} else {
-			//восстанавливать сохраненное
+			//РІРѕСЃСЃС‚Р°РЅР°РІР»РёРІР°С‚СЊ СЃРѕС…СЂР°РЅРµРЅРЅРѕРµ
 			_data = _box getVariable "rbc_suspendLootData";
 			[_box,_data] call rbc_fnc_setcontainerContent;
 			_box setVariable ["rbc_lootstate", "CR"];
@@ -47,7 +47,7 @@ switch (_state) do {
 	
 	};
 	case ("") : {
-		//создавать заново
+		//СЃРѕР·РґР°РІР°С‚СЊ Р·Р°РЅРѕРІРѕ
 		_box setVariable ["rbc_lootstate", "CR"];
 		_box setVariable ["rbc_LootTime", time];
 		_data = [_box,_cfg] call rbc_fnc_createBoxContent;

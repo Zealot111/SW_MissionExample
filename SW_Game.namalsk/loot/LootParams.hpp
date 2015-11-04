@@ -104,6 +104,7 @@
 		
 		// оружие и боеприпасы
 		class AKSU : LootWeapon {classNames[] = {"arifle_av_aksu"}; linkedItems[] = {"muzzle_av_snds2","RHSMagAK74_1"}; linkedItemProbabilities[] = {0.1,0.5}; };
+		class muzzle_av_snds2 : LootItem {classNames[] = {"muzzle_av_snds2"};};
 		class RHSMagAK74_1 : LootMagazine {classNames[] = {"rhs_30Rnd_545x39_AK","rhs_30Rnd_545x39_AK_green"};classNamesWeights[] = {0.20,0.025};}; 
 		class AK74_DTK : LootItem {classNames[] = {"rhs_acc_dtk"};};
 		class AK74 : LootWeapon {classNames[] = {"rhs_weap_ak74m_camo","rhs_weap_ak74m_plummag","rhs_weap_ak74m_desert","rhs_weap_ak74m","rhs_weap_ak74m_2mag","rhs_weap_ak74m_2mag_camo"};
