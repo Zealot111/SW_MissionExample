@@ -64,10 +64,42 @@ if (alive Player) then
 	  };
 		case "Electra":
 		{ 
-			_Apos = markerPos _Aname;
-			_Apos = [_Apos select 0, _Apos select 1, 0];
-			_APlayerpos = getPos _APlayer;
-			[[_APlayer, _APlayerPos],"anomaly_fnc_AhitElectra",true,false] call BIS_fnc_MP;
+
+	   	if (Player == _APlayer) then
+	   	{
+				_Apos = GetPos player;
+				_light = "#lightpoint" createVehicle _Apos;
+				_light setposatl [_Apos select 0,(_Apos select 1) +5,(_Apos select 2) + 1];
+				_light setLightDayLight true;                           
+				_light setLightBrightness 10;
+				_light setLightAmbient [0.05, 0.05, 0.1];
+				_light setlightcolor [1, 1, 2];
+				sleep 0.1;
+				_light setLightBrightness 0;
+				sleep (random 0.1);
+				_duration = random(2);
+				for "_i" from 0 to _duration do 
+				{
+					_time = time + 0.1;
+					_light setLightBrightness (5 + random 10);
+					waituntil {	time > _time };
+				};
+				deletevehicle _light;	   	
+ 	  	  _sndrnd = ["electra_hit1","electra_hit"] call BIS_fnc_selectRandom;
+				if (_APlayer != vehicle _APlayer) then 
+				{ 	
+					(vehicle _APlayer) setDamage (damage vehicle _APlayer + random(0.3));
+	 	  	  _APlayer say3d _sndrnd;
+				}
+				else 	
+				{	
+					_APlayer setVariable ["AGM_AllowUnconscious", true];				
+					_APlayer setVariable ["AGM_Pain", ((_APlayer getVariable "AGM_Pain") + random(0.3)), True];
+					_bodyrnd = ["HitHead","HitLeftArm","HitRightArm"] call BIS_fnc_selectRandom;
+					_APlayer setHitPointDamage [_bodyrnd, (_APlayer getHitPointDamage _bodyrnd)+0.2+random(0.4)];
+	 	  	  _APlayer say3d _sndrnd;
+	 	  	};
+	  	};
 		};
 		case "Puh":
 		{ 
@@ -85,9 +117,8 @@ if (alive Player) then
 					_APlayer setVariable ["AGM_Blood", ((_APlayer getVariable "AGM_Blood") - random(0.2)), True];
 					_APlayer setVariable ["AGM_isBleeding", true, True];
 					_APlayer setVariable ["AGM_Pain", ((_APlayer getVariable "AGM_Pain") + random(0.1)), True];
-					_APlayer setHitPointDamage ["HitHead",(_APlayer getHitPointDamage "HitHead")+random(0.2)];
-					_APlayer setHitPointDamage ["HitLeftArm", (_APlayer getHitPointDamage "HitLeftArm")+random(0.2)];
-	     		_APlayer setHitPointDamage ["HitRightArm", (_APlayer getHitPointDamage "HitRightArm")+random(0.2)];
+					_bodyrnd = ["HitHead","HitLeftArm","HitRightArm"] call BIS_fnc_selectRandom;
+					_APlayer setHitPointDamage [_bodyrnd, (_APlayer getHitPointDamage _bodyrnd)+random(0.4)];
 	 	  	  _APlayer say3d "puh_hit";
 	  	  };
 	  	};
@@ -107,10 +138,10 @@ if (alive Player) then
 					_APlayer setVariable ["AGM_Blood", ((_APlayer getVariable "AGM_Blood") - random(0.1)), True];
 					_APlayer setVariable ["AGM_isBleeding", false, True];
 					_APlayer setVariable ["AGM_Pain", ((_APlayer getVariable "AGM_Pain") + random(0.3)), True];
-					_APlayer setHitPointDamage ["HitLeftArm", (_APlayer getHitPointDamage "HitLeftArm")+random(0.3)];
-					_APlayer setHitPointDamage ["HitRightArm", (_APlayer getHitPointDamage "HitRightArm")+random(0.3)];
-					_APlayer setHitPointDamage ["HitLeftLeg", (_APlayer getHitPointDamage "HitLeftLeg")+random(0.2)];
-					_APlayer setHitPointDamage ["HitRightLeg", (_APlayer getHitPointDamage "HitRightLeg")+random(0.2)];
+					_bodyrnd = ["HitBody","HitLeftArm","HitRightArm"] call BIS_fnc_selectRandom;
+					_APlayer setHitPointDamage [_bodyrnd, (_APlayer getHitPointDamage _bodyrnd)+0.2+random(0.4)];
+					_bodyrnd = ["HitHead","HitLeftLeg","HitRightLeg"] call BIS_fnc_selectRandom;
+					_APlayer setHitPointDamage [_bodyrnd, (_APlayer getHitPointDamage _bodyrnd)+0.2+random(0.4)];
 	 	  	  _APlayer say3d "jarka_hit";
 	 	  	};
 	  	};
@@ -130,14 +161,14 @@ if (alive Player) then
 					_APlayer setVariable ["AGM_Blood", ((_APlayer getVariable "AGM_Blood") - random(0.1)), True];
 					_APlayer setVariable ["AGM_isBleeding", false, True];
 					_APlayer setVariable ["AGM_Pain", ((_APlayer getVariable "AGM_Pain") + random(0.4)), True];
-					_APlayer setHitPointDamage ["HitBody", (_APlayer getHitPointDamage "HitBody")+random(0.3)];
-					_APlayer setHitPointDamage ["HitLeftLeg", (_APlayer getHitPointDamage "HitLeftLeg")+random(0.1)];
-					_APlayer setHitPointDamage ["HitRightLeg", (_APlayer getHitPointDamage "HitRightLeg")+random(0.1)];
+					_bodyrnd = ["HitBody","HitLeftLeg","HitRightLeg"] call BIS_fnc_selectRandom;
+					_APlayer setHitPointDamage [_bodyrnd, (_APlayer getHitPointDamage _bodyrnd)+0.2+random(0.4)];
 	 	  	  _APlayer say3d "myas_hit";
 	 	  	};
 			};	  		
 		};	
 	};
+sleep 0.3;
 //diag_log "Ahit ended.";
 };	
 

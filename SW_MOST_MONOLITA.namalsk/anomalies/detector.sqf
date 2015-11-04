@@ -133,9 +133,9 @@ DetectorRenew = {
 		
 		    switch (Adetector_lvl) do
 				{                                       
-					case 1: {Player say3d "AdetectorBeep";uisleep 0.6;_ctrl = _display displayCtrl 574114; _ctrl ctrlShow true;};
-					case 2: {Player say3d "AdetectorBeep2";uisleep 0.2;_ctrl = _display displayCtrl 574114; _ctrl ctrlShow true;};
-					case 3: {Player say3d "AdetectorBeep3";uisleep 0.1;_ctrl = _display displayCtrl 574114; _ctrl ctrlShow true;uisleep 0.1; _ctrl ctrlShow false;uisleep 0.1;_ctrl ctrlShow true;uisleep 0.1;};
+					case 1: {_ctrl = _display displayCtrl 574114; _ctrl ctrlShow true;Player say3d "AdetectorBeep";uisleep 0.4;_ctrl ctrlShow false;uisleep 0.2;};
+					case 2: {_ctrl = _display displayCtrl 574114; _ctrl ctrlShow true;Player say3d "AdetectorBeep2";uisleep 0.1;_ctrl ctrlShow false;uisleep 0.1;_ctrl ctrlShow true;uisleep 0.1;_ctrl ctrlShow false;};
+					case 3: {_ctrl = _display displayCtrl 574114; _ctrl ctrlShow true;Player say3d "AdetectorBeep3";uisleep 0.1; _ctrl ctrlShow false;uisleep 0.1;_ctrl ctrlShow true;uisleep 0.1; _ctrl ctrlShow false;uisleep 0.1;_ctrl ctrlShow true;uisleep 0.1;_ctrl ctrlShow false;uisleep 0.1;_ctrl ctrlShow true;uisleep 0.1;_ctrl ctrlShow false;};
 				};
 				uisleep 0.4;
 			};

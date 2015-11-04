@@ -105,7 +105,7 @@ _null = [] spawn {
             	 if (_Adist < 3 and alive Player) then
                {
     //                [[_x],"anomaly_fnc_Ahit",Player,true,false] spawn BIS_fnc_MP;
-                  nul = [_x] spawn anomaly_fnc_Ahit;
+                  nul = [_x] call anomaly_fnc_Ahit;
                };
             };
           } forEach tf_Anomalies;

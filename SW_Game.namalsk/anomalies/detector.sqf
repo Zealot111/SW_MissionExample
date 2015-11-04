@@ -29,7 +29,6 @@ DetectorRenew = {
 	if ("RBCSW_AdetectorCA1" in (items player)) then
 	{
 	  _ctrl = _display displayCtrl 574100; _ctrl ctrlShow true;
-	  hint "rbcsw1";
 		while {alive player && !isnull (uiNamespace getVariable ["Adetector_display",displayNull]) && ("RBCSW_AdetectorCA1" in (items player))} do 
 		{
 			switch (Adetector_lvl) do 
@@ -99,7 +98,6 @@ DetectorRenew = {
 	}
 	else
 	{
- 	  hint "rbcsw2";
 	  if ("RBCSW_AdetectorCA2" in (items player)) then
 	  {
 			while {alive player && !isnull (uiNamespace getVariable ["Adetector_display",displayNull]) && ("RBCSW_AdetectorCA2" in (items player))} do 
