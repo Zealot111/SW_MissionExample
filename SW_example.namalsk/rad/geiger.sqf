@@ -8,7 +8,10 @@ zlt_maskOn = false;
 
 if (!hasInterface) exitWith {};
 
-
+player setvariable ["ZRadDoze",0,true];
+player setvariable ["ZAlcohol",0,true];
+player setvariable ["radx",0,true];
+player setvariable ["radx_time",0,true];
 
 [] execvm "rad\goggles.sqf";
 
