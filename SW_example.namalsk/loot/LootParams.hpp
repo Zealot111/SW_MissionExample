@@ -76,6 +76,8 @@
 	
 	class VanillaCategory : BaseCategory {};
 	
+	
+	
 	class StalkerCategory : BaseCategory {
 		// медицина, еда
 		class AGM_Bandage : LootItem {classNames[] = {"AGM_Bandage"};numbers[] = {1,1,2,2,3,3};};
