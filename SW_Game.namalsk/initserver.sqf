@@ -1,0 +1,3 @@
+zltrespawnplayer = [];
+publicvariable "zltrespawnplayer";
+
