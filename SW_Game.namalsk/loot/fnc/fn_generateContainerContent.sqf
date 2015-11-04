@@ -25,8 +25,8 @@ private ["_res","_rnd","_cat","_itemsCheckProbNum","_itemsprobability","_items",
 	params ["_cfg","_item","_arr"];
 	private ["_classNames","_classNamesWeights","_classType","_class","_numbers","_num","_linkedItems","_linkedItemProbabilities"];
 	TRACE_2("", _cfg, _item);
-	if !(isclass ( _cfg / _item)) exitwith {
-		 WARNING( format ["Отсутствует Item: %1 в %2",_item, _cfg]);
+	if (!isclass ( _cfg / _item)) exitWith {
+		private ["_wrn"];_wrn=format ["Отсутствует Item: %1 в %2",_item, _cfg];WARNING(_wrn);
 		 _arr
 	};
 	
@@ -71,15 +71,11 @@ private ["_res","_rnd","_cat","_itemsCheckProbNum","_itemsprobability","_items",
 			for "_j" from 1 to _itemsCheckProbNum do {
 				if (random 1 < _itemsprobability) then {
 					_item = [_items,_itemsweights] call rbc_fnc_selectRandomWeighted;
-					if (isclass (_lootpointcfg / _cat / _item)) then {
-						[_lootpointcfg / _cat, _item,_res] call _fnc_processItem;
-					} else {
-						WARNING( format ["Отсутствует Item: %1 в Cat:%2 в %3",_item, _cat, _lootpointcfg]);
-					};
+					[_lootpointcfg / _cat, _item,_res] call _fnc_processItem;
 				};
 			};
 		} else {
-			WARNING( format ["Отсутствует Category: %1 в %2",_cat, _lootpointcfg]);
+			private ["_wrn"];_wrn=format ["Отсутствует Category: %1 в %2",_cat, _lootpointcfg];WARNING(_wrn);
 		};
 	};
 };
