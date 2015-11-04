@@ -48,13 +48,13 @@ if (hasinterface) then {
 	sleep 3;
 	if ( ({getplayeruid player == _x} count zltrespawnplayer) > 3 ) then {
 	avbg = player ;
-		avbg setdamage 1; deletevehicle avbg;
+		avbg setdamage 1; deletevehicle player;
 		[sidelogic,"Вы умерли"]  spawn wmt_fnc_endmission;
 		
 	};
 	if ( ({getplayeruid player == _x} count zltrespawnplayer) > 0 ) then {
 		avbg = player;
-		forceRespawn player; deletevehicle avbg;
+		forceRespawn player; deletevehicle player;
 	} else {
 
 	};

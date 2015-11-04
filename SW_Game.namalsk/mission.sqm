@@ -8,7 +8,6 @@ class Mission
 		"A3_Characters_F_BLUFOR",
 		"A3_Characters_F_OPFOR",
 		"rhs_c_troops",
-		"wmt_main",
 		"A3_Modules_F"
 	};
 	addOnsAuto[]=
@@ -41,7 +40,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=92;
+		items=100;
 		class Item0
 		{
 			side="GUER";
@@ -4596,6 +4595,374 @@ class Mission
 					skill=0.60000002;
 					text="zmb_5_3_1_1";
 					init="this setvariable [""maxzombies"",5];  this setvariable [""totalzombies"",10];";
+				};
+			};
+		};
+		class Item92
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={7675.6743,10.386882,11765.272};
+					special="NONE";
+					id=208;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={7676.7407,10.412899,11764.368};
+					special="NONE";
+					id=209;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={7677.6489,10.293113,11764.375};
+					special="NONE";
+					id=210;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""ST.sqf"";";
+					description="3. Сталкер ";
+				};
+			};
+		};
+		class Item93
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={7389.7661,16.129883,11812.844};
+					special="NONE";
+					id=211;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={7390.8325,16.288654,11811.939};
+					special="NONE";
+					id=212;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={7391.7407,16.274664,11811.946};
+					special="NONE";
+					id=213;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""ST.sqf"";";
+					description="3. Сталкер ";
+				};
+			};
+		};
+		class Item94
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={6334.4243,9.7586012,11929.837};
+					special="NONE";
+					id=214;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={6335.4907,9.9651995,11928.933};
+					special="NONE";
+					id=215;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={6336.3989,10.00887,11928.939};
+					special="NONE";
+					id=216;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""ST.sqf"";";
+					description="3. Сталкер ";
+				};
+			};
+		};
+		class Item95
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={5999.8984,10.04345,11740.248};
+					special="NONE";
+					id=217;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={6000.9648,10.136282,11739.344};
+					special="NONE";
+					id=218;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={6001.873,10.124769,11739.351};
+					special="NONE";
+					id=219;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""ST.sqf"";";
+					description="3. Сталкер ";
+				};
+			};
+		};
+		class Item96
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={5838.8574,10.817828,11604.095};
+					special="NONE";
+					id=220;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={5839.9238,11.092732,11603.19};
+					special="NONE";
+					id=221;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={5840.832,11.188097,11603.197};
+					special="NONE";
+					id=222;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""ST.sqf"";";
+					description="3. Сталкер ";
+				};
+			};
+		};
+		class Item97
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={5698.6782,8.1130686,11512.594};
+					special="NONE";
+					id=223;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={5699.7446,8.2651386,11511.689};
+					special="NONE";
+					id=224;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={5700.6528,8.3021431,11511.696};
+					special="NONE";
+					id=225;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""ST.sqf"";";
+					description="3. Сталкер ";
+				};
+			};
+		};
+		class Item98
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={7882.1563,14.149062,10164.376};
+					special="NONE";
+					id=226;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={7883.2227,14.151917,10163.472};
+					special="NONE";
+					id=227;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={7884.1309,14.160832,10163.479};
+					special="NONE";
+					id=228;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""ST.sqf"";";
+					description="3. Сталкер ";
+				};
+			};
+		};
+		class Item99
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					position[]={6855.1919,12.465283,9766.0088};
+					special="NONE";
+					id=229;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={6856.2583,11.992387,9765.1045};
+					special="NONE";
+					id=230;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={6857.1665,11.949357,9765.1113};
+					special="NONE";
+					id=231;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""ST.sqf"";";
+					description="3. Сталкер ";
 				};
 			};
 		};
