@@ -12,7 +12,7 @@ wmt_hl_ratio = [-1,-1,-1];
 wmt_hl_sidelimits = [-1,-1,-1];
 
 waituntil {!isnil "bis_fnc_init"};
-if (hasinterface) then {	{if (_x select [0,4] == "rad_") then {_x setMarkerAlphaLocal 1;};} foreach allMapMarkers;};
+if (hasinterface) then {	{if (_x select [0,4] == "rad_") then {_x setMarkerAlphaLocal 0;};} foreach allMapMarkers;};
 
 [] call wmt_fnc_briefingmap;
 
@@ -53,7 +53,8 @@ if (hasinterface) then {
 		
 	};
 	if ( ({getplayeruid player == _x} count zltrespawnplayer) > 0 ) then {
-		forceRespawn player;
+		avbg = player;
+		forceRespawn player; deletevehicle avbg;
 	} else {
 
 	};

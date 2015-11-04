@@ -12,7 +12,7 @@
 		lootSuspendTime = 180 ;  //180;  количество секунд до сохранения лута
 		
 		lootHouseClasses[] = {"House","House_F"};
-		lootBoxesClasses[] = {"rhs_mags_crate"};
+		lootBoxesClasses[] = {"rhs_mags_crate","plp_ct_TrashContGreyMedium","plp_ct_TrashContColGenericOpen"};
 		
 	};
 
@@ -63,6 +63,9 @@
 
 		class Box_Ind_Ammoord_F : DefaultBox {}; 
 		class rhs_mags_crate : DefaultBox { lootpoint = "StalkerWeaponBoxLootPoint"; };
+		class plp_ct_TrashContGreyMedium : rhs_mags_crate {};
+		class plp_ct_TrashContColGenericOpen : plp_ct_TrashContGreyMedium {};
+		
 	};	
 		
 		
