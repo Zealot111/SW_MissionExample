@@ -27,8 +27,6 @@ if (hasinterface) then {	{if (_x select [0,4] == "rad_") then {_x setMarkerAlpha
 
 _bs = [] execVM "t.sqf";
 _bs = [] execVM "del.sqf";
-waituntil {scriptDone _bs};
-0 execVM "loot3.sqf";
 
 
 //################ MISSION SPECIFIC ##################################################
@@ -36,29 +34,6 @@ waituntil {scriptDone _bs};
 if (isserver) then {
 	[missionConfigFile / "LootParameters"] call rbc_fnc_lootSystemInit;
 	[zmb,zmb_1,zmb_2,zmb_3,zmb_4,zmb_5,zmb_6,zmb_7,zmb_8,zmb_9,zmb_10,zmb_11,zmb_12,zmb_13,zmb_14,zmb_17,zmb_16,zmb_4_2] execVM "zombie.sqf";
-};
-if (hasinterface) then {
-/*
-	setPlayerRespawnTime 10;
-	if ( ({getplayeruid player == _x} count zltrespawnplayer) > 0 ) then {
-		setPlayerRespawnTime 900;
-	
-	}; 
-	*/
-//	{if (_x select [0,4] == "rad_") then {_x setMarkerAlphaLocal 1;};} foreach allMapMarkers;
-	sleep 3;
-	if ( ({getplayeruid player == _x} count zltrespawnplayer) > 3 ) then {
-	avbg = player ;
-		avbg setdamage 1; deletevehicle player;
-		[sidelogic,"Вы умерли"]  spawn wmt_fnc_endmission;
-		
-	};
-	if ( ({getplayeruid player == _x} count zltrespawnplayer) > 0 ) then {
-		avbg = player;
-		forceRespawn player; deletevehicle player;
-	} else {
-
-	};
 };
 
 if (isServer) then {

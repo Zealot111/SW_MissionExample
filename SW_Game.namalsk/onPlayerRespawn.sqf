@@ -2,9 +2,11 @@ diag_log ["OnPlayerRespawn", _this];
 [] execvm "rad\geiger.sqf";
 
 //[<newUnit>,<oldUnit>,<respawn>,<respawnDelay>]
+waituntil {!isnull player && {alive player}}
+
 _unit = _this select 0;
 
-if ({getplayeruid player == _x} count zltrespawnplayer > 0) then {
+if ({getplayeruid player == _x} count rbc_alreadyPlayedUIDs > 0) then {
     removeAllWeapons _unit;
     removeAllItems _unit;
     removeAllAssignedItems _unit;
@@ -26,14 +28,4 @@ if ({getplayeruid player == _x} count zltrespawnplayer > 0) then {
     _unit linkItem "ItemWatch";
 };
 
-if (hasinterface) then {
-  sleep 3;
-  if ( ({getplayeruid player == _x} count zltrespawnplayer) > 3 ) then {
-	avbg = _unit ;
-	 avbg setdamage 1; deletevehicle avbg;
-	  [sidelogic,"Вы проиграли"]  spawn wmt_fnc_endmission;
-	  
-  };
-
-};
   
