@@ -35,4 +35,12 @@ class ZombieStalkerSlow1 : ZobieStalkerBase_IndepResurrect {
 class ZombieStalkerSlow2 : ZobieStalkerBase_IndepResurrect2 {
 	moves="CfgRyanZombiesMovesMaleSdrSlow2";
 };	
- 
+
+// контейнеры
+
+class plp_ct_CasketLeatherRed;
+class plp_ct_StalkerCasketLeatherRed : plp_ct_CasketLeatherRed {
+	maximumLoad = 500000;
+	
+	
+};

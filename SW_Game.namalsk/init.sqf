@@ -1,4 +1,5 @@
 /**/
+diag_log ["Init.sqf"];
 enableSaving [false, false];
 TF_give_personal_radio_to_regular_soldier=true;
 TF_give_microdagr_to_soldier=false;

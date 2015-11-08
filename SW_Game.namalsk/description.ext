@@ -2,11 +2,11 @@
 respawnDelay = 900;
 respawnVehicleDelay = 60;
 respawnDialog = 0;
-respawnTemplates[] = {"Counter","Tickets"};
+respawnTemplates[] = {"Counter"};
 respawnOnStart = 0;
 joinUnassigned = 1;
 disabledAI = 1;
-respawnButton = 1;
+respawnButton = 0;
 aiKills = 0;
 reviveDelay = 6;		// The time it takes to revive a unit. Will be halved if you have a Medikit. (Default: 6 seconds.)
 reviveForceRespawnDelay = 3;	// The time it takes to force your respawn while incapacitated. (Default: 3 seconds.)

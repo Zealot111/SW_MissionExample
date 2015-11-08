@@ -5,7 +5,7 @@ class CfgPatches
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 1.0;
-		requiredAddons[] = {"A3_Weapons_F"};
+		requiredAddons[] = {"A3_Weapons_F","plp_containers"};
 	};
 };
 

@@ -38,7 +38,7 @@ if (_usestdpos == 2) then {
 	_positions = ( _house call compile _buildingPosString);
 };
 
-if ((_lootpoint == "" && _scriptedLootpoint == "") || !(_usestdpos in [1,2]) || _lootprobpos == 0 || count _positions == 0) exitWith {nil};
+if ((_lootpoint == "" && _scriptedLootpoint == "") || !(_usestdpos in [1,2]) || _lootprobpos == 0 || count _positions == 0 || isObjectHidden _house) exitWith {nil};
 _lastpos = [0,0,0];
 _result = [[],[]]; //posNumber and generateContainerArray 
 
