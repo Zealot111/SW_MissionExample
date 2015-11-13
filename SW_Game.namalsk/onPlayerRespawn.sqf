@@ -1,12 +1,12 @@
 diag_log ["OnPlayerRespawn", _this];
-[] execvm "rad\geiger.sqf";
+
 
 //[<newUnit>,<oldUnit>,<respawn>,<respawnDelay>]
 waituntil {!isnull player && {alive player}}
 
 _unit = _this select 0;
+sleep 0.1;
 
-if ({getplayeruid player == _x} count rbc_alreadyPlayedUIDs > 0) then {
     removeAllWeapons _unit;
     removeAllItems _unit;
     removeAllAssignedItems _unit;
@@ -26,6 +26,8 @@ if ({getplayeruid player == _x} count rbc_alreadyPlayedUIDs > 0) then {
     _unit addItem "8Rnd_Mag_pm";
     _unit addWeapon "av_makarov";
     _unit linkItem "ItemWatch";
-};
+
+
+
 
   

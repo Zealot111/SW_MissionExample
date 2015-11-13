@@ -3,7 +3,7 @@ respawnDelay = 900;
 respawnVehicleDelay = 60;
 respawnDialog = 0;
 respawnTemplates[] = {"Counter"};
-respawnOnStart = 0;
+respawnOnStart = -1;
 joinUnassigned = 1;
 disabledAI = 1;
 respawnButton = 0;
@@ -34,7 +34,6 @@ wreckRemovalMinTime = 86400;
 class CfgFunctions
 {
  	#include "anomalies\functions.hpp"
- 	#include "loot\LootFnc.hpp"
 };  
 class RscTitles
 {	

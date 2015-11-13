@@ -13,7 +13,6 @@ wmt_hl_ratio = [-1,-1,-1];
 wmt_hl_sidelimits = [-1,-1,-1];
 
 waituntil {!isnil "bis_fnc_init"};
-if (hasinterface) then {	{if (_x select [0,4] == "rad_") then {_x setMarkerAlphaLocal 0;};} foreach allMapMarkers;};
 
 [] call wmt_fnc_briefingmap;
 
@@ -29,12 +28,9 @@ _bs = [] execVM "t.sqf";
 _bs = [] execVM "del.sqf";
 
 
+
 //################ MISSION SPECIFIC ##################################################
 
-if (isserver) then {
-	[missionConfigFile / "LootParameters"] call rbc_fnc_lootSystemInit;
-	[zmb,zmb_1,zmb_2,zmb_3,zmb_4,zmb_5,zmb_6,zmb_7,zmb_8,zmb_9,zmb_10,zmb_11,zmb_12,zmb_13,zmb_14,zmb_17,zmb_16,zmb_4_2] execVM "zombie.sqf";
-};
 
 if (isServer) then {
         _pos = [8088.254395,11215.62207,71.781021];

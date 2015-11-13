@@ -5,6 +5,7 @@ private ["_units","_fn_checkLos"];
 _fn_checkLos = {
 	params ["_unit","_distance","_target"];
 	private ["_eyepa","_eyepb","_coeff","_anim"];
+	if (_target getvariable ["ZAlcohol",0] > 0.5) exitWith {false};
 	_eyepa = eyepos _unit; 
 	_eyepb = eyepos _target; 
 	

@@ -6,6 +6,10 @@ class rbc
    	class Math {
    		class selectRandomWeighted {file = "\rbc_stalker\fnc\loot\fn_randomweighted.sqf";};
    	};
+   	class Misc {
+   		class disableAI {file = "\rbc_stalker\fnc\misc\fnc_disableAI.sqf";};
+
+   	};
    	class Loot {
    		class getContainerContent {file = "\rbc_stalker\fnc\loot\fn_getContainerContent.sqf";};
    		class setContainerContent {file = "\rbc_stalker\fnc\loot\fn_setContainerContent.sqf";};

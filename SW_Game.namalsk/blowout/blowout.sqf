@@ -19,7 +19,18 @@ if (isServer) then {
 		while {true} do {
 			sleep ( _timeout * (45 + random 30));
 			diag_log ["Starting blowout on clients"];
-			[[_blowtime,_timea],{[((_this select 0)*(0.75 + random 0.5)),((_this select 1)*(0.5 + random 1)) ] spawn mrk_fnc_blowout}] remoteexec ["bis_fnc_spawn"];			
+			[[_blowtime,_timea],{[((_this select 0)*(0.75 + random 0.5)),((_this select 1)*(0.5 + random 1)) ] spawn mrk_fnc_blowout}] remoteexec ["bis_fnc_spawn"];
+			sleep _timea;
+			sleep _blowtime;
+			// total cleanup
+			{
+				deletevehicle _x;
+			} foreach allDead;
+			{
+				if !(_x getvariable ["rbc_lootsystem",false]) then {
+					deletevehicle _x;
+				};
+			} foreach (allMissionObjects "GroundWeaponHolder" + allMissionObjects "simulatedWeaponHolder");
 		};
 	};
 };
@@ -132,9 +143,10 @@ mrk_fnc_blowout = {
 	player setfatigue 1;
 	titleText ["", "BLACK OUT",2.8];
 	sleep 2.8;
+	/* Пока не синхронизировано пускай не роняет в бессознанку
 	if ( (player getVariable ["ZAlcohol",0]) < 0.5 ) then {
 		[player, 30] call AGM_Medical_fnc_knockOut;
-	};
+	};*/
 	_Out = ([] call Mrk_fnc_CheckIn) / 36. * 2;
 	player setDamage (damage player + _Out);
 	mrk_blw_blowout_peakended = true;

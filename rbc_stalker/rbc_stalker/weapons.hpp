@@ -64,7 +64,7 @@ class zlt_rotgut: rbc_itemcore
 	};		
 };
 
-class rbc_TacticalBacon: rbc_itemcore
+class rbc_bacon: rbc_itemcore
 {
 	mass = 5;
 	scope = 2;
@@ -77,7 +77,7 @@ class rbc_TacticalBacon: rbc_itemcore
 		mass = 5;
 	};		
 };
-class rbc_BakedBeans: rbc_itemcore
+class rbc_beans: rbc_itemcore
 {
 	mass = 5;
 	scope = 2;

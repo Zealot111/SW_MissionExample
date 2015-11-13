@@ -8,11 +8,6 @@ zlt_maskOn = false;
 
 if (!hasInterface) exitWith {};
 
-player setvariable ["ZRadDoze",0,true];
-player setvariable ["ZAlcohol",0,true];
-player setvariable ["radx",0,true];
-player setvariable ["radx_time",0,true];
-
 [] execvm "rad\goggles.sqf";
 
 0 execvm "rad\medical.sqf";
@@ -167,6 +162,17 @@ PP_radmed ppEffectCommit 0;
 ZRadScrMainCycle = 0 spawn ZRadMainCycle;
 
 ["Дозиметр (показать/убрать)", {true}, {if (isnull (uiNamespace getVariable ["Zlt_radex_display",displaynull])) then {("zltradradex" call BIS_fnc_rscLayer) cutrsc ["RscZltRadex", "PLAIN"];} else {("zltradradex" call BIS_fnc_rscLayer) cuttext ["", "PLAIN"];}}, true] call AGM_Interaction_fnc_addInteractionSelf;
+
+player addEventHandler ["Killed", {
+	player setvariable ["ZRadDoze",0];
+	player setvariable ["ZAlcohol",0];
+	player setvariable ["radx",0];
+	player setvariable ["radx_time",0];
+    
+}];
+
+
+
 
 
 

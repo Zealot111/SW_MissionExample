@@ -179,3 +179,10 @@
 		sound[] = {"\rbc_stalker\sounds\rad\soda.ogg", 1.0, 1};
 		titles[]={};
 	};
+	class zrad_food
+	{
+		name = "zrad_food";
+		sound[] = {"\rbc_stalker\sounds\rad\food.ogg", 1.0, 1};
+		titles[]={};
+	};
+

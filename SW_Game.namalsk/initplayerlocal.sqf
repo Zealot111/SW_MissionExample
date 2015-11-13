@@ -1,6 +1,9 @@
 ﻿diag_log ["InitPlayerLocal.sqf"];
 
 if (isNil "rbc_alreadyPlayedUIDs") then {rbc_alreadyPlayedUIDs=[];};
+
+[] execvm "rad\geiger.sqf";
+if (hasinterface) then {	{if (_x select [0,4] == "rad_") then {_x setMarkerAlphaLocal 0;};} foreach allMapMarkers;};
  
 sleep 1;
 if (alive player) then {
@@ -26,3 +29,4 @@ if (alive player) then {
 	};
 	
 };
+

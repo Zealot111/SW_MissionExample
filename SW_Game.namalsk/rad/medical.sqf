@@ -34,6 +34,7 @@ zltMedAlco = {
 
 zltMedDblCLickHandler = {
 	disableserialization;
+	private ["_ctrl","_index","_text","_item","_data","_old","_alc","_blood"];
 	_ctrl = (_this select 0);
 	_index = _this select 1;         
 
@@ -51,6 +52,16 @@ zltMedDblCLickHandler = {
 	sleep 0.001;
 	
 	switch (_item) do {
+		case "zlt_radx" : {
+			player removeitem "zlt_radx";
+			if (player getvariable ["radx",0] < 2) then {
+				player setvariable ["radx", (player getvariable ["radx",0]) + 1 ,true];
+				player setvariable ["radx_time", daytime, true];
+			};
+			playsound "zrad_radx";
+
+		};
+
 		case "zlt_radx" : {
 			player removeitem "zlt_radx";
 			if (player getvariable ["radx",0] < 2) then {
@@ -92,8 +103,30 @@ zltMedDblCLickHandler = {
 		
 			_old = player getVariable ["ZRadDoze",0.1];
 			player setVariable ["ZRadDoze", (_old - (10 + random 10)) max 0, true];
+	
+		};
+
+		case "rbc_bacon" : {
+			player removeitem "rbc_bacon";
+			playsound "zrad_food";
 		
-		
+			_old = player getVariable ["ZRadDoze",0.1];
+			player setVariable ["ZRadDoze", (_old - (5 + random 3)) max 0, true];		
+
+			_blood = ((player getVariable "AGM_Blood") + 0.1) min 1;
+    		player setVariable ["AGM_Blood", _blood, true];
+
+		};
+
+		case "rbc_beans" : {
+			player removeitem "rbc_beans";
+			playsound "zrad_food";
+			_blood = ((player getVariable "AGM_Blood") + 0.05) min 1;
+
+    		player setVariable ["AGM_Blood", _blood, true];
+			_old = player getVariable ["ZRadDoze",0.1];
+			player setVariable ["ZRadDoze", (_old - (10 + random 10)) max 0, true];		
+
 		};
 		
 		default {};
