@@ -108,8 +108,10 @@ ZRadMedEffects = {
 };
 
 ZRadGetCurrent = {
+	private "_inzone";
 	_inzone = false;
 	{if (player in list _x || ( missionnamespace getvariable ["zradon",false])) exitWith {_inzone = true;};} foreach zlt_radzones;
+	if (surfaceIsWater getpos player) then {_inzone = true;};
 	if (_inzone) then {z_asec=20; zradSecond = 3;} else {z_asec = 0; zradSecond = 0;};
 	_inzone
 };
