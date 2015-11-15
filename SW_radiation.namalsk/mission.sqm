@@ -3,10 +3,8 @@ class Mission
 {
 	addOns[]=
 	{
-		"WMT_Main",
 		"wmt_vehicle",
 		"AGM_Medical",
-		"A3_Modules_F",
 		"rhs_c_weapons",
 		"rhsusf_c_troops"
 	};
@@ -31,898 +29,456 @@ class Mission
 	};
 	class Markers
 	{
-		items=74;
+		items=45;
 		class Item0
 		{
-			position[]={4960.3652,1.1495206,10742.428};
+			position[]={6400.3145,6.9504848,8611.1738};
 			name="rad_1";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=100;
-			b=100;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=50;
+			b=50;
 		};
 		class Item1
 		{
-			position[]={7233.1504,55.173737,10475.471};
-			name="rad_3";
+			position[]={6784.6885,7.2321377,8357.2813};
+			name="rad_1_1";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=100;
-			b=100;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=50;
+			b=50;
 		};
 		class Item2
 		{
-			position[]={8284.9453,15.123499,10767.267};
-			name="rad_4";
+			position[]={7662.5767,71.867363,8751.0576};
+			name="rad_1_2";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
+			colorName="ColorRed";
 			a=100;
 			b=100;
-			drawBorder=1;
 		};
 		class Item3
 		{
-			position[]={8993.9141,7.508801,10027.054};
-			name="rad_5";
+			position[]={7299.6519,84.509232,7967.6572};
+			name="rad_1_2_1";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
+			colorName="ColorRed";
 			a=100;
 			b=100;
-			drawBorder=1;
 		};
 		class Item4
 		{
-			position[]={6703.0342,15,11348.015};
-			name="rad_6";
+			position[]={7912.7095,0,7700.2466};
+			name="rad_1_2_2";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=100;
-			b=100;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=200;
+			b=200;
 		};
 		class Item5
 		{
-			position[]={6715.6631,15,11087.024};
-			name="rad_7";
+			position[]={3538.8657,205.38771,6676.0483};
+			name="rad_1_2_3";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
+			colorName="ColorRed";
 			a=100;
 			b=100;
-			drawBorder=1;
 		};
 		class Item6
 		{
-			position[]={6940.4678,15,11373.27};
-			name="rad_8";
+			position[]={4159.7622,398.7999,6646.1655};
+			name="rad_1_2_4";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
+			colorName="ColorRed";
 			a=100;
 			b=100;
-			drawBorder=1;
 		};
 		class Item7
 		{
-			position[]={5721.8643,21.859156,9855.1924};
-			name="rad_10";
+			position[]={4835.7026,41,6230.5371};
+			name="rad_1_2_5";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
+			colorName="ColorRed";
 			a=100;
 			b=100;
-			drawBorder=1;
 		};
 		class Item8
 		{
-			position[]={7949.7461,0.0086903721,7634.6494};
-			name="rad_12";
+			position[]={4831.1143,41,6119.9619};
+			name="rad_1_2_6";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
+			colorName="ColorRed";
 			a=100;
 			b=100;
-			drawBorder=1;
 		};
 		class Item9
 		{
-			position[]={3539.0427,205.38771,6660.2817};
-			name="rad_20";
+			position[]={4969.063,7.6271009,6651.9121};
+			name="rad_1_2_7";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=100;
+			b=100;
 		};
 		class Item10
 		{
-			position[]={4456.4263,2.8,11226.984};
-			name="rad_21";
+			position[]={3849.967,53,7434.9155};
+			name="rad_1_2_8";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=100;
+			b=100;
 		};
 		class Item11
 		{
-			position[]={5776.1201,16.855667,10800.391};
-			name="rad_22";
+			position[]={3943.7043,53,7548.0469};
+			name="rad_1_2_9";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=100;
+			b=100;
 		};
 		class Item12
 		{
-			position[]={6158.0073,34.391438,10781.115};
-			name="rad_2";
+			position[]={4022.8967,53,7651.4819};
+			name="rad_1_2_10";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=100;
+			b=100;
 		};
 		class Item13
 		{
-			position[]={6042.3472,30.350763,10813.414};
-			name="rad_23";
+			position[]={4992.2148,47.237587,6543.6777};
+			name="rad_1_2_11";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=100;
+			b=100;
 		};
 		class Item14
 		{
-			position[]={6908.9756,15.48575,11273.093};
-			name="rad_24";
+			position[]={4064.7329,70.311455,9231.2393};
+			name="rad_1_2_12";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=100;
+			b=100;
 		};
 		class Item15
 		{
-			position[]={6644.312,15,11225.686};
-			name="rad_25";
+			position[]={4695.3071,23.543581,8903.2393};
+			name="rad_1_2_13";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=100;
+			b=100;
 		};
 		class Item16
 		{
-			position[]={6801.8862,15,11671.224};
-			name="rad_26";
+			position[]={5800.5103,50.595562,8677.5313};
+			name="rad_1_2_14";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=100;
+			b=100;
 		};
 		class Item17
 		{
-			position[]={8964.2832,3.3489623,10649.547};
-			name="rad_27";
+			position[]={5016.959,40,8212.623};
+			name="rad_1_2_15";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=100;
+			b=100;
 		};
 		class Item18
 		{
-			position[]={8120.8765,15,10864.267};
-			name="rad_28";
+			position[]={5001.2881,50,7998.4526};
+			name="rad_1_2_16";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=100;
+			b=100;
 		};
 		class Item19
 		{
-			position[]={6289.4932,4.931891,9936.0674};
-			name="rad_9";
+			position[]={6240.1367,42.930939,9213.3594};
+			name="rad_1_2_17";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=100;
+			b=100;
 		};
 		class Item20
 		{
-			position[]={6450.5552,36,9317.5518};
-			name="rad_29";
+			position[]={6306.0737,42.854752,9372.4678};
+			name="rad_1_2_18";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=100;
+			b=100;
 		};
 		class Item21
 		{
-			position[]={6523.5054,36,9279.8506};
-			name="rad_30";
+			position[]={6255.9038,41.717907,9525.8418};
+			name="rad_1_2_19";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=100;
+			b=100;
 		};
 		class Item22
 		{
-			position[]={5700.7871,1.167527,9280.2441};
-			name="rad_31";
+			position[]={6122.5972,33.085739,9436.9707};
+			name="rad_1_2_20";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=100;
+			b=100;
 		};
 		class Item23
 		{
-			position[]={5790.0352,4.9057903,9244.043};
-			name="rad_32";
+			position[]={6145.5322,37.997704,9276.4297};
+			name="rad_1_2_21";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=100;
+			b=100;
 		};
 		class Item24
 		{
-			position[]={7787.2075,-0.23566876,9511.7305};
-			name="rad_33";
+			position[]={6541.7441,36,9293.7666};
+			name="rad_1_2_22";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=100;
+			b=100;
 		};
 		class Item25
 		{
-			position[]={7631.189,72.401009,8731.9902};
-			name="rad_13";
+			position[]={6409.7378,36,9338.7686};
+			name="rad_1_2_23";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=100;
+			b=100;
 		};
 		class Item26
 		{
-			position[]={7693.4937,71.867363,8766.5088};
-			name="rad_34";
+			position[]={6714.3682,8.5050774,9994.373};
+			name="rad_1_2_24";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=100;
+			b=100;
 		};
 		class Item27
 		{
-			position[]={7642.3301,39.897118,7465.4067};
-			name="rad_14";
+			position[]={6833.5317,23.397163,9922.4639};
+			name="rad_1_2_25";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=100;
+			b=100;
 		};
 		class Item28
 		{
-			position[]={7718.6943,40.522255,7370.2529};
-			name="rad_35";
+			position[]={6925.9868,1.7249473,9869.0459};
+			name="rad_1_2_26";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=100;
+			b=100;
 		};
 		class Item29
 		{
-			position[]={7713.4077,40.045979,7415.48};
-			name="rad_36";
+			position[]={6445.2231,24.068413,9815.6279};
+			name="rad_1_2_27";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=100;
+			b=100;
 		};
 		class Item30
 		{
-			position[]={7249.3481,84.518974,7945.2896};
-			name="rad_11";
+			position[]={6545.896,46.208168,9717.0098};
+			name="rad_1_2_28";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=100;
+			b=100;
 		};
 		class Item31
 		{
-			position[]={7284.5933,85.075562,7910.6343};
-			name="rad_37";
+			position[]={6671.2231,34.338825,9655.374};
+			name="rad_1_2_29";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=100;
+			b=100;
 		};
 		class Item32
 		{
-			position[]={7335.6987,84.450089,7957.6245};
-			name="rad_38";
+			position[]={6788.332,5.9457722,9599.9014};
+			name="rad_1_2_30";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=100;
+			b=100;
 		};
 		class Item33
 		{
-			position[]={7329.8247,84.540726,8014.0117};
-			name="rad_39";
+			position[]={5616.8306,16.365988,9779.7988};
+			name="rad_1_2_31";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=100;
+			b=100;
 		};
 		class Item34
 		{
-			position[]={7096.8696,88.785561,6248.8311};
-			name="rad_15";
+			position[]={5868.5654,14.521346,9863.1865};
+			name="rad_1_2_31_1";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=100;
+			b=100;
 		};
 		class Item35
 		{
-			position[]={7294.9004,39.802986,5834.2559};
-			name="rad_40";
+			position[]={6747.4292,15,11279.945};
+			name="rad_1_2_31_2";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=300;
+			b=300;
 		};
 		class Item36
 		{
-			position[]={6668.6509,3.5671382,5975.2202};
-			name="rad_41";
+			position[]={4468.022,-0.49340737,11325.196};
+			name="rad_1_2_31_2_1";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=300;
+			b=300;
 		};
 		class Item37
 		{
-			position[]={6624.5947,3.484283,5789.6108};
-			name="rad_42";
+			position[]={4841.1147,13.655105,10821.922};
+			name="rad_1_2_31_3";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=100;
+			b=100;
 		};
 		class Item38
 		{
-			position[]={6174.6333,7.2385435,5689.1689};
-			name="rad_16";
+			position[]={4399.7139,14.989105,10743.567};
+			name="rad_1_2_31_4";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=100;
+			b=100;
 		};
 		class Item39
 		{
-			position[]={4865.5205,41,6199.6245};
-			name="rad_18";
+			position[]={5760.481,16.86363,10782.746};
+			name="rad_1_2_31_5";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=100;
+			b=100;
 		};
 		class Item40
 		{
-			position[]={4857.2969,41,6132.6641};
-			name="rad_43";
+			position[]={8259.8008,14.991535,10740.825};
+			name="rad_1_2_31_2_1_1";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=200;
+			b=200;
 		};
 		class Item41
 		{
-			position[]={4838.499,41,6280.6816};
-			name="rad_44";
+			position[]={9266.376,-0.022335887,10024.037};
+			name="rad_1_2_31_2_1_2";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=300;
+			b=300;
 		};
 		class Item42
 		{
-			position[]={4964.3789,14.542278,6658.2183};
-			name="rad_17";
+			position[]={3983.749,157.37367,8490.6445};
+			name="rad_1_2_31_2_1_1_1";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=200;
+			b=200;
 		};
 		class Item43
 		{
-			position[]={5025.8354,46.790943,6560.2661};
-			name="rad_45";
+			position[]={6101.6162,13.67421,5785.6309};
+			name="rad_1_2_31_2_1_1_2";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=200;
+			b=200;
 		};
 		class Item44
 		{
-			position[]={4999.5439,4.7356882,6607.4521};
-			name="rad_46";
+			position[]={6074.0537,0,6726.9526};
+			name="rad_1_2_31_2_1_1_3";
 			markerType="ELLIPSE";
 			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
-		};
-		class Item45
-		{
-			position[]={4171.7227,398.84781,6621.8672};
-			name="rad_47";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
-		};
-		class Item46
-		{
-			position[]={4216.8296,398.01645,6607.8818};
-			name="rad_19";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
-		};
-		class Item47
-		{
-			position[]={4122.7817,376.95569,6684.7036};
-			name="rad_48";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
-		};
-		class Item48
-		{
-			position[]={4354.4272,3.2348626,4785.5605};
-			name="rad_49";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
-		};
-		class Item49
-		{
-			position[]={2187.0437,4.5935845,5769.7158};
-			name="rad_50";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
-		};
-		class Item50
-		{
-			position[]={5033.9014,40,8215.4248};
-			name="rad_51";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
-		};
-		class Item51
-		{
-			position[]={5008.5591,50,7981.3223};
-			name="rad_52";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
-		};
-		class Item52
-		{
-			position[]={3826.4087,53,7464.3516};
-			name="rad_53";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
-		};
-		class Item53
-		{
-			position[]={3913.9353,52.999779,7476.3335};
-			name="rad_54";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
-		};
-		class Item54
-		{
-			position[]={3899.8691,53.008289,7525.8237};
-			name="rad_55";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
-		};
-		class Item55
-		{
-			position[]={3944.1531,53,7570.105};
-			name="rad_56";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
-		};
-		class Item56
-		{
-			position[]={4002.5042,53,7603.4453};
-			name="rad_57";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
-		};
-		class Item57
-		{
-			position[]={3982.7654,157.26796,8489.1895};
-			name="rad_58";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
-		};
-		class Item58
-		{
-			position[]={4675.9175,23.532782,8907.3975};
-			name="rad_59";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
-		};
-		class Item59
-		{
-			position[]={4620.1133,78.296616,9212.8311};
-			name="rad_60";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
-		};
-		class Item60
-		{
-			position[]={4684.1421,74.069237,9223.9912};
-			name="rad_61";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
-		};
-		class Item61
-		{
-			position[]={4728.7856,67.134247,9219.8789};
-			name="rad_62";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
-		};
-		class Item62
-		{
-			position[]={4767.5713,27.406605,8973.5615};
-			name="rad_63";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
-		};
-		class Item63
-		{
-			position[]={5532.8511,44.385086,9546.2383};
-			name="rad_64";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
-		};
-		class Item64
-		{
-			position[]={4073.9009,70.327858,9219.2754};
-			name="rad_65";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
-		};
-		class Item65
-		{
-			position[]={7149.9189,15.235102,10873.082};
-			name="rad_66";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=130;
-			b=30;
-			angle=28.457394;
-			drawBorder=1;
-		};
-		class Item66
-		{
-			position[]={7577.1514,35.30011,11331.379};
-			name="rad_67";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
-		};
-		class Item67
-		{
-			position[]={8086.9316,69.844383,11192.79};
-			name="rad_68";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
-		};
-		class Item68
-		{
-			position[]={5790.7969,50.9039,8657.1836};
-			name="rad_69";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
-		};
-		class Item69
-		{
-			position[]={5844.8599,50.596066,8699.2295};
-			name="rad_70";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
-		};
-		class Item70
-		{
-			position[]={5859.1846,50.720329,8636.8525};
-			name="rad_71";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=30;
-			drawBorder=1;
-		};
-		class Item71
-		{
-			position[]={5483.8984,-0.002240971,10073.938};
-			name="rad_72";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=230;
-			angle=-49.684395;
-			drawBorder=1;
-		};
-		class Item72
-		{
-			position[]={6018.2046,0.0033798201,9772.7793};
-			name="rad_73";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=230;
-			angle=1.4547747;
-			drawBorder=1;
-		};
-		class Item73
-		{
-			position[]={6881.5303,16.918978,8047.9463};
-			name="rad_74";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorGrey";
-			fillName="Border";
-			a=30;
-			b=230;
-			angle=-258.54556;
-			drawBorder=1;
+			colorName="ColorRed";
+			a=200;
+			b=200;
 		};
 	};
 };

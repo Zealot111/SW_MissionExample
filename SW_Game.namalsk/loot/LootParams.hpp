@@ -24,6 +24,8 @@
 		"plp_ct_TrashContGreySmall","plp_ct_TrashCanCityPark""plp_ct_TrashcanIndPurple","plp_ct_TrashcanIndRed"
 		 "plp_ct_CartonRottenSmall"
 
+		 "Land_ProjectCherno_A_Hospital" - мед
+
 		*/
 		
 	};
@@ -181,7 +183,7 @@
 		itemsProbability = 0.4;
 		itemsCheckProbNum = 3; 
 		items[] = {"zlt_rotgut","zlt_beer","rbc_bacon","rbc_beans"};
-		itemsWeights[] = {0.1,0.5,0.15,0.35};
+		itemsWeights[] = {0.1,0.35,0.2,0.35};
 	};
 	class StalkerAntiRad : StalkerCategory {
 		itemsProbability = 0.67;

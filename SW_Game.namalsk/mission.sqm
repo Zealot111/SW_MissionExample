@@ -24,18 +24,19 @@ class Mission
 	randomSeed=4754635;
 	class Intel
 	{
-		startWeather=0.68000001;
-		startFog=0.19999999;
+		startWeather=0.58999997;
+		startFog=0.13;
 		startWind=0.099999994;
 		startWaves=0.099999994;
-		forecastWeather=0.85999995;
-		forecastFog=0.20999999;
+		forecastWeather=0.58999997;
+		forecastFog=0.13;
 		forecastWind=0.099999994;
 		forecastWaves=0.099999994;
 		forecastLightnings=0.099999994;
 		rainForced=1;
 		year=2011;
 		month=11;
+		hour=11;
 		minute=25;
 		startFogDecay=0.013;
 		forecastFogDecay=0.013;
@@ -51,7 +52,7 @@ class Mission
 				items=3;
 				class Item0
 				{
-					position[]={5853.999,17.36834,11534.219};
+					position[]={4698.4429,4.4581532,4971.5518};
 					special="NONE";
 					id=0;
 					side="GUER";
@@ -65,7 +66,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={5855.0654,17.366795,11533.314};
+					position[]={4699.5093,4.2989454,4970.6475};
 					special="NONE";
 					id=1;
 					side="GUER";
@@ -77,7 +78,7 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={5855.9736,17.362103,11533.321};
+					position[]={4700.4175,4.2481556,4970.6543};
 					special="NONE";
 					id=2;
 					side="GUER";
@@ -97,7 +98,8 @@ class Mission
 				items=10;
 				class Item0
 				{
-					position[]={6267.6362,42.000828,9354.8398};
+					position[]={6271.3813,42.367435,9318.5605};
+					azimut=-6.6479802;
 					special="NONE";
 					id=3;
 					side="GUER";
@@ -111,7 +113,8 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={6268.7026,42.002029,9353.9004};
+					position[]={6272.5488,42.369823,9317.751};
+					azimut=-6.6479802;
 					special="NONE";
 					id=4;
 					side="GUER";
@@ -123,7 +126,8 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={6269.5825,42.002426,9353.9102};
+					position[]={6273.4229,42.368774,9317.8623};
+					azimut=-6.6479802;
 					special="NONE";
 					id=5;
 					side="GUER";
@@ -135,7 +139,8 @@ class Mission
 				};
 				class Item3
 				{
-					position[]={6270.521,42.002853,9353.9102};
+					position[]={6274.354,42.367695,9317.9707};
+					azimut=-6.6479802;
 					special="NONE";
 					id=6;
 					side="GUER";
@@ -147,7 +152,8 @@ class Mission
 				};
 				class Item4
 				{
-					position[]={6271.4814,42.003307,9353.9209};
+					position[]={6275.3071,42.366535,9318.0947};
+					azimut=-6.6479802;
 					special="NONE";
 					id=7;
 					side="GUER";
@@ -159,7 +165,8 @@ class Mission
 				};
 				class Item5
 				{
-					position[]={6272.4067,42.00378,9353.918};
+					position[]={6276.2266,42.370972,9318.1973};
+					azimut=-6.6479802;
 					special="NONE";
 					id=8;
 					side="GUER";
@@ -171,7 +178,8 @@ class Mission
 				};
 				class Item6
 				{
-					position[]={6273.3862,42.00428,9353.9199};
+					position[]={6277.1992,42.3787,9318.3115};
+					azimut=-6.6479802;
 					special="NONE";
 					id=9;
 					side="GUER";
@@ -183,7 +191,8 @@ class Mission
 				};
 				class Item7
 				{
-					position[]={6274.3652,42.00478,9353.9199};
+					position[]={6278.1709,42.386421,9318.4258};
+					azimut=-6.6479802;
 					special="NONE";
 					id=10;
 					side="GUER";
@@ -195,7 +204,8 @@ class Mission
 				};
 				class Item8
 				{
-					position[]={6275.2749,42.005005,9353.9111};
+					position[]={6279.0762,42.39357,9318.5225};
+					azimut=-6.6479802;
 					special="NONE";
 					id=11;
 					side="GUER";
@@ -207,7 +217,8 @@ class Mission
 				};
 				class Item9
 				{
-					position[]={6276.1323,42.004665,9353.9434};
+					position[]={6279.9233,42.400436,9318.6543};
+					azimut=-6.6479802;
 					special="NONE";
 					id=12;
 					side="GUER";
@@ -3218,7 +3229,7 @@ class Mission
 				items=3;
 				class Item0
 				{
-					position[]={7089.5957,16.294907,11845.455};
+					position[]={2575.1904,7.2870545,5637.6431};
 					special="NONE";
 					id=124;
 					side="GUER";
@@ -3232,7 +3243,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={7090.6621,16.326569,11844.551};
+					position[]={2576.2568,7.1251111,5636.7388};
 					special="NONE";
 					id=125;
 					side="GUER";
@@ -3244,7 +3255,7 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={7091.5703,16.351892,11844.558};
+					position[]={2577.165,7.1413417,5636.7456};
 					special="NONE";
 					id=126;
 					side="GUER";
@@ -3264,7 +3275,7 @@ class Mission
 				items=3;
 				class Item0
 				{
-					position[]={9004.7988,18.648165,10327.507};
+					position[]={3115.4692,16.958828,8068.9829};
 					special="NONE";
 					id=127;
 					side="GUER";
@@ -3278,7 +3289,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={9005.8652,18.659506,10326.603};
+					position[]={3116.5356,17.397348,8068.0786};
 					special="NONE";
 					id=128;
 					side="GUER";
@@ -3290,7 +3301,7 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={9006.7734,18.663891,10326.609};
+					position[]={3117.4438,17.668356,8068.0854};
 					special="NONE";
 					id=129;
 					side="GUER";
@@ -3494,7 +3505,7 @@ class Mission
 				items=3;
 				class Item0
 				{
-					position[]={5218.6406,72.773613,8959.0098};
+					position[]={4352.9287,7.3232808,9754.5713};
 					special="NONE";
 					id=142;
 					side="GUER";
@@ -3508,7 +3519,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={5219.707,72.773468,8958.1055};
+					position[]={4353.9951,7.2748084,9753.667};
 					special="NONE";
 					id=143;
 					side="GUER";
@@ -3520,7 +3531,7 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={5220.6152,72.813728,8958.1123};
+					position[]={4354.9033,7.2792277,9753.6738};
 					special="NONE";
 					id=144;
 					side="GUER";
@@ -3678,7 +3689,7 @@ class Mission
 				items=3;
 				class Item0
 				{
-					position[]={5767.1826,18.08526,10697.144};
+					position[]={2591.4539,16.142879,6852.4619};
 					special="NONE";
 					id=154;
 					side="GUER";
@@ -3692,7 +3703,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={5768.249,18.089233,10696.239};
+					position[]={2592.5203,16.264984,6851.5576};
 					special="NONE";
 					id=155;
 					side="GUER";
@@ -3704,7 +3715,7 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={5769.1572,18.118448,10696.246};
+					position[]={2593.4285,16.369606,6851.5645};
 					special="NONE";
 					id=156;
 					side="GUER";
@@ -4754,7 +4765,7 @@ class Mission
 				items=3;
 				class Item0
 				{
-					position[]={5999.8984,10.04345,11740.248};
+					position[]={3656.2329,12.402058,8875.877};
 					special="NONE";
 					id=217;
 					side="GUER";
@@ -4768,7 +4779,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={6000.9648,10.136282,11739.344};
+					position[]={3657.2993,12.678407,8874.9727};
 					special="NONE";
 					id=218;
 					side="GUER";
@@ -4780,7 +4791,7 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={6001.873,10.124769,11739.351};
+					position[]={3658.2075,12.790646,8874.9795};
 					special="NONE";
 					id=219;
 					side="GUER";
@@ -5014,7 +5025,7 @@ class Mission
 						};
 						class Item4
 						{
-							value="1";
+							value="0";
 							parentCls="WMT_Main";
 							typeName="ExtendedBriefing";
 						};
@@ -5032,7 +5043,7 @@ class Mission
 						};
 						class Item7
 						{
-							value="1";
+							value="0";
 							parentCls="WMT_Main";
 							typeName="GenerateFrequencies";
 						};
@@ -5131,7 +5142,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=26;
+		items=33;
 		class Item0
 		{
 			position[]={7651.0957,80.021164,8752.2188};
@@ -5176,40 +5187,13 @@ class Mission
 		};
 		class Item7
 		{
-			position[]={4596.6587,24.303839,10478.743};
-			name="G";
-			text="Gravy";
-			type="Empty";
-			colorName="ColorCIV";
-			angle=-51.491299;
-		};
-		class Item8
-		{
-			position[]={5168.479,26.335526,10696.626};
-			name="E";
-			text="Electra";
-			type="Empty";
-			colorName="ColorBlue";
-			angle=-51.491299;
-		};
-		class Item9
-		{
-			position[]={4434.3618,15.821211,10676.938};
-			name="M";
-			text="Myas";
-			type="Empty";
-			colorName="ColorBrown";
-			angle=-51.491299;
-		};
-		class Item10
-		{
 			position[]={8085.2266,29.404411,6279.9365};
 			name="respawn_west";
 			text="RESPAWN WEST";
 			type="Empty";
 			colorName="ColorBlue";
 		};
-		class Item11
+		class Item8
 		{
 			position[]={5752.0464,16.049204,11501.82};
 			name="respawn_guerrila";
@@ -5217,7 +5201,7 @@ class Mission
 			type="Empty";
 			colorName="ColorGreen";
 		};
-		class Item12
+		class Item9
 		{
 			position[]={4715.3516,23.543583,8913.2354};
 			name="rad_23";
@@ -5229,7 +5213,7 @@ class Mission
 			b=30;
 			drawBorder=1;
 		};
-		class Item13
+		class Item10
 		{
 			position[]={6410.2583,18.006893,11906.086};
 			name="respawn_guerrila_1";
@@ -5237,7 +5221,7 @@ class Mission
 			type="Empty";
 			colorName="ColorGreen";
 		};
-		class Item14
+		class Item11
 		{
 			position[]={7192.7852,24.299932,11815.883};
 			name="respawn_guerrila_2";
@@ -5245,7 +5229,7 @@ class Mission
 			type="Empty";
 			colorName="ColorGreen";
 		};
-		class Item15
+		class Item12
 		{
 			position[]={7859.1709,13.936943,11606.157};
 			name="respawn_guerrila_3";
@@ -5253,7 +5237,7 @@ class Mission
 			type="Empty";
 			colorName="ColorGreen";
 		};
-		class Item16
+		class Item13
 		{
 			position[]={8475.9063,25.758366,11213.066};
 			name="respawn_guerrila_4";
@@ -5261,7 +5245,7 @@ class Mission
 			type="Empty";
 			colorName="ColorGreen";
 		};
-		class Item17
+		class Item14
 		{
 			position[]={8985.1191,16.592676,10364.679};
 			name="respawn_guerrila_5";
@@ -5269,7 +5253,7 @@ class Mission
 			type="Empty";
 			colorName="ColorGreen";
 		};
-		class Item18
+		class Item15
 		{
 			position[]={8666.0293,13.288584,10038.726};
 			name="respawn_guerrila_6";
@@ -5277,7 +5261,7 @@ class Mission
 			type="Empty";
 			colorName="ColorGreen";
 		};
-		class Item19
+		class Item16
 		{
 			position[]={7666.5908,2.7202747,10172.111};
 			name="respawn_guerrila_7";
@@ -5285,7 +5269,7 @@ class Mission
 			type="Empty";
 			colorName="ColorGreen";
 		};
-		class Item20
+		class Item17
 		{
 			position[]={2579.5833,16.488768,6807.0649};
 			name="respawn_guerrila_8";
@@ -5293,7 +5277,7 @@ class Mission
 			type="Empty";
 			colorName="ColorGreen";
 		};
-		class Item21
+		class Item18
 		{
 			position[]={4121.6714,39.456181,5175.5972};
 			name="respawn_guerrila_9";
@@ -5301,7 +5285,7 @@ class Mission
 			type="Empty";
 			colorName="ColorGreen";
 		};
-		class Item22
+		class Item19
 		{
 			position[]={7936.9712,34.184135,6947.0874};
 			name="respawn_west_1";
@@ -5309,7 +5293,7 @@ class Mission
 			type="Empty";
 			colorName="ColorBlue";
 		};
-		class Item23
+		class Item20
 		{
 			position[]={7258.04,14.053065,5601.0669};
 			name="respawn_west_2";
@@ -5317,7 +5301,7 @@ class Mission
 			type="Empty";
 			colorName="ColorBlue";
 		};
-		class Item24
+		class Item21
 		{
 			position[]={7951.3193,7.8058267,8168.7192};
 			name="respawn_west_3";
@@ -5325,7 +5309,7 @@ class Mission
 			type="Empty";
 			colorName="ColorBlue";
 		};
-		class Item25
+		class Item22
 		{
 			position[]={8069.0859,5.88376,8982.2295};
 			name="respawn_west_4";
@@ -5333,7 +5317,86 @@ class Mission
 			type="Empty";
 			colorName="ColorBlue";
 		};
-
+		class Item23
+		{
+			position[]={5236.8491,8.9192686,9954.7939};
+			name="respawn_guerrila_7_1";
+			text="RESPAWN GUERILLA";
+			type="Empty";
+			colorName="ColorGreen";
+		};
+		class Item24
+		{
+			position[]={4343.4648,5.4447789,9736.8193};
+			name="respawn_guerrila_7_2";
+			text="RESPAWN GUERILLA";
+			type="Empty";
+			colorName="ColorGreen";
+		};
+		class Item25
+		{
+			position[]={2802.8752,9.9292212,7397.0459};
+			name="respawn_guerrila_7_3";
+			text="RESPAWN GUERILLA";
+			type="Empty";
+			colorName="ColorGreen";
+		};
+		class Item26
+		{
+			position[]={2564.8684,7.2276921,5638.1367};
+			name="respawn_guerrila_7_2_1";
+			text="RESPAWN GUERILLA";
+			type="Empty";
+			colorName="ColorGreen";
+		};
+		class Item27
+		{
+			position[]={3857.1018,6.0092974,5888.9863};
+			name="respawn_guerrila_7_2_2";
+			text="RESPAWN GUERILLA";
+			type="Empty";
+			colorName="ColorGreen";
+		};
+		class Item28
+		{
+			position[]={6228.4858,10.880624,6289.0557};
+			name="respawn_guerrila_7_2_3";
+			text="RESPAWN GUERILLA";
+			type="Empty";
+			colorName="ColorGreen";
+		};
+		class Item29
+		{
+			position[]={3667.4446,14.830942,8870.6504};
+			name="respawn_guerrila_7_2_4";
+			text="RESPAWN GUERILLA";
+			type="Empty";
+			colorName="ColorGreen";
+		};
+		class Item30
+		{
+			position[]={2212.3254,5.2815294,6186.2798};
+			name="respawn_guerrila_8_1";
+			text="RESPAWN GUERILLA";
+			type="Empty";
+			colorName="ColorGreen";
+		};
+		class Item31
+		{
+			position[]={4636.5322,4.0745163,4910.8105};
+			name="respawn_guerrila_9_1";
+			text="RESPAWN GUERILLA";
+			type="Empty";
+			colorName="ColorGreen";
+		};
+		class Item32
+		{
+			position[]={5810.4341,8.9109001,5399.7793};
+			name="respawn_guerrila_9_2";
+			text="RESPAWN GUERILLA";
+			type="Empty";
+			colorName="ColorGreen";
+		};
 	};
 };
 class Intro

@@ -13,7 +13,7 @@ reviveForceRespawnDelay = 3;	// The time it takes to force your respawn while in
 reviveBleedOutDelay = 120;	// The time it takes for a unit to bleed out. (Default: 2 minutes.)
 
 author="[RMC] Chief";          
-OnLoadName = "Воркута";
+OnLoadName = "STALKER WARS";
 OnLoadMission = "Сталкерские будни";
 loadScreen = "";
 overviewPicture = "";
@@ -41,3 +41,4 @@ class RscTitles
 };
 
 #include "loot\LootParams.hpp"
+#include "merchantGUI.hpp"

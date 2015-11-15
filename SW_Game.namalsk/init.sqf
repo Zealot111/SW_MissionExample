@@ -18,7 +18,7 @@ waituntil {!isnil "bis_fnc_init"};
 
 [] execVM "briefing.sqf";
 
-0 spawn {sleep 1;  10 setFog [0.1, 0.02, 50]; };
+//0 spawn {sleep 1;  10 setFog [0.1, 0.02, 50]; };
 
 [40,120] execVM "blowout\blowout.sqf";
 

@@ -2,11 +2,11 @@ diag_log ["OnPlayerRespawn", _this];
 
 
 //[<newUnit>,<oldUnit>,<respawn>,<respawnDelay>]
-waituntil {!isnull player && {alive player}}
+waituntil {!isnull player && {alive player}};
 
-_unit = _this select 0;
+
 sleep 0.1;
-
+	_unit = _this select 0;
     removeAllWeapons _unit;
     removeAllItems _unit;
     removeAllAssignedItems _unit;

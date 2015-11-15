@@ -4,10 +4,11 @@ if (isNil "rbc_alreadyPlayedUIDs") then {rbc_alreadyPlayedUIDs=[];};
 
 [] execvm "rad\geiger.sqf";
 if (hasinterface) then {	{if (_x select [0,4] == "rad_") then {_x setMarkerAlphaLocal 0;};} foreach allMapMarkers;};
+[] execvm "merchant.sqf";
  
 sleep 1;
 if (alive player) then {
-	if (getPlayerUID player in rbc_alreadyPlayedUIDs && player getVariable ["rbc_disconnected",0] != 1) then {
+	if (getPlayerUID player in rbc_alreadyPlayedUIDs && player getVariable ["rbc_disconnected",0] != 1 && !(player getvariable ["rbc_is_vip",false] )) then {
 		diag_log ["initplayerlocal.sqf, player second enter to game"];
 		// move to far place
 		player setposasl [100,100,100];
