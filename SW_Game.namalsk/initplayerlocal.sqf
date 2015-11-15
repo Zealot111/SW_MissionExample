@@ -3,7 +3,7 @@
 if (isNil "rbc_alreadyPlayedUIDs") then {rbc_alreadyPlayedUIDs=[];};
 
 [] execvm "rad\geiger.sqf";
-if (hasinterface) then {	{if (_x select [0,4] == "rad_") then {_x setMarkerAlphaLocal 0;};} foreach allMapMarkers;};
+
 [] execvm "merchant.sqf";
  
 sleep 1;
@@ -30,4 +30,4 @@ if (alive player) then {
 	};
 	
 };
-
+setviewdistance 500;

@@ -3,31 +3,31 @@ if (!hasInterface) exitWith {};
 zlt_mOriginData = [
 // медицина, еда
 "AGM_Bandage", "AGM_Morphine", "AGM_Epipen", "AGM_Bloodbag", "zlt_radx", "zlt_radaway", "zlt_rotgut", "zlt_beer", "rbc_bacon", "rbc_beans",
- 100, 200, 300, 500, 300, 3500, 200, 100, 80, 120,
+ 100, 			200,			 300, 			500,			 300,	 3500, 			200,			 100,		 120, 		80,
 // электроника и предметы
 "RBCSW_Mask_M40_OD", "RBCSW_AdetectorCA1", "RBCSW_AdetectorCA2", "NVGoggles", "ItemCompass", "ItemMap", "ItemGPS", "ItemRadio", "Binocular",
-1500, 1000, 3500, 5000, 150, 100, 2500, 2200, 1450,
+1500,					 1000,				 3500, 					5000,		 150,			 100, 		2500,	 2200,		 1450,
 // вещмешки
 "B_TacticalPack_rgr","B_TacticalPack_blk","B_TacticalPack_oli","B_Kitbag_rgr","B_Carryall_oli","B_Carryall_khk","rhs_sidor",
-1500,1450,1500,3000,2500,1000,
+1500,					1450,				1500,				3000,			2500,			2500,			1000,
 //оружие пистолеты и ПП
 "av_makarov","av_aps","av_tt","rhsusf_weap_m1911a1","rhsusf_weap_glock17g4","av_pp2000","av_kedr",
-500,1200,800,1500,2000,2500,3000,
+500,			1200,	800,	1500,				2000,					2500,		3000,
 //магазины пистолеты и ПП
-"8Rnd_Mag_pm","8Rnd_Mag","30Rnd_9x21_Mag","30_9mm","rhsusf_mag_17Rnd_9x19_JHP","20Rnd_9x21_Mag",
-60,80,120,150,120,150,
+"8Rnd_Mag_pm","8Rnd_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","rhsusf_mag_17Rnd_9x19_JHP","20Rnd_9x21_Mag",
+60,				80,			120,			150,		120,					150,
 //оружие ружья
 "str_sks_old", "str_ij_obr","str_ij_long","str_to34_long","optic_str_puold",
-1500,1000,1200,1500,1000,
+1500,			1000,			1200,		1500,			1000,
 //магазины ружья
 "2pul_pula", "10rnd_sks_mag","5rnd_762_mos",
-40, 100, 80,
+40,				 100,			 80,
 //оружие автоматы
 "arifle_av_aksu", "arifle_av_ak74m_a", "arifle_av_ak74m_gp", "arifle_av_aks74", "arifle_av_groza", "arifle_av_groza_gp", "rhs_weap_akm", "rhs_weap_akm_gp25", "arifle_av_asval", "arifle_av_bizon",
-2500,3000,3500,3200,4500,5000,2900,3400,13000,8100,
+2500,				3000,				3500,					3200,			4500,				5000,				2900,				3400,				13000,				8100,
 //магазины автоматы
 "rhs_30Rnd_545x39_AK","rhs_VOG25","rhs_30Rnd_762x39mm", "64Rnd_9x19_mag", "20Rnd_av_9x39mm_SP5",
-200,200,250,400,350,
+200,					200,			250,			400,				350,
 //пулеметы
 "arifle_av_rpk74_a", "av_pk_base",
 15000,25000,
@@ -276,6 +276,7 @@ zlt_fnc_createMerchant = {
 	_bot setvariable ["zlt_buysellfnc",[zlt_merchantdataSell,zlt_merchantDataBuy]];
 	_bot allowDamage false;
 	_bot setdir _dir;
+	_bot setvariable ["PlayerName","Торговец"];
 
 	//marker
 	_markerstr = createMarkerLocal ["salebotname"+str (getposatl _bot),getposatl _bot];
@@ -325,7 +326,6 @@ sleep 1.;
 [[5314.57,9245.73,0.0601425],111.897] call zlt_fnc_createMerchant;
 [[7815.88,10557.1,0.673497],338.499] call zlt_fnc_createMerchant;
 [[6665.04,9666,0.0891151],6.20759] call zlt_fnc_createMerchant;
-[[7815.88,10557.1,0.673497],338.499] call zlt_fnc_createMerchant;
 [[4345.15,4793.17,0.144421],184.574] call zlt_fnc_createMerchant;
 
 // создание конкретных торговцев по координатам

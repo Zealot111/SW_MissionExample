@@ -54,7 +54,7 @@ for "_i" from 1 to 4 do {_unit addItemToUniform "2pul_pula";};
 for "_i" from 1 to 3 do {_unit addItemToUniform "8Rnd_Mag_pm";};
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "rhs_mag_rgd5";
-_unit addVest "LOP_V_Carrier_TAN";
+_unit addVest "6B3";
 _unit addItemToVest "2pul_pula";
 _unit addItemToVest "8Rnd_Mag_pm";
 _unit addItemToVest "rhs_mag_rgd5";

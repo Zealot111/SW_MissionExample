@@ -12,7 +12,7 @@
 		lootSuspendTime = 120 ;  //180;  количество секунд до сохранения лута
 		
 		lootHouseClasses[] = {"House","House_F"};
-		lootBoxesClasses[] = {"plp_ct_base"};
+		lootBoxesClasses[] = {"plp_ct_TrashContColGeneric","plp_ct_TrashContColGenericOpen","plp_ct_TrashContGreyBig","plp_ct_TrashContGreyMedium","plp_ct_TrashContGreySmall","plp_ct_TrashCanCityPark""plp_ct_TrashcanIndPurple","plp_ct_TrashcanIndRed","plp_ct_CartonRottenSmall"};
 		/*[06.11.2015 17:36:20] Chief RMC: В общем контейнеры для крутого лута схроны:
 		[06.11.2015 17:36:24] Chief RMC: "plp_ct_CasketLeatherGreen",
 		"plp_ct_WeathCrateSmallGreen"
@@ -25,6 +25,7 @@
 		 "plp_ct_CartonRottenSmall"
 
 		 "Land_ProjectCherno_A_Hospital" - мед
+		 plp_ct_base
 
 		*/
 		
