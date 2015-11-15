@@ -7,10 +7,10 @@ private ['_hclass','_usestdpos','_lootpoint','_lootprobpos','_positions','_lastp
 
 _hclass = typeof _box;
 
-_usestdpos = getNumber (_lootparamscfg / "LootSpawnPoints" / "Default" / "useStandardBuildingPos");
-_lootpoint = getText (_lootparamscfg / "LootSpawnPoints" / "Default" / "lootpoint");
-_scriptedLootpoint = getText (_lootparamscfg / "LootSpawnPoints" / "Default" / "scriptedLootpoint");
-_eachBPosLootProb = gettext (_lootparamscfg / "LootSpawnPoints" / "Default" / "eachBPosLootProb");
+_usestdpos = getNumber (_lootparamscfg / "LootSpawnPoints" / "DefaultBox" / "useStandardBuildingPos");
+_lootpoint = getText (_lootparamscfg / "LootSpawnPoints" / "DefaultBox" / "lootpoint");
+_scriptedLootpoint = getText (_lootparamscfg / "LootSpawnPoints" / "DefaultBox" / "scriptedLootpoint");
+_eachBPosLootProb = gettext (_lootparamscfg / "LootSpawnPoints" / "DefaultBox" / "eachBPosLootProb");
 
 if (isClass(_lootparamscfg / "LootSpawnPoints" / (_hclass))) then {
 	_usestdpos = getNumber (_lootparamscfg / "LootSpawnPoints" / (_hclass) / "useStandardBuildingPos");
@@ -22,7 +22,7 @@ if (isClass(_lootparamscfg / "LootSpawnPoints" / (_hclass))) then {
 
 TRACE_5('',_hclass,_usestdpos,_lootpoint,_scriptedLootpoint,_eachBPosLootProb);
 
-if (_usestdpos != 3 ) exitwith {WARNING("Ћшибка, некорректные параметры!");[[],[],[],[]]};
+if (_usestdpos != 3 ) exitwith {WARNING("РћС€РёР±РєР°, РЅРµРєРѕСЂСЂРµРєС‚РЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹!");[[],[],[],[]]};
 
 if (_scriptedLootpoint != "") then {
 	_lootpoint = _box call compile _scriptedLootpoint;

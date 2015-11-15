@@ -9,10 +9,22 @@
 		playerCheckDistance = 100; // 100m radius
 		pauseBetweenChecks = 7.2;
 		lootRenewTime = 900 ; // 900;  количество секунд до регенерации лута
-		lootSuspendTime = 180 ;  //180;  количество секунд до сохранения лута
+		lootSuspendTime = 120 ;  //180;  количество секунд до сохранения лута
 		
 		lootHouseClasses[] = {"House","House_F"};
-		lootBoxesClasses[] = {"rhs_mags_crate","plp_ct_TrashContGreyMedium","plp_ct_TrashContColGenericOpen"};
+		lootBoxesClasses[] = {"plp_ct_base"};
+		/*[06.11.2015 17:36:20] Chief RMC: В общем контейнеры для крутого лута схроны:
+		[06.11.2015 17:36:24] Chief RMC: "plp_ct_CasketLeatherGreen",
+		"plp_ct_WeathCrateSmallGreen"
+		,"plp_ct_WeathCrateMediumGreen"
+		,"plp_ct_SuitcaseMetalSilverSide"
+		[06.11.2015 17:36:58] Chief RMC: В мусорках можно обычный лут спавнить
+		[06.11.2015 17:37:09] Chief RMC: "plp_ct_TrashContColGeneric","plp_ct_TrashContColGenericOpen","plp_ct_TrashContGreyBig","plp_ct_TrashContGreyMedium",
+
+		"plp_ct_TrashContGreySmall","plp_ct_TrashCanCityPark""plp_ct_TrashcanIndPurple","plp_ct_TrashcanIndRed"
+		 "plp_ct_CartonRottenSmall"
+
+		*/
 		
 	};
 
@@ -63,12 +75,21 @@
 
 		class Box_Ind_Ammoord_F : DefaultBox {}; 
 		class rhs_mags_crate : DefaultBox { lootpoint = "StalkerWeaponBoxLootPoint"; };
-		class plp_ct_TrashContGreyMedium : rhs_mags_crate {};
+		class plp_ct_TrashContGreyMedium : DefaultBox {lootpoint = "StalkerStdLootPoint";};
 		class plp_ct_TrashContColGenericOpen : plp_ct_TrashContGreyMedium {};
-		
+		class plp_ct_TrashContColGeneric : plp_ct_TrashContGreyMedium {};
+		class plp_ct_TrashContGreyBig : plp_ct_TrashContGreyMedium {};
+		class plp_ct_TrashContGreySmall : plp_ct_TrashContGreyMedium {};
+		class plp_ct_TrashCanCityPark : plp_ct_TrashContGreyMedium {};
+		class plp_ct_TrashcanIndPurple : plp_ct_TrashContGreyMedium {};
+		class plp_ct_TrashcanIndRed : plp_ct_TrashContGreyMedium {};
+		class plp_ct_CartonRottenSmall : plp_ct_TrashContGreyMedium {};
+		class plp_ct_CasketLeatherGreen : rhs_mags_crate {};
+		class plp_ct_WeathCrateSmallGreen : rhs_mags_crate {};
+		class plp_ct_WeathCrateMediumGreen : rhs_mags_crate {};
+		class plp_ct_SuitcaseMetalSilverSide : rhs_mags_crate {};
+
 	};	
-		
-		
 	class BaseCategory {
 		itemsProbability = 1.0; itemsCheckProbNum = 10;  items[] = {}; itemsWeights[] = {};	
 		class LootItem {classNames[]={};classNamesWeights[] = {1};classType = 2;numbers[] = {1};linkedItems[] = {};linkedItemsProbabilities[] = {0.2}; };	
@@ -91,7 +112,8 @@
 		class zlt_radaway: LootItem {classNames[] = {"zlt_radaway"};};
 		class zlt_rotgut: LootItem {classNames[] = {"zlt_rotgut"};};
 		class zlt_beer: LootItem {classNames[] = {"zlt_beer"};};
-		
+		class rbc_bacon: LootItem {classNames[] = {"rbc_bacon"};};
+		class rbc_beans: LootItem {classNames[] = {"rbc_beans"};};		
 		
 		// электроника и предметы 
 		class RBCSW_Mask_M40_OD :LootItem {classNames[] = {"RBCSW_Mask_M40_OD"};};
@@ -158,8 +180,8 @@
 	class StalkerFoodDrink : StalkerCategory {
 		itemsProbability = 0.4;
 		itemsCheckProbNum = 3; 
-		items[] = {"zlt_rotgut","zlt_beer"};
-		itemsWeights[] = {0.1,0.5};
+		items[] = {"zlt_rotgut","zlt_beer","rbc_bacon","rbc_beans"};
+		itemsWeights[] = {0.1,0.5,0.15,0.35};
 	};
 	class StalkerAntiRad : StalkerCategory {
 		itemsProbability = 0.67;
@@ -171,7 +193,7 @@
 		itemsProbability = 1.0;
 		itemsCheckProbNum = 1; 
 		items[] = {			"RBCSW_Mask_M40_OD","RBCSW_Adetector","NightVision","ItemMap","ItemRadio","Binocular","Backpack"};
-		itemsWeights[] = {			5			,		5			,	1		,	15		,	5		,	2		,	3};
+		itemsWeights[] = {			5			,		5			,	0.5		,	15		,	5		,	1		,	3};
 	};
 	class StalkerCivilianWeapons : StalkerCategory {
 		itemsProbability = 0.25;
