@@ -134,6 +134,7 @@ ZRadScrEffects = scriptnull;
 ZRadScrMainCycle = scriptnull;
 
 ZRadMainCycle = {
+	while {true} do {
 	while {alive player} do {
 		0 call ZRadGetCurrent;
 		0 call ZRadMedEffects;		
@@ -141,6 +142,8 @@ ZRadMainCycle = {
 			if (isnull ZRadScrEffects) then {ZRadScrEffects = 0 spawn ZRadEffect;};
 		 };
 		sleep 0.75;
+	};
+	sleep 0.001;
 	};
 };
 

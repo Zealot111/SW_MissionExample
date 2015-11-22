@@ -3,10 +3,10 @@ if (!hasInterface) exitWith {};
 zlt_mOriginData = [
 // медицина, еда
 "AGM_Bandage", "AGM_Morphine", "AGM_Epipen", "AGM_Bloodbag", "zlt_radx", "zlt_radaway", "zlt_rotgut", "zlt_beer", "rbc_bacon", "rbc_beans",
- 100, 			200,			 300, 			500,			 300,	 3500, 			200,			 100,		 120, 		80,
+ 80, 			200,			 300, 			500,			 300,	 3500, 			200,			 100,		 120, 		80,
 // электроника и предметы
-"RBCSW_Mask_M40_OD", "RBCSW_AdetectorCA1", "RBCSW_AdetectorCA2", "NVGoggles", "ItemCompass", "ItemMap", "ItemGPS", "ItemRadio", "Binocular",
-1500,					 1000,				 3500, 					5000,		 150,			 100, 		2500,	 2200,		 1450,
+"RBCSW_Mask_M40_OD", "RBCSW_AdetectorCA2", "RBCSW_AdetectorCA1", "NVGoggles", "ItemCompass", "ItemMap", "ItemGPS", "ItemRadio", "Binocular",
+1500,					 1000,				 3500, 					5000,		 150,			 350, 		2500,	 2200,		 1450,
 // вещмешки
 "B_TacticalPack_rgr","B_TacticalPack_blk","B_TacticalPack_oli","B_Kitbag_rgr","B_Carryall_oli","B_Carryall_khk","rhs_sidor",
 1500,					1450,				1500,				3000,			2500,			2500,			1000,
@@ -111,6 +111,10 @@ zlt_fnc_getitemConfig = {
 		case (isclass (configFile / "CfgVehicles" / _name)) : {
 			_type = "backpack"; 
 			_cfgPath = "CfgVehicles";
+		};
+		case (isclass (configFile / "CfgGlasses" / _name)) : {
+			_type = "glasses"; 
+			_cfgPath = "CfgGlasses";
 		};
 		default {diag_log ["zlt_fnc_getitemConfig:Error:Unknownclass",_name];};
 	};
@@ -265,6 +269,7 @@ zlt_fnc_createMerchant = {
 	private ["_bot","_safez","_safez","_markerstr"];
 	// place bot
 	_bot = "B_soldier_F" createVehicleLocal _pos;
+	_bot setposatl _pos;
 	_pos params ["_x","_y","_z"];
 	_crate = "plp_ct_StalkerCasketLeatherRed" createVehicleLocal getpos _bot;
 	_crate setposatl ( [_pos, 1, _dir ] call BIS_fnc_relPos ); 

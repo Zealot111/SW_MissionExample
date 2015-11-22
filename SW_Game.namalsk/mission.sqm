@@ -24,11 +24,11 @@ class Mission
 	randomSeed=4754635;
 	class Intel
 	{
-		startWeather=0.58999997;
+		startWeather=0.69999999;
 		startFog=0.13;
 		startWind=0.099999994;
 		startWaves=0.099999994;
-		forecastWeather=0.58999997;
+		forecastWeather=0.69999999;
 		forecastFog=0.13;
 		forecastWind=0.099999994;
 		forecastWaves=0.099999994;

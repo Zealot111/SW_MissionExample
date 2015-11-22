@@ -31,6 +31,11 @@ if (isServer) then {
 					deletevehicle _x;
 				};
 			} foreach (allMissionObjects "GroundWeaponHolder" + allMissionObjects "simulatedWeaponHolder");
+			{
+				if (count units _x == 0) then {
+					deleteGroup _x;
+				};
+			} foreach +(allGroups);
 		};
 	};
 };
