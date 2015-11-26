@@ -44,3 +44,39 @@ class plp_ct_StalkerCasketLeatherRed : plp_ct_CasketLeatherRed {
 	
 	
 };
+
+// ретекстуры
+
+class I_Soldier_F;
+
+class rbc_man_dolg_base: I_Soldier_F
+{
+	author = "Zealot";
+	_generalMacro = "I_Soldier_F";
+	scope = 1;
+	modelsides[] = {3,2,1,0};
+	displayName = "Stalker - Dolg - Base";
+	nakedUniform = "U_BasicBody";
+	vehicleClass = "Stalker";
+	uniformClass = "rbc_U_dolg";
+	hiddenSelectionsTextures[] = {"\rbc_stalker\uniform\dolg.paa"};
+	hiddenSelections[] = {"Camo","insignia"};
+	linkedItems[] = {"rbc_U_dolg"};
+	respawnLinkedItems[] = {"rbc_U_dolg"};
+};
+
+class rbc_man_monolit_base: I_Soldier_F
+{
+	author = "Zealot";
+	_generalMacro = "I_Soldier_F";
+	scope = 1;
+	modelsides[] = {3,2,1,0};
+	displayName = "Stalker - Monolit - Base";
+	nakedUniform = "U_BasicBody";
+	vehicleClass = "Stalker";
+	uniformClass = "rbc_U_monolit";
+	hiddenSelectionsTextures[] = {"\rbc_stalker\uniform\monolit.paa"};
+	hiddenSelections[] = {"Camo","insignia"};
+	linkedItems[] = {"rbc_U_monolit"};
+	respawnLinkedItems[] = {"rbc_U_monolit"};
+};
