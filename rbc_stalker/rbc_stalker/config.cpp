@@ -33,6 +33,8 @@ class CfgVehicles
 class CfgWeapons 
 {
 	#include "weapons.hpp"
+	#include "uniform.hpp"
+	#include "vest.hpp"
 
 };
 

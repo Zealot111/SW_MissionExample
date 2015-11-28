@@ -3,7 +3,7 @@
 /*
 item0[] = {"Init_",0,250,-67.944733,-492.992157,22.055267,-442.992157,0.000000,"Init" \n ""};
 item1[] = {"Delay_",4,218,-72.467987,-402.453156,17.532013,-352.453217,0.000000,"Delay" \n ""};
-item2[] = {"Make_Decision_",2,4346,-95.363770,-201.194473,22.452042,-120.729607,0.000000,"Make Decision" \n ""};
+item2[] = {"Make_Decision_",2,250,-95.363770,-201.194473,22.452042,-120.729607,0.000000,"Make Decision" \n ""};
 item3[] = {"AnimState",4,218,65.852417,-185.242981,155.852417,-135.242981,50.000000,"AnimState"};
 item4[] = {"Pursue__",4,218,-434.953461,93.718964,-344.953461,143.718964,20.000000,"Pursue?" \n ""};
 item5[] = {"Stalk__",4,218,-332.257721,-153.120621,-242.257782,-103.120621,10.000000,"Stalk?" \n ""};
@@ -26,7 +26,7 @@ item21[] = {"",7,210,237.630859,-379.779510,245.630859,-371.779541,0.000000,""};
 item22[] = {"",7,210,237.442078,18.378357,245.442078,26.378357,0.000000,""};
 item23[] = {"",7,210,-700.740356,-241.895508,-692.740356,-233.895508,0.000000,""};
 item24[] = {"",7,210,-488.257111,-397.429199,-480.257111,-389.429199,0.000000,""};
-item25[] = {"Stalk",2,250,-478.810028,-205.918213,-388.809998,-155.918213,0.000000,"Stalk"};
+item25[] = {"Stalk",2,4346,-478.810028,-205.918213,-388.809998,-155.918213,0.000000,"Stalk"};
 item26[] = {"",7,210,-577.188843,-108.772278,-569.188843,-100.772278,0.000000,""};
 item27[] = {"",7,210,32.638859,-169.723663,40.638851,-161.723663,0.000000,""};
 link0[] = {0,1};
@@ -66,8 +66,8 @@ link33[] = {24,1};
 link34[] = {25,24};
 link35[] = {26,16};
 link36[] = {27,3};
-globals[] = {0.000000,0,0,0,0,640,480,1,98,6316128,1,-1080.016846,762.186523,685.958740,-547.064392,1216,925,1};
-window[] = {2,-1,-1,-1,-1,915,125,1519,125,3,1234};
+globals[] = {0.000000,0,0,0,0,640,480,1,98,6316128,1,-1080.016846,762.186523,685.958740,-547.064392,727,925,1};
+window[] = {2,-1,-1,-1,-1,915,125,1519,125,3,745};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -86,8 +86,9 @@ class FSM
                          "[""_checkenemydistance"",75+random 50,[75]],[""_spawnzone"",100,[200]],[""_stalkzone"",150,[0]],[""_huntzone"",200,[0]]];" \n
                          "" \n
                          "" \n
+                         "_pos = [getpos _logic, random _spawnzone, random 360, 0, [0,100], ""CAMan"" ] call SHK_fnc_SHKpos;" \n
                          "" \n
-                         "_zombie = createAgent   [_zmbclass ,	getpos _logic, [], _spawnzone , ""NONE""];" \n
+                         "_zombie = createAgent   [_zmbclass ,	_pos, [], 1 , ""NONE""];" \n
                          "_zombie setVariable [""BIS_fnc_animalBehaviour_disable"", true];" \n
                          "_logic setvariable [""rbc_zmb_zombies"", (_logic getVariable [""rbc_zmb_zombies"",[]]) + [_zombie]];" \n
                          "_zombie setVariable [""AGM_AllowUnconscious"", false];" \n
@@ -582,7 +583,7 @@ class FSM
                         itemno = 25;
                         init = /*%FSM<STATEINIT""">*/"if (count _stalkpos == 0 || time > _stalktime) then {" \n
                          "	if (random 1 < 0.3) then {" \n
-                         "		_stalkpos = [getpos _logic, _stalkradius] call bis_fnc_randompostrigger;" \n
+                         "		_stalkpos = [getpos _logic, random _stalkradius, random 360, 0, [0,100], ""CAMan"" ] call SHK_fnc_SHKpos;" \n
                          "		if (!surfaceiswater _stalkpos) then {" \n
                          "			_zombie moveto _stalkpos;" \n
                          "			_stalktime = time + 180;" \n
