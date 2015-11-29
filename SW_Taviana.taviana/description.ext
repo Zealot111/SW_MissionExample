@@ -1,0 +1,44 @@
+﻿respawn = 3;
+respawnDelay = 900;
+respawnVehicleDelay = 60;
+respawnDialog = 0;
+respawnTemplates[] = {"Counter"};
+respawnOnStart = -1;
+joinUnassigned = 1;
+disabledAI = 1;
+respawnButton = 0;
+aiKills = 0;
+reviveDelay = 6;		// The time it takes to revive a unit. Will be halved if you have a Medikit. (Default: 6 seconds.)
+reviveForceRespawnDelay = 3;	// The time it takes to force your respawn while incapacitated. (Default: 3 seconds.)
+reviveBleedOutDelay = 120;	// The time it takes for a unit to bleed out. (Default: 2 minutes.)
+
+author="[RMC] Chief";          
+OnLoadName = "STALKER WARS";
+OnLoadMission = "Сталкерские будни";
+loadScreen = "";
+overviewPicture = "";
+
+class Header {
+	gameType = Team;
+	minPlayers = 1;
+	maxPlayers = 140;
+};
+
+enableDebugConsole=1;
+disableChannels[] = {2,4,5,6};
+//DisabledAI = 1;
+
+corpseRemovalMinTime= 86400;
+wreckRemovalMinTime = 86400;
+
+class CfgFunctions
+{
+ 	#include "anomalies\functions.hpp"
+ 	#include "shk_pos\functions.hpp"
+};  
+class RscTitles
+{	
+	#include "rad\titles.hpp"
+};
+
+#include "merchantGUI.hpp"

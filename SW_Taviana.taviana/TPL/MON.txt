@@ -1,0 +1,60 @@
+case ( _cl == "min_rf_soldier"):{
+removeAllWeapons _unit;
+removeAllItems _unit;
+removeAllAssignedItems _unit;
+removeUniform _unit;
+removeVest _unit;
+removeBackpack _unit;
+removeHeadgear _unit;
+removeGoggles _unit;
+_unit forceAddUniform "rbc_U_monolit";
+for "_i" from 1 to 2 do {_unit addItemToUniform "AGM_Bandage";};
+_unit addItemToUniform "AGM_Morphine";
+for "_i" from 1 to 3 do {_unit addItemToUniform "RH_15Rnd_9x19_SIG";};
+for "_i" from 1 to 2 do {_unit addItemToUniform "Chemlight_red";};
+_unit addVest "Vest_monolit";
+_unit addGoggles "G_Balaclava_blk";
+_unit addItem "RH_15Rnd_9x19_SIG";
+_unit addWeapon "RH_p226";
+_unit linkItem "ItemMap";
+_unit linkItem "ItemCompass";
+_unit linkItem "ItemWatch";
+_unit linkItem "ItemRadio";
+[_unit,"STALKER_insignia_monolith"] call bis_fnc_setUnitInsignia;
+};
+
+case ( _cl == "min_rf_soldier_SL"):{
+removeAllWeapons _unit;
+removeAllItems _unit;
+removeAllAssignedItems _unit;
+removeUniform _unit;
+removeVest _unit;
+removeBackpack _unit;
+removeHeadgear _unit;
+removeGoggles _unit;
+_unit forceAddUniform "rbc_U_monolit";
+_unit addItemToUniform "RBCSW_AdetectorCA1";
+for "_i" from 1 to 2 do {_unit addItemToUniform "AGM_CableTie";};
+for "_i" from 1 to 3 do {_unit addItemToUniform "RH_30Rnd_556x45_M855A1";};
+_unit addItemToUniform "RH_15Rnd_9x19_SIG";
+_unit addVest "Vest_monolit";
+for "_i" from 1 to 4 do {_unit addItemToVest "AGM_Bandage";};
+for "_i" from 1 to 2 do {_unit addItemToVest "AGM_Morphine";};
+for "_i" from 1 to 5 do {_unit addItemToVest "zlt_radx";};
+for "_i" from 1 to 2 do {_unit addItemToVest "RH_15Rnd_9x19_SIG";};
+_unit addHeadgear "av_shlem_Vityaz2";
+_unit addGoggles "RBCSW_Mask_M50_Monolyth";
+_unit addItem "RH_30Rnd_556x45_M855A1";
+_unit addItem "RH_15Rnd_9x19_SIG";
+_unit addWeapon "RH_m4";
+_unit addWeapon "RH_p226";
+_unit addWeapon "Binocular";
+_unit linkItem "ItemMap";
+_unit linkItem "ItemCompass";
+_unit linkItem "ItemWatch";
+_unit linkItem "ItemRadio";
+[_unit,"STALKER_insignia_monolith"] call bis_fnc_setUnitInsignia;
+};
+
+
+
