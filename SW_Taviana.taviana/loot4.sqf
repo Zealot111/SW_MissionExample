@@ -8,11 +8,11 @@ zlt_lootRenewTime = 900;
 zlt_lootHouseClasses =  ["house","house_f"]; // какие классы домов искать
 zlt_lootBoxesClasses =  ["plp_ct_base"]; // какие классы ящиков искать
 zlt_lootBoxesTemplates = [[
-    "plp_ct_weathcratebigworn",
-    "plp_ct_weathcratesmallgreen",
-    "plp_ct_weathcratemediumgreen",
-    "plp_ct_suitcasemetalsilverside",
-    "plp_ct_cartonrottensmall"
+    "plp_ct_weathcratebigworn" 
+    ,"plp_ct_weathcratesmallgreen"
+    ,"plp_ct_weathcratemediumgreen"
+    ,"plp_ct_suitcasemetalsilverside"
+    ,"plp_ct_cartonrottensmall"
 ],[
 	"akm"
 	,"akm_ammo"
@@ -20,7 +20,7 @@ zlt_lootBoxesTemplates = [[
 	,"good"
 	,"med"
 
-]; // шаблоны для генерации лута
+]]; // шаблоны для генерации лута
 
 zlt_lootProbability = 0.1;
 
@@ -94,6 +94,7 @@ zlt_fnc_randomWeighted = {
 zlt_fnc_generateContent = {
 	params ["_contentType"];	
 	private ["_res","_maxcount","_classes","_weights","_class"];
+//	diag_log ["zlt_fnc_generateContent",_this];
 	_res = [];
 	_contentType = toLower _contentType;
 	switch (_contentType) do { 
@@ -292,7 +293,12 @@ zlt_fnc_pingBox = {
 			if !(_bclass in zlt_boxesNoLoot) then {
 				_box setVariable ["rbc_lootstate", "CR"];
 				_box setVariable ["rbc_LootTime", time];
-				_data = ["Normal"] call zlt_fnc_generateContent;
+				if (tolower typeof _box in (zlt_lootBoxesTemplates select 0)) then {
+					_ind = (zlt_lootBoxesTemplates select 0) find tolower typeof _box;
+					_data = [(zlt_lootBoxesTemplates select 1) select _ind] call zlt_fnc_generateContent;
+				} else {
+					_data = ["Normal"] call zlt_fnc_generateContent;
+				};
 				[_box,_data] call zlt_fnc_setCargoContent;
 				zlt_lootBoxes pushback _box;
 			} else {
@@ -344,6 +350,7 @@ zlt_fnc_lootInit = {
 		sleep 3.2;
 		rbc_stopLootThread = nil;
 		while {isNil "rbc_stopLootThread"} do {
+			
 			_users = [[allUnits,playableUnits] select (count playableUnits > 0), {isPlayer _this && alive _this && vehicle _this == _this}] call CBA_fnc_select ;
 			{
 				_houses = nearestObjects [_x,zlt_lootHouseClasses, zlt_playerCheckDistance];
@@ -371,6 +378,7 @@ zlt_fnc_lootInit = {
 					zlt_lootBoxes=zlt_lootBoxes - [_x];
 				};
 			} foreach zlt_lootBoxes;
+			diag_log ["LootThreadOK"];
 		};
 		rbc_stopLootThread = nil;
 	};

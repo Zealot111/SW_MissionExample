@@ -26,7 +26,7 @@ zradscanmarkers = {
 			zlt_radzones pushback _trigger;
 		};
 	} foreach allmapmarkers;
-	{ deletemarkerlocal _x } foreach _mrkdel;
+	//{ deletemarkerlocal _x } foreach _mrkdel;
 };
 
 ZRadexRenew = {

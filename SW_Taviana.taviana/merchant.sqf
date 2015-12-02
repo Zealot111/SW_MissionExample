@@ -1,33 +1,49 @@
 if (!hasInterface) exitWith {};
 
+
 zlt_mOriginData = [
 // медицина, еда
 "AGM_Bandage", "AGM_Morphine", "AGM_Epipen", "AGM_Bloodbag", "zlt_radx", "zlt_radaway", "zlt_rotgut", "zlt_beer", "rbc_bacon", "rbc_beans",
  80, 			200,			 300, 			500,			 300,	 3500, 			200,			 100,		 120, 		80,
 // электроника и предметы
 "RBCSW_Mask_M40_OD", "RBCSW_AdetectorCA2", "RBCSW_AdetectorCA1", "NVGoggles", "ItemCompass", "ItemMap", "ItemGPS", "ItemRadio", "Binocular",
-1500,					 1000,				 3500, 					5000,		 150,			 350, 		2500,	 2200,		 1450,
+500,					 1000,				 3500, 					5000,		 150,			 350, 		2500,	 2200,		 1450,
 // вещмешки
-"B_TacticalPack_rgr","B_TacticalPack_blk","B_TacticalPack_oli","B_Kitbag_rgr","B_Carryall_oli","B_Carryall_khk"
+"B_TacticalPack_rgr","B_TacticalPack_blk","B_TacticalPack_oli","B_Kitbag_rgr","B_Carryall_oli","B_Carryall_khk",
 1500,					1450,				1500,				3000,			2500,			2500,		
-//оружие пистолеты и ПП
-"av_makarov","av_aps","av_tt","RH_m9","RH_deagle","av_pp2000","av_kedr",
-500,			1200,	800,	1500,				2000,					2500,		3000,
-//магазины пистолеты и ПП
-"8Rnd_Mag_pm","8Rnd_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","RH_7Rnd_50_AE","20Rnd_9x21_Mag",
-60,				80,			120,			150,		120,					150,
+//одежда
+"AV_Ghillie_W","AV_CombatUniform_ter20","AV_CombatUniform_DES","AV_CombatUniform_ter14","AV_CombatUniform_ST","AV_CombatUniform_kml_S","AV_CombatUniform_SF","AV_Uniform_STRU_2","CamoU_green","CamoU_UrbKamysh",
+6000,      600, 610,700,650,                                    200,                                          570,                                     780,                               1200,                    400,                               
+//шапки и каски
+"rhs_beanie_green","av_shlem","av_shlem_chehol2","av_pako","H_Bandanna_khk","H_Bandanna_gry","H_Bandanna_camo","H_Bandanna_cbr","H_Beret_blk","H_Cap_blk","H_ShemagOpen_khk","H_ShemagOpen_tan","H_Shemag_olive","H_Booniehat_oli","H_Booniehat_khk","CamoH_Green","CamoH_Black","min_rf_bandana_olive","min_rf_beanie_black","G_Balaclava_blk",
+100,                             2000,              2100,                           100,            50,                            50,                            50,                              50,                           100,                     90,                  95,                              95,                                   95,                          110,                             110,                            400,                   410,                     65,                                        80,                                       30, 
+//броники и разгрузки
+"6B3","6B5","AAFVest01_l_green","AAFVest01_h_green","TacVest_black","V94_ch2","Tarzan_w_bron","Tarzan_ch_bron","V94_zel2",
+500,   600,     2500,                         3000,                               2200,                       2400,           3500,                      3550,                      2500,
+
+"RH_mak","av_aps","RH_tt33","RH_m9","RH_deagle","RH_cz75","RH_g17","RH_usp","RH_m1911","RH_p226",
+500,			1200,	600,	1100,				2000,	1200, 1250, 1500,1000,				
+//магазины пистолеты 
+"RH_8Rnd_9x18_Mak","20Rnd_9x21_Mag","RH_8Rnd_762_tt33","RH_15Rnd_9x19_M9","RH_7Rnd_50_AE","RH_16Rnd_9x19_CZ","RH_12Rnd_45cal_usp","RH_7Rnd_45cal_m1911","RH_15Rnd_9x19_SIG","RH_suppr9",
+60,				80,			50,			150,		120,					150, 120, 110, 100,100,200,
+//оружие ПП
+"av_pp2000","av_kedrpp","RH_vz61","RH_tec9","RH_muzi",
+2500, 2300, 2100, 3000, 2800,
+//магазины ПП
+"RH_20Rnd_32cal_vz61","RH_32Rnd_9x19_tec","30Rnd_9x21_Mag","RH_30Rnd_9x19_UZI","muzzle_snds_L",
+100, 90,120,100,250,
 //оружие ружья
-"str_sks_old", "str_ij_obr","str_ij_long","str_to34_long","optic_str_puold",
-1500,			1000,			1200,		1500,			1000,
+"str_sks_old", "str_ij_obr","str_ij_long","str_to34_long",
+1500,			1000,			1200,		1500,			
 //магазины ружья
 "2pul_pula", "10rnd_sks_mag","5rnd_762_mos",
 40,				 100,			 80,
 //оружие автоматы
-"arifle_av_aksu", "arifle_av_ak74m_a", "arifle_av_ak74m_gp", "arifle_av_aks74", "arifle_av_groza", "arifle_av_groza_gp", "arifle_av_akm", "arifle_akm_gp", "arifle_av_asval", "arifle_av_bizon",
-2500,				3000,				3500,					3200,			4500,				5000,				2900,				3400,				13000,				8100,
+"arifle_av_aksu", "arifle_av_ak74_1", "arifle_av_ak74g", "arifle_av_aks74", "arifle_av_akm", "arifle_akm_gp", "arifle_av_akms","arifle_akms_gp", "arifle_av_groza", "arifle_av_groza_gp","arifle_av_aek","arifle_av_aekg","arifle_av_asval","av_Saiga12K","RH_M16A2","arifle_av_bizon","RH_sbr9","RH_M16A2gl","RH_hk416s_des","RH_M4A1_ris","RH_M4A1_ris_M203",
+2500,			              	3000,			                 	3200,				           	2800,		                	2500,			            	2700,			        	2600,			            	2800,			            	8000,			        	8200,                                    7200,                     7400,                        12000,                       6000,                   4200,            5000,                          3200,          4400,                 6200,                    7100,                   7300 ,   
 //магазины автоматы
-"30Rnd_ak_545x39_mag","1Rnd_HE_Grenade_shell","30Rnd_ak_762x39_mag", "64Rnd_9x19_mag", "20Rnd_av_9x39mm_SP5",
-200,					200,			250,			400,				350,
+"30Rnd_ak_545x39_mag","1Rnd_HE_Grenade_shell","30Rnd_ak_762x39_mag", "64Rnd_9x19_mag", "20Rnd_av_9x39mm_SP5","av_Saiga12_M","30Rnd_9x21_Mag","30Rnd_556x45_Stanag","av_kobra","optic_av_aimp","RH_compm4s","RH_ta01nsn","muzzle_av_snds","RH_spr_mbs",
+200,					                 200,		                             	250,		                            	400,			            	350,                                 120,                       120,                          80,                                       250,            280,                        400,                  1200,                  350,                         380,
 //пулеметы
 "arifle_av_rpk74_a", "av_pk_base",
 15000,25000,
@@ -35,17 +51,14 @@ zlt_mOriginData = [
 "45Rnd_ak_545x39_mag", "200Rnd_av_762x39_mag",
 300,1000,
 //снайперки
-"av_svu_h", "srifle_av_svda_h", "arifle_av_vss",
-17000,15000,20000,
+"av_svu_h", "srifle_av_svda_h", "arifle_av_vss","RH_Mk11",
+17000,15000,20000,22000,
 //снайперки магазины и прицелы
-"rhs_10Rnd_762x54mmR_7N1", "20Rnd_av_9x39mm_SP5","optic_av_pso",
-400, 350,5000,
-//одежда
-"rhs_beanie_green","AV_CombatUniform_ST","TacVest_black", "av_shlem", "Rys_m2_def_GP","CamoH_Atacs","AAFVest01_berezka",
-100,400,600,1200,600,500,400
+"10Rnd_av_762x39_svd", "20Rnd_av_9x39mm_SP5","optic_av_pso","RH_ta31rmr","muzzle_av_snds",
+400, 350,3800, 3600,500
+
 
 ];
-
 
 
 zlt_merchantdataSell = [[
@@ -68,7 +81,7 @@ zlt_merchantDataBuy = [[
 zlt_currentMerchant = objNull;
 
 
-zlt_playerMoney = 500;
+zlt_playerMoney = 5000;
 
 
 #define MSG_MAIN 0
@@ -324,11 +337,11 @@ sleep 1.;
 } foreach zlt_mOriginData;
 
 
-[[6916.76,8382.28,0.0619574],158.608] call zlt_fnc_createMerchant;
-[[5314.57,9245.73,0.0601425],111.897] call zlt_fnc_createMerchant;
-[[7815.88,10557.1,0.673497],338.499] call zlt_fnc_createMerchant;
-[[6665.04,9666,0.0891151],6.20759] call zlt_fnc_createMerchant;
-[[4345.15,4793.17,0.144421],184.574] call zlt_fnc_createMerchant;
+[[13089.6,12897.2,0.00143814],200.904] call zlt_fnc_createMerchant; //возле белого
+[[11305.8,17802.6,0.00149727],282.135] call zlt_fnc_createMerchant; //на севере
+[[15146.9,7885.03,0.323502],122.21] call zlt_fnc_createMerchant; // на юге
+[[16449.6,14340.4,0.485538],86.6077] call zlt_fnc_createMerchant; //долг
+[[7814.91,9130.27,0.359283],296.324] call zlt_fnc_createMerchant; //монолит
 
 // создание конкретных торговцев по координатам
 

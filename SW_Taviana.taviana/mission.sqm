@@ -8,7 +8,13 @@ class Mission
 		"a3_characters_f",
 		"A3_Modules_F",
 		"wmt_main",
-		"AGM_Medical"
+		"AGM_Medical",
+		"rds_A2_Civilians",
+		"min_rf_air",
+		"A3_Characters_F_BLUFOR",
+		"min_rf_units",
+		"wmt_vehicle",
+		"A3_Boat_F_Boat_Transport_01"
 	};
 	addOnsAuto[]=
 	{
@@ -17,6 +23,12 @@ class Mission
 		"A3_Modules_F",
 		"wmt_main",
 		"AGM_Medical",
+		"A3_Characters_F_BLUFOR",
+		"min_rf_units",
+		"wmt_vehicle",
+		"rds_A2_Civilians",
+		"min_rf_air",
+		"A3_Boat_F_Boat_Transport_01",
 		"ori_taviana"
 	};
 	randomSeed=3078903;
@@ -43,47 +55,66 @@ class Mission
 	};
 	class Groups
 	{
-		items=123;
+		items=162;
 		class Item0
 		{
 			side="GUER";
 			class Vehicles
 			{
-				items=3;
+				items=4;
 				class Item0
 				{
-					position[]={18756.191,0.04246743,14192.707};
+					position[]={7626.6362,3.9020894,20304.074};
+					azimut=112.58458;
 					special="NONE";
 					id=0;
 					side="GUER";
 					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.5;
-					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""ST.sqf"";";
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
 					description="1. Сталкер ""Проводник""";
 				};
 				class Item1
 				{
-					position[]={18757.258,0.039968692,14191.803};
+					position[]={7625.3887,3.5031269,20303.436};
+					azimut=112.58458;
 					special="NONE";
 					id=1;
 					side="GUER";
 					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
 					skill=0.40000001;
-					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""ST.sqf"";";
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
 					description="2. Сталкер ";
 				};
 				class Item2
 				{
-					position[]={18758.166,0.036104202,14191.81};
+					position[]={7625.0566,3.3433466,20302.605};
+					azimut=112.58458;
 					special="NONE";
 					id=2;
 					side="GUER";
 					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
 					skill=0.40000001;
-					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""ST.sqf"";";
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
 					description="3. Сталкер ";
+				};
+				class Item3
+				{
+					position[]={7625.9092,3.7894838,20305.178};
+					azimut=112.58458;
+					special="NONE";
+					id=3;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
 				};
 			};
 		};
@@ -97,7 +128,7 @@ class Mission
 				{
 					position[]={18744.436,0.0098009724,15465.071};
 					special="NONE";
-					id=3;
+					id=4;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -115,7 +146,7 @@ class Mission
 				class Item0
 				{
 					position[]={10782.6,6.1634674,18890.693};
-					id=4;
+					id=5;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -204,7 +235,7 @@ class Mission
 							typeName="Units";
 						};
 					};
-					id=5;
+					id=6;
 					side="LOGIC";
 					vehicle="WMT_Main";
 					leader=1;
@@ -268,7 +299,7 @@ class Mission
 							typeName="Units";
 						};
 					};
-					id=6;
+					id=7;
 					side="LOGIC";
 					vehicle="WMT_Time";
 					leader=1;
@@ -378,7 +409,7 @@ class Mission
 							typeName="DisableScreams";
 						};
 					};
-					id=7;
+					id=8;
 					side="LOGIC";
 					vehicle="AGM_ModuleMedical";
 					lock="UNLOCKED";
@@ -395,7 +426,7 @@ class Mission
 				class Item0
 				{
 					position[]={18730.914,0.038998939,15180.574};
-					id=8;
+					id=9;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -413,7 +444,7 @@ class Mission
 				class Item0
 				{
 					position[]={11119.119,6.1634674,18614.123};
-					id=9;
+					id=10;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -432,7 +463,7 @@ class Mission
 				class Item0
 				{
 					position[]={11025.005,6.1634674,18824.818};
-					id=10;
+					id=11;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -451,7 +482,7 @@ class Mission
 				class Item0
 				{
 					position[]={10196.818,76.724533,19010.066};
-					id=11;
+					id=12;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -470,7 +501,7 @@ class Mission
 				class Item0
 				{
 					position[]={9966.0615,78.331512,19102.926};
-					id=12;
+					id=13;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -489,7 +520,7 @@ class Mission
 				class Item0
 				{
 					position[]={10377.789,75.280434,18272.822};
-					id=13;
+					id=14;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -508,7 +539,7 @@ class Mission
 				class Item0
 				{
 					position[]={10421.51,5.1085663,16889.252};
-					id=14;
+					id=15;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -527,7 +558,7 @@ class Mission
 				class Item0
 				{
 					position[]={8877.9014,11.086334,15526.495};
-					id=15;
+					id=16;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -546,7 +577,7 @@ class Mission
 				class Item0
 				{
 					position[]={9124.1768,10.070496,14895.061};
-					id=16;
+					id=17;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -565,7 +596,7 @@ class Mission
 				class Item0
 				{
 					position[]={9217.4336,10.070496,14664.558};
-					id=17;
+					id=18;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -584,7 +615,7 @@ class Mission
 				class Item0
 				{
 					position[]={8712.6367,4.2301869,14777.965};
-					id=18;
+					id=19;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -603,7 +634,7 @@ class Mission
 				class Item0
 				{
 					position[]={9193.6211,6.0853271,14076.576};
-					id=19;
+					id=20;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -622,7 +653,7 @@ class Mission
 				class Item0
 				{
 					position[]={8933.8955,6.0853271,13977.968};
-					id=20;
+					id=21;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -641,7 +672,7 @@ class Mission
 				class Item0
 				{
 					position[]={9616.9727,24.096756,13485.442};
-					id=21;
+					id=22;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -660,7 +691,7 @@ class Mission
 				class Item0
 				{
 					position[]={8396.5508,174.97377,19478.436};
-					id=22;
+					id=23;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -679,7 +710,7 @@ class Mission
 				class Item0
 				{
 					position[]={11892.258,114.11487,15487.118};
-					id=23;
+					id=24;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -698,7 +729,7 @@ class Mission
 				class Item0
 				{
 					position[]={12348.545,114.11487,15439.534};
-					id=24;
+					id=25;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -717,7 +748,7 @@ class Mission
 				class Item0
 				{
 					position[]={11437.786,114.11487,15414.704};
-					id=25;
+					id=26;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -736,7 +767,7 @@ class Mission
 				class Item0
 				{
 					position[]={11393.089,114.11487,15893.185};
-					id=26;
+					id=27;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -755,7 +786,7 @@ class Mission
 				class Item0
 				{
 					position[]={11656.274,114.11487,14970.869};
-					id=27;
+					id=28;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -774,7 +805,7 @@ class Mission
 				class Item0
 				{
 					position[]={12730.476,60.158707,14408.226};
-					id=28;
+					id=29;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -793,7 +824,7 @@ class Mission
 				class Item0
 				{
 					position[]={12608.782,60.158707,14546.924};
-					id=29;
+					id=30;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -812,7 +843,7 @@ class Mission
 				class Item0
 				{
 					position[]={12852.538,60.158707,14190.482};
-					id=30;
+					id=31;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -831,7 +862,7 @@ class Mission
 				class Item0
 				{
 					position[]={12491.697,83.053925,13781.757};
-					id=31;
+					id=32;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -850,7 +881,7 @@ class Mission
 				class Item0
 				{
 					position[]={12493.084,86.532448,13663.432};
-					id=32;
+					id=33;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -869,7 +900,7 @@ class Mission
 				class Item0
 				{
 					position[]={12567.762,91.213707,13560.777};
-					id=33;
+					id=34;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -888,7 +919,7 @@ class Mission
 				class Item0
 				{
 					position[]={13600.144,70.47274,13494.479};
-					id=34;
+					id=35;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -907,7 +938,7 @@ class Mission
 				class Item0
 				{
 					position[]={15342.467,35.739731,16419.545};
-					id=35;
+					id=36;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -926,7 +957,7 @@ class Mission
 				class Item0
 				{
 					position[]={15563.891,35.739731,16334.18};
-					id=36;
+					id=37;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -945,7 +976,7 @@ class Mission
 				class Item0
 				{
 					position[]={15437.034,35.739731,16222.157};
-					id=37;
+					id=38;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -964,7 +995,7 @@ class Mission
 				class Item0
 				{
 					position[]={16210.139,35.739731,13658.578};
-					id=38;
+					id=39;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -983,7 +1014,7 @@ class Mission
 				class Item0
 				{
 					position[]={16354.827,35.739731,13712.69};
-					id=39;
+					id=40;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1002,7 +1033,7 @@ class Mission
 				class Item0
 				{
 					position[]={16034.09,35.739731,13621.449};
-					id=40;
+					id=41;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1021,7 +1052,7 @@ class Mission
 				class Item0
 				{
 					position[]={16241.532,45.077545,11557.091};
-					id=41;
+					id=42;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1040,7 +1071,7 @@ class Mission
 				class Item0
 				{
 					position[]={16971.01,24.682816,12798.886};
-					id=42;
+					id=43;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1059,7 +1090,7 @@ class Mission
 				class Item0
 				{
 					position[]={16897.742,24.682816,12593.411};
-					id=43;
+					id=44;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1078,7 +1109,7 @@ class Mission
 				class Item0
 				{
 					position[]={17355.459,6.8667297,13044.943};
-					id=44;
+					id=45;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1097,7 +1128,7 @@ class Mission
 				class Item0
 				{
 					position[]={14086.893,58.087967,12407.886};
-					id=45;
+					id=46;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1116,7 +1147,7 @@ class Mission
 				class Item0
 				{
 					position[]={14056.193,58.087967,12097.135};
-					id=46;
+					id=47;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1135,7 +1166,7 @@ class Mission
 				class Item0
 				{
 					position[]={12701.758,64.143875,11981.66};
-					id=47;
+					id=48;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1154,7 +1185,7 @@ class Mission
 				class Item0
 				{
 					position[]={12701.285,64.143875,11750.406};
-					id=48;
+					id=49;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1173,7 +1204,7 @@ class Mission
 				class Item0
 				{
 					position[]={14479.702,64.690857,11366.841};
-					id=49;
+					id=50;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1192,7 +1223,7 @@ class Mission
 				class Item0
 				{
 					position[]={14277.413,69.93383,11278.939};
-					id=50;
+					id=51;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1211,7 +1242,7 @@ class Mission
 				class Item0
 				{
 					position[]={14658.562,15.149643,10315.574};
-					id=51;
+					id=52;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1230,7 +1261,7 @@ class Mission
 				class Item0
 				{
 					position[]={14659.688,15.089083,9890.6191};
-					id=52;
+					id=53;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1249,7 +1280,7 @@ class Mission
 				class Item0
 				{
 					position[]={15203.672,15.1496,9742.4268};
-					id=53;
+					id=54;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1268,7 +1299,7 @@ class Mission
 				class Item0
 				{
 					position[]={15465.724,15.280465,9970.1465};
-					id=54;
+					id=55;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1287,7 +1318,7 @@ class Mission
 				class Item0
 				{
 					position[]={15246.937,15.149643,9341.1699};
-					id=55;
+					id=56;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1306,7 +1337,7 @@ class Mission
 				class Item0
 				{
 					position[]={15640.867,15.149643,9519.2744};
-					id=56;
+					id=57;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1325,7 +1356,7 @@ class Mission
 				class Item0
 				{
 					position[]={15323.111,15.149643,9068.5449};
-					id=57;
+					id=58;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1344,7 +1375,7 @@ class Mission
 				class Item0
 				{
 					position[]={9761.8809,20.852327,12581.136};
-					id=58;
+					id=59;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1363,7 +1394,7 @@ class Mission
 				class Item0
 				{
 					position[]={9659.25,20.428923,12718.076};
-					id=59;
+					id=60;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1382,7 +1413,7 @@ class Mission
 				class Item0
 				{
 					position[]={8560.7891,4.5627756,13527.155};
-					id=60;
+					id=61;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1401,7 +1432,7 @@ class Mission
 				class Item0
 				{
 					position[]={9557.9336,26.503778,11775.141};
-					id=61;
+					id=62;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1420,7 +1451,7 @@ class Mission
 				class Item0
 				{
 					position[]={11702.389,13.000778,9064.6738};
-					id=62;
+					id=63;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1439,7 +1470,7 @@ class Mission
 				class Item0
 				{
 					position[]={11496.829,16.725506,10073.764};
-					id=63;
+					id=64;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1458,7 +1489,7 @@ class Mission
 				class Item0
 				{
 					position[]={11666.569,18.436485,9935.8027};
-					id=64;
+					id=65;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1477,7 +1508,7 @@ class Mission
 				class Item0
 				{
 					position[]={12602.207,21.740396,8737.752};
-					id=65;
+					id=66;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1496,7 +1527,7 @@ class Mission
 				class Item0
 				{
 					position[]={13423.013,3.4285431,8016.2383};
-					id=66;
+					id=67;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1515,7 +1546,7 @@ class Mission
 				class Item0
 				{
 					position[]={14323.823,2.998764,7228.7935};
-					id=67;
+					id=68;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1534,7 +1565,7 @@ class Mission
 				class Item0
 				{
 					position[]={13854.306,28.785202,7096.0322};
-					id=68;
+					id=69;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1553,7 +1584,7 @@ class Mission
 				class Item0
 				{
 					position[]={13679.695,64.727554,5948.9702};
-					id=69;
+					id=70;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1572,7 +1603,7 @@ class Mission
 				class Item0
 				{
 					position[]={15569.914,31.988968,5811.751};
-					id=70;
+					id=71;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1591,7 +1622,7 @@ class Mission
 				class Item0
 				{
 					position[]={15835.188,31.988968,5809.6724};
-					id=71;
+					id=72;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1610,7 +1641,7 @@ class Mission
 				class Item0
 				{
 					position[]={17319.252,239.06189,7608.6367};
-					id=72;
+					id=73;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1629,7 +1660,7 @@ class Mission
 				class Item0
 				{
 					position[]={17317.844,239.06189,7402.8179};
-					id=73;
+					id=74;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1648,7 +1679,7 @@ class Mission
 				class Item0
 				{
 					position[]={17215.607,239.06189,7491.8774};
-					id=74;
+					id=75;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1667,7 +1698,7 @@ class Mission
 				class Item0
 				{
 					position[]={16515.824,170.10269,8309.8008};
-					id=75;
+					id=76;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1686,7 +1717,7 @@ class Mission
 				class Item0
 				{
 					position[]={17598.834,177.09628,6328.314};
-					id=76;
+					id=77;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1705,7 +1736,7 @@ class Mission
 				class Item0
 				{
 					position[]={15640.915,36.814873,5254.4556};
-					id=77;
+					id=78;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1724,7 +1755,7 @@ class Mission
 				class Item0
 				{
 					position[]={16853.643,11.11765,3887.8936};
-					id=78;
+					id=79;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1743,7 +1774,7 @@ class Mission
 				class Item0
 				{
 					position[]={8968.8604,194.32632,8243.2109};
-					id=79;
+					id=80;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1762,7 +1793,7 @@ class Mission
 				class Item0
 				{
 					position[]={9151.2686,194.32632,8027.6016};
-					id=80;
+					id=81;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1781,7 +1812,7 @@ class Mission
 				class Item0
 				{
 					position[]={9462.708,194.32632,7888.4844};
-					id=81;
+					id=82;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1800,7 +1831,7 @@ class Mission
 				class Item0
 				{
 					position[]={5616.0947,35.935074,8706.9775};
-					id=82;
+					id=83;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1819,7 +1850,7 @@ class Mission
 				class Item0
 				{
 					position[]={5562.4639,35.935074,8951.7031};
-					id=83;
+					id=84;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1838,7 +1869,7 @@ class Mission
 				class Item0
 				{
 					position[]={5364.9595,35.935074,8654.3027};
-					id=84;
+					id=85;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1857,7 +1888,7 @@ class Mission
 				class Item0
 				{
 					position[]={3877.51,36.208572,7223.0635};
-					id=85;
+					id=86;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1876,7 +1907,7 @@ class Mission
 				class Item0
 				{
 					position[]={3862.8142,36.208572,7031.1128};
-					id=86;
+					id=87;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1895,7 +1926,7 @@ class Mission
 				class Item0
 				{
 					position[]={3294.906,34.372269,7493.915};
-					id=87;
+					id=88;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1914,7 +1945,7 @@ class Mission
 				class Item0
 				{
 					position[]={3454.5969,5.1085663,7856.3872};
-					id=88;
+					id=89;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1933,7 +1964,7 @@ class Mission
 				class Item0
 				{
 					position[]={5542.5396,6.1634674,9824.7783};
-					id=89;
+					id=90;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1952,7 +1983,7 @@ class Mission
 				class Item0
 				{
 					position[]={5803.7686,33.161087,9914.4063};
-					id=90;
+					id=91;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1971,7 +2002,7 @@ class Mission
 				class Item0
 				{
 					position[]={5955.6958,33.161087,9864.6738};
-					id=91;
+					id=92;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -1990,7 +2021,7 @@ class Mission
 				class Item0
 				{
 					position[]={6673.9443,83.027664,9880.208};
-					id=92;
+					id=93;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -2009,7 +2040,7 @@ class Mission
 				class Item0
 				{
 					position[]={7495.4692,72.335388,8021.8491};
-					id=93;
+					id=94;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -2028,7 +2059,7 @@ class Mission
 				class Item0
 				{
 					position[]={7100.1758,70.854294,8321.7402};
-					id=94;
+					id=95;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -2047,7 +2078,7 @@ class Mission
 				class Item0
 				{
 					position[]={7999.3506,73.164871,6512.5635};
-					id=95;
+					id=96;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -2066,7 +2097,7 @@ class Mission
 				class Item0
 				{
 					position[]={7946.7236,72.778427,6767.3296};
-					id=96;
+					id=97;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -2085,7 +2116,7 @@ class Mission
 				class Item0
 				{
 					position[]={8231.2109,91.632111,6087.8218};
-					id=97;
+					id=98;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -2104,7 +2135,7 @@ class Mission
 				class Item0
 				{
 					position[]={9537.4688,96.533203,4696.9971};
-					id=98;
+					id=99;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -2123,7 +2154,7 @@ class Mission
 				class Item0
 				{
 					position[]={9484.6357,96.533203,4375.1543};
-					id=99;
+					id=100;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -2142,7 +2173,7 @@ class Mission
 				class Item0
 				{
 					position[]={9655.2529,96.533203,4152.6719};
-					id=100;
+					id=101;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -2161,7 +2192,7 @@ class Mission
 				class Item0
 				{
 					position[]={7861.5322,34.76297,4492.0713};
-					id=101;
+					id=102;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -2180,7 +2211,7 @@ class Mission
 				class Item0
 				{
 					position[]={7775.9595,34.76297,4134.9609};
-					id=102;
+					id=103;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -2199,7 +2230,7 @@ class Mission
 				class Item0
 				{
 					position[]={7524.1782,34.76297,4154.2324};
-					id=103;
+					id=104;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -2218,7 +2249,7 @@ class Mission
 				class Item0
 				{
 					position[]={7510.1235,34.76297,4404.8232};
-					id=104;
+					id=105;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -2237,7 +2268,7 @@ class Mission
 				class Item0
 				{
 					position[]={8931.6338,10.331923,2294.8198};
-					id=105;
+					id=106;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -2256,7 +2287,7 @@ class Mission
 				class Item0
 				{
 					position[]={10005.43,9.959753,1367.7826};
-					id=106;
+					id=107;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -2275,7 +2306,7 @@ class Mission
 				class Item0
 				{
 					position[]={10986.818,16.098604,746.98633};
-					id=107;
+					id=108;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -2294,7 +2325,7 @@ class Mission
 				class Item0
 				{
 					position[]={11795.784,11.553058,720.51996};
-					id=108;
+					id=109;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -2313,7 +2344,7 @@ class Mission
 				class Item0
 				{
 					position[]={5445.1919,15.774765,14775.817};
-					id=109;
+					id=110;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -2332,7 +2363,7 @@ class Mission
 				class Item0
 				{
 					position[]={5758.8467,6.1243896,14560.896};
-					id=110;
+					id=111;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -2351,7 +2382,7 @@ class Mission
 				class Item0
 				{
 					position[]={5672.5649,40.584442,16097.941};
-					id=111;
+					id=112;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -2370,7 +2401,7 @@ class Mission
 				class Item0
 				{
 					position[]={5599.4229,46.08976,16749.453};
-					id=112;
+					id=113;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -2389,7 +2420,7 @@ class Mission
 				class Item0
 				{
 					position[]={5886.8203,42.1082,17469.285};
-					id=113;
+					id=114;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -2408,7 +2439,7 @@ class Mission
 				class Item0
 				{
 					position[]={5090.3794,25.659576,17751.049};
-					id=114;
+					id=115;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -2427,7 +2458,7 @@ class Mission
 				class Item0
 				{
 					position[]={5009.9023,25.659576,17580.957};
-					id=115;
+					id=116;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -2446,7 +2477,7 @@ class Mission
 				class Item0
 				{
 					position[]={3853.1877,26.977573,17777.744};
-					id=116;
+					id=117;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -2465,7 +2496,7 @@ class Mission
 				class Item0
 				{
 					position[]={3996.8538,26.278278,17665.275};
-					id=117;
+					id=118;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -2484,7 +2515,7 @@ class Mission
 				class Item0
 				{
 					position[]={2014.1118,21.088333,17230.248};
-					id=118;
+					id=119;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -2503,7 +2534,7 @@ class Mission
 				class Item0
 				{
 					position[]={1874.855,21.088333,17060.182};
-					id=119;
+					id=120;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -2522,7 +2553,7 @@ class Mission
 				class Item0
 				{
 					position[]={1556.7224,21.088333,17360.805};
-					id=120;
+					id=121;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -2541,7 +2572,7 @@ class Mission
 				class Item0
 				{
 					position[]={1337.7396,21.010193,17456.959};
-					id=121;
+					id=122;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -2560,7 +2591,7 @@ class Mission
 				class Item0
 				{
 					position[]={1336.3234,24.721878,18099.047};
-					id=122;
+					id=123;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -2579,7 +2610,7 @@ class Mission
 				class Item0
 				{
 					position[]={10626.6,68.324921,6563.0469};
-					id=123;
+					id=124;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -2598,7 +2629,7 @@ class Mission
 				class Item0
 				{
 					position[]={16710.492,45.077545,10434.393};
-					id=124;
+					id=125;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -2617,7 +2648,7 @@ class Mission
 				class Item0
 				{
 					position[]={16267.767,43.711975,10035.209};
-					id=125;
+					id=126;
 					side="LOGIC";
 					vehicle="Logic";
 					leader=1;
@@ -2627,10 +2658,3252 @@ class Mission
 				};
 			};
 		};
+		class Item123
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={8106.2988,160.86363,21278.23};
+					azimut=112.58458;
+					special="NONE";
+					id=127;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={8105.0513,160.79764,21277.592};
+					azimut=112.58458;
+					special="NONE";
+					id=128;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={8104.7192,160.79242,21276.762};
+					azimut=112.58458;
+					special="NONE";
+					id=129;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="3. Сталкер ";
+				};
+				class Item3
+				{
+					position[]={8105.5718,160.79749,21279.334};
+					azimut=112.58458;
+					special="NONE";
+					id=130;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+			};
+		};
+		class Item124
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={7336.7124,4.6749663,21204.955};
+					azimut=98.187073;
+					special="NONE";
+					id=131;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={7335.6494,4.2923198,21204.016};
+					azimut=98.187073;
+					special="NONE";
+					id=132;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={7335.5415,4.2355385,21203.096};
+					azimut=98.187073;
+					special="NONE";
+					id=133;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="3. Сталкер ";
+				};
+				class Item3
+				{
+					position[]={7335.7197,4.3561296,21205.838};
+					azimut=98.187073;
+					special="NONE";
+					id=134;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+			};
+		};
+		class Item125
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={7447.8032,2.5990446,20634.676};
+					azimut=143.26208;
+					special="NONE";
+					id=135;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={7446.4072,2.2210155,20634.762};
+					azimut=143.26208;
+					special="NONE";
+					id=136;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={7445.6958,1.9593867,20634.227};
+					azimut=143.26208;
+					special="NONE";
+					id=137;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="3. Сталкер ";
+				};
+				class Item3
+				{
+					position[]={7447.7432,2.7390761,20635.994};
+					azimut=143.26208;
+					special="NONE";
+					id=138;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+			};
+		};
+		class Item126
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={7972.8838,141.20409,21257.797};
+					azimut=148.422;
+					special="NONE";
+					id=139;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={7971.4971,140.90079,21258.002};
+					azimut=148.422;
+					special="NONE";
+					id=140;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={7970.7417,140.72264,21257.521};
+					azimut=148.422;
+					special="NONE";
+					id=141;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="3. Сталкер ";
+				};
+				class Item3
+				{
+					position[]={7972.939,141.24509,21259.113};
+					azimut=148.422;
+					special="NONE";
+					id=142;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+			};
+		};
+		class Item127
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={7840.7925,106.4078,21636.059};
+					azimut=183.8329;
+					special="NONE";
+					id=143;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={7839.7852,106.18593,21637.039};
+					azimut=183.8329;
+					special="NONE";
+					id=144;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={7838.8936,106.04099,21637.084};
+					azimut=183.8329;
+					special="NONE";
+					id=145;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="3. Сталкер ";
+				};
+				class Item3
+				{
+					position[]={7841.6064,106.47223,21637.104};
+					azimut=183.8329;
+					special="NONE";
+					id=146;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+			};
+		};
+		class Item128
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={7558.647,45.475296,22028.105};
+					azimut=188.91229;
+					special="NONE";
+					id=147;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={7557.728,45.240532,22029.16};
+					azimut=188.91229;
+					special="NONE";
+					id=148;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={7556.8442,45.104973,22029.273};
+					azimut=188.91229;
+					special="NONE";
+					id=149;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="3. Сталкер ";
+				};
+				class Item3
+				{
+					position[]={7559.5337,45.505062,22029.055};
+					azimut=188.91229;
+					special="NONE";
+					id=150;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+			};
+		};
+		class Item129
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={8365.707,5.7287927,22257.092};
+					azimut=211.30016;
+					special="NONE";
+					id=151;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={8365.292,5.2722292,22258.408};
+					azimut=211.30016;
+					special="NONE";
+					id=152;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={8364.5088,5.2037892,22258.895};
+					azimut=211.30016;
+					special="NONE";
+					id=153;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="3. Сталкер ";
+				};
+				class Item3
+				{
+					position[]={8366.9014,5.3118043,22257.662};
+					azimut=211.30016;
+					special="NONE";
+					id=154;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+			};
+		};
+		class Item130
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={8547.6318,5.5733252,22117.43};
+					azimut=218.37852;
+					special="NONE";
+					id=155;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={8547.3555,5.3159566,22118.836};
+					azimut=218.37852;
+					special="NONE";
+					id=156;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={8546.626,5.4001751,22119.336};
+					azimut=218.37852;
+					special="NONE";
+					id=157;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="3. Сталкер ";
+				};
+				class Item3
+				{
+					position[]={8548.8984,5.1314845,22117.807};
+					azimut=218.37852;
+					special="NONE";
+					id=158;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+			};
+		};
+		class Item131
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={8603.7529,5.8354239,22051.336};
+					azimut=218.37852;
+					special="NONE";
+					id=159;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={8603.4766,5.5992608,22052.742};
+					azimut=218.37852;
+					special="NONE";
+					id=160;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={8602.7471,5.6795077,22053.242};
+					azimut=218.37852;
+					special="NONE";
+					id=161;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="3. Сталкер ";
+				};
+				class Item3
+				{
+					position[]={8605.0195,5.4244022,22051.713};
+					azimut=218.37852;
+					special="NONE";
+					id=162;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+			};
+		};
+		class Item132
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={7346.126,1.410345,21021.008};
+					azimut=89.11972;
+					special="NONE";
+					id=163;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={7345.2041,1.0172056,21019.91};
+					azimut=89.11972;
+					special="NONE";
+					id=164;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={7345.272,1.00736,21019.035};
+					azimut=89.11972;
+					special="NONE";
+					id=165;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="3. Сталкер ";
+				};
+				class Item3
+				{
+					position[]={7352.7188,4.0921745,21028.156};
+					azimut=89.11972;
+					special="NONE";
+					id=166;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+			};
+		};
+		class Item133
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={8782.084,5.6157627,21870.063};
+					azimut=218.37852;
+					special="NONE";
+					id=167;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={8781.8076,5.3687115,21871.469};
+					azimut=218.37852;
+					special="NONE";
+					id=168;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={8781.0781,5.4189568,21871.969};
+					azimut=218.37852;
+					special="NONE";
+					id=169;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="3. Сталкер ";
+				};
+				class Item3
+				{
+					position[]={8783.3506,5.2562027,21870.439};
+					azimut=218.37852;
+					special="NONE";
+					id=170;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+			};
+		};
+		class Item134
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={7685.3711,4.337852,19856.42};
+					azimut=114.9816;
+					special="NONE";
+					id=171;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={7684.0977,3.7621114,19855.805};
+					azimut=114.9816;
+					special="NONE";
+					id=172;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={7683.7651,3.5720539,19855.01};
+					azimut=114.9816;
+					special="NONE";
+					id=173;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="3. Сталкер ";
+				};
+				class Item3
+				{
+					position[]={7684.7329,4.1422615,19857.596};
+					azimut=114.9816;
+					special="NONE";
+					id=174;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+			};
+		};
+		class Item135
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={7958.9014,7.7797723,19023.779};
+					azimut=96.761292;
+					special="NONE";
+					id=175;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={7957.8838,7.0962591,19022.801};
+					azimut=96.761292;
+					special="NONE";
+					id=176;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={7957.8169,6.9113703,19021.949};
+					azimut=96.761292;
+					special="NONE";
+					id=177;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="3. Сталкер ";
+				};
+				class Item3
+				{
+					position[]={7957.9263,7.4566264,19024.703};
+					azimut=96.761292;
+					special="NONE";
+					id=178;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+			};
+		};
+		class Item136
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={8055.229,10.602796,18557.799};
+					azimut=96.761292;
+					special="NONE";
+					id=179;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={8054.2114,10.085738,18556.82};
+					azimut=96.761292;
+					special="NONE";
+					id=180;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={8054.144,9.9554186,18555.969};
+					azimut=96.761292;
+					special="NONE";
+					id=181;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="3. Сталкер ";
+				};
+				class Item3
+				{
+					position[]={8054.2534,10.334079,18558.723};
+					azimut=96.761292;
+					special="NONE";
+					id=182;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+			};
+		};
+		class Item137
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={8098.3813,20.381981,17986.908};
+					azimut=96.761292;
+					special="NONE";
+					id=183;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={8097.3638,19.661886,17985.93};
+					azimut=96.761292;
+					special="NONE";
+					id=184;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={8097.2969,19.511522,17985.078};
+					azimut=96.761292;
+					special="NONE";
+					id=185;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="3. Сталкер ";
+				};
+				class Item3
+				{
+					position[]={8097.4063,19.936314,17987.832};
+					azimut=96.761292;
+					special="NONE";
+					id=186;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+			};
+		};
+		class Item138
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={7357.7129,6.954814,21802.506};
+					azimut=98.187073;
+					special="NONE";
+					id=187;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={7356.6499,6.5734348,21801.566};
+					azimut=98.187073;
+					special="NONE";
+					id=188;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={7356.542,6.5528808,21800.646};
+					azimut=98.187073;
+					special="NONE";
+					id=189;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="3. Сталкер ";
+				};
+				class Item3
+				{
+					position[]={7356.7202,6.5601206,21803.389};
+					azimut=98.187073;
+					special="NONE";
+					id=190;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+			};
+		};
+		class Item139
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={7532.7085,13.638247,22167.9};
+					azimut=98.187073;
+					special="NONE";
+					id=191;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={7531.6455,13.601201,22166.961};
+					azimut=98.187073;
+					special="NONE";
+					id=192;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={7531.5376,13.829249,22166.041};
+					azimut=98.187073;
+					special="NONE";
+					id=193;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="3. Сталкер ";
+				};
+				class Item3
+				{
+					position[]={7531.7158,13.131249,22168.783};
+					azimut=98.187073;
+					special="NONE";
+					id=194;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+			};
+		};
+		class Item140
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={7879.0029,17.762737,22344.746};
+					azimut=98.187073;
+					special="NONE";
+					id=195;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={7877.9399,18.061918,22343.807};
+					azimut=98.187073;
+					special="NONE";
+					id=196;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={7877.832,18.355261,22342.887};
+					azimut=98.187073;
+					special="NONE";
+					id=197;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="3. Сталкер ";
+				};
+				class Item3
+				{
+					position[]={7878.0103,17.48107,22345.629};
+					azimut=98.187073;
+					special="NONE";
+					id=198;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+			};
+		};
+		class Item141
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={8986.7236,7.0462918,21672.566};
+					azimut=219.80928;
+					special="NONE";
+					id=199;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={8986.4756,6.7537513,21673.969};
+					azimut=219.80928;
+					special="NONE";
+					id=200;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={8985.752,6.7482576,21674.537};
+					azimut=219.80928;
+					special="NONE";
+					id=201;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="3. Сталкер ";
+				};
+				class Item3
+				{
+					position[]={8987.9971,6.7233582,21672.955};
+					azimut=219.80928;
+					special="NONE";
+					id=202;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+			};
+		};
+		class Item142
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={9154.958,7.9481411,21532.102};
+					azimut=98.187073;
+					special="NONE";
+					id=203;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={9153.8955,8.3166771,21531.162};
+					azimut=98.187073;
+					special="NONE";
+					id=204;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={9153.7881,8.488081,21530.242};
+					azimut=98.187073;
+					special="NONE";
+					id=205;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="3. Сталкер ";
+				};
+				class Item3
+				{
+					position[]={9153.9658,8.0062981,21532.984};
+					azimut=98.187073;
+					special="NONE";
+					id=206;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+			};
+		};
+		class Item143
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={8928.9814,56.361408,21208.105};
+					azimut=160.24658;
+					special="NONE";
+					id=207;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={8927.6553,56.506248,21208.619};
+					azimut=160.24658;
+					special="NONE";
+					id=208;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={8926.7998,56.65432,21208.277};
+					azimut=160.24658;
+					special="NONE";
+					id=209;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="3. Сталкер ";
+				};
+				class Item3
+				{
+					position[]={8929.2988,56.215595,21209.396};
+					azimut=160.24658;
+					special="NONE";
+					id=210;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+			};
+		};
+		class Item144
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={9470.8857,3.9149718,20948.857};
+					azimut=160.24658;
+					special="NONE";
+					id=211;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={9469.5596,4.044373,20949.371};
+					azimut=160.24658;
+					special="NONE";
+					id=212;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={9468.7041,4.2351913,20949.029};
+					azimut=160.24658;
+					special="NONE";
+					id=213;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="3. Сталкер ";
+				};
+				class Item3
+				{
+					position[]={9471.2031,3.6646161,20950.148};
+					azimut=160.24658;
+					special="NONE";
+					id=214;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+			};
+		};
+		class Item145
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={9852.7832,9.1132851,20579.387};
+					azimut=160.24658;
+					special="NONE";
+					id=215;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={9851.457,9.339654,20579.9};
+					azimut=160.24658;
+					special="NONE";
+					id=216;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={9850.6016,9.6074543,20579.559};
+					azimut=160.24658;
+					special="NONE";
+					id=217;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="3. Сталкер ";
+				};
+				class Item3
+				{
+					position[]={9853.1006,8.8028765,20580.678};
+					azimut=160.24658;
+					special="NONE";
+					id=218;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+			};
+		};
+		class Item146
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={8255.5732,177.52757,20850.93};
+					azimut=112.58458;
+					special="NONE";
+					id=219;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={8254.3252,177.40607,20850.291};
+					azimut=112.58458;
+					special="NONE";
+					id=220;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={8253.9932,177.35912,20849.461};
+					azimut=112.58458;
+					special="NONE";
+					id=221;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="3. Сталкер ";
+				};
+				class Item3
+				{
+					position[]={8254.8467,177.51213,20852.033};
+					azimut=112.58458;
+					special="NONE";
+					id=222;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+			};
+		};
+		class Item147
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={8800.1445,155.68639,20582.111};
+					azimut=20.7889;
+					special="NONE";
+					id=223;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={8800.8242,155.62799,20580.881};
+					azimut=20.7889;
+					special="NONE";
+					id=224;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={8801.665,155.50644,20580.574};
+					azimut=20.7889;
+					special="NONE";
+					id=225;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="3. Сталкер ";
+				};
+				class Item3
+				{
+					position[]={8799.0635,155.87215,20581.348};
+					azimut=20.7889;
+					special="NONE";
+					id=226;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+			};
+		};
+		class Item148
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={13114.962,44.660728,12903.17};
+					special="NONE";
+					id=227;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="     [this, ""TORG""] call compile preprocessFileLineNumbers ""MERC1.sqf"";       this setvariable [""rbc_is_vip"",true];       this setvariable [""rbc_vip"",[""TORG"",""MERC1.sqf"",getposatl this]];  ";
+					description="1. Торговец Белый (VIP)";
+				};
+				class Item1
+				{
+					position[]={13116.352,44.756317,12902.273};
+					special="NONE";
+					id=228;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""M_1""] call compile preprocessFileLineNumbers ""MERC1.sqf"";";
+					description="2, Охрана ""Наемники""";
+				};
+				class Item2
+				{
+					position[]={13117.287,44.820633,12902.258};
+					special="NONE";
+					id=229;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""M_2""] call compile preprocessFileLineNumbers ""MERC1.sqf"";";
+					description="3, Охрана ""Наемники""";
+				};
+				class Item3
+				{
+					position[]={13118.206,44.883801,12902.291};
+					special="NONE";
+					id=230;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""M_3""] call compile preprocessFileLineNumbers ""MERC1.sqf"";";
+					description="4, Охрана ""Наемники""";
+				};
+			};
+		};
+		class Item149
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={8430.5918,164.67865,20356.93};
+					azimut=20.7889;
+					special="NONE";
+					id=231;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={8431.2715,164.64888,20355.699};
+					azimut=20.7889;
+					special="NONE";
+					id=232;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={8432.1123,164.71066,20355.393};
+					azimut=20.7889;
+					special="NONE";
+					id=233;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="3. Сталкер ";
+				};
+				class Item3
+				{
+					position[]={8429.5107,164.50522,20356.166};
+					azimut=20.7889;
+					special="NONE";
+					id=234;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+			};
+		};
+		class Item150
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={8553.6084,99.853264,21340.576};
+					azimut=20.7889;
+					special="NONE";
+					id=235;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={8554.2881,99.913574,21339.346};
+					azimut=20.7889;
+					special="NONE";
+					id=236;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={8555.1289,99.794281,21339.039};
+					azimut=20.7889;
+					special="NONE";
+					id=237;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="3. Сталкер ";
+				};
+				class Item3
+				{
+					position[]={8552.5273,100.19139,21339.813};
+					azimut=20.7889;
+					special="NONE";
+					id=238;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+			};
+		};
+		class Item151
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={8244.5557,73.469536,21860.09};
+					azimut=20.7889;
+					special="NONE";
+					id=239;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={8245.2373,73.541023,21858.859};
+					azimut=20.7889;
+					special="NONE";
+					id=240;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={8246.0771,73.504402,21858.553};
+					azimut=20.7889;
+					special="NONE";
+					id=241;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="3. Сталкер ";
+				};
+				class Item3
+				{
+					position[]={8243.4756,73.636032,21859.326};
+					azimut=20.7889;
+					special="NONE";
+					id=242;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+			};
+		};
+		class Item152
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={9249.8057,4.7329822,21372.77};
+					azimut=20.7889;
+					special="NONE";
+					id=243;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+					init="[this, ""ST1""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="1. Сталкер ""Проводник""";
+				};
+				class Item1
+				{
+					position[]={9250.4854,4.6609359,21371.539};
+					azimut=20.7889;
+					special="NONE";
+					id=244;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+				class Item2
+				{
+					position[]={9251.3262,4.4951968,21371.232};
+					azimut=20.7889;
+					special="NONE";
+					id=245;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="3. Сталкер ";
+				};
+				class Item3
+				{
+					position[]={9248.7246,4.9946399,21372.006};
+					azimut=20.7889;
+					special="NONE";
+					id=246;
+					side="GUER";
+					vehicle="I_Soldier_GL_F";
+					player="PLAY CDG";
+					skill=0.40000001;
+					init="[this, ""ST2""] call compile preprocessFileLineNumbers ""TPL\ST.sqf"";";
+					description="2. Сталкер ";
+				};
+			};
+		};
+		class Item153
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={7823.6743,87.401016,9094.0195};
+					id=247;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+				};
+				class Item1
+				{
+					position[]={7829.6396,87.558434,9089.0195};
+					id=248;
+					side="WEST";
+					vehicle="B_Soldier_AR_F";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={7819.6396,87.572937,9089.0195};
+					id=249;
+					side="WEST";
+					vehicle="B_soldier_GL_F";
+					skill=0.40000001;
+				};
+				class Item3
+				{
+					position[]={7834.6396,87.725578,9084.0195};
+					id=250;
+					side="WEST";
+					vehicle="B_soldier_LAT_F";
+					skill=0.40000001;
+				};
+			};
+			class Waypoints
+			{
+				items=9;
+				class Item0
+				{
+					position[]={7782.145,86.849251,9109.2285};
+					speed="NORMAL";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item1
+				{
+					position[]={7730.3911,86.581421,9113.1299};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item2
+				{
+					position[]={7700.2227,85.891968,9122.2324};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item3
+				{
+					position[]={7670.5742,86.132439,9076.9795};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item4
+				{
+					position[]={7767.8403,89.771011,9014.8223};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item5
+				{
+					position[]={7810.4937,89.67955,8997.3984};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item6
+				{
+					position[]={7847.6831,88.402153,9063.9756};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item7
+				{
+					position[]={7852.8359,87.771812,9082.3564};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item8
+				{
+					position[]={7823.6743,87.401016,9094.0195};
+					id=247;
+					type="CYCLE";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+			};
+		};
+		class Item154
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={7806.6938,86.114517,9125.5938};
+					azimut=200;
+					special="NONE";
+					id=251;
+					side="WEST";
+					vehicle="B_officer_F";
+					player="PLAYER COMMANDER";
+					leader=1;
+					rank="MAJOR";
+					skill=0.40000001;
+					text="monvip";
+					init="[this, ""LMON""] call compile preprocessFileLineNumbers ""tpl\mon.sqf"";  this setvariable [""rbc_is_vip"",true];  this setvariable [""rbc_vip"",[""LMON"",""tpl\mon.sqf"",getposatl this]];  group this setvariable [""blowout_protected"",true, true];  group this setvariable [""zlt_force_uniform"", [[""av_shlem_Vityaz2""],[""Vest_monolit""],[""rbc_U_monolit""],[""STALKER_insignia_monolith""]]];  ";
+					description="Жрец монолита (VIP)";
+				};
+			};
+		};
+		class Item155
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={7793.9609,86.116745,9126.4053};
+					id=252;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+				};
+				class Item1
+				{
+					position[]={7799.9263,86.298264,9121.4053};
+					id=253;
+					side="WEST";
+					vehicle="B_Soldier_AR_F";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={7789.9263,86.357124,9121.4053};
+					id=254;
+					side="WEST";
+					vehicle="B_soldier_GL_F";
+					skill=0.40000001;
+				};
+				class Item3
+				{
+					position[]={7804.9263,86.501205,9116.4053};
+					id=255;
+					side="WEST";
+					vehicle="B_soldier_LAT_F";
+					skill=0.40000001;
+				};
+			};
+			class Waypoints
+			{
+				items=17;
+				class Item0
+				{
+					position[]={7806.6973,85.284081,9144.7754};
+					speed="NORMAL";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item1
+				{
+					position[]={7807.7485,84.195572,9164.5283};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item2
+				{
+					position[]={7648.5322,79.027824,9276.5596};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item3
+				{
+					position[]={7571.4922,76.920883,9331.2275};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item4
+				{
+					position[]={7582.563,76.507042,9340.6846};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item5
+				{
+					position[]={7725.8047,81.551758,9230.6582};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item6
+				{
+					position[]={7804.6919,83.657127,9174.6084};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item7
+				{
+					position[]={7881.041,86.055908,9119.9414};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item8
+				{
+					position[]={7926.7129,89.317711,9050.9736};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item9
+				{
+					position[]={7939.3989,91.366211,8995.8447};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item10
+				{
+					position[]={7953.2388,92.974388,8946.7148};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item11
+				{
+					position[]={7943.5508,93.100441,8933.5664};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item12
+				{
+					position[]={7926.9434,90.441887,9019.6045};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item13
+				{
+					position[]={7877.812,86.52198,9110.9463};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item14
+				{
+					position[]={7828.6802,84.970238,9146.9297};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item15
+				{
+					position[]={7811.4126,85.231316,9144.9463};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item16
+				{
+					position[]={7793.9609,86.116745,9126.4053};
+					id=252;
+					type="CYCLE";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+			};
+		};
+		class Item156
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={7727.9019,86.676384,9106.1514};
+					id=256;
+					side="WEST";
+					vehicle="B_Soldier_TL_F";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+				};
+				class Item1
+				{
+					position[]={7733.8672,86.879005,9101.1514};
+					id=257;
+					side="WEST";
+					vehicle="B_Soldier_AR_F";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={7723.8672,86.722717,9101.1514};
+					id=258;
+					side="WEST";
+					vehicle="B_soldier_GL_F";
+					skill=0.40000001;
+				};
+				class Item3
+				{
+					position[]={7738.8672,87.018425,9096.1514};
+					id=259;
+					side="WEST";
+					vehicle="B_soldier_LAT_F";
+					skill=0.40000001;
+				};
+			};
+			class Waypoints
+			{
+				items=11;
+				class Item0
+				{
+					position[]={7708.2505,86.116081,9117.7236};
+					speed="NORMAL";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item1
+				{
+					position[]={7709.3926,85.758865,9135.9922};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item2
+				{
+					position[]={7727.519,84.833717,9161.1133};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item3
+				{
+					position[]={7741.0781,84.265656,9182.5244};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item4
+				{
+					position[]={7758.9204,84.26506,9185.5195};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item5
+				{
+					position[]={7791.3193,84.651413,9162.54};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item6
+				{
+					position[]={7835.8511,85.628349,9132.4248};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item7
+				{
+					position[]={7870.8208,86.690353,9108.0166};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item8
+				{
+					position[]={7861.5435,87.687233,9085.6084};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item9
+				{
+					position[]={7788.7505,87.341759,9095.7432};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item10
+				{
+					position[]={7727.9019,86.676384,9106.1514};
+					id=256;
+					type="CYCLE";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+			};
+		};
+		class Item157
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={16453.68,9.0937347,14333.884};
+					azimut=200;
+					special="NONE";
+					id=260;
+					side="EAST";
+					vehicle="min_rf_officer";
+					player="PLAY CDG";
+					leader=1;
+					rank="COLONEL";
+					skill=0.40000001;
+					text="dolgvip";
+					init="[this, ""LDOLG""] call compile preprocessFileLineNumbers ""tpl\dolg.sqf"";  this setvariable [""rbc_is_vip"",true];  this setvariable [""rbc_vip"",[""LDOLG"",""tpl\dolg.sqf"",getposatl this]];  group this setvariable [""zlt_force_uniform"", [[""av_shlem_chehol"",""min_rf_beanie_black""],[""Vest_dolg"",""Tarzan_ch_bron"",""Vest_h_dolg""],[""rbc_U_dolg""],[""STALKER_insignia_duty""]]];";
+					description="Полковник Долга (VIP)";
+				};
+			};
+		};
+		class Item158
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={16440.256,9.6724195,14364.559};
+					id=261;
+					side="EAST";
+					vehicle="min_rf_soldier_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+				};
+				class Item1
+				{
+					position[]={16441.572,9.5942163,14363.244};
+					id=262;
+					side="EAST";
+					vehicle="min_rf_soldier_AR";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={16439.006,9.7466354,14363.825};
+					id=263;
+					side="EAST";
+					vehicle="min_rf_soldier_GL";
+					skill=0.40000001;
+				};
+				class Item3
+				{
+					position[]={16442.5,9.5391207,14362.997};
+					id=264;
+					side="EAST";
+					vehicle="min_rf_soldier_LAT";
+					skill=0.40000001;
+				};
+			};
+			class Waypoints
+			{
+				items=12;
+				class Item0
+				{
+					position[]={16440.199,10.420349,14447.403};
+					speed="LIMITED";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item1
+				{
+					position[]={16426.121,11.040825,14482.295};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item2
+				{
+					position[]={16334.928,17.594898,14509.272};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item3
+				{
+					position[]={16277.162,23.833189,14527.746};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item4
+				{
+					position[]={16229.66,28.758133,14537.131};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item5
+				{
+					position[]={16229.072,28.805876,14527.453};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item6
+				{
+					position[]={16298.86,21.223717,14515.137};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item7
+				{
+					position[]={16352.522,15.882351,14499.891};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item8
+				{
+					position[]={16389.631,12.873391,14489.233};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item9
+				{
+					position[]={16424.568,11.10253,14477.333};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item10
+				{
+					position[]={16435.586,10.565772,14445.178};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item11
+				{
+					position[]={16440.256,9.6724195,14364.559};
+					id=261;
+					type="CYCLE";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+			};
+		};
+		class Item159
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={16435.666,9.3234892,14308.786};
+					id=265;
+					side="EAST";
+					vehicle="min_rf_soldier_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+				};
+				class Item1
+				{
+					position[]={16440.666,9.2396097,14303.786};
+					id=266;
+					side="EAST";
+					vehicle="min_rf_soldier_AR";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={16430.666,9.417263,14303.786};
+					id=267;
+					side="EAST";
+					vehicle="min_rf_soldier_GL";
+					skill=0.40000001;
+				};
+				class Item3
+				{
+					position[]={16445.666,9.1614857,14298.786};
+					id=268;
+					side="EAST";
+					vehicle="min_rf_soldier_LAT";
+					skill=0.40000001;
+				};
+			};
+			class Waypoints
+			{
+				items=15;
+				class Item0
+				{
+					position[]={16439.883,9.2518673,14333.559};
+					speed="LIMITED";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item1
+				{
+					position[]={16441.781,9.5108919,14356.598};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item2
+				{
+					position[]={16405.197,10.286431,14359.636};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item3
+				{
+					position[]={16385.77,11.999307,14349.133};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item4
+				{
+					position[]={16384.518,12.179426,14257.801};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item5
+				{
+					position[]={16385.18,12.35289,14194.984};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item6
+				{
+					position[]={16439.178,19.250893,14043.436};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item7
+				{
+					position[]={16506.648,17.905931,14038.013};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item8
+				{
+					position[]={16504.238,9.7200193,14160.907};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item9
+				{
+					position[]={16512.775,9.0546722,14284.757};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item10
+				{
+					position[]={16513.768,9.4617023,14346.252};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item11
+				{
+					position[]={16500.852,9.1256704,14358.292};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item12
+				{
+					position[]={16445.959,9.3337812,14355.838};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item13
+				{
+					position[]={16443.867,9.1895781,14320.288};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item14
+				{
+					position[]={16435.666,9.3234892,14308.786};
+					id=265;
+					type="CYCLE";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+			};
+		};
+		class Item160
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={16456.633,9.0937347,14366.963};
+					id=269;
+					side="EAST";
+					vehicle="min_rf_soldier_TL";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.5;
+				};
+				class Item1
+				{
+					position[]={16461.633,9.0937347,14361.963};
+					id=270;
+					side="EAST";
+					vehicle="min_rf_soldier_AR";
+					rank="CORPORAL";
+					skill=0.44999999;
+				};
+				class Item2
+				{
+					position[]={16451.633,9.0937347,14361.963};
+					id=271;
+					side="EAST";
+					vehicle="min_rf_soldier_GL";
+					skill=0.40000001;
+				};
+				class Item3
+				{
+					position[]={16456.379,9.0937347,14361.015};
+					id=272;
+					side="EAST";
+					vehicle="min_rf_soldier_LAT";
+					skill=0.40000001;
+				};
+			};
+			class Waypoints
+			{
+				items=13;
+				class Item0
+				{
+					position[]={16484.814,9.0937347,14368.155};
+					speed="LIMITED";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item1
+				{
+					position[]={16514.436,9.6411943,14359.039};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item2
+				{
+					position[]={16523.301,9.0546722,14295.337};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item3
+				{
+					position[]={16521.83,9.4995594,14229.666};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item4
+				{
+					position[]={16522.469,11.071399,14141.354};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item5
+				{
+					position[]={16524.838,20.878559,14022.409};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item6
+				{
+					position[]={16493.088,20.40428,14016.249};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item7
+				{
+					position[]={16420.584,21.375885,14030.938};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item8
+				{
+					position[]={16377.46,16.926893,14160.783};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item9
+				{
+					position[]={16363.715,15.135086,14298.21};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item10
+				{
+					position[]={16379.454,12.533725,14368.582};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item11
+				{
+					position[]={16409.207,10.892927,14376.413};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item12
+				{
+					position[]={16456.633,9.0937347,14366.963};
+					id=269;
+					type="CYCLE";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+			};
+		};
+		class Item161
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={18825.754,0.43275797,13764.813};
+					class args
+					{
+						items=7;
+						class Item0
+						{
+							value="0";
+							parentCls="WMT_Vehicle";
+							typeName="FullRepair";
+						};
+						class Item1
+						{
+							value="0";
+							parentCls="WMT_Vehicle";
+							typeName="VehicleCrew";
+						};
+						class Item2
+						{
+							value="0";
+							parentCls="WMT_Vehicle";
+							typeName="LowGear";
+						};
+						class Item3
+						{
+							value="0";
+							parentCls="WMT_Vehicle";
+							typeName="PushBoat";
+						};
+						class Item4
+						{
+							value="0";
+							parentCls="WMT_Vehicle";
+							typeName="Reammo";
+						};
+						class Item5
+						{
+							value="0";
+							parentCls="WMT_Vehicle";
+							typeName="StaticWeaponDrag";
+						};
+						class Item6
+						{
+							value="1";
+							parentCls="WMT_Vehicle";
+							typeName="Units";
+						};
+					};
+					id=273;
+					side="LOGIC";
+					vehicle="WMT_Vehicle";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+	};
+	class Vehicles
+	{
+		items=38;
+		class Item0
+		{
+			position[]={11159.843,6.1634674,18648.496};
+			id=274;
+			side="EMPTY";
+			vehicle="RDS_Gaz24_Civ_03";
+			skill=0.60000002;
+		};
+		class Item1
+		{
+			position[]={15149.499,15.012894,10124.765};
+			azimut=300;
+			id=275;
+			side="EMPTY";
+			vehicle="RDS_Gaz24_Civ_01";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item2
+		{
+			position[]={15326.542,15.149643,9478.8047};
+			azimut=300;
+			id=276;
+			side="EMPTY";
+			vehicle="RDS_Gaz24_Civ_02";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item3
+		{
+			position[]={15327.048,15.012894,9795.8613};
+			azimut=300;
+			id=277;
+			side="EMPTY";
+			vehicle="RDS_Ikarus_Civ_01";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item4
+		{
+			position[]={12540.497,64.143875,11677.667};
+			azimut=20;
+			id=278;
+			side="EMPTY";
+			vehicle="RDS_S1203_Civ_01";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item5
+		{
+			position[]={11122.294,114.11487,15445.235};
+			azimut=300;
+			id=279;
+			side="EMPTY";
+			vehicle="RDS_S1203_Civ_02";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item6
+		{
+			position[]={15892.124,15.149643,9517.5811};
+			azimut=300;
+			id=280;
+			side="EMPTY";
+			vehicle="RDS_Lada_Civ_01";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item7
+		{
+			position[]={12413.133,83.053925,13876.701};
+			azimut=300;
+			id=281;
+			side="EMPTY";
+			vehicle="RDS_Lada_Civ_03";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item8
+		{
+			position[]={9129.9111,10.070496,14780.351};
+			azimut=180;
+			id=282;
+			side="EMPTY";
+			vehicle="RDS_Lada_Civ_05";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item9
+		{
+			position[]={14177.251,58.087967,12157.747};
+			azimut=300;
+			id=283;
+			side="EMPTY";
+			vehicle="RDS_Lada_Civ_02";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item10
+		{
+			position[]={15375.344,35.739731,16375.068};
+			id=284;
+			side="EMPTY";
+			vehicle="RDS_Ikarus_Civ_02";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item11
+		{
+			position[]={11671.223,114.11487,15573.73};
+			azimut=270;
+			id=285;
+			side="EMPTY";
+			vehicle="RDS_Ikarus_Civ_01";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item12
+		{
+			position[]={15429.935,15.149643,9727.8604};
+			azimut=20;
+			id=286;
+			side="EMPTY";
+			vehicle="RDS_S1203_Civ_02";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item13
+		{
+			position[]={16167.888,35.739731,13597.889};
+			azimut=180;
+			id=287;
+			side="EMPTY";
+			vehicle="RDS_Lada_Civ_05";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item14
+		{
+			position[]={17389.006,239.06189,7464.4756};
+			azimut=300;
+			id=288;
+			side="EMPTY";
+			vehicle="RDS_Lada_Civ_01";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item15
+		{
+			position[]={14311.204,2.998764,7227.6924};
+			azimut=300;
+			id=289;
+			side="EMPTY";
+			vehicle="RDS_Gaz24_Civ_02";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item16
+		{
+			position[]={15716.603,31.988968,5771.6514};
+			azimut=300;
+			id=290;
+			side="EMPTY";
+			vehicle="RDS_Gaz24_Civ_02";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item17
+		{
+			position[]={11633.753,114.11487,15157.53};
+			azimut=300;
+			id=291;
+			side="EMPTY";
+			vehicle="RDS_Lada_Civ_05";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item18
+		{
+			position[]={7798.3481,34.76297,4330.6133};
+			azimut=180;
+			id=292;
+			side="EMPTY";
+			vehicle="RDS_Ikarus_Civ_01";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item19
+		{
+			position[]={7414.8037,34.76297,4435.6313};
+			azimut=300;
+			id=293;
+			side="EMPTY";
+			vehicle="RDS_Lada_Civ_02";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item20
+		{
+			position[]={3983.2776,36.208572,7088.603};
+			azimut=20;
+			id=294;
+			side="EMPTY";
+			vehicle="RDS_S1203_Civ_01";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item21
+		{
+			position[]={5785.5825,33.161087,9905.0215};
+			azimut=20;
+			id=295;
+			side="EMPTY";
+			vehicle="RDS_S1203_Civ_01";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item22
+		{
+			position[]={17359.844,6.8667297,13010.089};
+			azimut=300;
+			id=296;
+			side="EMPTY";
+			vehicle="RDS_Gaz24_Civ_01";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item23
+		{
+			position[]={9013.2793,194.32632,8296.9521};
+			azimut=300;
+			id=297;
+			side="EMPTY";
+			vehicle="RDS_Gaz24_Civ_01";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item24
+		{
+			position[]={7952.2476,72.778427,6924.8735};
+			azimut=300;
+			id=298;
+			side="EMPTY";
+			vehicle="RDS_Gaz24_Civ_01";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item25
+		{
+			position[]={6690.9272,66.969872,8424.873};
+			azimut=126.47106;
+			special="NONE";
+			id=299;
+			side="EMPTY";
+			vehicle="min_rf_heli_light_black";
+			skill=0.40000001;
+			description="3. Сталкер ";
+		};
+		class Item26
+		{
+			position[]={9497.8252,0.00091290695,12649.363};
+			id=300;
+			side="EMPTY";
+			vehicle="C_Rubberboat";
+			skill=0.60000002;
+		};
+		class Item27
+		{
+			position[]={8799.1973,-0.371539,13967.715};
+			id=301;
+			side="EMPTY";
+			vehicle="C_Rubberboat";
+			skill=0.60000002;
+		};
+		class Item28
+		{
+			position[]={10524.632,0.019983947,16750.637};
+			id=302;
+			side="EMPTY";
+			vehicle="C_Rubberboat";
+			skill=0.60000002;
+		};
+		class Item29
+		{
+			position[]={11145.695,-0.12729561,18969.457};
+			id=303;
+			side="EMPTY";
+			vehicle="C_Rubberboat";
+			skill=0.60000002;
+		};
+		class Item30
+		{
+			position[]={17216.816,-0.10308206,12712.146};
+			id=304;
+			side="EMPTY";
+			vehicle="C_Rubberboat";
+			skill=0.60000002;
+		};
+		class Item31
+		{
+			position[]={14831.271,-0.21914038,10110.793};
+			id=305;
+			side="EMPTY";
+			vehicle="C_Rubberboat";
+			skill=0.60000002;
+		};
+		class Item32
+		{
+			position[]={9790.3086,-0.20214397,9322.3965};
+			id=306;
+			side="EMPTY";
+			vehicle="C_Rubberboat";
+			skill=0.60000002;
+		};
+		class Item33
+		{
+			position[]={5407.1245,0.67159379,9863.6543};
+			id=307;
+			side="EMPTY";
+			vehicle="C_Rubberboat";
+			skill=0.60000002;
+		};
+		class Item34
+		{
+			position[]={5862.6572,-0.18283132,14600.137};
+			id=308;
+			side="EMPTY";
+			vehicle="C_Rubberboat";
+			skill=0.60000002;
+		};
+		class Item35
+		{
+			position[]={10219.934,-0.68736637,20258.406};
+			id=309;
+			side="EMPTY";
+			vehicle="C_Rubberboat";
+			skill=0.60000002;
+		};
+		class Item36
+		{
+			position[]={13182.822,0.19212684,7755.6406};
+			id=310;
+			side="EMPTY";
+			vehicle="C_Rubberboat";
+			skill=0.60000002;
+		};
+		class Item37
+		{
+			position[]={9164.6621,0.35784394,21653.174};
+			id=311;
+			side="EMPTY";
+			vehicle="C_Rubberboat";
+			skill=0.60000002;
+		};
 	};
 	class Markers
 	{
-		items=1762;
+		items=1776;
 		class Item0
 		{
 			position[]={9135.707,93.609451,16132.421};
@@ -18489,7 +21762,7 @@ class Mission
 		};
 		class Item1760
 		{
-			position[]={18740.662,-0.0024896171,14355.091};
+			position[]={7780.4766,88.060722,9073.6953};
 			name="respawn_west_4";
 			text="RESPAWN WEST";
 			type="Empty";
@@ -18497,11 +21770,139 @@ class Mission
 		};
 		class Item1761
 		{
-			position[]={18752.332,-0.0047976659,14894.254};
+			position[]={14334.099,20.562185,19034.352};
 			name="respawn_guerrila_7_2_4";
 			text="RESPAWN GUERILLA";
 			type="Empty";
 			colorName="ColorGreen";
+		};
+		class Item1762
+		{
+			position[]={8005.1592,73.465591,6458.9233};
+			name="zonec";
+			text="Контролируется: Никем";
+			type="hd_flag";
+			colorName="ColorKhaki";
+		};
+		class Item1763
+		{
+			position[]={8136.3447,37.437435,18142.244};
+			name="respawn_guerrila_7_2_4_1";
+			text="RESPAWN GUERILLA";
+			type="Empty";
+			colorName="ColorGreen";
+		};
+		class Item1764
+		{
+			position[]={7875.4985,12.207539,19218.395};
+			name="respawn_guerrila_7_2_4_2";
+			text="RESPAWN GUERILLA";
+			type="Empty";
+			colorName="ColorGreen";
+		};
+		class Item1765
+		{
+			position[]={7658.166,0.78992879,20002.725};
+			name="respawn_guerrila_7_2_4_3";
+			text="RESPAWN GUERILLA";
+			type="Empty";
+			colorName="ColorGreen";
+		};
+		class Item1766
+		{
+			position[]={8153.5791,168.7065,20959.127};
+			name="respawn_guerrila_7_2_4_4";
+			text="RESPAWN GUERILLA";
+			type="Empty";
+			colorName="ColorGreen";
+		};
+		class Item1767
+		{
+			position[]={7649.0386,18.455196,22262.086};
+			name="respawn_guerrila_7_2_4_5";
+			text="RESPAWN GUERILLA";
+			type="Empty";
+			colorName="ColorGreen";
+		};
+		class Item1768
+		{
+			position[]={7434.9585,21.118725,22006.527};
+			name="respawn_guerrila_7_2_4_6";
+			text="RESPAWN GUERILLA";
+			type="Empty";
+			colorName="ColorGreen";
+		};
+		class Item1769
+		{
+			position[]={7347.7607,8.7044058,21572.461};
+			name="respawn_guerrila_7_2_4_7";
+			text="RESPAWN GUERILLA";
+			type="Empty";
+			colorName="ColorGreen";
+		};
+		class Item1770
+		{
+			position[]={7399.6162,8.1119175,20836.57};
+			name="respawn_guerrila_7_2_4_8";
+			text="RESPAWN GUERILLA";
+			type="Empty";
+			colorName="ColorGreen";
+		};
+		class Item1771
+		{
+			position[]={8877.9541,7.5896683,21755.037};
+			name="respawn_guerrila_7_2_4_9";
+			text="RESPAWN GUERILLA";
+			type="Empty";
+			colorName="ColorGreen";
+		};
+		class Item1772
+		{
+			position[]={9334.8398,7.5650988,21105.404};
+			name="respawn_guerrila_7_2_4_10";
+			text="RESPAWN GUERILLA";
+			type="Empty";
+			colorName="ColorGreen";
+		};
+		class Item1773
+		{
+			position[]={16448.002,9.1249752,14281.577};
+			name="respawn_east_4_1";
+			text="RESPAWN east";
+			type="Empty";
+			colorName="ColorRed";
+		};
+		class Item1774
+		{
+			position[]={7815.3853,88.508514,9060.7773};
+			name="mon";
+			type="Faction_monolit";
+		};
+		class Item1775
+		{
+			position[]={16452.41,9.0937347,14271.864};
+			name="mon_1";
+			type="Faction_dolg";
+		};
+	};
+	class Sensors
+	{
+		items=1;
+		class Item0
+		{
+			position[]={7999.7983,73.288101,6473.8315};
+			a=80;
+			b=60;
+			angle=60.017124;
+			rectangular=1;
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="tzone";
+			class Effects
+			{
+			};
 		};
 	};
 };

@@ -31,8 +31,9 @@ if (alive player) then {
 	
 };
 setviewdistance 1000;
-/*
+
 if (player getVariable ["rbc_is_vip",false]) then {
+/*
         _pos = [8088.254395,11215.62207,71.781021];
         box1 = "plp_ct_FootlockerYellow" createVehicleLocal _pos;
         box1 setDir 341.636; box1 setPosWorld _pos;[box1,  -0.000425032, 5.79171e-005] call BIS_fnc_setPitchBank;
@@ -42,7 +43,25 @@ if (player getVariable ["rbc_is_vip",false]) then {
         box2 = "plp_ct_FootlockerYellow" createVehicleLocal _pos;
         box2 setDir 334.103; box2 setPosWorld _pos;[box2, -0.000649261, -0.000308266] call BIS_fnc_setPitchBank;
         box2 call compile preprocessFileLineNumbers "box2.sqf";
- 
-};
 */
+
+  _pos = [13082.56543,12914.610352,44.475708]; 
+  box1 = "plp_ct_FootlockerGreen" createVehicleLocal _pos;
+  box1 setDir 358.891; box1 setPosWorld _pos;
+  box1 call compile preprocessFileLineNumbers "box1.sqf";
+  
+	[] execvm "faction.sqf";
+};
+
 [] execvm "uniform.sqf";
+
+[] spawn {
+	while {true} do {
+	    if (alive player && (side player in [resistance,civilian]) && (currentweapon player == "")) then {
+			[player, "zlt_noweapon", true] call AGM_Interaction_fnc_setCaptivityStatus;
+	    } else {
+			[player, "zlt_noweapon", false] call AGM_Interaction_fnc_setCaptivityStatus;
+	    };
+		sleep 1.2;	
+   };
+};

@@ -27,6 +27,7 @@ waituntil {!isnil "bis_fnc_init"};
 
 0 execVM "anomalies\anomaly.sqf";
 [] execVM "sbox.sqf";
+[] execVM "t.sqf";
 
 //################ MISSION SPECIFIC ##################################################
 

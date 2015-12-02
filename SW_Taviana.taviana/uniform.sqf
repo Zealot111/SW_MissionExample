@@ -1,4 +1,4 @@
-﻿zlt_side_uniform = [["av_shlem_chehol"],["Tarzan_ch_bron"],["rbc_U_dolg"],["STALKER_insignia_duty"]];
+﻿// group this setvariable ["zlt_force_uniform", [["av_shlem_chehol"],["Tarzan_ch_bron"],["rbc_U_dolg"],["STALKER_insignia_duty"]]
 
 
 private ["_data","_uniform","_vest","_hg","_ins"];

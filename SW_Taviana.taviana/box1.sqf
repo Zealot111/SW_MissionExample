@@ -73,7 +73,6 @@ _unit addMagazineCargo ["5rnd_762_mos",20];
 _unit addItemCargo ["av_kobra",10];
 _unit addItemCargo ["optic_av_pso",10];
 _unit addItemCargo ["bipod_02_F_blk",10];
-_unit addItemCargo ["rhs_acc_pso1m2",10];
 _unit addItemCargo ["RH_ta31rmr",10];
 _unit addItemCargo ["RH_compm4s",10];
 _unit addItemCargo ["RH_ta01nsn",10];

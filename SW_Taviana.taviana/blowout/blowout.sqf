@@ -46,7 +46,7 @@ if !(hasInterface) exitwith {};
 mrk_fnc_checkIn = {
 	private ["_res","_objs","_uniUnit"];
 	_res = 0;
-	if ( "45KO_u3_grey_camo_uniform" == uniform player ) exitwith { 0 };
+	if (group player getvariable ["blowout_protected",false] ) exitwith { 0 };
 	for "_i" from 0 to 35 do { 
 		_rpos = [[(getposasl player) select 0, (getposasl player) select 1, ((getposasl player) select 2) + 100], 100, 10*_i] call bis_fnc_relPos;
 		if (!lineintersects [getposasl player, _rpos,player]) then {_res = _res + 1;};
