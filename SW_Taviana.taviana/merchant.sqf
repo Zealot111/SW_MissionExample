@@ -1,5 +1,199 @@
 if (!hasInterface) exitWith {};
 
+// параметры торговца
+
+// allowedToBuy classes, itemGroups
+
+// Шеуь
+/*
+[[["AGM_Bandage","AGM_Morphine","AGM_Epipen","AGM_Bloodbag","zlt_radx","zlt_radaway","zlt_rotgut","zlt_beer","rbc_bacon","rbc_beans"],[80,200,300,500,300,3500,200,100,120,80]],[["AGM_Bandage","AGM_Morphine","AGM_Epipen","AGM_Bloodbag","zlt_radx","zlt_radaway","zlt_rotgut","zlt_beer","rbc_bacon","rbc_beans"],[16,40,60,100,60,700,40,20,24,16]]]
+
+[[["AGM_BANDAGE","AGM_MORPHINE","AGM_EPIPEN","AGM_BLOODBAG","ZLT_RADX","ZLT_RADAWAY","ZLT_ROTGUT","ZLT_BEER","RBC_BACON","RBC_BEANS"],[80,200,300,500,300,3500,400,200,240,160]],[["AGM_BANDAGE","AGM_MORPHINE","AGM_EPIPEN","AGM_BLOODBAG","ZLT_RADX","ZLT_RADAWAY","ZLT_ROTGUT","ZLT_BEER","RBC_BACON","RBC_BEANS"],[16,40,60,100,150,1750,40,20,24,16]]]
+
+[[["AGM_BANDAGE","AGM_MORPHINE"],[800,2000]],[["ZLT_ROTGUT","ZLT_BEER","RBC_BACON","RBC_BEANS","AGM_BANDAGE","AGM_MORPHINE","AGM_EPIPEN","AGM_BLOODBAG"],[40,20,24,16,16,40,150,250]]]
+
+*/
+
+
+zlt_currentMerchant = objNull;
+zlt_playerMoney = 5000;
+player addEventHandler ["Killed", {zlt_playerMoney = 5000;}];
+
+
+zlt_mItemsData = [
+	"AGM_Bandage", 			80,				"MED_B",			
+	"AGM_Morphine",			200,			"MED_B",
+	"AGM_Epipen",			300,			"MED_A",
+	"AGM_Bloodbag",			500,			"MED_A",
+	"zlt_radx",				300,			"RAD",
+	"zlt_radaway",			3500,			"RAD",
+	"zlt_rotgut",			200,			"FOOD",
+	"zlt_beer",				100,			"FOOD",
+	"rbc_bacon",			120,			"FOOD",
+	"rbc_beans",			80,				"FOOD"
+];
+
+zlt_mGroupsData = [
+	"MED_B",		"Базовые медикаменты",
+	"MED_A",		"Дополнительные медикаменты",
+	"RAD",			"Противорадиационные препараты",
+	"FOOD",			"Еда и напитки",
+	"Misc",			"Разное"
+];
+
+
+// id, имя, предметы для покупки, предметы для продажи, 
+zlt_mTraderIdentity = [
+	["STD", ["Торговец","Торговец","U_C_HunterBody_grn","H_Hat_checker","WhiteHead_20",""], ["All",1], ["aLL",0.2]],
+	["I2", ["Лавка Ивана","Иван Иванович","Униформа", "Шапка", "Очки", "Лицо", "Значек"], ["All",1, "Food", 2, "RAD"], ["aLL",0.2, "RAD", 0.5, "FOOD" ]],
+	["I3", ["Лавка Ивана","Иван Иванович","Униформа", "Шапка", "Очки", "Лицо", "Значек"], ["MED_B",10], ["FOOD",0.2,"MED_B","MED_A", 0.5]]
+];
+
+
+private ["_fnc_checkUserData","_fnc_prepareUserData"];
+	
+_fnc_checkUserData = {
+
+	if ((count zlt_mItemsData % 3) != 0) exitWith {diag_log ["Error:_fnc_checkUserData:Incorrect zlt_mItemsData "];};
+	{
+		if ((_foreachIndex) % 3 == 0) then {
+			if !([zlt_mItemsData select _foreachIndex, zlt_mItemsData select (_foreachIndex+1), zlt_mItemsData select (_foreachIndex+2)] isEqualTypeArray ["",0,""]) exitWith {
+				diag_log ["Error:_fnc_checkUserData:Incorrect zlt_mItemsData"];
+			};
+		};
+	} foreach zlt_mItemsData;
+
+	if ((count zlt_mGroupsData % 2) != 0) exitWith {diag_log ["Error:_fnc_checkUserData:Incorrect zlt_mGroupsData "];};
+
+};
+
+_fnc_prepareUserData = {
+	private "_arrStrToUpper";
+	_arrStrToUpper = { { if (_x isEqualType "") then { _this set [_foreachIndex, toUpper _x];}; } foreach _this;_this};
+	zlt_mItemsData call _arrStrToUpper;
+	{
+		if (_foreachIndex % 2 == 0) then {
+			zlt_mGroupsData set [_foreachIndex, toUpper _x];
+		};
+	} foreach zlt_mGroupsData;
+	private "_temp"; _temp = [];
+	{
+		_x params ["_a","_b","_c","_d"];
+		_a= toUpper _a; _c call _arrStrToUpper; _d call _arrStrToUpper;
+		_temp pushback [_a,_b,_c,_d];
+	} foreach zlt_mTraderIdentity;
+	zlt_mTraderIdentity = _temp;
+};
+
+zlt_fnc_mGetGroupName = {
+	params ["_gr"]; 
+	private "_ind"; _ind = zlt_mGroupsData find toUpper _gr ;
+	if (_ind == -1) exitWith {diag_log ["zlt_fnc_mGetGroupName:Error:NoSuchItem",_this];nil};
+	(zlt_mGroupsData select _ind + 1)
+};
+
+zlt_fnc_mGetItemGroup = {
+	params ["_item"];
+	private "_ind"; _ind = zlt_mItemsData find toUpper _item ;
+	if (_ind == -1) exitWith {diag_log ["zlt_fnc_mGetItemGroup:Error:NoSuchItem",_this];nil};
+	(zlt_mItemsData select _ind + 2)
+};
+
+zlt_fnc_mItemIsInGroup = {
+	params ["_item", "_group"];
+	[toUpper _item, toUpper _group] params ["_item","_group"];
+	if (_group == "ALL") exitWith {true};
+	private "_ind"; _ind = zlt_mItemsData find _item ;
+	if (_ind == -1) exitWith {diag_log ["zlt_fnc_mItemIsInGroup:Error:NoSuchItem",_this];nil};
+	(zlt_mItemsData select _ind + 2) == _group
+};
+
+zlt_fnc_getItemsPrices = {
+	params ["_trID"];
+	_fnc_getClassesPrices = {
+		params ["_class", "_factor"];_class = toUpper _class; private ["_res","_ind"];_res=[];
+		//diag_log ["_fnc_getClassesPrices",_this];
+		switch (true) do {
+			case (_class == "ALL") : {
+				{
+					if (_foreachIndex % 3 == 0 ) then {
+						_res pushBack (zlt_mItemsData select _foreachIndex );
+						_res pushBack ((zlt_mItemsData select _foreachIndex +1) * _factor );
+					};
+				} foreach zlt_mItemsData;
+			};		
+			case (_class in zlt_mGroupsData) : {
+				{
+					if (_class isEqualTo _x ) then {
+						_res pushBack (zlt_mItemsData select _foreachIndex -2 ); 
+						_res pushBack ((zlt_mItemsData select _foreachIndex -1) * _factor );
+					};
+				} foreach zlt_mItemsData;
+			};
+			default {
+				_ind = zlt_mItemsData find _class;
+				if (_ind != -1) then {
+					_res pushBack (zlt_mItemsData select _ind); _res pushBack ((zlt_mItemsData select _ind +1 ) * _factor);
+				} else {diag_log ["_fnc_getClassesPrices error:IncorrectClass",_this, _class];};
+			};
+		};
+		//diag_log ["_fnc_getClassesPrices", _res];
+		_res
+	};
+	private ["_buyItemsRes","_sellItemsRes","_priceFactor","_prices","_ind"];
+	_trID = toUpper _trID;
+	_buyItemsRes = [[],[]], _sellItemsRes = [[],[]];
+	{
+		if (_x select 0 == _trID) exitWith {_trID = _x;};
+	} foreach zlt_mTraderIdentity;
+	if (_trID isEqualType "") exitWith {diag_log ["zlt_fnc_getItemsPrices:NoSuchTraderID", _this];};
+	_trID params ["_id","_name","_buyItems","_sellItems"];
+	// buyItems
+	{
+		if (_x isEqualType "") then {
+			_priceFactor = 1;
+			if ((count _buyItems-1) >= _foreachIndex + 1 && { _buyItems select _foreachIndex + 1 isEqualType 0}) then {
+				_priceFactor = _buyItems select _foreachIndex + 1;
+			};
+			_prices = [_x, _priceFactor] call _fnc_getClassesPrices;
+			{	
+				if (_x isEqualType "") then {
+					_ind = (_buyItemsRes select 0) find _x;
+					if (_ind == -1) then {
+						(_buyItemsRes select 0) pushBack _x;
+						(_buyItemsRes select 1) pushback (_prices select _foreachIndex + 1);
+					} else {
+						(_buyItemsRes select 1) set [_ind, _prices select _foreachIndex + 1 ];
+					};
+				};
+			} foreach _prices;
+		};
+	} foreach _buyItems;
+	{
+		if (_x isEqualType "") then {
+			_priceFactor = 0.2;
+			if ((count _sellItems-1) >= _foreachIndex + 1 && { _sellItems select _foreachIndex + 1 isEqualType 0}) then {
+				_priceFactor = _sellItems select _foreachIndex + 1;
+			};
+			_prices = [_x, _priceFactor] call _fnc_getClassesPrices;
+			{	
+				if (_x isEqualType "" ) then {
+					_ind = (_sellItemsRes select 0) find _x;
+					if (_ind == -1) then {
+						(_sellItemsRes select 0) pushBack _x;
+						(_sellItemsRes select 1) pushback (_prices select _foreachIndex + 1);
+					} else {
+						(_sellItemsRes select 1) set [_ind, _prices select _foreachIndex + 1 ];
+					};
+				};
+			} foreach _prices;
+		};
+	} foreach _sellItems;
+	diag_log ["zlt_fnc_getItemsPrices", _this, _trID, [_buyItemsRes, _sellItemsRes]];
+	[_sellItemsRes, _buyItemsRes]
+
+};
+
 
 zlt_mOriginData = [
 // медицина, еда
@@ -61,27 +255,8 @@ zlt_mOriginData = [
 ];
 
 
-zlt_merchantdataSell = [[
 
 
-],[
-
-
-]];
-
-
-zlt_merchantDataBuy = [[
-
-
-],[
-
-
-]];
-
-zlt_currentMerchant = objNull;
-
-
-zlt_playerMoney = 5000;
 
 
 #define MSG_MAIN 0
@@ -143,7 +318,7 @@ zlt_fnc_sellAll = {
 	_items = (weaponCargo _crate + magazinecargo _crate + itemCargo _crate + backpackCargo _crate);
 	{
 		_price = 50;
-		_priceind = (_sellItemsClasses find _itemclass);
+		_priceind = (_sellItemsClasses find (toUpper _x));
 		if (_priceind != -1) then {_price = _sellItemPrices select (_priceind);};
 		zlt_playerMoney = zlt_playerMoney + _price;
 	} foreach _items;
@@ -161,6 +336,7 @@ zlt_fnc_handleSellMerchantMenu = {
 		case "INIT" : {
 			_sellItemsClasses = (zlt_currentMerchant getVariable ["zlt_buysellfnc",[[],[]]] select 0 select 0);
 			_sellItemPrices = (zlt_currentMerchant getVariable ["zlt_buysellfnc",[[],[]]] select 0 select 1);
+			diag_log ["zlt_fnc_handleSellMerchantMenu", _sellItemsClasses, _sellItemPrices];
 			_crate = zlt_currentMerchant getvariable "zlt_merchantCrate";
 			_items = (weaponCargo _crate + magazinecargo _crate + itemCargo _crate + backpackCargo _crate) call BIS_fnc_consolidateArray;		
 			hint parseText format [zlt_merchant_msgs select MSG_STATUS, zlt_playerMoney];
@@ -168,7 +344,7 @@ zlt_fnc_handleSellMerchantMenu = {
 			_ctrlSellItemsList = _display displayCtrl 1500;
 			lbClear _ctrlSellItemsList;
 			{
-				_itemclass = _x select 0; _number = _x select 1;
+				_itemclass = toUpper(_x select 0); _number = _x select 1;
 				_priceind = (_sellItemsClasses find _itemclass);
 				_price = 50;
 				if (_priceind != -1) then {
@@ -230,26 +406,50 @@ zlt_fnc_playerbuy = {
 
 
 zlt_fnc_handleBuyMerchantMenu = {
-	disableSerialization;
+	//disableSerialization;
 	params ["_params","_option"];
-	private ["_buyitemsClasses","_buyItemPrices","_ctrlBuyItemsList","_data"];
+	diag_log ["zlt_fnc_handleBuyMerchantMenu",_this];
+	private ["_buyitemsClasses","_buyItemPrices","_ctrlBuyItemsList","_data","_ctrlComboGroups","_fnc_fillList"];
+	
+	_fnc_fillList = {
+		params ["_iclasses", "_iprices", "_group"];private ["_ind"];
+		_group = toUpper _group ;
+		lbClear 1500;
+		{
+			if ( [_x, _group] call zlt_fnc_mItemIsInGroup) then {
+				([_x] call zlt_fnc_getitemConfig) params ['_type','_image','_text','_tooltip','_cfgPath'];
+				_ind = lbAdd [1500,format ["%1 (%2 RUR)",_text,_iprices select _forEachIndex]];
+				 lbSetPicture [1500,_ind, _image];
+				 lbSetTooltip [1500, _ind, _tooltip];
+				 lbSetData [1500,_ind, str [_x, _type, _iprices select _forEachIndex]];
+			};
+		} foreach _iclasses
+	};
+	_fnc_fillCombo = {
+		params ["_items"];private ["_ind","_gr","_grname","_added"];
+		_ind = lbAdd [2100,format ["%1","Все"]];
+		lbSetData [2100,_ind, "ALL"];
+		lbSetCurSel [2100, 0];
+		_added = [];
+		{
+			_gr = [_x] call zlt_fnc_mGetItemGroup;
+			if !(_gr in _added) then {
+				_grname = [_gr] call zlt_fnc_mGetGroupName;
+				_added pushBack _gr;
+				_ind =  lbAdd [2100,format ["%1",_grname]];
+				lbSetData [2100, _ind, _gr];
+			};
+		} foreach _items;
+	};
 
 	_buyitemsClasses = (zlt_currentMerchant getVariable ["zlt_buysellfnc",[[],[]]] select 1 select 0);
 	_buyItemPrices = (zlt_currentMerchant getVariable ["zlt_buysellfnc",[[],[]]] select 1 select 1);
 	switch (_option) do { 
 		case "INIT" : {
 			hint parseText format [zlt_merchant_msgs select MSG_STATUS, zlt_playerMoney];
-//			waitUntil {dialog};
-			_params params ["_display"];
-			// fill list
-			_ctrlBuyItemsList = _display displayCtrl 1500;
-			{
-				([_x] call zlt_fnc_getitemConfig) params ['_type','_image','_text','_tooltip','_cfgPath'];
-				_ind = _ctrlBuyItemsList lbAdd format ["%1 (%2 RUR)",_text,_buyItemPrices select _forEachIndex];
-				 _ctrlBuyItemsList lbSetPicture [_ind, _image];
-				 _ctrlBuyItemsList lbSetTooltip [ _ind, _tooltip];
-				 _ctrlBuyItemsList lbSetData [_ind, str [_x, _type, _buyItemPrices select _forEachIndex]];
-			} foreach (_buyitemsClasses);
+			waitUntil {dialog};
+			[_buyitemsClasses, _buyItemPrices, "All"] call _fnc_fillList;
+			[_buyitemsClasses ] call _fnc_fillCombo;
 		}; 
 		case "BUYBUTTON" : {
 			if (lbCurSel 1500 == -1) exitWith {};
@@ -257,6 +457,9 @@ zlt_fnc_handleBuyMerchantMenu = {
 			diag_log ["zlt_fnc_handleBuyMerchantMenu",_data];
 			_data call zlt_fnc_playerbuy;
 		}; 
+		case "COMBO" : {
+			[ _buyitemsClasses, _buyItemPrices, lbData [2100,(_this select 0) select 1]] call _fnc_fillList;
+		};
 		case "BUYDBLCLICK" : {
 			_params params ["_ctrl","_ind"];
 			if (lbCurSel 1500 == -1) exitWith {};
@@ -275,30 +478,50 @@ zlt_fnc_handleBuyMerchantMenu = {
 
 
 zlt_fnc_createMerchant = {
-	params ["_pos","_dir"];
-	private ["_bot","_safez","_safez","_markerstr"];
+	params ["_pos","_dir", "_id"];
+	private ["_bot","_safez","_safez","_markerstr","_chair","_indID","_iddata"];
 	// place bot
+	_id = toUpper _id;
 	_bot = "B_soldier_F" createVehicleLocal _pos;
 	_bot setposatl _pos;
 	_pos params ["_x","_y","_z"];
-	_crate = "plp_ct_StalkerCasketLeatherRed" createVehicleLocal getpos _bot;
+	
+	_crate = "plp_ct_FootlockerStalkerBrown" createVehicleLocal getpos _bot;
 	_crate setposatl ( [_pos, 1, _dir ] call BIS_fnc_relPos ); 
 	_crate setdir _dir;
+	
+	_chair = "Land_ChairWood_F" createVehicleLocal getpos _bot;
+	_chair setPosATL _pos;
+	_chair enableSimulation false;
+	_chair setDir _dir+180;
+	_bot switchMove "Crew";
 
 	_safez = "ProtectionZone_Invisible_F" createVehicleLocal getposatl _bot;
 	_safez setposatl getposatl _bot;
 	_bot setvariable ["zlt_merchantCrate", _crate];
-	_bot setvariable ["zlt_buysellfnc",[zlt_merchantdataSell,zlt_merchantDataBuy]];
+	//_bot setvariable ["zlt_buysellfnc",[zlt_merchantdataSell,zlt_merchantDataBuy]];
+	_bot setVariable ["zlt_mIdentity", _id];
+	_indID = 0;
+	{
+		if (_x select 0 == _id) exitWith {_indID=_foreachIndex;};
+	} foreach zlt_mTraderIdentity;
+	_iddata = zlt_mTraderIdentity select _indID select 1;
+	// ["Лавка Ивана","Иван Иванович","Униформа", "Шапка", "Очки", "Лицо", "Значек"]
+	// ["Торговец","Торговец","U_C_HunterBody_grn","H_Hat_checker","WhiteHead_20",""];
+	_iddata params ["_marker", "_name", "_uniform","_head","_gogles","_face","_insign"];
+	
+	
 	_bot allowDamage false;
 	_bot setdir _dir;
-	_bot setvariable ["PlayerName","Торговец"];
+	_bot setvariable ["PlayerName",_name];
+	_bot enableSimulation false;
 
 	//marker
 	_markerstr = createMarkerLocal ["salebotname"+str (getposatl _bot),getposatl _bot];
 	_markerstr setMarkerShapeLocal "ICON";
 	_markerstr setMarkerTypeLocal "mil_dot";
 	_markerstr setMarkerColorLocal "ColorOrange";
-	_markerstr setMarkerTextLocal "Торговец";
+	_markerstr setMarkerTextLocal _marker;
 
 	removeAllWeapons _bot;
 	removeAllItems _bot;
@@ -308,33 +531,20 @@ zlt_fnc_createMerchant = {
 	removeBackpack _bot;
 	removeHeadgear _bot;
 	removeGoggles _bot;
-
-	_bot forceAddUniform "U_C_HunterBody_grn";
-	_bot addHeadgear "H_Hat_checker";
-	_bot addMagazine "rhs_30Rnd_545x39_AK";
-	_bot addWeapon "arifle_av_104_2";
-	_bot addPrimaryWeaponItem "optic_av_aimp_2";
-	_bot setFace "WhiteHead_20";
-	_bot addAction ["Купить", {zlt_currentMerchant = (_this select 0); createDialog "RscStalkerMerchantBuy"; }];
-	_bot addAction ["Продать", {zlt_currentMerchant = (_this select 0); createDialog "RscStalkerMerchantSell";  }];
-
-
+	if (_uniform != "") then {_bot forceAddUniform _uniform;};
+	if (_head != "") then { _bot addHeadgear _head;};
+	if (_face != "") then {_bot setFace _face;};
+	if (_insign != "") then {[_bot,_insign] call BIS_fnc_setUnitInsignia;};
+	_bot addAction ["Купить", {zlt_currentMerchant = (_this select 0); createDialog "RscStalkerMerchantBuy"; zlt_currentMerchant setvariable ["zlt_buysellfnc",[zlt_currentMerchant getvariable "zlt_mIdentity"] call zlt_fnc_getItemsPrices]; }];
+	_bot addAction ["Продать", {zlt_currentMerchant = (_this select 0); createDialog "RscStalkerMerchantSell";  zlt_currentMerchant setvariable ["zlt_buysellfnc",[zlt_currentMerchant getvariable "zlt_mIdentity"] call zlt_fnc_getItemsPrices]; }];
 };
 
+call _fnc_checkUserData;
+call _fnc_prepareUserData;
 
+/*
 sleep 1.;
 // 
-{
-	if (typeName _x == typeName "") then {
-	      (zlt_merchantdataSell select 0) pushBack _x;
-	      (zlt_merchantDataBuy select 0) pushBack _x;
-	};
-	if (typeName _x == typeName 0) then {
-		(zlt_merchantdataSell select 1) pushBack (_x/5);
-      	(zlt_merchantDataBuy select 1) pushBack _x;
-	};
-
-} foreach zlt_mOriginData;
 
 
 [[13089.6,12897.2,0.00143814],200.904] call zlt_fnc_createMerchant; //возле белого
@@ -345,6 +555,4 @@ sleep 1.;
 
 // создание конкретных торговцев по координатам
 
-player addEventHandler ["Killed", {
-	zlt_playerMoney = 500;
-}];
+*/

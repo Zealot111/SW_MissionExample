@@ -1633,8 +1633,8 @@ class RscStalkerMerchantBuy {
 	{
 		RscListbox_1500,
 		RscButtonMenuOK_2600,
-		RscButton_1600
-		
+		RscButton_1600,
+		RscCombo_2100
 	};
 	////////////////////////////////////////////////////////
 	// GUI EDITOR OUTPUT START (by [STELS]Zealot, v1.063, #Vaniqa)
@@ -1646,18 +1646,28 @@ class RscStalkerMerchantBuy {
 		onLBDblClick = "[_this,""BUYDBLCLICK""] call zlt_fnc_handleBuyMerchantMenu";
 
 		x = 0.5 * GUI_GRID_W + GUI_GRID_X;
-		y = 0.5 * GUI_GRID_H + GUI_GRID_Y;
-		w = 29 * GUI_GRID_W;
-		h = 22 * GUI_GRID_H;
+		y = 2 * GUI_GRID_H + GUI_GRID_Y;
+		w = 32.5 * GUI_GRID_W;
+		h = 22.5 * GUI_GRID_H;
+		
+		class ListScrollBar
+		{
+			color[] = {1,1,1,0.6};
+			colorActive[] = {1,1,1,1};
+			colorDisabled[] = {1,1,1,0.3};
+			 arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa"; // Arrow 
+			 arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa"; // Arrow when clicked on 
+			 border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa"; // Slider background (stretched vertically) 
+			 thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa"; // Dragging element (stretched vertically) 
+		};
 	};
 	class RscButtonMenuOK_2600: RscButtonMenuOK
 	{
-		style = ST_CENTER | ST_VCENTER;
-		x = 30 * GUI_GRID_W + GUI_GRID_X;
-		y = 20 * GUI_GRID_H + GUI_GRID_Y;
+		text = "Выход"; //--- ToDo: Localize;
+		x = 33.5 * GUI_GRID_W + GUI_GRID_X;
+		y = 22 * GUI_GRID_H + GUI_GRID_Y;
 		w = 6 * GUI_GRID_W;
 		h = 2.5 * GUI_GRID_H;
-		text = "ЗАКРЫТЬ";
 	};
 	class RscButton_1600: RscButton
 	{
@@ -1665,11 +1675,20 @@ class RscStalkerMerchantBuy {
 		onButtonClick = "[_this,""BUYBUTTON""] call zlt_fnc_handleBuyMerchantMenu";
 
 		text = "Купить"; //--- ToDo: Localize;
-		x = 30 * GUI_GRID_W + GUI_GRID_X;
-		y = 0.5 * GUI_GRID_H + GUI_GRID_Y;
+		x = 33.5 * GUI_GRID_W + GUI_GRID_X;
+		y = 2 * GUI_GRID_H + GUI_GRID_Y;
 		w = 6 * GUI_GRID_W;
-		h = 19 * GUI_GRID_H;
+		h = 19.5 * GUI_GRID_H;
 		sizeEx = 1.5 * GUI_GRID_H;
+	};
+	class RscCombo_2100: RscCombo
+	{
+		onLBSelChanged = "[_this,""COMBO""] call zlt_fnc_handleBuyMerchantMenu";
+		idc = 2100;
+		x = 0.5 * GUI_GRID_W + GUI_GRID_X;
+		y = 0.5 * GUI_GRID_H + GUI_GRID_Y;
+		w = 32.5 * GUI_GRID_W;
+		h = 1 * GUI_GRID_H;
 	};
 
 ////////////////////////////////////////////////////////
@@ -1700,6 +1719,17 @@ class RscStalkerMerchantSell {
 		y = 0.5 * GUI_GRID_H + GUI_GRID_Y;
 		w = 29 * GUI_GRID_W;
 		h = 22 * GUI_GRID_H;
+		class ListScrollBar
+		{
+			color[] = {1,1,1,0.6};
+			colorActive[] = {1,1,1,1};
+			colorDisabled[] = {1,1,1,0.3};
+			 arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa"; // Arrow 
+			 arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa"; // Arrow when clicked on 
+			 border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa"; // Slider background (stretched vertically) 
+			 thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa"; // Dragging element (stretched vertically) 
+		};
+
 	};
 	class RscButtonMenuOK_2600: RscButtonMenuOK
 	{
