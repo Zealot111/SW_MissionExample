@@ -13,7 +13,7 @@ class ZobieStalkerBase_IndepResurrect : ZobieStalkerBaseNoScript {
 		"Camo","insignia"
 	};
 	hiddenSelectionsTextures[]=		{
-		"\FFCamoPack\Data\Uniform_camo_01.paa", "\stalker_markers\images\STALKLER.paa"
+		"\FFCamoPack\Data\Uniform_camo_01.paa", "\STALKER_Patches\data\loners.paa"
 	};		
 };	
 class ZobieStalkerBase_IndepResurrect2 : ZobieStalkerBaseNoScript {
@@ -21,7 +21,7 @@ class ZobieStalkerBase_IndepResurrect2 : ZobieStalkerBaseNoScript {
 		"Camo","insignia"
 	};
 	hiddenSelectionsTextures[]=		{
-		"\FFCamoPack\Data\Uniform_camo_06.paa", "\stalker_markers\images\STALKLER.paa"
+		"\FFCamoPack\Data\Uniform_camo_06.paa", "\STALKER_Patches\data\loners.paa"
 	};		
 };	
 class ZombieStalkerMedium1 : ZobieStalkerBase_IndepResurrect {

@@ -41,19 +41,19 @@ class CfgFactionClasses {
 		displayName = "Свободные сталкеры";
 		priority = 1;
 		side = 2;
-		icon = "\stalker_markers\images\STALKLER.paa";
+		icon = "\STALKER_Patches\data\loners.paa";
 	};		
 	class SW_Dolg {
 		displayName = "Долг";
 		priority = 1;
 		side = 0;
-		icon = "\stalker_markers\images\DOLG.paa";
+		icon = "\STALKER_Patches\data\duty.paa";
 	};	
 	class SW_Monolit {
 		displayName = "Монолит";
 		priority = 1;
 		side = 1;
-		icon = "\stalker_markers\images\MONOLIT.paa";
+		icon = "\STALKER_Patches\data\monolith.paa";
 	};	
 };
 
@@ -61,5 +61,8 @@ class CfgFactionClasses {
 class CfgGroups {
 	class East {
 		#include "dolgGroup.hpp"
+	};
+	class West {
+		#include "monGroup.hpp"
 	};
 };
