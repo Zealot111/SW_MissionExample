@@ -10,11 +10,6 @@ class CfgPatches
 };
 
 
-class CfgFunctions
-{
-	#include "functions.hpp"
-};
-
 
 class CfgSounds
 {
@@ -27,6 +22,7 @@ class EventHandlers;
 class CfgVehicles 
 {
 	#include "vehicles.hpp"
+	#include "units.hpp"
 };
 
 
@@ -40,3 +36,30 @@ class CfgWeapons
 
 
 
+class CfgFactionClasses {
+	class SW_Stalkers {
+		displayName = "Свободные сталкеры";
+		priority = 1;
+		side = 2;
+		icon = "\stalker_markers\images\STALKLER.paa";
+	};		
+	class SW_Dolg {
+		displayName = "Долг";
+		priority = 1;
+		side = 0;
+		icon = "\stalker_markers\images\DOLG.paa";
+	};	
+	class SW_Monolit {
+		displayName = "Монолит";
+		priority = 1;
+		side = 1;
+		icon = "\stalker_markers\images\MONOLIT.paa";
+	};	
+};
+
+
+class CfgGroups {
+	class East {
+		#include "dolgGroup.hpp"
+	};
+};

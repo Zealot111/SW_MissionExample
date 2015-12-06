@@ -24,7 +24,7 @@ zlt_lootBoxesTemplates = [[
 
 zlt_lootProbability = 0.1;
 
-zlt_housesNoLoot = [];
+zlt_housesNoLoot = ["land_terain_base_a","land_terain_velke_panely"];
 zlt_boxesNoLoot = [];
 zlt_housesSpecialPoints = [[],[]];
 zlt_housesNoElevCheck = [];

@@ -31,7 +31,7 @@ class zlt_radx: rbc_itemcore
 	scope = 2;
 	author = "Zealot";
 	displayName = "Rad-X";
-	descriptionShort = "Патентованный препарат-радиопротектор. <br /> Противопоказан при беременности!";
+	descriptionShort = "Патентованный препарат-радиопротектор. Противопоказан при беременности!";
 	picture = "\rbc_stalker\pics\Chem_Rad-X.paa";
 	class ItemInfo: InventoryItem_Base_F {
 		mass = 1;
