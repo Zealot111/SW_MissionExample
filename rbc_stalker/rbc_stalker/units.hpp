@@ -7,9 +7,9 @@
 #define dup10(a) a, a, a, a, a, a, a, a, a, a
 #define dup12(a) a, a, a, a, a, a, a, a, a, a, a, a
 
-class Camo_atacs;
+//class Camo_atacs;
 class I_Soldier_F;
-class SW_Stalker_Loner_Base_F: Camo_atacs
+class SW_Stalker_Loner_Base_F: I_Soldier_F
 {
 	author = "Zealot";
 	_generalMacro = "I_Soldier_F";
@@ -19,12 +19,9 @@ class SW_Stalker_Loner_Base_F: Camo_atacs
 	modelsides[] = {3,2,1,0};
 	displayName = "Stalker - Loner - Base";
 	nakedUniform = "U_BasicBody";
-	hiddenSelectionsTextures[] = { "\STALKER_Patches\data\loners.paa"};
-	hiddenSelections[] = {"insignia"};
-	identityTypes[]= {"LanguageRUS","Head_Euro","Head_asian","G_IRaN_default"};
-	faceType = "Man_a3";
-  	genericNames="RussianMen";
-
+	uniformClass = "rbc_U_loner";
+	hiddenSelectionsTextures[] = {"\STALKER_Patches\data\loners.paa", "\FFCamoPack\Data\Uniform_camo_08.paa"};
+	hiddenSelections[] = {"insignia","Camo"};
 };
 
 class SW_Stalker_Hobo_F : SW_Stalker_Loner_Base_F {
@@ -34,7 +31,10 @@ class SW_Stalker_Hobo_F : SW_Stalker_Loner_Base_F {
 	faction = "SW_Stalkers";
 	displayName = "Stalker Hobo";
 	cost = 50000;
-	uniformClass = "CamoU_atacs";
+	uniformClass = "rbc_U_loner";
+	identityTypes[]= {"LanguageRUS","Head_Euro","Head_asian","G_IRaN_default"};
+	faceType = "Man_a3";
+  	genericNames="RussianMen";	
 	backpack = "";		
 	weapons[] = {"Throw","Put"};
 	respawnweapons[] = {"str_ij_long","Throw","Put"};
