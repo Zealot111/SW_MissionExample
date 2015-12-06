@@ -7,8 +7,88 @@
 #define dup10(a) a, a, a, a, a, a, a, a, a, a
 #define dup12(a) a, a, a, a, a, a, a, a, a, a, a, a
 
-
+class Camo_atacs;
 class I_Soldier_F;
+class SW_Stalker_Loner_Base_F: Camo_atacs
+{
+	author = "Zealot";
+	_generalMacro = "I_Soldier_F";
+	vehicleClass = "Men";
+	icon = "iconMan";	
+	scope = 1;
+	modelsides[] = {3,2,1,0};
+	displayName = "Stalker - Loner - Base";
+	nakedUniform = "U_BasicBody";
+	hiddenSelectionsTextures[] = { "\STALKER_Patches\data\loners.paa"};
+	hiddenSelections[] = {"insignia"};
+	identityTypes[]= {"LanguageRUS","Head_Euro","Head_asian","G_IRaN_default"};
+	faceType = "Man_a3";
+  	genericNames="RussianMen";
+
+};
+
+class SW_Stalker_Hobo_F : SW_Stalker_Loner_Base_F {
+	scope = 2;
+	scopeCurator = 2;
+	side = 2;
+	faction = "SW_Stalkers";
+	displayName = "Stalker Hobo";
+	cost = 50000;
+	uniformClass = "CamoU_atacs";
+	backpack = "";		
+	weapons[] = {"Throw","Put"};
+	respawnweapons[] = {"str_ij_long","Throw","Put"};
+	magazines[] = {};
+	respawnmagazines[] = {};
+	items[] = {"FirstAidKit"};
+	respawnitems[] = {"FirstAidKit"};
+	linkedItems[] = {"ItemMap","ItemCompass","ItemWatch"};
+	respawnlinkedItems[] = {"ItemMap","ItemCompass","ItemWatch"};	
+
+};
+
+class SW_Stalker_HoboWthShotgun_F : SW_Stalker_Hobo_F {
+	displayName = "Stalker Hobo with shotgun";
+	weapons[] = {"str_ij_long","Throw","Put"};
+	respawnweapons[] = {"str_ij_long","Throw","Put"};
+	magazines[] = {dup12("2pul_pula")};
+	respawnmagazines[] = {dup12("2pul_pula")};
+	items[] = {"RBCSW_AdetectorCA2","FirstAidKit",dup3("zlt_radx"), dup2("rbc_bacon")};
+	respawnitems[] = {"RBCSW_AdetectorCA2","FirstAidKit",dup3("zlt_radx"), dup2("rbc_bacon")};
+	linkedItems[] = {"rhs_beanie_green","6B3","ItemMap","ItemCompass","ItemWatch"};
+	respawnlinkedItems[] = {"rhs_beanie_green","6B3","ItemMap","ItemCompass","ItemWatch"};	
+	
+	
+};
+
+class SW_Stalker_Loner_F : SW_Stalker_HoboWthShotgun_F {
+	displayName = "Stalker Loner";
+	cost = 80000;
+	weapons[] = {"str_ij_long","Throw","Put"};
+	respawnweapons[] = {"str_ij_long","Throw","Put"};
+	magazines[] = {dup12("2pul_pula")};
+	respawnmagazines[] = {dup12("2pul_pula")};
+	items[] = {"RBCSW_AdetectorCA2","FirstAidKit",dup3("zlt_radx"), dup2("rbc_bacon")};
+	respawnitems[] = {"RBCSW_AdetectorCA2","FirstAidKit",dup3("zlt_radx"), dup2("rbc_bacon")};
+	linkedItems[] = {"rhs_beanie_green","6B3","ItemMap","ItemCompass","ItemWatch"};
+	respawnlinkedItems[] = {"rhs_beanie_green","6B3","ItemMap","ItemCompass","ItemWatch"};	
+	
+};
+
+class SW_Stalker_Loner_Leader_F : SW_Stalker_Loner_F {
+	displayName = "Stalker Leader";
+	icon = "iconManLeader";
+	cost = 100000;
+	weapons[] = {"RH_mak","str_ij_long","Throw","Put"};
+	respawnweapons[] = {"RH_mak","str_ij_long","Throw","Put"};
+	magazines[] = {dup12("2pul_pula"), dup5("RH_8Rnd_9x18_Mak")};
+	respawnmagazines[] = {dup12("2pul_pula"), dup4("RH_8Rnd_9x18_Mak")};
+	items[] = {"RBCSW_AdetectorCA1","FirstAidKit",dup3("zlt_radx"), dup2("rbc_bacon")};
+	respawnitems[] = {"RBCSW_AdetectorCA1","FirstAidKit",dup3("zlt_radx"), dup2("rbc_bacon")};
+	linkedItems[] = {"rhs_beanie_green","6B3","ItemMap","ItemCompass","ItemWatch","ItemRadio"};
+	respawnlinkedItems[] = {"rhs_beanie_green","6B3","ItemMap","ItemCompass","ItemWatch","ItemRadio"};	
+	
+};
 
 class rbc_man_dolg_base: I_Soldier_F
 {
@@ -53,6 +133,8 @@ class SW_MON_SL_F : rbc_man_monolit_base {
 	cost = 500000;
 	uniformClass = "rbc_U_monolit";
   	identityTypes[]= {"LanguageRUS","Head_Euro","Head_asian","G_IRaN_default"};
+	hiddenSelectionsTextures[] = {"\STALKER_Patches\data\monolith.paa"};
+	hiddenSelections[] = {"insignia"};
   	faceType = "Man_a3";
   	genericNames="RussianMen";
 	backpack = "";	
@@ -121,6 +203,8 @@ class SW_Dolg_SL_F : rbc_man_dolg_base {
   	identityTypes[]= {"LanguageRUS","Head_Euro","Head_asian","G_IRaN_default"};
   	faceType = "Man_a3";
   	genericNames="RussianMen";
+	hiddenSelectionsTextures[] = {"\STALKER_Patches\data\duty.paa"};
+	hiddenSelections[] = {"insignia"};	
 	backpack = "";
 	weapons[] = {"arifle_av_aksu","RH_mak","Binocular","Throw","Put"};
 	respawnweapons[] = {"arifle_av_aksu","RH_mak","Binocular","Throw","Put"};

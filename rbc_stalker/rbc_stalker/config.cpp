@@ -65,4 +65,7 @@ class CfgGroups {
 	class West {
 		#include "monGroup.hpp"
 	};
+	class Indep {
+		#include "stlkGroup.hpp"
+	};
 };
